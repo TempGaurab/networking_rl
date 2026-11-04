@@ -1,0 +1,172 @@
+% ======================================================================
+\chapter{Search Strings and Sources}
+\label{app:search}
+% ======================================================================
+
+All searches were run on 31 October 2026 for publication years 2016--2026. The raw responses are stored in \texttt{review/data/raw/}.
+
+\paragraph{OpenAlex (executed).} Works endpoint, Boolean search over titles and abstracts, page paging, 200 records per page:
+\begin{small}
+\begin{verbatim}
+filter = title_and_abstract.search:("reinforcement learning" OR
+         "imitation learning") AND ("congestion control" OR
+         "congestion window" OR ECN),publication_year:2016-2026
+\end{verbatim}
+\end{small}
+
+\paragraph{arXiv (executed).} Because the API's phrase operator under-retrieves, we retrieved on single terms and applied the protocol's exact phrases locally (hyphens treated as spaces; ``ECN'' matched as a whole word):
+\begin{small}
+\begin{verbatim}
+search_query = (ti:reinforcement OR abs:reinforcement OR ti:imitation
+                OR abs:imitation) AND (ti:congestion OR abs:congestion
+                OR ti:ECN OR abs:ECN)
+                AND submittedDate:[201601010000 TO 202612312359]
+\end{verbatim}
+\end{small}
+
+\paragraph{USENIX NSDI and ATC (executed).} The technical-sessions page of every NSDI (2016--2026) and USENIX ATC (2016--2025) was scraped for titles and abstracts, and the protocol query was applied locally.
+
+\paragraph{Subscription databases (for re-execution with institutional access).} These strings implement the same query in each database's syntax. We could not run them (\cref{sec:search}).
+\begin{small}
+\begin{verbatim}
+IEEE Xplore (Command Search; Publication Year 2016-2026):
+  (("Document Title":"reinforcement learning" OR
+    "Abstract":"reinforcement learning" OR
+    "Document Title":"imitation learning" OR
+    "Abstract":"imitation learning") AND
+   ("Document Title":"congestion control" OR
+    "Abstract":"congestion control" OR
+    "Document Title":"congestion window" OR
+    "Abstract":"congestion window" OR
+    "Document Title":ECN OR "Abstract":ECN))
+
+ACM Digital Library (Advanced Search; Published 2016-2026):
+  (Title:("reinforcement learning" OR "imitation learning") OR
+   Abstract:("reinforcement learning" OR "imitation learning")) AND
+  (Title:("congestion control" OR "congestion window" OR ECN) OR
+   Abstract:("congestion control" OR "congestion window" OR ECN))
+
+Scopus (Advanced Search):
+  TITLE-ABS(("reinforcement learning" OR "imitation learning") AND
+            ("congestion control" OR "congestion window" OR ecn))
+  AND PUBYEAR > 2015 AND PUBYEAR < 2027
+\end{verbatim}
+\end{small}
+
+\paragraph{Citation searching.} \emph{Forward}: all 2016--2026 works citing at least one of ten seed reports and mentioning ``congestion'' in the title or abstract. The seeds were Aurora (arXiv 2018 and ICML 2019), Orca, Pantheon/Indigo, MVFST-RL, Sage, QTCP, Eagle, TCP-RL, and DRL-CC for MPTCP. \emph{Backward}: the reference lists of sixteen recent included reports with long related-work sections. Sage, Orca and Astraea were among them, and the full list is stored with the raw responses. Records already identified were removed before screening.
+
+\paragraph{Supplementary search for LLM-based work (\cref{sec:llm}).} This scoped search informs the narrative of \cref{sec:llm} only and did not enter the PRISMA flow:
+\begin{small}
+\begin{verbatim}
+OpenAlex (2022-2026, titles and abstracts):
+  ("large language model" OR "large language models" OR LLM OR LLMs
+   OR "language model" OR GPT) AND
+  ("congestion control" OR "congestion window")
+arXiv (2022-2026), then a local filter for "congestion control|window":
+  (ti:LLM OR abs:LLM OR ti:LLMs OR abs:LLMs OR ti:"language model"
+   OR abs:"language model" OR abs:"language models") AND
+  (ti:congestion OR abs:congestion)
+\end{verbatim}
+\end{small}
+
+% ======================================================================
+\chapter{Additional Tables and Figures}
+\label{app:tables}
+% ======================================================================
+
+\input{generated/tab_real}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/case_study_delay.pdf}
+\caption{Case study: mean queueing delay (in multiples of the base RTT, log scale) when one factor is varied around the reference link. Lines are means over the converged training seeds (as in \cref{tab:case}) and shaded bands span them; the gray band or line marks the narrow training range. Both PPO policies keep queues far shorter than AIMD and usually shorter than BBR-like. Under capacity variability all controllers queue more, the classic ones most.}
+\label{fig:case-delay}
+\end{figure}
+
+\clearpage
+\input{generated/tab_all_studies}
+
+% ======================================================================
+\chapter{Replication Package}
+\label{app:replication}
+% ======================================================================
+
+The replication package contains everything needed to regenerate every number, table and figure in this survey. Its \texttt{README.md} gives the exact commands.
+
+\begin{description}[leftmargin=0pt]
+  \item[\texttt{review/scripts/}] The pipeline. Search (\texttt{search\_openalex.py}, \texttt{search\_arxiv.py}, \texttt{search\_usenix.py}, \texttt{search\_snowball.py}, \texttt{search\_backward.py}, \texttt{search\_llm.py}), deduplication (\texttt{merge\_dedupe.py}), retrieval and evidence mining (\texttt{fulltext\_*.py}, \texttt{evidence.py}), study linking (\texttt{studies.py}), corpus and bibliography (\texttt{build\_corpus.py}, \texttt{assemble\_bib.py}), and statistics, figures and tables (\texttt{make\_numbers.py}, \texttt{make\_tables.py}).
+  \item[\texttt{review/data/}] Records, every screening decision with its reason (\texttt{screening/}), the retrieval log, the coded extraction files (\texttt{extraction/coded\_b0*.psv}, one line per report with the evidence source), the study table, and the generated statistics.
+  \item[\texttt{review/data/screening/second\_screener/}] A blinded sample of title/abstract records for an independent second screener, and \texttt{review/scripts/agreement.py}, which reports Cohen's $\kappa$~\cite{cohen1960kappa} against the original decisions.
+  \item[\texttt{case\_study/}] Environment (\texttt{ccenv.py}), training (\texttt{train.py}), evaluation (\texttt{evaluate.py}), figures and tables (\texttt{plot\_case\_study.py}), and the eight trained models.
+\end{description}
+
+\paragraph{Case-study configuration.} \Cref{tab:case-config} lists the settings used in \cref{sec:case-study}.
+
+\begin{table}[ht]
+\centering
+\caption{Case-study configuration.}
+\label{tab:case-config}
+\small
+\begin{tabularx}{\linewidth}{@{}lY@{}}
+\toprule
+Item & Setting \\
+\midrule
+Environment & fluid single-bottleneck drop-tail queue; 20\,ms monitor intervals; feedback delayed by $\lceil \text{RTT}/20\,\text{ms}\rceil$ intervals; per-packet random loss; exponential RTT jitter; capacity as a bounded multiplicative random walk \\
+Observation & latency gradient, latency ratio, sending ratio for each of the last 10 intervals (30 values) \\
+Action & $a\in[-1,1]$; rate $\times(1+0.05a)$ if $a\ge 0$, else rate $/(1-0.05a)$ \\
+Reward & utilization $-$ queueing delay/base RTT $- 3\times$ loss rate \\
+Algorithm & PPO (Stable-Baselines3): 8 parallel environments, 512 steps each per update, minibatch 256, 10 epochs, learning rate $3\times10^{-4}$, $\gamma=0.99$, GAE $\lambda=0.95$, clip 0.2, entropy coefficient 0.005, MLP $64\times 64$, reward normalization \\
+Training & \nCsSteps{} million steps per run, \nCsSeeds{} seeds per distribution, episodes of 400 intervals (8\,s), about \nCsTrainMinutes{} minutes per run on one CPU core \\
+Evaluation & 10\,s flows including ramp-up, 5 flows per condition, deterministic policy; reference link 3\,Mbit/s, 50\,ms, 1.5\,BDP; one factor varied at a time \\
+Baselines & Reno-like AIMD (window-based, ACK-clocked, slow start, halving at most once per RTT); BBR-like (BBRv1 state machine, gain cycling, in-flight cap of $2\times$BDP) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ======================================================================
+\chapter{PRISMA 2020 Checklist}
+\label{app:prisma}
+% ======================================================================
+
+\Cref{tab:prisma-checklist} maps the PRISMA~2020 items~\cite{page2021prisma} to the place where this survey reports them. Items that assume a quantitative meta-analysis (effect measures, certainty of pooled estimates) are marked as not applicable, because the synthesis is narrative and tabular (\cref{sec:synthesis}).
+
+\begin{small}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}lL{5.2cm}L{8.3cm}@{}}
+\caption{PRISMA 2020 checklist.}\label{tab:prisma-checklist}\\
+\toprule \# & Item & Where reported \\ \midrule \endfirsthead
+\toprule \# & Item & Where reported \\ \midrule \endhead
+\bottomrule \endfoot
+1 & Title & Title page: identified as a systematic survey \\
+2 & Abstract & Abstract \\
+3 & Rationale & \Cref{sec:motivation,sec:related} \\
+4 & Objectives & \Cref{sec:rqs} (\RQ{1}--\RQ{3}) \\
+5 & Eligibility criteria & \Cref{sec:eligibility}, \cref{tab:eligibility} \\
+6 & Information sources & \Cref{sec:search}; search date 31 October 2026 \\
+7 & Search strategy & \Cref{app:search} (executed strings and strings for the subscription databases) \\
+8 & Selection process & \Cref{sec:selection}; decisions in \texttt{review/data/screening/} \\
+9 & Data collection process & \Cref{sec:selection}; evidence and coding files in \texttt{review/data/} \\
+10a--b & Data items & \Cref{sec:items} \\
+11 & Study risk-of-bias assessment & \Cref{sec:appraisal} (evidence-practice appraisal) \\
+12 & Effect measures & Not applicable: no effect sizes are pooled (\cref{sec:synthesis}) \\
+13a--f & Synthesis methods & \Cref{sec:synthesis}; tabulation by setting, period and coded item (\cref{sec:corpus}) \\
+14 & Reporting-bias assessment & \Cref{sec:threats} (search coverage, abstract-only coding) \\
+15 & Certainty assessment & Evidence level of every study (\cref{sec:where}) and practice scores (\cref{sec:practices}) \\
+16a & Study selection & \Cref{fig:prisma} \\
+16b & Excluded studies & Reason codes for every excluded record in \texttt{review/data/screening/} and \texttt{extraction.csv} \\
+17 & Study characteristics & \Cref{tab:all-studies}; \cref{sec:corpus} \\
+18 & Risk of bias in studies & \Cref{sec:practices} (practice scores), \cref{tab:practices} \\
+19 & Results of individual studies & \Cref{tab:all-studies,tab:real}; \cref{ch:internet,ch:wireless,ch:datacenter} \\
+20a--d & Results of syntheses & \Cref{sec:corpus}; \cref{ch:internet,ch:wireless,ch:datacenter,ch:training,ch:deployment} \\
+21 & Reporting biases & \Cref{sec:threats} \\
+22 & Certainty of evidence & \Cref{sec:where,sec:practices,sec:generalization} \\
+23a & Interpretation & \Cref{ch:deployment}, \cref{sec:conclusion} \\
+23b & Limitations of the evidence & \Cref{sec:where,sec:practices} \\
+23c & Limitations of the review & \Cref{sec:threats} \\
+23d & Implications & \Cref{sec:recommendations,sec:agenda} \\
+24a--c & Registration and protocol & Not registered; protocol is the course proposal; deviations in \cref{sec:search} \\
+25 & Support & None (\cref{sec:synthesis}, final paragraph) \\
+26 & Competing interests & None declared (\cref{sec:synthesis}, final paragraph) \\
+27 & Availability of data, code and materials & \Cref{app:replication}; replication package \\
+\end{longtable}
+\end{small}

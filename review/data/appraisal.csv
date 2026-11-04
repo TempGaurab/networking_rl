@@ -1,0 +1,267 @@
+bibkey,name,score
+li2016learning,Q-learning TCP for memory-constrained IoT,1
+li2017dynamic,Kanerva-coding RL TCP,0
+xu2018network,Actor-critic AQM,1
+huang2018qarc,QARC,1
+li2019qtcp,QTCP,0
+kong2018improving,RL-TCP,1
+jin2018congestion,SDN-DC Q-learning/SARSA CC,0
+trinh2018energy,eqCC,1
+jay2019aurora,Aurora,4
+zhou2019concerto,Concerto,2
+nascimento2019deep,DRL fronthaul CC,1
+xie2019adaptive,DRL initial window for 5G MEC,1
+xu2019drlcc,DRL-CC (MPTCP),3
+lan2019deep,DRL-CCP,2
+gomez2019intelligent,Intelligent AQM with ECN,2
+wang2019reinforcement,LGFCC,1
+fang2019rtc,RL BWE for RTC (Microsoft),2
+rani2019reinforcement,RL loss-differentiating TCP,0
+bachl2019rax,Rax,0
+silva2019congestion,Smart-DTN-CC,1
+li2019smartcc,SmartCC,0
+xiao2019drinc,TCP-Drinc,2
+nie2019tcprl,TCP-RL,2
+zhang2020reinforcement,ARC,2
+abbasloo2021deepcc,DeepCC (Abbasloo et al.),3
+mai2020distributed,Distributed RL in-network CC,1
+emara2020eagle,Eagle,2
+cui2020improving,Hd-TCP,1
+bachl2020lfq,LFQ,3
+lei2020congestion,Multi-task DRL CC (SDN),0
+zhang2020onrl,OnRL,3
+abbasloo2020orca,Orca,5
+huang2020objective,Partner,0
+jiang2020performance,RLAQM,1
+xu2020handover,RTCP (HSR),1
+naeem2020software,SDN actor-critic MPTCP for IoT,1
+li2020tcp,TCP-PPCC,1
+yan2021acc,ACC,2
+yamazaki2021fairness,AIMD-QTCP,2
+ma2021intelligent,AQM meets DRL,0
+li2021auto,AUTO,3
+liu2021multi,CRL-CC,3
+pokhrel2021learning,DQL-MPTCP,3
+chen2021ran,DRL-3R,1
+liao2021learning,DRL-CC (deadline-aware),0
+he2021deepcc,"DeepCC (He et al., MPTCP)",0
+wang2021hybrid,HRCC,1
+xu2021deep,HSR-CC (space-ground MPTCP),0
+zhang2021learningcc,LearningCC,2
+zhang2021loki,Loki,2
+kasi2021tcp,MARL + transfer TCP CC,0
+xia2021multi,MOCC (Xia et al.),0
+sacco2021owl,Owl,3
+martins2021policy,Policy distillation (fronthaul),3
+xu2021reinforcement,RL-PSD,0
+li2021tcp,RL-explore,0
+xia2021rlcc,RLCC,2
+zhang2021research,SDN Q-learning rate allocation,2
+wang2021intelligent,TCP-DQN,0
+li2021tcpa,TCP-NeuRoc,2
+hassan2021tcp,TCP-RL in an SDN data centre,0
+pradeep2021temporal,TD actor-critic TCP,0
+zheng2022teacher,Teacher-Student robust DRL,1
+huang2021zwei,Zwei,1
+xie2022bbr,BBR-FIT,2
+bentaleb2022bob,BoB,3
+li2022reinforcement,CLCC,1
+xiao2022optimal,Coefficient-free RL rate control,0
+seo2022fairness,DQN TCP v2 fairness,2
+yousif2022intelligent,DQN-tuned AQM,1
+lei2022deep,DRL bidirectional-node WSN CC,1
+zhang2022deepcc,DeepCC (Zhang et al.),3
+huang2022learned,DuGu,2
+liu2022distributed,Federated DRL bandwidth weights,1
+yang2022gdmd,GDMD,0
+xia2022genet,Genet,4
+xia2022glider,Glider,2
+zhang2022hybridrts,HybridRTS,2
+wang2022intelligent,ICCDRL,2
+yang2022ieacc,IEACC,2
+zhang2022liteflow,LiteFlow,2
+bai2022macc,MACC (cross-layer),1
+ma2022mocc,MOCC,4
+zhuang2022achieving,MP-OL,3
+zhong2022muses,Muses,0
+wang2022ncc,NCC,2
+gong2022nuwa,Nuwa-RL,0
+masood2022intelligent,OAC-TCPCC,1
+emara2022pareto,Pareto,2
+wei2022plume,Plume (lightweight DRL CC),0
+satinge2022q,Q-learning adaptive TCP CC,0
+forero2022congestion,RL local flow control (lossy networks),1
+tessler2022rlcc,RL-CC (Tessler et al.),3
+fuhrer2023nvidia,RL-CC on NVIDIA NICs,3
+ma2022rlrbm,RLRBM,1
+guo2022deep,SAC-CC,0
+guo2022congestion,SDN-DC incast DRL,1
+sharan2022symbolic,Symbolic distillation,3
+huang2022tcp,TCP-CFCC,2
+li2022noninvasive,Transformer-BBR (power IoT),1
+jia2022zixia,ZiXia,2
+feng2023deep,A2C UAV bottleneck control,1
+pan2023making,ABBR,2
+huang2023acc,ACC-RL (power DC),2
+kheirkhah2023acct,ACCT,2
+jayaudhaya2023acoco,ACoCo,1
+zhou2023congestion,CARLA,2
+liu2023decc,DECC,1
+hou2023deep,DLCC,2
+midhula2023adaptive,DNN+DRL wireless CC,0
+xing2023deep,DRL CC for SDN/NDN satellites,0
+cao2023drlfcc,DRLFcc,1
+he2023fine,DeepFC,0
+ye2023data,Dolce-RC,2
+zhang2023floo,Floo,2
+forero2023learning,Hierarchical MARL queue policies (maritime),1
+naqvi2023implementability,Implementability of DRL CC (cellular),0
+luo2023novela,Inverse-RL CC,0
+tariq2023ai,IoUT CoAP copies,1
+du2023learning,LRCC,1
+huang2023end,LUC (bandit-feedback game CC),3
+liu2023leopard,Leopard,3
+ketabi2023deep,MARL BBR parameter tuning (DC),2
+boussaoud2023multi,MARL SDN CC,0
+galliera2023marlin,MARLIN,4
+chen2023congestion,Multicast QUIC RL CC,1
+zhang2023pbq,PBQ-enhanced QUIC,1
+yuan2023research,PPO cwnd strategy,0
+tang2023combining,PeaceKeeper,2
+patel2023plume,Plume (prioritized trace sampling),3
+ha2023intelligent,Q-learning/DQN MPTCP (deep-space video),1
+yu2023low,RL CC + streaming FEC (NTN),2
+shahzad2023rlecna,RLECN,0
+he2023learning,RMTC,1
+diel2023rscat,RSCAT,0
+liao2023stop,STOP,0
+yen2023sage,Sage,3
+yerushalmi2023enhancing,Scenario-based modelling for DRL (Aurora),1
+tian2024spine,Spine,2
+shi2023intelligent,TCP-PPO2,2
+huang2023tcp,TCP-QNCC,0
+molia2023tcp,TCP-RLLD,0
+zheng2023trcc,TRCC,1
+ali2023efficient,Weighted-ensemble DRL CC,0
+donta2023icocoa,iCoCoA,0
+satish2024active,A3C-tuned L4S AQM (FreeBSD),3
+liao2024astraea,Astraea,4
+zhang2024bbq,BBQ,1
+yang2024canopy,Canopy,4
+martins2024closed,Closed-form CC via symbolic regression,4
+pokhrel2024ddpg,DDPG-MPCC,4
+wang2024research,DDQN power-IoT CC,0
+almeida2024desired,DESiRED (P4 AQM),3
+andradezambrano2024reinforcement,DQN UDP CC for smart grid,2
+shrestha2024fairness,DRL CCA switching for Wi-Fi fairness,2
+smirnov2024real,DRL WebRTC uplink rate control (5G),1
+yang2024optimizing,DRL deep-space DTN CC,0
+alipio2024cache,DRL-CaCC (cache-aware WSN CC),0
+matrood2024adaptive,DRL-RED,1
+zaeri2024emprn,EMPRN,1
+huang2024game,Game-theoretic bandits (swap regret),2
+bernardez2024graphcc,GraphCC,2
+yuan2024drl,Hierarchical DRL anti-jamming PHY + CC,1
+xu2024kerdqn,KerDqn,1
+hu2024lightweight,LAECN,1
+du2025libra,Libra,3
+wu2024miqa,MIQA / MIA,2
+yu2024classic,MPLibra,3
+wei2024breaking,Maggey,3
+bhat2024multi,Multi-context RL INT CC,0
+xia2024loss,NVC-aware RL CC,1
+dai2024quantifying,Network-assist MAB,1
+zheng2024receiver,Q-NDN,1
+meng2024multi,Q-learning CC (multi-band),0
+zhu2024intelligent,RL CC for LEO (Inf. Sci.),0
+blokhin2024deep,SAC-MWL (QUIC),2
+molia2024reinforcement,TCP-RLACC,1
+liu2024zygos,Zygos,0
+chae2025ackurate,ACKurate-DQN,1
+wang2025congestion,AIRL (blockchain SDN),0
+xing2025reinforcement,ASCRL,2
+han2025anole,Anole,3
+liu2025adaptive,Auto (MORL CC service),0
+abedini2025cubic,CUBIC-Learn,2
+yan2025handover,Creo,1
+pan2025intelligent,Cross-layer mmWave CC,1
+liu2025automatic,D2T*,2
+yu2025dnccq,DNCCQ-PPO (XQUIC),0
+aglamazlar2025deep,DQN TCP CC (ns3-gym),1
+andradezambrano2025performance,DQN_CC multi-hop mobile wireless,1
+liu2025intelligent,DRL CC for HEO-LEO,1
+zala2025effective,DRL CC for wireless (LNNS),0
+pan2025drl,DRL-ABS,1
+yang2025digital,Digital-twin actor-critic QUIC CC,1
+boussaoud2025dual,Dual-agent Dueling DQN (SDN),2
+chengfeng2025duetcc,DuetCC,1
+rao2025enhancing,EE-AOBF-MPTCP-DDPG,2
+liu2025research,EPPO (power emergency RTC),0
+yu2025echocc,EchoCC,2
+kiarie2025expert,Expert-driven jumpstart RL CC,0
+serra2025flecto,Flecto,2
+kutsevol2025learning,GO RL TL (semantic CC),3
+peng2025htpccs,HTPCCS,0
+wang2025edge,Jazz,3
+tian2025jury,Jury,4
+wang2025kontrol,KONTROL,2
+hu2025hierarchical,LACC / HACC (hierarchical CCA selection),1
+peng2025macc,MACC (MAPPO),3
+gui2025multi,MHA-DRL-CC (SAGIN),1
+zhou2025safety,Marten,2
+mwaura2025adaptive,Meta-RL CC protocol,2
+chen2025generalizable,Meta-diffusion BWE policy,2
+bai2025metacon,MetaCon,1
+pappone2025mutant,Mutant,4
+yao2025unified,NMS + Galaxy,1
+bai2025pisces,Pisces,2
+gu2025procc,ProCC,1
+suarez2025pulsequic,PulseQUIC,0
+takesada2025q,Q-AIMD,0
+wang2025rdma,RDI,1
+chen2025research,RL-BNCC (power DCs),0
+jiao2025bandwidth,SAB-RL,1
+mahajan2025reinforcement,TCP-Int (mesh),1
+wang2025transal,TransAL-CC,2
+shawish2025wifi,WHCC (home Wi-Fi),0
+sidhu2026pluggable,AERO,1
+kanungo2026adaptive,AHMA,1
+li2026alchemy,ALCHEMY,2
+gandrakota2026autonetflow,AutoNetFlow,2
+konig2026augmenting,C3,2
+chaurasiya2026cross,Cross-layer dual-agent RL (P4),2
+maglione2026deep,DARA,2
+janani2026adaptive,DDPG MQTT-broker CC,2
+nguyen2026deep,DRL + least-squares congestion minimization,0
+mohammed2026ddpg,DRL-BLUE,2
+ji2026dtcc,DTCC,0
+zhang2026delay,Delay-based RL jitter-aware CC,0
+abedini2026digital,Digital-twin robust RL (substation GOOSE flooding),0
+wu2026dyna,DynA,0
+mishra2026explainable,Explainable cache-aware DRL CC (robotic sensor nets),0
+zhang2026active,Fuzzy + RL AQM,0
+islam2026genrl,GenRL-CC,2
+jia2026han,HAN,1
+han2026learn,Learn-to-Probe,0
+an2026mptcp,MADRL MPTCP for IIoT,0
+vazaios2026multi,MARL CC for wireless ad hoc networks,1
+dara2026autonomous,Multi-agent DQN CC (high-speed),0
+peng2026netrl,NetRL,2
+jia2026pocc,POCC,1
+choi2026energy,PPO CoAP-QUIC cross-layer CC,1
+cai2026deep,PPO TCP CC for FANETs,1
+sharma2026adaptive,"PPO-tuned CUBIC (beta, C)",2
+cui2026pro,PRO-SAC,2
+chae2026pacemaker,Pacemaker-CC,3
+liu2026q,Q-learning queue-discipline selection,1
+lv2026qos,QoS-aware hierarchical CC (SAGSIN),0
+kanojia2026reinforcement,RL-HCC (6G),2
+aoki2026performance,RL-HKD,2
+markudova2026advancing,ReCoCo,3
+li2026sac,SAC-BBR,1
+guo2026deep,SCC-RT,0
+lu2026wapi,SymDistill-CC,1
+pan2026syntra,Syntra,0
+zhang2026transformer,TCCO,2
+li2026lightweight,TCP-RLA,1
+zhang2026collaborative,TT&C microburst ECN (space),1

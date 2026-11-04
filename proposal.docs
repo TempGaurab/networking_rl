@@ -1,0 +1,14 @@
+Survey on Reinforcement Learning for Congestion Control
+CS 6043: Networking · Gaurab Baral and Nityashree Vangala
+
+Motivation
+We propose a survey of reinforcement learning (RL) for congestion control (CC). In RL-based CC, an agent at the sender watches network signals such as delay, throughput, and packet loss. Every short interval, it raises or lowers the sending rate or congestion window. It then gets a reward that is high for fast delivery and low for long delays or lost packets, so over many trials it learns which action works best in each network state.
+Our survey focuses only on RL, covers recent controllers, and records for every paper whether its results come from simulation, emulation, or a real network.
+Research questions
+RQ1 (Design): How do RL methods control congestion: what do they observe, what do they change, and what reward do they learn from?
+RQ2 (Testing): How are these methods trained and tested, and do they still work on networks they did not see in training?
+RQ3 (Deployment): What stops operators from using RL-based congestion control in real networks, and what research could fix these problems?
+Planned structure
+The survey has six chapters; Chapters 5 and 6 are our main new contributions. After background in Chapter 1, Chapters 2 to 4 each cover one setting: the wide-area Internet; wireless, cellular, and satellite links; and data centers. Chapter 5 covers training and testing, from simulators (wireshark) to shared testbeds (Pantheon) and real networks. Chapter 6 covers deployment barriers and controllers designed with large language models.
+Method
+Following PRISMA 2020, we search IEEE Xplore, the ACM Digital Library, Scopus, arXiv, and USENIX proceedings (NSDI, ATC) for 2016–2026 papers matching ("reinforcement learning" OR "imitation learning") AND ("congestion control" OR "congestion window" OR "ECN"). Both of us screen every title and abstract and settle disagreements by discussion. For each paper, we record the setting, RL method, state, action, reward, training setup, results, code availability, and whether the controller was tested on a real network.

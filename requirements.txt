@@ -1,0 +1,11 @@
+# Python 3.12; versions used to produce the published results
+pandas==2.3.3
+numpy==1.26.4
+matplotlib==3.10.8
+requests==2.32.5
+beautifulsoup4==4.15.0
+pymupdf
+# case study only
+gymnasium==1.4.0
+stable-baselines3==2.9.2
+torch==2.9.1

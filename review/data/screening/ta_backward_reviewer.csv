@@ -1,0 +1,156 @@
+bid,year,title,doi,openalex_id,decision,note,arm
+B001,2016,Asynchronous Methods for Deep Reinforcement Learning,10.48550/arxiv.1602.01783,W2260756217,EC2,general ML/RL method or non-network domain (background only),backward
+B002,2016,BBR: Congestion-Based Congestion Control,10.1145/3012426.3022184,W3138562521,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B003,2016,Generalizing Skills with Semi-Supervised Reinforcement Learning,10.48550/arxiv.1612.00429,W2558634851,EC2,general ML/RL method or non-network domain (background only),backward
+B004,2016,Hierarchical Multiscale Recurrent Neural Networks,10.48550/arxiv.1609.01704,W2510842514,EC2,general ML/RL method or non-network domain (background only),backward
+B005,2016,Identity Mappings in Deep Residual Networks,10.1007/978-3-319-46493-0_38,W2302255633,EC2,general ML/RL method or non-network domain (background only),backward
+B006,2016,Learning Multiagent Communication with Backpropagation,10.48550/arxiv.1605.07736,W2402402867,EC2,general ML/RL method or non-network domain (background only),backward
+B007,2016,Learning-Based and Data-Driven TCP Design for Memory-Constrained IoT,10.1109/dcoss.2016.8,W2508010543,INC,learning-based TCP for memory-constrained IoT (check RL),backward
+B008,2016,Mastering the game of Go with deep neural networks and tree search,10.1038/nature16961,W2257979135,EC2,general ML/RL method or non-network domain (background only),backward
+B009,2016,Multi-armed bandits with application to 5G small cells,10.1109/mwc.2016.7498076,W2193897973,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B010,2016,Successor Features for Transfer in Reinforcement Learning,10.13140/rg.2.2.35439.18085,W2962717849,EC2,general ML/RL method or non-network domain (background only),backward
+B011,2017,2017 USENIX Annual Technical Conference (USENIX ATC'17),,W2734941459,EC5,proceedings front matter,backward
+B012,2017,An Axiomatic Approach to Congestion Control,10.1145/3152434.3152445,W2769495039,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B013,2017,BBR,10.1145/3009824,W2540285146,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B014,2017,Credit-Scheduled Delay-Bounded Congestion Control for Datacenters,10.1145/3098822.3098840,W2743073148,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B015,2017,ImageNet classification with deep convolutional neural networks,10.1145/3065386,W2163605009,EC2,general ML/RL method or non-network domain (background only),backward
+B016,2017,"Integrated Networking, Caching, and Computing for Connected Vehicles: A Deep Reinforcement Learning Approach",10.1109/tvt.2017.2760281,W2761862361,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B017,2017,Mastering the game of Go without human knowledge,10.1038/nature24270,W2766447205,EC2,general ML/RL method or non-network domain (background only),backward
+B018,2017,Neural Adaptive Video Streaming with Pensieve,10.1145/3098822.3098843,W2744628735,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B019,2017,Overcoming catastrophic forgetting in neural networks,10.1073/pnas.1611835114,W2560647685,EC2,general ML/RL method or non-network domain (background only),backward
+B020,2017,The QUIC Transport Protocol,10.1145/3098822.3098842,W2745034467,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B021,2018,A Systematic DNN Weight Pruning Framework Using Alternating Direction Method of Multipliers,10.1007/978-3-030-01237-3_12,W2798170643,EC2,general ML/RL method or non-network domain (background only),backward
+B022,2018,"A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play",10.1126/science.aar6404,W2902907165,EC2,general ML/RL method or non-network domain (background only),backward
+B023,2018,Actor-Attention-Critic for Multi-Agent Reinforcement Learning,10.48550/arxiv.1810.02912,W2894976951,EC2,general ML/RL method or non-network domain (background only),backward
+B024,2018,Addressing Function Approximation Error in Actor-Critic Methods,10.48550/arxiv.1802.09477,W2787938642,EC2,general ML/RL method or non-network domain (background only),backward
+B025,2018,AuTO,10.1145/3230543.3230551,W2824027552,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B026,2018,Cellular Controlled Delay TCP (C2TCP),10.23919/ifipnetworking.2018.8696844,W2869071834,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B027,2018,"Combating Bufferbloat in Multi-Bottleneck Networks: Equilibrium, Stability, and Algorithms",10.1109/infocom.2018.8486251,W2793244472,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B028,2018,Deep Multi-User Reinforcement Learning for Distributed Dynamic Spectrum Access,10.1109/twc.2018.2879433,W2898754723,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B029,2018,Deep Reinforcement Learning That Matters,10.1609/aaai.v32i1.11694,W2754517384,EC2,general ML/RL method or non-network domain (background only),backward
+B030,2018,Deep Reinforcement Learning for Dynamic Multichannel Access in Wireless Networks,10.1109/tccn.2018.2809722,W2963079995,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B031,2018,"Deep Reinforcement Learning for Mobile Edge Caching: Review, New Features, and Open Issues",10.1109/mnet.2018.1800109,W2903523957,EC4,survey/review,backward
+B032,2018,ExLL,10.1145/3281411.3281430,W2902331071,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B033,2018,Learning Attentional Communication for Multi-Agent Cooperation,10.48550/arxiv.1805.07733,W2803155336,EC2,general ML/RL method or non-network domain (background only),backward
+B034,2018,"Learning and Generalization in Overparameterized Neural Networks, Going Beyond Two Layers",10.48550/arxiv.1811.04918,W2900103278,EC2,general ML/RL method or non-network domain (background only),backward
+B035,2018,"Learning to Adapt in Dynamic, Real-World Environments Through Meta-Reinforcement Learning",10.48550/arxiv.1803.11347,W2903630557,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B036,2018,Pantheon: the training ground for internet congestion-control research,,W2887715205,INC,Pantheon (Indigo: imitation-learned CC),backward
+B037,2018,QARC,10.1145/3240508.3240545,W2802214001,INC,QARC: DRL video-quality-aware RTC rate control,backward
+B038,2018,QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning,10.48550/arxiv.1803.11485,W2794643322,EC2,general ML/RL method or non-network domain (background only),backward
+B039,2018,Recurrent Experience Replay in Distributed Reinforcement Learning.,,W2908064123,EC2,general ML/RL method or non-network domain (background only),backward
+B040,2018,Recurrent World Models Facilitate Policy Evolution,10.48550/arxiv.1809.01999,W2890208753,EC2,general ML/RL method or non-network domain (background only),backward
+B041,2019,2019 IFIP Networking Conference (IFIP Networking),10.23919/ifipnetworking46909.2019,W4241339295,EC5,proceedings front matter,backward
+B042,2019,C2TCP: A Flexible Cellular TCP to Meet Stringent Delay Requirements,10.1109/jsac.2019.2898758,W2899254093,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B043,2019,Congestion Control for Cross-Datacenter Networks,10.1109/icnp.2019.8888042,W2982686855,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B044,2019,Grandmaster level in StarCraft II using multi-agent reinforcement learning,10.1038/s41586-019-1724-z,W2982316857,EC2,general ML/RL method or non-network domain (background only),backward
+B045,2019,HPCC,10.1145/3341302.3342085,W2968108410,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B046,2019,Learning Fairness in Multi-Agent Systems,10.48550/arxiv.1910.14472,W2970727184,EC2,general ML/RL method or non-network domain (background only),backward
+B047,2019,Learning scheduling algorithms for data processing clusters,10.1145/3341302.3342080,W2968986602,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B048,2019,MAVEN: Multi-Agent Variational Exploration,10.48550/arxiv.1910.07483,W2970514967,EC2,general ML/RL method or non-network domain (background only),backward
+B049,2019,On Some Approaches to Find Nash Equilibrium in Concave Games,10.1134/s0005117919050138,W2946446382,EC2,general ML/RL method or non-network domain (background only),backward
+B050,2019,On the Generalization Gap in Reparameterizable Reinforcement Learning,10.48550/arxiv.1905.12654,W2946421721,EC2,general ML/RL method or non-network domain (background only),backward
+B051,2019,Proceedings of the ACM Special Interest Group on Data Communication,10.1145/3341302,W4250765357,EC5,proceedings front matter,backward
+B052,2019,"PyTorch: An Imperative Style, High-Performance Deep Learning Library",10.48550/arxiv.1912.01703,W2970971581,EC2,general ML/RL method or non-network domain (background only),backward
+B053,2019,Reinforcement Learning Based Routing in Networks: Review and Classification of Approaches,10.1109/access.2019.2913776,W2943717074,EC4,survey/review,backward
+B054,2019,When to use parametric models in reinforcement learning?,10.48550/arxiv.1906.05243,W2970202659,EC2,general ML/RL method or non-network domain (background only),backward
+B055,2019,ns-3 meets OpenAI Gym,10.1145/3345768.3355908,W2990740617,INC,ns3-gym (TCP CC example; tooling),backward
+B056,2020,Interference and Generalization in Temporal Difference Learning,10.48550/arxiv.2003.06350,W3012291041,EC2,general ML/RL method or non-network domain (background only),backward
+B057,2020,Interpreting Deep Learning-Based Networking Systems,10.1145/3387514.3405859,W3038898937,INC,Metis interpretability (check CC case study),backward
+B058,2020,Interpreting Deep Learning-Based Networking Systems,,W3098136764,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B059,2020,Learning Fair Policies in Decentralized Cooperative Multi-Agent Reinforcement Learning,10.48550/arxiv.2012.09421,W3167120022,EC2,general ML/RL method or non-network domain (background only),backward
+B060,2020,Learning Fair Policies in Multiobjective (Deep) Reinforcement Learning with Average and Discounted Rewards,10.48550/arxiv.2008.07773,W3035432460,EC2,general ML/RL method or non-network domain (background only),backward
+B061,2020,LinnOS: Predictability on Unpredictable Flash Storage with a Light Neural Network,,W3096140366,EC2,general ML/RL method or non-network domain (background only),backward
+B062,2020,Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning,10.48550/arxiv.2003.08839,W2963762747,EC2,general ML/RL method or non-network domain (background only),backward
+B063,2020,Multi-Armed-Bandit-Based Spectrum Scheduling Algorithms in Wireless Networks: A Survey,10.1109/mwc.001.1900280,W3010248974,EC4,survey/review,backward
+B064,2020,Online Safety Assurance for Learning-Augmented Systems,10.1145/3422604.3425940,W3096386778,INC,online safety assurance for learning-augmented systems (check CC),backward
+B065,2020,Path persistence in the cloud,10.1145/3402413.3402416,W3028936679,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B066,2020,Reinforcement Learning for IoT Security: A Comprehensive Survey,10.1109/jiot.2020.3040957,W3108669277,EC4,survey/review,backward
+B067,2020,Reinforcement Learning from Imperfect Demonstrations under Soft Expert Guidance,10.1609/aaai.v34i04.5953,W2998396902,EC2,general ML/RL method or non-network domain (background only),backward
+B068,2020,Rethinking Skip Connection with Layer Normalization,10.18653/v1/2020.coling-main.320,W3116570699,EC2,general ML/RL method or non-network domain (background only),backward
+B069,2020,SharpEdge: an asynchronous and core-agnostic solution to guarantee bounded-delays,10.1007/s42045-020-00032-z,W2996863786,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B070,2020,Survey on Applications of Multi-Armed and Contextual Bandits,10.1109/cec48606.2020.9185782,W3083184774,EC4,survey/review,backward
+B071,2020,Wanna Make Your TCP Scheme Great for Cellular Networks? Let Machines Do It for You!,10.1109/jsac.2020.3036958,W3036580555,INC,DeepCC (Abbasloo et al.): DRL cwnd-cap plug-in for cellular,backward
+B072,2020,Weighted QMIX: Expanding Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning,10.48550/arxiv.2006.10800,W3094456479,EC2,general ML/RL method or non-network domain (background only),backward
+B073,2020,{EcoFuzz}: Adaptive {Energy-Saving} Greybox Fuzzing as a Variant of the Adversarial {Multi-Armed} Bandit,,W3018511011,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B074,2021,A unified congestion control framework for diverse application preferences and network conditions,10.1145/3485983.3494840,W3216425677,INC,Libra (CoNEXT'21 conference version),backward
+B075,2021,Deep Reinforcement Learning for Cyber Security,10.1109/tnnls.2021.3121870,W2952298682,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B076,2021,Loki,10.1145/3447993.3483259,W3210224682,INC,Loki: RL + rule fusion for RTC rate control,backward
+B077,2021,Moving towards reproducible machine learning,10.1038/s43588-021-00152-6,W4205249749,EC2,general ML/RL method or non-network domain (background only),backward
+B078,2021,Network planning with deep reinforcement learning,10.1145/3452296.3472902,W3191167321,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B079,2021,Proceedings of the 17th International Conference on emerging Networking EXperiments and Technologies,10.1145/3485983,W4200492323,EC5,proceedings front matter,backward
+B080,2021,Proceedings of the 2021 ACM SIGCOMM 2021 Conference,10.1145/3452296,W4205118271,EC5,proceedings front matter,backward
+B081,2021,Understanding of BBRv2: Evaluation and Comparison With BBRv1 Congestion Control Algorithm,10.1109/access.2021.3061696,W3129258755,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B082,2021,When Is Generalizable Reinforcement Learning Tractable?,10.48550/arxiv.2101.00300,W3118752723,EC2,general ML/RL method or non-network domain (background only),backward
+B083,2022,A first look at starlink performance,10.1145/3517745.3561416,W4307020413,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B084,2022,Genet,10.1145/3544216.3544243,W4290991577,INC,Genet (SIGCOMM'22),backward
+B085,2022,LiteFlow,10.1145/3544216.3544229,W4290991649,INC,LiteFlow (SIGCOMM'22),backward
+B086,2022,Magnetic control of tokamak plasmas through deep reinforcement learning,10.1038/s41586-021-04301-9,W4213377513,EC2,general ML/RL method or non-network domain (background only),backward
+B087,2022,Towards Continual Reinforcement Learning: A Review and Perspectives,10.1613/jair.1.13673,W3117215073,EC4,survey/review,backward
+B088,2022,Training Language Models to Follow Instructions with Human Feedback,10.52202/068431-2011,W7133211372,EC2,general ML/RL method or non-network domain (background only),backward
+B089,2022,Training language models to follow instructions with human feedback,10.48550/arxiv.2203.02155,W4226278401,EC2,general ML/RL method or non-network domain (background only),backward
+B090,2023,Computers Can Learn from the Heuristic Designs and Master Internet Congestion Control,10.1145/3603269.3604838,W4386365365,INC,Sage (SIGCOMM'23),backward
+B091,2023,Deep Reinforcement Learning,10.1007/978-981-19-7784-8_10,W4362650357,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B092,2023,Internet Congestion Control Benchmarking,10.48550/arxiv.2307.10054,W4384919947,INC,CC benchmarking (check learned CCs),backward
+B093,2023,Multi-Timescale Evaluation of Starlink Throughput,10.1145/3614204.3616108,W4386692006,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B094,2024,A Multifaceted Look at Starlink Performance,10.1145/3589334.3645328,W4396758450,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B095,2024,Proceedings of the Nineteenth European Conference on Computer Systems,10.1145/3627703,W4394907705,EC5,proceedings front matter,backward
+B096,2024,SatGuard: Concealing Endless and Bursty Packet Losses in LEO Satellite Networks for Delay-Sensitive Web Applications,10.1145/3589334.3645639,W4396723621,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B101,2016,Analysis and design of the google congestion control for web real-time communication (WebRTC),10.1145/2910017.2910605,W2397506972,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B102,2016,HTTP/2-Based Adaptive Streaming of HEVC Video Over 4G/LTE Networks,10.1109/lcomm.2016.2601087,W2507174453,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B103,2016,Integrating HEC with circuit breakers and multipath RTP to improve RTC media quality,10.1007/s11235-016-0169-z,W2374178569,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B104,2016,Resource Management with Deep Reinforcement Learning,10.1145/3005745.3005750,W2546571074,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B105,2016,SDNDASH,10.1145/2964284.2964332,W2526384825,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B106,2016,"Spending ""Quality""' Time with the Web Video",10.1109/mic.2016.49,W2333383702,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B107,2017,5th International Conference on Learning Representations (ICLR 17),,W2747329762,EC5,proceedings front matter,backward
+B108,2017,Congestion Control for Web Real-Time Communication,10.1109/tnet.2017.2703615,W2624438931,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B109,2017,Congestion Control for WebRTC: Standardization Status and Open Issues,10.1109/mcomstd.2017.1700014,W2740230956,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B110,2017,"Machine Learning for Networking: Workflow, Advances and Opportunities",10.1109/mnet.2017.1700200,W2759910885,EC4,survey/review,backward
+B111,2017,POI360,10.1145/3143361.3143381,W2769967491,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B112,2017,Proximal Policy Optimization Algorithms,10.48550/arxiv.1707.06347,W2736601468,EC2,general ML/RL method or non-network domain (background only),backward
+B113,2017,QUETRA,10.1145/3123266.3123390,W2766174800,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B114,2017,Self-Clocked Rate Adaptation for Multimedia,10.17487/rfc8298,W2516381406,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B115,2017,WEBRTC BASED ELEARNING PLATFORM,10.12753/2066-026x-17-093,W4321848056,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B116,2018,A Survey on Bitrate Adaptation Schemes for Streaming Media Over HTTP,10.1109/comst.2018.2862938,W2906364736,EC4,survey/review,backward
+B117,2018,Deep Learning towards Mobile Applications,10.1109/icdcs.2018.00139,W2808423829,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B118,2018,Performance Evaluation of WebRTC-based Video Conferencing,10.1145/3199524.3199534,W2790105919,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B119,2018,Safe Reinforcement Learning via Shielding,10.1609/aaai.v32i1.11797,W2963575966,EC2,general ML/RL method or non-network domain (background only),backward
+B120,2018,Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor,10.48550/arxiv.1801.01290,W2781726626,EC2,general ML/RL method or non-network domain (background only),backward
+B121,2018,The Impact of Packet Loss and Google Congestion Control on QoE for WebRTC-Based Mobile Multiparty Audiovisual Telemeetings,10.1007/978-3-030-05710-7_38,W2903960826,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B122,2018,Virtual reality conferencing,10.1145/3204949.3208115,W2810137124,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B123,2018,Want to play DASH?,10.1145/3204949.3204961,W2810545749,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B124,2019,Continuous Bitrate & Latency Control with Deep Reinforcement Learning for Live Video Streaming,10.1145/3343031.3356063,W2981563534,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B125,2019,GCC-beta: Improving Interactive Live Video Streaming via an Adaptive Low-Latency Congestion Control,10.1109/icc.2019.8761256,W2961394698,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B126,2019,High-Level Teleoperation System for Aerial Exploration of Indoor Environments,10.3389/frobt.2019.00095,W2982108443,EC2,general ML/RL method or non-network domain (background only),backward
+B127,2019,Machine learning based video coding optimizations: A survey,10.1016/j.ins.2019.07.096,W2964808424,EC4,survey/review,backward
+B128,2019,On The Power of Curriculum Learning in Training Deep Networks,10.48550/arxiv.1904.03626,W2926516160,EC2,general ML/RL method or non-network domain (background only),backward
+B129,2019,Realtime Mobile Bandwidth Prediction Using LSTM Neural Network,10.1007/978-3-030-15986-3_3,W2921640676,EC2,general ML/RL method or non-network domain (background only),backward
+B130,2019,Shifting More Attention to Video Salient Object Detection,10.1109/cvpr.2019.00875,W2965638232,EC2,general ML/RL method or non-network domain (background only),backward
+B131,2019,Sizing router buffers (redux),10.1145/3371934.3371957,W2984874211,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B132,2019,Watching Videos Together in Social Virtual Reality: An Experimental Study on User's QoE,10.1109/vr.2019.8798264,W2935172904,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B133,2020,A comparative study of RTC applications,10.1109/ism.2020.00007,W3124153473,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B134,2020,An online learning based path selection for multipath real‐time video transmission in overlay network,10.1002/ett.4131,W3092379435,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B135,2020,BOLA: Near-Optimal Bitrate Adaptation for Online Videos,10.1109/tnet.2020.2996964,W2294512426,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B136,2020,Cloud Gaming with Foveated Video Encoding,10.1145/3369110,W3009470780,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B137,2020,Data-Driven Bandwidth Prediction Models and Automated Model Selection for Low Latency,10.1109/tmm.2020.3013387,W3047449906,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B138,2020,Delay sensitivity classification of cloud gaming content,10.1145/3386293.3397116,W3029115977,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B139,2020,GROOT,10.1145/3372224.3419214,W3088533413,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B140,2020,NEMO,10.1145/3372224.3419185,W3087814885,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B141,2020,Network-Assisted Dynamic Adaptation (NADA): A Unified Congestion Control Scheme for Real-Time Media,10.17487/rfc8698,W3004987718,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B142,2020,Neural-Enhanced Live Streaming,10.1145/3387514.3405856,W3046761316,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B143,2020,OnRL,10.1145/3372224.3419186,W3087963932,INC,OnRL: online RL for mobile video telephony rate control,backward
+B144,2020,"Robotics, Smart Wearable Technologies, and Autonomous Intelligent Systems for Healthcare During the COVID‐19 Pandemic: An Analysis of the State of the Art and Future Vision",10.1002/aisy.202000071,W3022706795,EC2,general ML/RL method or non-network domain (background only),backward
+B145,2020,Social network-based distancing strategies to flatten the COVID-19 curve in a post-lockdown world,10.1038/s41562-020-0898-6,W3017364177,EC2,general ML/RL method or non-network domain (background only),backward
+B146,2020,TACK,10.1145/3387514.3405850,W3046330406,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B147,2020,ViVo,10.1145/3372224.3380888,W3021314748,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B148,2021,An Elastic System Architecture for Edge Based Low Latency Interactive Video Applications,10.1109/tbc.2021.3077758,W3163652387,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B149,2021,Catching the Moment With LoL$^+$ in Twitch-Like Low-Latency Live Streaming Platforms,10.1109/tmm.2021.3079288,W3161795961,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B150,2021,Dnsmos: A Non-Intrusive Perceptual Objective Speech Quality Metric to Evaluate Noise Suppressors,10.1109/icassp39728.2021.9414878,W3097627357,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B151,2021,Hierarchical Reinforcement Learning,10.1145/3453160,W3168892396,EC2,general ML/RL method or non-network domain (background only),backward
+B152,2021,Measuring the performance and network utilization of popular video conferencing applications,10.1145/3487552.3487842,W3165206205,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B153,2021,Reinforcement Learning-Based Resource Partitioning for Improving Responsiveness in Cloud Gaming,10.1109/tc.2021.3070879,W3149125616,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B154,2021,WebRTC,10.1145/3453182,W3186660640,EC3,"not RL/IL congestion control (classic CC, measurement, ABR, or other system)",backward
+B155,2021,Zwei: A Self-Play Reinforcement Learning Framework for Video Transmission Services,10.1109/tmm.2021.3063620,W3134125422,INC,Zwei self-play RL for video transmission (check CC),backward
+K001,2024,Canopy: Property-Driven Learning for Congestion Control,10.48550/arXiv.2412.10915,,INC,known to reviewers; verified on arXiv (2412.10915),reviewer
+K002,2025,Agua: A Concept-Based Explainer for Learning-Enabled Systems,10.1145/3718958.3754341,,INC,known to reviewers; CC is a case study,reviewer
+K003,2024,ACM MMSys 2024 Bandwidth Estimation in Real Time Communications Challenge,10.1145/3625468.3653068,,INC,known to reviewers; offline-RL BWE benchmark (arXiv 2403.06324),reviewer
+K004,2022,Multi-objective congestion control,10.1145/3492321.3519593,,INC,EuroSys'22 report of MOCC (linked to R0101),reviewer

@@ -1,0 +1,276 @@
+sid,year,title,doi,openalex_id,decision,note
+S005,2018,Restructuring endpoint congestion control,https://doi.org/10.1145/3230543.3230553,W2825975108,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S184,2024,Congestion or No Congestion: Packet Loss Identification and Prediction Using Machine Learning,https://doi.org/10.1109/platcon63925.2024.10830750,W4406461608,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S040,2020,Machine Learning for End-to-End Congestion Control,https://doi.org/10.1109/mcom.001.1900509,W3043280294,EC4,survey/overview/position
+S006,2018,Towards a Deeper Understanding of TCP BBR Congestion Control,https://doi.org/10.23919/ifipnetworking.2018.8696830,W2940580470,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S062,2021,Congestion Control: A Renaissance with Machine Learning,https://doi.org/10.1109/mnet.011.2000603,W3127399923,EC4,survey/overview/position
+S024,2020,A Survey of TCP Congestion Control Algorithm,https://doi.org/10.1109/icsip49896.2020.9339423,W3128037105,EC4,survey/overview
+S018,2019,Reproducible measurements of TCP BBR congestion control,https://doi.org/10.1016/j.comcom.2019.05.011,W2945233633,EC3,non-learning congestion control (no RL/IL)
+S043,2020,On the Future of Congestion Control for the Public Internet,https://doi.org/10.1145/3422604.3425939,W3094173809,EC4,survey/overview/position
+S064,2021,Counterfeiting Congestion Control Algorithms,https://doi.org/10.1145/3484266.3487381,W3212928074,EC3,non-learning congestion control (no RL/IL)
+S161,2023,Slowdown as a Metric for Congestion Control Fairness,https://doi.org/10.1145/3626111.3628185,W4388644525,EC3,non-learning congestion control (no RL/IL)
+S091,2021,Toward formally verifying congestion control behavior,https://doi.org/10.1145/3452296.3472912,W3190832025,EC3,non-learning congestion control (no RL/IL)
+S070,2021,Learning to Harness Bandwidth With Multipath Congestion Control and Scheduling,https://doi.org/10.1109/tmc.2021.3085598,W3169005972,INC,DQL-MPTCP joint CC + scheduling
+S011,2019,Learning Congestion State For mmWave Channels,https://doi.org/10.1145/3349624.3356769,W2979683162,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S017,2019,P4-enabled Network-assisted Congestion Feedback,https://doi.org/10.1145/3375235.3375238,W3003999938,EC3,non-learning congestion control (no RL/IL)
+S123,2022,The Emerging Internet Congestion Control Paradigms,https://doi.org/10.1109/meco55406.2022.9797207,W4283276778,EC4,survey/overview/position
+S132,2023,"Comprehensive review on congestion detection, alleviation, and control for IoT networks",https://doi.org/10.1016/j.jnca.2023.103749,W4387340495,EC4,survey/overview
+S218,2025,Aero: A Pluggable Congestion Control for QUIC,https://doi.org/10.1145/3712678.3721878,W4409145138,INC,method unclear from abstract; assess in full text
+S234,2025,Low Delay Congestion Control for the Internet,https://doi.org/10.1109/iwqos65803.2025.11143533,W4414170687,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S057,2021,Antelope: A Framework for Dynamic Selection of Congestion Control Algorithms,https://doi.org/10.1109/icnp52444.2021.9651912,W4213209621,INC,method unclear from abstract; assess in full text
+S133,2023,Congestion Control Algorithms for the Internet,https://doi.org/10.1587/bplus.17.68,W4378801318,EC3,non-learning congestion control (no RL/IL)
+S149,2023,Intelligent TCP Congestion Control Policy Optimization,https://doi.org/10.3390/app13116644,W4378905142,INC,PPO TCP CC
+S015,2019,Machine Learning for Internet Congestion Control: Techniques and Challenges,https://doi.org/10.1109/mic.2019.2948520,W2996585810,EC4,survey/overview/position
+S156,2023,Poster: PolyCC: Poly-Algorithmic Congestion Control,https://doi.org/10.1145/3603269.3610846,W4386385273,EC3,non-learning congestion control (no RL/IL)
+S108,2022,End-to-End TCP Congestion Control as a Classification Problem,https://doi.org/10.1109/tr.2022.3172335,W4293195705,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S072,2021,LearningCC: An online learning approach for congestion control,https://doi.org/10.1002/ett.4331,W3190322952,INC,LearningCC bandit
+S181,2024,Congestion Control Algorithms for the Internet – A Secondary Publication,https://doi.org/10.26689/jera.v8i2.6452,W4394012121,EC3,non-learning congestion control (no RL/IL)
+S022,2020,A Low Latency Congestion Control That Can Compete,https://doi.org/10.1145/3426746.3434059,W3110988826,EC3,non-learning congestion control (no RL/IL)
+S241,2025,SafeNetCC: Towards Safety-Oriented Congestion Control,https://doi.org/10.1109/noms57970.2025.11073635,W4412445354,EC3,non-learning congestion control (no RL/IL)
+S176,2024,Astraea: Towards Fair and Efficient Learning-based Congestion Control,https://doi.org/10.1145/3627703.3650069,W4394945925,INC,Astraea (EuroSys'24)
+S179,2024,Comprehensive Analysis of Congestion Control Techniques for WSNs,https://doi.org/10.1109/ic3se62002.2024.10593516,W4400910985,EC4,survey/overview/position
+S246,2025,Toward Non-Expert Customized Congestion Control,https://doi.org/10.1109/icc52391.2025.11160790,W4414538616,EC3,NECC: LLM-assisted customised CCA via BPF (Chapter 6 supplementary set)
+S014,2019,MVFST-RL: An Asynchronous RL Framework for Congestion Control with Delayed Actions,https://doi.org/10.48550/arxiv.1910.04054,W2979501713,INC,MVFST-RL
+S079,2021,Quantifying the transient performance of congestion control algorithms,https://doi.org/10.1145/3472716.3472861,W3195376159,EC3,non-learning congestion control (no RL/IL)
+S206,2024,RNN-based Congestion Control in the Linux Kernel,https://doi.org/10.1109/candarw64572.2024.00028,W4405937060,INC,method unclear from abstract; assess in full text
+S231,2025,Introspective Congestion Control for Consistent High Performance,https://doi.org/10.1145/3689031.3696084,W4408847450,EC3,non-learning congestion control (no RL/IL)
+S193,2024,Impact of Congestion Control on Mixed Reality Applications,https://doi.org/10.1145/3672196.3673395,W4400649744,EC3,non-learning congestion control (no RL/IL)
+S230,2025,INCC: In-Network Congestion Control With Proactive Bottleneck Awareness,https://doi.org/10.1109/ton.2025.3589553,W4412722547,EC3,non-learning congestion control (no RL/IL)
+S117,2022,Learned Internet Congestion Control for Short Video Uploading,https://doi.org/10.1145/3503161.3548436,W4304013671,INC,DuGu imitation of optimal solver (video upload)
+S110,2022,Future Internet Congestion Control: The Diminishing Feedback Problem,https://doi.org/10.1109/mcom.006.2200008,W4285188191,EC3,non-learning congestion control (no RL/IL)
+S174,2024,An eBPF-empowered Congestion Control System with Delay Requirements,https://doi.org/10.1109/smc54092.2024.10831324,W4406614650,EC3,non-learning congestion control (no RL/IL)
+S210,2024,Review of Congestion Control Methods in Named Data Network,https://doi.org/10.62051/ijcsit.v3n1.09,W4399717282,EC4,survey/overview
+S200,2024,Network Congestion Prevention Strategy based on Kalman Filter,https://doi.org/10.1109/isctis63324.2024.10699124,W4403123951,EC3,non-learning congestion control (no RL/IL)
+S228,2025,Evaluating Transport Layer Congestion Control Algorithms: A Comprehensive Survey,https://doi.org/10.1109/comst.2025.3533303,W4406755384,EC4,survey/overview
+S238,2025,Model Predictive Congestion Control for Data Center Networks,https://doi.org/10.1109/tnse.2025.3626049,W4415624267,EC3,non-learning congestion control (no RL/IL)
+S049,2020,Prediction of Network Congestion at Router using Machine learning Technique,https://doi.org/10.1109/discover50404.2020.9278028,W3116596571,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S083,2021,Revisiting TCP congestion control throughput models & fairness properties at scale,https://doi.org/10.1145/3487552.3487834,W3209837111,EC3,non-learning congestion control (no RL/IL)
+S219,2025,An efficient congestion control scheme for railway transport networks,https://doi.org/10.1016/j.simpat.2025.103085,W4407254959,EC3,non-learning congestion control (no RL/IL)
+S114,2022,Impact of RoCE Congestion Control Policies on Distributed Training of DNNs,https://doi.org/10.1109/hoti55740.2022.00021,W4312899083,EC3,non-learning congestion control (no RL/IL)
+S195,2024,In-network congestion control toward enhanced network resource utilization,https://doi.org/10.1109/icoin59985.2024.10572066,W4400277134,EC3,non-learning congestion control (no RL/IL)
+S232,2025,LeoCC: Making Internet Congestion Control Robust to LEO Satellite Dynamics,https://doi.org/10.1145/3718958.3750491,W4413756591,EC3,non-learning congestion control (no RL/IL)
+S052,2021,A Comprehensive Overview of TCP Congestion Control in 5G Networks: Research Challenges and Future Perspectives,https://doi.org/10.3390/s21134510,W3174203314,EC4,survey/overview/position
+S253,2026,"BBR Congestion Control Algorithms: Evolution, Challenges and Future Directions",https://doi.org/10.1145/3793537,W7125698356,EC4,survey/overview
+S016,2019,Mystique: A Fine-Grained and Transparent Congestion Control Enforcement Scheme,https://doi.org/10.1109/tnsm.2019.2935829,W2968354563,EC3,non-learning congestion control (no RL/IL)
+S102,2022,Coexistence of delay-based TCP congestion control: Challenges and opportunities,https://doi.org/10.1109/cqr54764.2022.9918593,W4308097579,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S001,2018,Congestion Control Approaches Applied to Wireless Sensor Networks: A Survey,https://doi.org/10.22061/jecei.2019.5093.188,W2959509289,EC4,survey/overview/position
+S099,2022,Attention Networks for Time Series Regression and Application to Congestion Control,https://doi.org/10.23919/ifipnetworking55013.2022.9829808,W4280607417,EC3,non-learning congestion control (no RL/IL)
+S076,2021,Managing TCP Congestion Control of Smartphones toward Advanced Control,https://doi.org/10.1109/icce-tw52618.2021.9603132,W3215262226,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S142,2023,Gemini: Divide-and-Conquer for Practical Learning-Based Internet Congestion Control,https://doi.org/10.1109/infocom53939.2023.10229069,W4386249621,INC,method unclear from abstract; assess in full text
+S053,2021,A Hybrid Receiver-side Congestion Control Scheme for Web Real-time Communication,https://doi.org/10.1145/3458305.3479970,W3199557041,INC,HRCC hybrid receiver-side RTC CC (RL)
+S068,2021,ICon: How Can We Intelligently Predict TCP Congestion?,https://doi.org/10.1109/icccnt51525.2021.9579708,W3213085903,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S154,2023,PACC: Perception Aware Congestion Control for Real-time Communication,https://doi.org/10.1109/icme55011.2023.00172,W4386160516,INC,method unclear from abstract; assess in full text
+S088,2021,TCP Congestion Avoidance in Data Centres using Reinforcement Learning,https://doi.org/10.23919/icact51234.2021.9370861,W3133904720,INC,RL TCP congestion avoidance in DCs
+S003,2018,Micro Congestion Control: Every Flow Deserves a Second Chance,https://doi.org/10.48550/arxiv.1806.05406,W2808085152,EC3,non-learning congestion control (no RL/IL)
+S056,2021,An Intelligent TCP Congestion Control Method Based on Deep Q Network,https://doi.org/10.3390/fi13100261,W3206415412,INC,TCP-DQN
+S035,2020,End-to-end congestion control approaches for high throughput and low delay in 4G/5G cellular networks,https://doi.org/10.1016/j.comnet.2020.107692,W3110125393,EC3,non-learning congestion control (no RL/IL)
+S061,2021,Configurable Low Delay Congestion Control Scheme for Cellular Networks,https://doi.org/10.1109/bmsb53066.2021.9547114,W3203414888,EC3,non-learning congestion control (no RL/IL)
+S168,2024,A Congestion Control Algorithm for Live Video Streaming in Dynamic Network,https://doi.org/10.1109/cscloud62866.2024.00032,W4401247709,EC3,non-learning congestion control (no RL/IL)
+S235,2025,Low latency data forwarding at in-Network Congestion Control nodes,https://doi.org/10.23919/apcc64555.2025.11279738,W4417337994,EC3,non-learning congestion control (no RL/IL)
+S071,2021,Learning-based congestion control simulator for mobile internet education,https://doi.org/10.1145/3477091.3482760,W3199463238,INC,method unclear from abstract; assess in full text
+S074,2021,MPLibra: Complementing the Benefits of Classic and Learning-based Multipath Congestion Control,https://doi.org/10.1109/icnp52444.2021.9651987,W4200061718,INC,MPLibra (classic + learning MPTCP)
+S103,2022,Copa+: Analysis and Improvement of the Delay-based Congestion Control Algorithm Copa,https://doi.org/10.1109/infocom48880.2022.9796913,W4283209504,EC3,non-learning congestion control (no RL/IL)
+S122,2022,TCP Congestion Avoidance in Data Centres using Reinforcement Learning,https://doi.org/10.23919/icact53585.2022.9728923,W4220812597,INC,duplicate report of S088
+S075,2021,Machine Learning for Broad-Sensed Internet Congestion Control and Avoidance: A Comprehensive Survey,https://doi.org/10.1109/access.2021.3060287,W3129231932,EC4,survey/overview/position
+S044,2020,One Rein to Rule Them All: A Framework for Datacenter-to-User Congestion Control,https://doi.org/10.1145/3411029.3411036,W3048541595,EC3,non-learning congestion control (no RL/IL)
+S096,2022,Achieving Flexible and Lightweight Multipath Congestion Control Through Online Learning,https://doi.org/10.1109/tnsm.2022.3208747,W4296916072,INC,MP-OL bandit multipath CC
+S126,2023,A Review on Congestion Control for Internet of Deep Space Things Communication,https://doi.org/10.1109/icoin56518.2023.10048993,W4321488607,EC4,survey/overview/position
+S153,2023,Optimization of TCP Congestion Control Algorithms Loss-Based in Wireless Network,https://doi.org/10.1007/978-981-19-9697-9_31,W4318619550,EC3,non-learning congestion control (no RL/IL)
+S025,2020,Accurate mathematical modeling and solution of TCP congestion window size distribution,https://doi.org/10.1016/j.comcom.2020.09.010,W3089237931,EC3,non-learning congestion control (no RL/IL)
+S095,2022,A Machine Learning-Based Framework for Dynamic Selection of Congestion Control Algorithms,https://doi.org/10.1109/tnet.2022.3220225,W4312893352,INC,method unclear from abstract; assess in full text
+S224,2025,EchoCC: Refining Learning-Based Congestion Control With WordBook,https://doi.org/10.1109/ton.2025.3566495,W4410359218,INC,method unclear from abstract; assess in full text
+S135,2023,Disco: A Framework for Dynamic Selection of Multipath Congestion Control Algorithms,https://doi.org/10.1109/icnp59255.2023.10355608,W4389988679,INC,method unclear from abstract; assess in full text
+S145,2023,Identifying Network Congestion on SDN-Based Data Centers with Supervised Classification,https://doi.org/10.1007/978-3-031-28451-9_20,W4324284590,EC3,non-learning congestion control (no RL/IL)
+S251,2026,An Experimental Study of Congestion Control in LEO Satellite Networks,https://doi.org/10.23919/ifipnetworking70592.2026.11579033,W7166688850,EC3,non-learning congestion control (no RL/IL)
+S202,2024,Performance Impact of Nested Congestion Control on Transport-Layer Multipath Tunneling,https://doi.org/10.3390/fi16070233,W4400202219,EC3,non-learning congestion control (no RL/IL)
+S199,2024,Mobility-Aware Congestion Control for Multipath QUIC in Integrated Terrestrial Satellite Networks,https://doi.org/10.1109/tmc.2024.3397164,W4396680684,EC3,non-learning congestion control (no RL/IL)
+S263,2026,Improving Evaluation of Heterogenous Congestion Control Algorithm Interactions,https://doi.org/10.1145/3789240.3829156,W7202188582,EC3,non-learning congestion control (no RL/IL)
+S090,2021,The case for model-driven interpretability of delay-based congestion control protocols,https://doi.org/10.1145/3457175.3457179,W3128576194,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S222,2025,"Design, Discussion, and Its Potential Performance Evaluation of In-Network Congestion Control",https://doi.org/10.1587/transinf.2025edp7014,W4410592763,EC3,non-learning congestion control (no RL/IL)
+S111,2022,Hierarchical Congestion Control (HCC): Fairness and Fast Convergence for Data Centers,https://doi.org/10.23919/ifipnetworking55013.2022.9829786,W4286571626,EC3,non-learning congestion control (no RL/IL)
+S213,2024,When Classic Meets Intelligence: A Hybrid Multipath Congestion Control Framework,https://doi.org/10.1109/tnet.2024.3395356,W4396852932,INC,MPLibra journal
+S029,2020,CaaS: Enabling Congestion Control as a Service to Optimize WAN Data Transfer,https://doi.org/10.1007/978-981-15-9129-7_6,W3094514457,EC3,non-learning congestion control (no RL/IL)
+S183,2024,Congestion Control as a Service: Towards Low Latency Mobile Uploading,https://doi.org/10.1109/iwqos61813.2024.10682903,W4402897319,EC3,non-learning congestion control (no RL/IL)
+S159,2023,Research on TCP Congestion Control Strategy Based on Proximal Policy Optimization,https://doi.org/10.1109/itaic58329.2023.10408879,W4391423802,INC,PPO TCP CC
+S138,2023,Enforcing Fairness in the Traffic Policer Among Heterogeneous Congestion Control Algorithms,https://doi.org/10.1109/tnet.2023.3276410,W4380905998,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S198,2024,"Meet Challenges of RTT Jitter, A Hybrid Internet Congestion Control Algorithm",https://doi.org/10.1145/3589334.3645338,W4396758720,EC3,non-learning congestion control (no RL/IL)
+S085,2021,Sliceable Congestion Control for Latency-Aware Bandwidth Allocation in Network Slicing,https://doi.org/10.1109/icc42927.2021.9500605,W3192377482,EC3,non-learning congestion control (no RL/IL)
+S063,2021,Congestion control in high‐speed networks using the probabilistic estimation approach,https://doi.org/10.1002/dac.4766,W3135573997,EC3,non-learning congestion control (no RL/IL)
+S242,2025,TCP Congestion Control Algorithm Using Queueing Theory-Based Optimality Equation,https://doi.org/10.3390/electronics14020263,W4406243284,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S116,2022,Intelligent TCP Congestion Control Scheme in Internet of Deep Space Things Communication,https://doi.org/10.1109/tnse.2022.3212534,W4312421081,INC,OAC-TCPCC deep-space
+S164,2023,TCP-CNNLSTM: Congestion Control Scheme for MANET using AI Technologies,https://doi.org/10.1109/icaiss58487.2023.10250756,W4386920054,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S137,2023,End-to-End Congestion Control as Learning for Unknown Games with Bandit Feedback,https://doi.org/10.1109/icdcs57875.2023.00060,W4387544211,INC,bandit-feedback game CC (theory)
+S243,2025,TCP DCERL+: Improving congestion control in mobile ad hoc networks,https://doi.org/10.1016/j.array.2025.100472,W4413363777,EC3,non-learning congestion control (no RL/IL)
+S129,2023,An INT-based TCP window modulator for congestion control in data center networks,https://doi.org/10.1016/j.jnca.2023.103688,W4381332919,EC3,non-learning congestion control (no RL/IL)
+S139,2023,Enhancing Congestion Control to Improve User Experience in IoT Using LSTM Network,https://doi.org/10.1109/vtc2023-fall60731.2023.10333505,W4389545277,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S220,2025,Anole: A Pragmatic Blend of Classic and Learning-Based Algorithms in Congestion Control,https://doi.org/10.1109/tc.2025.3566872,W4410394262,INC,method unclear from abstract; assess in full text
+S113,2022,How Attention Deep Learning Can Improve Copa Congestion Control Performance,https://doi.org/10.1109/iwcmc55113.2022.9824755,W4280568983,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S273,2026,Towards a Pluggable and Implementation-Agnostic Learning-Based Congestion Control for QUIC,https://doi.org/10.1145/3827616,W7167078089,INC,method unclear from abstract; assess in full text
+S216,2025,A Practical Congestion Control Algorithm for Low-Latency Interactive Video Streaming,https://doi.org/10.1109/ton.2024.3519902,W4406138229,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S260,2026,GFCC: A Global Fast Congestion Control Mechanism Based on Software-Defined Networking,https://doi.org/10.1109/ton.2026.3652966,W7123336520,EC3,non-learning congestion control (no RL/IL)
+S146,2023,Improvement of Copa: Behaviors and Friendliness of Delay-Based Congestion Control Algorithm,https://doi.org/10.1109/tnet.2023.3278677,W4382119294,EC3,non-learning congestion control (no RL/IL)
+S143,2023,HINT: Supporting Congestion Control Decisions with P4-driven In-Band Network Telemetry,https://doi.org/10.1109/hpsr57248.2023.10147977,W4380551571,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S201,2024,Optimized Extreme Gradient Boosting with Remora Algorithm for Congestion Prediction in Transport Layer,https://doi.org/10.5815/ijcnis.2024.03.10,W4399257980,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S269,2026,On the Robustness of Bimodal Congestion Control Against Inconsistent Explicit Feedback,https://doi.org/10.1109/compsac69091.2026.00171,W7203836089,EC3,non-learning congestion control (no RL/IL)
+S121,2022,RETRACTED ARTICLE: Congestion Control of Multipath Parallel Transmission of Data for Blockchain Applications,https://doi.org/10.1080/03772063.2022.2060877,W4224079764,EC5,thesis/book/retracted
+S120,2022,Not a Trade-Off: On the Wi-Fi Energy Efficiency of Effective Internet Congestion Control,https://doi.org/10.23919/wons54113.2022.9764413,W4225087446,EC3,non-learning congestion control (no RL/IL)
+S249,2026,ALCHEMY: Reusing Congestion Control Wisdom for Adaptive QUIC Transport,https://doi.org/10.1109/iwqos70441.2026.11661091,W7204236144,INC,ALCHEMY offline DRL CC selection
+S173,2024,Adaptive congestion control in IoT networks: Leveraging one-way delay for enhanced performance,https://doi.org/10.1016/j.heliyon.2024.e40266,W4404197836,EC3,non-learning congestion control (no RL/IL)
+S185,2024,Context-Aware Cross-Layer Congestion Control for Large-Scale Live Streaming,https://doi.org/10.1109/tnet.2024.3397671,W4396910103,INC,method unclear from abstract; assess in full text
+S258,2026,Experimental Evaluation of MPTCP Congestion Control Algorithms in Multi-Interface Linux Environments,https://doi.org/10.1109/icsmile69273.2026.11519270,W7161779455,EC3,non-learning congestion control (no RL/IL)
+S268,2026,No Single Algorithm Suffices: A Framework-Centric Argument for Adaptive TCP Congestion Control,https://doi.org/10.1109/csnt69054.2026.11502263,W7160647225,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S259,2026,Forewarned is Forearmed: A Responsive Congestion Control with Non-intrusive Uplink Dynamics Capture,https://doi.org/10.1145/3789240.3829143,W7202159698,EC3,non-learning congestion control (no RL/IL)
+S067,2021,Development of a Real-Time Dynamic Weighting Method in Routing for Congestion Control: Application and Analysis,https://doi.org/10.1007/s11277-020-08041-3,W3120905809,EC3,non-learning congestion control (no RL/IL)
+S212,2024,Scalable Verification of Multi-ACK Properties in Loss-Based Congestion Control Implementations,https://doi.org/10.1109/icnp61940.2024.10858512,W4407130112,EC3,non-learning congestion control (no RL/IL)
+S223,2025,Digital Twin-Enabled Intelligent Congestion Control for QUIC-based E2E Communication,https://doi.org/10.1109/vtc2025-fall65116.2025.11310182,W7118553469,INC,digital-twin QUIC CC (magazine)
+S042,2020,NEAT-TCP: Generation of TCP Congestion Control through Neuroevolution of Augmenting Topologies,https://doi.org/10.1109/iccworkshops49005.2020.9145446,W3035490903,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S130,2023,An Improved Soft Computing based Congestion Control in Routing the Data in Wireless Sensor Network,https://doi.org/10.1109/icears56392.2023.10085213,W4362613420,EC2,RL for another task / not CC
+S265,2026,Lynx: Queueing-theoretic Congestion Control Robust to Large Number of Flows,https://doi.org/10.1145/3789240.3822354,W7202175431,EC3,non-learning congestion control (no RL/IL)
+S163,2023,TCCC: A Throughput Consistency Congestion Control Algorithm for MPTCP in Mixed Transmission of Long and Short Flows,https://doi.org/10.1109/tnsm.2023.3242419,W4320005622,EC3,non-learning congestion control (no RL/IL)
+S207,2024,RTCC: Enable End-to-end Sub-RTT Congestion Control for Next-generation Network,https://doi.org/10.1109/secon64284.2024.10934858,W4408898080,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S254,2026,BBR-PP: Accelerating Slow Start for Congestion Control in LEO Satellite Networks,https://doi.org/10.1145/3821162.3821172,W7171353478,EC3,non-learning congestion control (no RL/IL)
+S041,2020,Markov transition and smart cache congestion control for IoT enabled wireless mesh networks,https://doi.org/10.1007/s12083-020-00969-4,W3048630691,EC3,non-learning congestion control (no RL/IL)
+S027,2020,BBR-Based Congestion Control and Packet Scheduling for Bottleneck Fairness Considered Multipath TCP in Heterogeneous Wireless Networks,https://doi.org/10.1109/tvt.2020.3047877,W3116982344,EC3,non-learning congestion control (no RL/IL)
+S162,2023,SmartSBD: Smart shared bottleneck detection for efficient multipath congestion control over heterogeneous networks,https://doi.org/10.1016/j.comnet.2023.110047,W4387212626,EC3,non-learning congestion control (no RL/IL)
+S050,2020,Predictive sliding‐mode congestion control for wireless access networks with singular and non‐singular control gain,https://doi.org/10.1049/iet-cta.2019.1138,W3019166061,EC3,non-learning congestion control (no RL/IL)
+S180,2024,Congestion Avoidance in TCP Based on Optimized Random Forest with Improved Random Early Detection Algorithm,https://doi.org/10.1142/s021946782550055x,W4391542291,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S215,2024,“Comparison of TCP Congestion Control Algorithms: Harnessing the power of Traditional Hybrid and Machine Learning Fusion.”,https://doi.org/10.1109/iceccc61767.2024.10593994,W4400910604,INC,method unclear from abstract; assess in full text
+S115,2022,Improving per-flow fairness by ML-based estimation of competing flows’ congestion control algorithm,https://doi.org/10.1109/icufn55119.2022.9829701,W4286247445,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S196,2024,Intelligent Congestion Control in QUIC for Reliable E2E Communication Network: A Digital Twin-Based Approach,https://doi.org/10.1109/icccworkshops62562.2024.10693770,W4403125750,INC,digital-twin actor-critic QUIC CC
+S275,2026,WiLD: Learning-Based Wireless Loss Diagnosis for Congestion Control With Ultra-Low Kernel Overhead,https://doi.org/10.1109/tnsm.2026.3664422,W7128771963,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S127,2023,A Survey on Congestion Control and Scheduling for Multipath TCP: Machine Learning vs Classical Approaches,https://doi.org/10.15439/2023f9832,W4387619722,EC4,survey/overview/position
+S148,2023,Intelligent Multi-Path TCP Congestion Control for video streaming in Internet of Deep Space Things communication,https://doi.org/10.1016/j.icte.2023.02.006,W4321201217,INC,Q-learning/DQN MPTCP deep-space video
+S261,2026,Genet: A Hybrid Congestion Control Framework with a Dynamic Tenure System and Learned Inference,https://doi.org/10.1109/cisce69494.2026.11504607,W7160828408,INC,method unclear from abstract; assess in full text
+S226,2025,Enhancing Mobile Immersive Streaming Experience via Deadline-Aware Scheduling and Learning-Enhanced Congestion Control,https://doi.org/10.1109/jiot.2025.3621630,W4415222040,INC,method unclear from abstract; assess in full text
+S267,2026,Multi-CDN as a Collective Service: Towards Hot Start in Congestion Control at Scale,https://doi.org/10.1145/3820441.3820445,W7169914691,EC3,non-learning congestion control (no RL/IL)
+S182,2024,Congestion Control Optimization for Short Video Services: User-End and Edge Server Collaboration in Practice,https://doi.org/10.1109/icnp61940.2024.10858531,W4407130113,EC3,non-learning congestion control (no RL/IL)
+S203,2024,Performance evaluation of the congestion severity aware rate regulation (CSRR) algorithm in wireless body area networks,https://doi.org/10.1002/dac.5892,W4401191438,EC3,non-learning congestion control (no RL/IL)
+S112,2022,Honesty aware congestion concerned secured edge disjoint multi path routing with fuzzy rule descriptors,https://doi.org/10.3233/jifs-212841,W4205144313,EC3,non-learning congestion control (no RL/IL)
+S233,2025,"Linear, Fractional, and Expolinear: Fair and Efficient Congestion Control Algorithms for TCP in Lossy and Delay-Sensitive Networks",https://doi.org/10.1109/netsoft64993.2025.11080557,W4412537184,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S187,2024,DRL-based Cross-layer Design for PHY Scheduling and Congestion Control in Anti-jamming Communications,https://doi.org/10.1109/globecom52923.2024.10901431,W4408324790,INC,hierarchical DRL PHY scheduling + CC (anti-jamming)
+S191,2024,Fox Prey Optimisation: A Novel Multi-Objective Approach for Congestion Control in Wired Computer Networks,https://doi.org/10.1109/ictas59620.2024.10507150,W4395448155,EC3,non-learning congestion control (no RL/IL)
+S248,2026,A Concern-Decoupled Architecture for Scenario-Optimized Congestion Control in Large-Scale Live Video CDNs,https://doi.org/10.1109/ton.2026.3651621,W7123357458,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S250,2026,An Efficient Shared-Memory Framework for TCP Vegas Congestion Control Using Clustering and Optimization,https://doi.org/10.1109/netsoft70012.2026.11603474,W7168455942,EC3,non-learning congestion control (no RL/IL)
+S262,2026,ICCP: Toward Congestion Control Agent via Controlling Logic Decoupling and Algorithm Integration,https://doi.org/10.1109/tnsm.2026.3714992,W7169788442,INC,ICCP runtime framework hosting RL CCAs
+S272,2026,SwCC-Sec: Secure Software-Programmable and Per-Packet Congestion Control in RDMA Engine,https://doi.org/10.1109/ton.2026.3728591,W7204518690,EC3,non-learning congestion control (no RL/IL)
+S077,2021,Model-Agnostic and Efficient Exploration of Numerical Congestion Control State Space of Real-World TCP Implementations,https://doi.org/10.1109/tnet.2021.3078161,W3163241440,EC3,non-learning congestion control (no RL/IL)
+S264,2026,LQC: Cross-Layer Congestion Control Algorithm Based on Online Learning and Driver-Queue,https://doi.org/10.1109/wcnc65185.2026.11555580,W7164963291,INC,method unclear from abstract; assess in full text
+S140,2023,Explicit feedback for congestion control in Science DMZ cyberinfrastructures based on programable data-plane switches.,https://doi.org/10.29393/tdudec-15vc1ef15,W4386067224,EC3,non-learning congestion control (no RL/IL)
+S255,2026,Decentralized Adaptive Initial Congestion Window in 5G Using Handshake-Based Flow Classification and Online Learning,https://doi.org/10.1109/tnsm.2026.3698279,W7162814044,INC,method unclear from abstract; assess in full text
+S229,2025,Expanding the Use of Deep Learning for Classification and Control of Congestion in High Band-High BER TCP/IP Networks,https://doi.org/10.1007/s10922-025-09996-z,W4416445815,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S177,2024,Cold Start or Hot Start? Robust Slow Start in Congestion Control with A Priori Knowledge for Mobile Web Services,https://doi.org/10.1145/3589334.3645393,W4396736182,EC3,non-learning congestion control (no RL/IL)
+S271,2026,Rethinking TCP Congestion Control for Lossy Networks: A Loss-Aware Design for Efficient Bandwidth Utilization Beyond Vegas and BBR,https://doi.org/10.2139/ssrn.6826525,W7162325455,EC3,non-learning congestion control (no RL/IL)
+S244,2025,Teaching to Fish Rather Than Giving a Fish: The Concentrator Method of Teaching Classic Congestion Control With Learning-Based module,https://doi.org/10.1109/tmc.2025.3567582,W4410153102,INC,method unclear from abstract; assess in full text
+S225,2025,Enhancing Efficiency with Adaptive Optimized Balancing Factor for MPTCP Congestion Control Using Deep Deterministic Policy Gradient: EE-AOBF-MPTCP-DDPG,https://doi.org/10.22399/ijcesen.1409,W4409592447,INC,DDPG MPTCP balancing factor
+S257,2026,Energy-Efficient Dynamic Retransmission Timeouts with Enhanced Stability for Constrained Application Protocol-Based Internet of Things Networks via Edge Intelligence-Assisted Cross-Layer Congestion Control,https://doi.org/10.3390/electronics15132884,W7166825044,INC,PPO CoAP-QUIC CC
+S002,2018,Copa,https://doi.org/10.1145/3232755.3232783,W2885982708,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S046,2020,PBE-CC,https://doi.org/10.1145/3387514.3405880,W3004648298,EC3,non-learning congestion control (no RL/IL)
+S051,2020,RNN-based Approach to TCP throughput prediction,https://doi.org/10.1109/candarw51189.2020.00080,W3132478463,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S170,2024,A bandwidth delay product based modified Veno for high-speed networks: BDP-Veno,https://doi.org/10.1016/j.jnca.2024.103983,W4401023168,EC3,non-learning congestion control (no RL/IL)
+S030,2020,DCTCP with Front Marking: Decouple ECN Control Loop From The Queuing Delay,https://doi.org/10.1109/hpcc-smartcity-dss50907.2020.00052,W3163237344,EC3,non-learning congestion control (no RL/IL)
+S039,2020,Leveraging Coupled BBR and Adaptive Packet Scheduling to Boost MPTCP,https://doi.org/10.48550/arxiv.2002.06284,W3006515886,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S036,2020,Improving TCP Performance with Intelligent Loss Differentiation for Mobile Adhoc Networks,https://doi.org/10.30534/ijatcse/2020/312942020,W3086816786,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S158,2023,Reduction of Search Space of Unmanned Aerial Vehicles Using Improved Swarm Based Algorithm,https://doi.org/10.1109/icscna58489.2023.10370360,W4390482313,EC3,non-learning congestion control (no RL/IL)
+S124,2022,Towards Efficient Transport Mechanisms in Mobile Internet : Measurement and Optimization,https://doi.org/10.70675/4619ac1bz00e3z4bc8zbf73z331061ab1d5a,W7151568481,EC3,non-learning congestion control (no RL/IL)
+S197,2024,Machine learning-based estimation of the number of competing flows at a bottleneck link,https://doi.org/10.1109/noms59830.2024.10574929,W4400234648,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S227,2025,Enhancing TCP Variants to Estimate Dynamic Bandwidth in Mobile Cloud,https://doi.org/10.1007/s11277-024-11709-9,W4406828499,EC3,non-learning congestion control (no RL/IL)
+S037,2020,Learn-ing-Based On-AP TCP Performance Enhancement,https://doi.org/10.1155/2020/8863420,W3048762404,INC,method unclear from abstract; assess in full text
+S084,2021,SCASys,https://doi.org/10.1145/3472716.3472857,W3196281909,EC3,non-learning congestion control (no RL/IL)
+S073,2021,Leveraging Coupled BBR and Adaptive Packet Scheduling to Boost MPTCP,https://doi.org/10.1109/twc.2021.3085661,W3169243324,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S208,2024,Real-Time TCP Packet Loss Prediction Using Machine Learning,https://doi.org/10.1109/access.2024.3488511,W4403918253,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S266,2026,Managing and Controlling IP Packet Traffic Based on AI at Router on Internet: A Survey,https://doi.org/10.1007/978-3-032-12846-1_3,W7118019614,EC4,survey/overview
+S047,2020,PCC Proteus,https://doi.org/10.1145/3387514.3405891,W3046331189,EC3,non-learning congestion control (no RL/IL)
+S008,2019,An Evaluation of BBR and its variants,https://doi.org/10.48550/arxiv.1909.03673,W2972127834,EC3,non-learning congestion control (no RL/IL)
+S107,2022,Dynamic Load Balancing Techniques in the IoT: A Review,https://doi.org/10.3390/sym14122554,W4311522578,EC4,survey/overview/position
+S188,2024,Deep Reinforcement Learning Approach for Smart Traffic Signal Control System,https://doi.org/10.1109/iccpct61902.2024.10673269,W4402753280,EC1,non-network congestion
+S066,2021,Deep Learning (DL)-based adaptive transport layer control in UAV Swarm Networks,https://doi.org/10.1016/j.comnet.2021.108511,W3205438423,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S055,2021,An Adaptive Control Scheme for Deadline-aware Streaming,https://doi.org/10.1109/icisfall51598.2021.9627345,W4200212799,INC,method unclear from abstract; assess in full text
+S165,2023,TCP-RLLD: TCP with reinforcement learning based loss differentiation for mobile adhoc networks,https://doi.org/10.1007/s11276-023-03254-3,W4321242386,INC,TCP-RLLD RL loss differentiation
+S097,2022,Achieving consistent low latency for wireless real-time communications with the shortest control loop,https://doi.org/10.1145/3544216.3544225,W4290990969,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S171,2024,A robust PID and RLS controller for TCP/AQM system,https://doi.org/10.1016/j.jnca.2024.103947,W4400016701,EC3,non-learning congestion control (no RL/IL)
+S204,2024,Promises and Potential of BBRv3,https://doi.org/10.1007/978-3-031-56252-5_12,W4392964046,EC3,non-learning congestion control (no RL/IL)
+S270,2026,RAN-Aware Delay Compensation for Delay-Sensitive Protocols in Cellular Networks,https://doi.org/10.1145/3774906.3802791,W7160602878,EC3,non-learning congestion control (no RL/IL)
+S239,2025,PulseQUIC: Enhancing QUIC-Based Video Streaming through DRL-Guided Adaptive Pacing,https://doi.org/10.1145/3746441.3748232,W4413348640,INC,PulseQUIC DRL pacing
+S172,2024,A survey of transmission control protocol variants,https://doi.org/10.30574/wjarr.2024.21.3.0886,W4393190362,EC4,survey/overview
+S045,2020,Optimal End-to-End Transmission Control of Satellite Networks with Long Delay and High Bit Error Rate,https://doi.org/10.25103/jestr.136.11,W3127163598,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S021,2019,When to use and when not to use BBR,https://doi.org/10.1145/3355369.3355579,W2981134903,EC3,non-learning congestion control (no RL/IL)
+S026,2020,Adaptive Control of Plug-in Electric Vehicle Charging with Reinforcement Learning,https://doi.org/10.1145/3396851.3397706,W3036138595,EC1,non-network congestion
+S094,2021,Wireless Loss Detection over Fairly Shared Heterogeneous Long Fat Networks,https://doi.org/10.3390/electronics10090987,W3159403351,EC3,non-learning congestion control (no RL/IL)
+S106,2022,Deep Graph Reinforcement Learning Based Intelligent Traffic Routing Control for Software-Defined Wireless Sensor Networks,https://doi.org/10.3390/app12041951,W4213109482,EC2,RL for another task / not CC
+S190,2024,Dynamic Flow Scheduling for DNN Training Workloads in Data Centers,https://doi.org/10.1109/tnsm.2024.3450670,W4401907575,EC2,RL for another task / not CC
+S189,2024,Dragonfly: In-Flight CCA Identification,https://doi.org/10.1109/tnsm.2024.3380417,W4393034325,EC3,non-learning congestion control (no RL/IL)
+S175,2024,Analysis and Improvement of PowerTCP,https://doi.org/10.1109/iwqos61813.2024.10682942,W4402897394,EC3,non-learning congestion control (no RL/IL)
+S136,2023,Dragonfly: In-Flight CCA Identification,https://doi.org/10.23919/ifipnetworking57963.2023.10186432,W4385192302,EC3,non-learning congestion control (no RL/IL)
+S237,2025,Man-Made Heuristics Are Dead. Long Live Code Generators!,https://doi.org/10.1145/3772356.3772413,W4416297995,EC3,LLM code generation for controller policies (Chapter 6 supplementary set)
+S178,2024,Comparative Analysis of Different Transport Layer Protocol Techniques Incognitive Network,https://doi.org/10.2174/0126662558301809240923075109,W4403467806,INC,comparison incl. RL-TCP
+S144,2023,Harnessing ML For Network Protocol Assessment,https://doi.org/10.1145/3626111.3628182,W4388625507,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S065,2021,DTN Trustworthiness for Permafrost Telemetry IoT Network,https://doi.org/10.3390/rs13224493,W3214304346,EC3,non-learning congestion control (no RL/IL)
+S060,2021,Coarse Estimation of Bottleneck Router’s Buffer Size for Heterogeneous TCP Sources,https://doi.org/10.1109/iccworkshops50388.2021.9473644,W3178467246,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S007,2019,A Survey on Recent Advances in Transport Layer Protocols,https://doi.org/10.1109/comst.2019.2932905,W2996688537,EC4,survey/overview/position
+S240,2025,Research on Real-Time Audio and Video Communication Technology for Power Emergency Command Based on Deep Learning,https://doi.org/10.1109/auteee67053.2025.11322086,W7124163075,INC,EPPO PPO RTC CC
+S032,2020,DeepRoute: Herding Elephant and Mice Flows with Reinforcement Learning,https://doi.org/10.1007/978-3-030-45778-5_20,W3017235608,EC2,RL for another task / not CC
+S078,2021,Practical Bandwidth Allocation for Video QoE Fairness,https://doi.org/10.1007/978-3-030-85928-2_41,W3198878419,EC3,non-learning congestion control (no RL/IL)
+S125,2023,A Characterization of Route Variability in LEO Satellite Networks,https://doi.org/10.1007/978-3-031-28486-1_14,W4324009507,EC3,non-learning congestion control (no RL/IL)
+S256,2026,Ditto: A Flexible Transmission Control Mechanism for Diverse User Demands and Network Conditions,https://doi.org/10.1007/978-981-95-8408-6_26,W7152730323,INC,method unclear from abstract; assess in full text
+S100,2022,AutoPlex,https://doi.org/10.1145/3538401.3546596,W4293248156,INC,method unclear from abstract; assess in full text
+S028,2020,CKCD: A Fair and Low Latency Queue Control Algorithm for Heterogeneous TCP Flows,https://doi.org/10.1109/icnc47757.2020.9049742,W3013130170,EC3,non-learning congestion control (no RL/IL)
+S211,2024,SUSS: Improving TCP Performance by Speeding Up Slow-Start,https://doi.org/10.1145/3651890.3672234,W4401176345,EC3,non-learning congestion control (no RL/IL)
+S093,2021,Towards the Fairness of Traffic Policer,https://doi.org/10.1109/infocom42981.2021.9488761,W3154776992,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S274,2026,When BBR Meets Live Streaming,https://doi.org/10.1007/978-981-95-8450-5_2,W7161759923,EC3,non-learning congestion control (no RL/IL)
+S118,2022,Machine Learning Empowered Intelligent Data Center Networking,https://doi.org/10.1007/978-981-19-7395-6_3,W4321448644,EC5,thesis/book/retracted
+S131,2023,"Boosting TCP & QUIC Performance in mmWave, Terahertz, and Lightwave Wireless Networks: A Survey",https://doi.org/10.1109/comst.2023.3301820,W4385517003,EC4,survey/overview
+S152,2023,LiteFlow: Toward High-Performance Adaptive Neural Networks for Kernel Datapath,https://doi.org/10.1109/tnet.2023.3293152,W4384519245,INC,LiteFlow kernel NN deployment for learned CC
+S194,2024,Improve video QoE by practical bandwidth allocation,https://doi.org/10.1007/s00530-024-01577-5,W4404787532,EC3,non-learning congestion control (no RL/IL)
+S019,2019,Robustifying Network Protocols with Adversarial Examples,https://doi.org/10.1145/3365609.3365862,W2985924307,INC,adversarial (RL-generated) network conditions vs Aurora
+S134,2023,Data-Driven Rate Control for RDMA Networks: A Lightweight Online Learning Approach,https://doi.org/10.1109/icdcs57875.2023.00085,W4387544159,INC,Dolce-RC bandit RDMA rate control
+S086,2021,"Survey on Machine Learning for Intelligent End-to-End Communication Toward 6G: From Network Access, Routing to Traffic Control and Streaming Adaption",https://doi.org/10.1109/comst.2021.3073009,W3155413563,EC4,survey/overview/position
+S214,2024,Zhuge: Toward Consistent Low Latency With Minimal Control Loop Delay,https://doi.org/10.1109/tnet.2024.3502822,W4404810148,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S082,2021,Resource Management with AQM,https://doi.org/10.15476/elte.2021.058,W4323360259,EC5,thesis/book/retracted
+S245,2025,Thunder: Minimum I/O Latency of Disaggregated Storage by Packet-Level Write-Through,https://doi.org/10.1109/ton.2025.3587237,W4412560837,EC3,non-learning congestion control (no RL/IL)
+S151,2023,Learning to Maximize Network Bandwidth Utilization with Deep Reinforcement Learning,https://doi.org/10.1109/globecom54140.2023.10437507,W4392153236,EC2,RL for another task / not CC
+S020,2019,Smart Collaborative Automation for Receive Buffer Control in Multipath Industrial Networks,https://doi.org/10.1109/tii.2019.2950109,W2982399527,EC2,RL for another task / not CC
+S192,2024,Game-Theoretic Bandits for Network Optimization With High-Probability Swap-Regret Upper Bounds,https://doi.org/10.1109/tnet.2024.3444593,W4401879294,INC,method unclear from abstract; assess in full text
+S012,2019,Learning in situ: a randomized experiment in video streaming,https://doi.org/10.48550/arxiv.1906.01113,W2975425489,EC2,RL for another task / not CC
+S119,2022,Next-generation network transmission control protocol based on deep learning,https://doi.org/10.21203/rs.3.rs-2072283/v1,W4296848192,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S247,2025,Towards Accurate TCP Flightsize Estimation: A History-Aware Learning Approach,https://doi.org/10.1109/ipccc66453.2025.11304669,W7117482905,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S166,2023,Tackling Deployability Challenges in ML-Powered Networks,https://doi.org/10.1145/3626570.3626605,W4387246896,EC4,survey/overview/position
+S009,2019,DL-TCP: Deep Learning-Based Transmission Control Protocol for Disaster 5G mmWave Networks,https://doi.org/10.1109/access.2019.2945582,W2977839413,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S157,2023,QoS Aware Service Provisioning and Resource Distribution in 4G/5G Heterogeneous Networks,https://doi.org/10.1007/978-981-19-5723-9_3,W4318817466,EC3,non-learning congestion control (no RL/IL)
+S054,2021,A survey on TCP over mmWave,https://doi.org/10.1016/j.comcom.2021.01.032,W3129125171,EC4,survey/overview
+S147,2023,Integrated Sensing and Communication in Obstacle Avoidance System for Autonomous Vehicles,https://doi.org/10.1109/ic-c57619.2023.00022,W4388236114,EC3,non-learning congestion control (no RL/IL)
+S101,2022,BBRv2+: Towards balancing aggressiveness and fairness with delay-based bandwidth probing,https://doi.org/10.1016/j.comnet.2022.108789,W4226049856,EC3,non-learning congestion control (no RL/IL)
+S004,2018,Muses,https://doi.org/10.1145/3234200.3234202,W2887220541,INC,Muses poster (IL; earlier report of Muses)
+S104,2022,Data-Driven Network Path Simulation with iBox,https://doi.org/10.1145/3508026,W4214555249,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S252,2026,AutoNetFlow: An Intelligent Reinforcement Learning Framework for Adaptive Process Automation in Network Traffic Control,https://doi.org/10.1109/iccraids67816.2026.11519680,W7162132383,INC,AutoNetFlow RL packet handling (check scope)
+S098,2022,Aggregating Without Bloating: Hard Times for TCP on Wi-Fi,https://doi.org/10.1109/tnet.2022.3171594,W4285125009,EC3,non-learning congestion control (no RL/IL)
+S013,2019,Learning to Coordinate Video Codec with Transport Protocol for Mobile Video Telephony,https://doi.org/10.1145/3300061.3345430,W2979599265,INC,Concerto: imitation learning joint codec/transport rate (RTC)
+S080,2021,Rate Adaptation and Block Scheduling for Delay-sensitive Multimedia Applications,https://doi.org/10.1145/3474085.3479224,W3207693887,EC3,non-learning congestion control (no RL/IL)
+S069,2021,Investigating indirect impacts of TCP connection on IMS network,https://doi.org/10.33899/edusj.2021.130133.1160,W3172813294,EC3,non-learning congestion control (no RL/IL)
+S031,2020,DeepHop on Edge: Hop-by-hop Routing byDistributed Learning with Semantic Attention,https://doi.org/10.1145/3404397.3404425,W3047729696,EC2,RL for another task / not CC
+S105,2022,Data-Driven Network Path Simulation with iBox,https://doi.org/10.1145/3547353.3522646,W4284878904,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S109,2022,Forecasting TCP's Rate to Speed up Slow Start,https://doi.org/10.1109/ojcs.2022.3208701,W4296912636,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S038,2020,Learning Mixed Traffic Signatures in Shared Networks,https://doi.org/10.1007/978-3-030-50371-0_39,W3035890040,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S128,2023,A Survey on Modern Innovative Secured Transport Layer Protocols on Recent Advances,https://doi.org/10.1109/iccmc56507.2023.10084044,W4362544950,EC4,survey/overview/position
+S081,2021,Redesigning compound TCP with cognitive edge intelligence for WiFi-based IoT,https://doi.org/10.1016/j.future.2021.07.028,W3184063823,EC3,non-learning congestion control (no RL/IL)
+S155,2023,PEPesc: A TCP Performance Enhancing Proxy for Non-Terrestrial Networks,https://doi.org/10.1109/tmc.2023.3269436,W4366967619,EC3,non-learning congestion control (no RL/IL)
+S167,2023,Toward Scalable and Efficient Hierarchical Deep Reinforcement Learning for 5G RAN Slicing,https://doi.org/10.1109/tgcn.2023.3295341,W4384161787,EC2,RL for another task / not CC
+S087,2021,TCP Acknowledgment Optimization in Low Power and Embedded Devices,https://doi.org/10.3390/electronics10060639,W3133582842,EC3,non-learning congestion control (no RL/IL)
+S033,2020,Dynamically Split the Traffic in Software Defined Network Based on Deep Reinforcement Learning,https://doi.org/10.1109/iwcmc48107.2020.9148369,W3045589571,EC2,RL for another task / not CC
+S236,2025,Mahak: An Automated and Efficient Assessment Framework for Internet Control Algorithms,https://doi.org/10.1109/icnp65844.2025.11192397,W4415125527,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S186,2024,"DESiRED — Dynamic, Enhanced, and Smart iRED: A P4-AQM with Deep Reinforcement Learning and In-band Network Telemetry",https://doi.org/10.1016/j.comnet.2024.110326,W4392882382,INC,DESiRED P4 AQM with DRL
+S150,2023,Learning to Configure Converters in Hybrid Switching Data Center Networks,https://doi.org/10.1109/tnet.2023.3294803,W4385453124,EC2,RL for another task / not CC
+S160,2023,Self-Attention-Based Uplink Radio Resource Prediction in 5G Dual Connectivity,https://doi.org/10.1109/jiot.2023.3283490,W4379983804,EC2,RL for another task / not CC
+S209,2024,Reducing First-Frame Delay of Live Streaming by Simultaneously Initializing Window and Rate,https://doi.org/10.1109/icdcs60910.2024.00030,W4401752551,EC3,non-learning congestion control (no RL/IL)
+S023,2020,A Parallel Data Stream Layer for Large Data Workloads on WANs,https://doi.org/10.1109/hpcc-smartcity-dss50907.2020.00119,W3159355823,EC3,non-learning congestion control (no RL/IL)
+S048,2020,Practical Machine Learning-Based Rate Adaptation Solution for Wi-Fi NICs: IEEE 802.11ac as a Case Study,https://doi.org/10.1109/tvt.2020.3004471,W3037382408,EC2,RL for another task / not CC
+S010,2019,Impact of QUIC on fairness in mobile networks,https://doi.org/10.1109/nof47743.2019.9015005,W3009293017,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S169,2024,A Machine Learning-Based Link Quality Assistance at Transport Layer for High-Frequency Networks,https://doi.org/10.1109/icc51166.2024.10622673,W4402156003,EC3,"learning method is supervised/heuristic/other, not RL/IL"
+S217,2025,AI-enabled routing in next generation networks: A survey,https://doi.org/10.1016/j.aej.2025.01.095,W4407846702,EC4,survey/overview/position
+S058,2021,Arsenal: Understanding Learning-Based Wireless Video Transport via In-Depth Evaluation,https://doi.org/10.1109/tvt.2021.3105479,W3195058958,INC,method unclear from abstract; assess in full text
+S205,2024,Quantifying the Merits of Network-Assist Online Learning in Optimizing Network Protocols,https://doi.org/10.1109/iwqos61813.2024.10682895,W4402897100,INC,method unclear from abstract; assess in full text
+S221,2025,Automatic Dual Threshold Tuning for Switch Buffer Sharing in Datacenter Networking,https://doi.org/10.1109/ton.2025.3590965,W4412623638,INC,D2T* DRL switch buffer thresholds
+S034,2020,Efficient Multisource Data Delivery in Edge Cloud With Rateless Parallel Push,https://doi.org/10.1109/jiot.2020.2996800,W3026933316,EC3,non-learning congestion control (no RL/IL)
+S141,2023,Fairness Analysis of Deep Reinforcement Learning based Multi-Path QUIC Scheduling,https://doi.org/10.1145/3555776.3577658,W4379620330,EC2,RL for another task / not CC
+S059,2021,Choose a correct marking position: ECN should be freed from tail mark,https://doi.org/10.1016/j.comnet.2021.108329,W3183400349,EC3,non-learning congestion control (no RL/IL)
+S092,2021,Towards Novel Multipath Data Scheduling For Future IoT Systems: A Survey,https://doi.org/10.48550/arxiv.2105.07578,W3162836714,EC4,survey/overview
+S089,2021,TCP-FLASH - A Fast Reacting TCP for Modern Networks,https://doi.org/10.1109/access.2021.3077612,W3158465148,EC3,"learning method is supervised/heuristic/other, not RL/IL"

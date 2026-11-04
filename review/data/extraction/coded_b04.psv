@@ -1,0 +1,41 @@
+id|inc|name|setting|tags|ctrl|action|aspace|state|reward|family|algo|hybrid|train|sim|emu|real|real_kind|gen|fair|code|contrib|src|result
+R0202|Y|DRLFcc|CELL|high-loss wireless|S|cwnd|NR|NR|NR|NR|DRL combined with fast recovery|Y|ns-3|1|0|0||NR|NR|N|ctrl|AB|+196% goodput and -22.4% RTT vs traditional TCP (ns-3)
+R0203|Y|DRL CC for SDN/NDN satellites|SAT|SDN,NDN|NR|NR|NR|NR|NR|NR|DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|DRL-based CC for SDN and NDN in satellite networks (abstract unavailable; coded from title)
+R0204|Y|A2C UAV bottleneck control|CELL|UAV|C|rate|NR|NR|thr,delay|AC|A2C|N|sim|1|0|0||NR|NR|N|ctrl|AB|+18.9% throughput, -2.8% latency vs Q-learning CC (simulation)
+R0205|EX-EC4|DRL perspectives on IoT reliable transmission|||||||||||||||||||||perspective/tutorial (problem formulation, parameter choices, challenges)
+R0206|EX-EC2|ECSAC-DRO (LEO)|||||||||||||||||||||DRL mainly optimizes routing; compared only against Dijkstra
+R0208|Y|DLCC|IOT|6LoWPAN|S|rate|NR|NR|thr,loss|MARL|DRL in a non-cooperative Markov game with Lagrangian loss constraint|N|sim|1|0|0||NR|Y|N|ctrl|AB|keeps loss below tolerance; more energy-efficient, higher throughput, lower delay, fairer than hybrid CC
+R0211|Y|Spine|WAN||S|param|C|NR|NR|NR|hierarchical: light CC executor + coarse-grained DRL sub-policy generator|Y|emulation|0|1|1|real-world Internet experiments|NR|NR|N|ctrl|AB|consistent performance with >=80% less control overhead than DRL CCs, close to CUBIC
+R0212|Y|Weighted-ensemble DRL CC|GEN||NR|NR|NR|NR|NR|NR|weighted ensemble DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|ensemble-DRL CC (abstract unavailable; coded from title)
+R0213|Y|Scenario-based modelling for DRL (Aurora)|WAN|method|S|rate|C|aurora|thr,delay,loss|PG|PPO with scenario-based reward shaping|N|custom-sim|1|0|0||NR|NR|N|method|FT|engineers inject rules into the reward; Aurora agents comply better with requirements
+R0214|Y|Interval configuration for DRL CC|WAN|analysis|S|rate|C|rttinfl,rttratio,sendratio|qoe|PG|PPO (Aurora-style) with different MI / RTT estimators|N|Pantheon|0|1|?||NR|NR|N|analysis|FT|MI length and RTT estimator change QoS; RTT_jk with n=2 best in most scenarios
+R0215|Y|DeepFC|IOT|PMTU|S|param;cwnd|NR|NR|NR|NR|DRL predicts transmission-unit size coupled with cwnd|N|NR|?|?|?||NR|NR|N|ctrl|AB|-67.8% fragmentation, -20.9% FCT, +20.0% throughput vs benchmarks
+R0216|Y|Implementability of DRL CC (cellular)|CELL|implementability|S|NR|NR|NR|NR|NR|DRL|N|NR|?|?|?||NR|NR|N|method|AB|improving deployability of DRL CC in cellular networks (abstract unavailable; coded from title)
+R0217|Y|Hierarchical MARL queue policies (maritime)|IOT|hop-by-hop,maritime|N|rate;other|NR|queue,sojourn|loss,delay|MARL|hierarchical multi-agent RL (goal-setting + worker policies)|N|sim|1|0|0||NR|NR|N|ctrl|AB|configures local flow-control and shaping to meet loss and sojourn-time goals (simulated queues)
+R0218|LINK|MARLIN (MILCOM)|||||||||||||||||||||linked report of R0225
+R0220|Y|LRCC|WAN|RTC|R|bitrate|NR|NR|qoe|NR|attention-LSTM bandwidth memory + RL|N|sim|1|0|0||NR|NR|N|ctrl|AB|lower loss, higher utilization and QoE than baselines (trace-driven)
+R0221|Y|RMTC|CELL|MP|S|cwnd;split|NR|NR|NR|MARL|real-time multi-agent DRL + pacing|N|NR|?|?|?||NR|Y|N|ctrl|AB|beats learned and heuristic MPTCP schemes; considers TCP-friendliness and HoL blocking
+R0222|Y|Leopard|CELL|MP|S|cwnd|NR|NR|NR|NR|offline RL + online fine-tuning|N|emulation|0|1|1|real-world experiments|Y|NR|N|ctrl|AB|+13% throughput vs DRL-CC; -20% convergence time vs MPCC in new conditions
+R0223|Y|RL CC + streaming FEC (NTN)|SAT|NTN,QUIC,FEC|S|rate|NR|NR|NR|NR|RL rate control with streaming FEC in quic-go|N|NR|?|1|?||NR|NR|N|ctrl|AB|much shorter in-order delivery delay on lossy long-delay links (quic-go)
+R0224|LINK|MA-CC (LNNS)|||||||||||||||||||||linked report of R0155
+R0225|Y|MARLIN|WAN|real-network training|S|cwnd|C|14 features x 7 statistics|delay,other|AC|SAC (infinite-horizon), trained on a real network|N|real|0|1|1|real network with background traffic (training and test)|Y|NR|Y|ctrl|FT|trained on a real network, matches CUBIC on file transfer with little tuning; tactical extension beats CUBIC and Mockets in SATCOM/UHF emulation
+R0226|LINK|MIA (INFOCOM)|||||||||||||||||||||linked report of R0293
+R0227|EX-EC4|ML vs classical CC overview|||||||||||||||||||||overview of challenges and trends; no primary evaluation reported
+R0228|Y|ABBR|WAN|BBR|S|rate|NR|bbrstate|thr,delay|NR|DRL with BBR domain knowledge (Linux kernel)|Y|NR|?|1|?||NR|NR|N|ctrl|AB|-40% delay at ~3% throughput cost vs BBR; best throughput-delay-overhead trade-off
+R0229|LINK|Marten (INFOCOM)|||||||||||||||||||||linked report of R0410
+R0236|EX-EC2|OUT-CONA|||||||||||||||||||||actor-critic RL schedules handovers; congestion handling is rule-based caching
+R0237|Y|PBQ-enhanced QUIC|WAN|QUIC|S|cwnd|C|NR|thr,loss,delay|PG|PPO sets cwnd, BBR sets pacing|Y|ns-3|1|0|?||NR|NR|N|ctrl|FT|higher throughput, lower RTT than QUIC with CUBIC or BBR
+R0238|EX-EC5|BBR improvement with Genet (proposal)|||||||||||||||||||||research proposal without reported results
+R0239|Y|Plume (prioritized trace sampling)|GEN|training method|S|rate|C|aurora|thr,delay,loss|PG+AC|trace clustering and prioritized sampling (algorithm-agnostic)|N|custom-sim|1|?|?||Y|NR|Y|method|FT|rebalancing skewed training traces improves CC, ABR and LB controllers; ABR controller wins on Puffer
+R0241|Y|RLECN|GEN|ECN,SDN|C|ecn|NR|NR|NR|NR|RL via SDN controller|Y|NR|?|?|?||NR|NR|N|ctrl|AB|dynamic ECN threshold outperforms state of the art
+R0242|Y|RSCAT|DC|SDN|C|param|C|NR|fct|AC|actor-critic RL + congestion classification|Y|NR|?|?|?||NR|NR|N|ctrl|AB|lower FCT for DCTCP and CUBIC without end-host changes
+R0243|LINK|ReCoCo (conf.)|||||||||||||||||||||linked report of R0430
+R0246|Y|STOP|GEN|deadline|S|param;rate|NR|NR|other|NR|curriculum-guided DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|joint send-buffer and transmission control for deadlines (abstract unavailable; coded from title)
+R0250|Y|TCP-QNCC|GEN||S|cwnd|D|NR|NR|DQN|DQN|N|NR|?|?|?||NR|NR|N|ctrl|AB|better overall than CUBIC and Vegas across scenarios
+R0251|Y|TRCC|GEN|transfer|S|cwnd|NR|NR|NR|NR|transfer RL (fine-tune a source-network model)|N|NR|?|?|?||Y|NR|N|method|AB|converges quickly in a new network with comparable performance
+R0252|LINK|Verifying generalization (CAV)|||||||||||||||||||||linked report of R0313
+R0253|Y|iCoCoA|IOT|CoAP|S|param|NR|NR|NR|NR|DRL|Y|NR|?|?|?||NR|NR|N|ctrl|AB|DRL CoAP CC for constrained devices beats existing CoAP CC
+R0255|Y|Q-NDN|WAN|NDN|R|cwnd|D|NR|util|TAB|Q-learning|N|ns-3|1|0|0||NR|NR|N|ctrl|FT|fast convergence, full bandwidth use, near-zero loss (ndnSIM)
+R0256|Y|DQN UDP CC for smart grid|IOT|smart-grid,UDP|S|rate|D|NR|NR|DQN|DQN|N|sim|1|0|0||NR|Y|N|ctrl|AB|higher PDR, throughput and fairness in grid and city smart-meter scenarios
+R0257|Y|DRL-CaCC (cache-aware WSN CC)|IOT|WSN,cache|N|cwnd|NR|cacheparams|other|NR|DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|cache parameters as state, cwnd movement as action; 10-40% gains in cache utilization, throughput and delay over cache-based CC (from linked report R0279)
+R0259|Y|A3C-tuned L4S AQM (FreeBSD)|GEN|AQM,L4S|N|aqm|NR|NR|NR|AC|A3C tuning DualQ coupled AQM|Y|testbed|0|1|?||NR|NR|Y|ctrl|AB|A3C tunes L4S DualQ AQM in FreeBSD; beats traditional AQM in experiments

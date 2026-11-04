@@ -1,0 +1,83 @@
+% ----------------------------------------------------------------------
+\section{Review Method}
+\label{sec:method}
+
+We followed the PRISMA~2020 reporting guideline~\cite{page2021prisma}, with the search and snowballing steps adapted to computer science as recommended by Kitchenham and Charters~\cite{kitchenham2007guidelines} and Wohlin~\cite{wohlin2014snowballing}. The whole pipeline (search scripts, raw API responses, every screening decision with its reason, the retrieval log, evidence snippets, and the extraction table) is in the replication package that accompanies this survey (\texttt{review/}). Every number in this section is generated from those files.
+
+\subsection{Eligibility criteria}
+\label{sec:eligibility}
+
+\Cref{tab:eligibility} lists the criteria. In short, we include primary studies from 2016--2026 in which a reinforcement-learning or imitation-learning method (including bandits, offline RL and multi-agent RL) controls congestion in a packet network. The method may set a sending rate, a congestion window or pacing rate, the parameters of a congestion-control algorithm, which algorithm runs, or a network-side congestion signal (ECN marking, AQM, buffer sizing). Studies that \emph{evaluate} such controllers (robustness, fairness, verification, interpretability) and frameworks built specifically for training or testing them are included as well, because they bear directly on \RQ{2} and \RQ{3}. Surveys are not primary studies; they are listed separately and discussed in \cref{sec:related}.
+
+Two boundary decisions deserve mention. First, ``congestion control'' in vehicular networks usually means \emph{channel-load} control of periodic safety beacons (decentralized congestion control, DCC). That is a MAC/facilities-layer problem with different objectives, so we exclude it (EC2) and mention it only in \cref{ch:wireless}. Second, adaptive-bitrate video streaming over TCP is excluded (EC2), but rate control for \emph{real-time} media, which replaces WebRTC's Google Congestion Control, is congestion control and is included.
+
+\begin{table}[t]
+\centering
+\caption{Eligibility criteria.}
+\label{tab:eligibility}
+\small
+\begin{tabularx}{\linewidth}{@{}lY@{}}
+\toprule
+\multicolumn{2}{@{}l}{\textbf{Inclusion} (all must hold)} \\
+IC1 & Packet-switched data network (Internet/WAN, wireless/cellular/satellite, data center, IoT/ad hoc, ICN). \\
+IC2 & An RL/IL method (incl.\ bandits, offline RL, MARL) is the controller, or the object of evaluation, and its decision affects how fast sources send or how congestion is signalled. \\
+IC3 & Primary study: new controller, evaluation/analysis of RL-based CC, or a training/testing framework built for it. \\
+IC4 & Published 2016--2026 in English as a peer-reviewed paper or a preprint with sufficient technical detail. \\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{Exclusion} (any)} \\
+EC1 & ``Congestion'' outside packet networks (road or air traffic, power grids, on-chip interconnects, crowds). \\
+EC2 & RL used for another networking task (routing, traffic engineering, load balancing, scheduling, caching, resource allocation, ABR video, MAC/channel access, V2X beacon-load control). \\
+EC3 & No RL/IL component (supervised prediction, heuristics, fuzzy logic, metaheuristics, Bayesian optimization). \\
+EC4 & Secondary study (survey, review, tutorial, position paper, editorial overview). \\
+EC5 & Not a primary research report (thesis or book chapter duplicating published work, proceedings front matter, machine-generated or retracted text, non-English full text). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Information sources and search}
+\label{sec:search}
+
+The protocol query was
+\begin{center}
+\small\texttt{("reinforcement learning" OR "imitation learning") AND}\\
+\small\texttt{("congestion control" OR "congestion window" OR "ECN")}
+\end{center}
+applied to titles and abstracts of works published 2016--2026. All searches were run on 31~October~2026. Search strings in each source's syntax are given in \cref{app:search}.
+
+\begin{itemize}
+  \item \textbf{OpenAlex} (\nOpenAlex{} records). OpenAlex indexes the records of IEEE Xplore, the ACM Digital Library, Elsevier, Springer, Wiley, MDPI, USENIX and arXiv, and supports Boolean title/abstract search with an open API. We use it as the reproducible stand-in for the subscription databases named in our protocol and attribute each record to its database of origin by DOI prefix: \nOriginIEEE{} IEEE Xplore records (DOI prefix 10.1109) and \nOriginACM{} ACM records (10.1145) among the deduplicated set.
+  \item \textbf{arXiv} (\nArxivMatched{} records). The arXiv API's phrase operator under-retrieves (it returned 44 records for the two core phrases against 239 for the same words unquoted). We therefore retrieved on single terms (\nArxivRetrieved{} records) and applied the exact Boolean phrase query locally, treating hyphens as spaces as the subscription databases do.
+  \item \textbf{USENIX NSDI and ATC proceedings} (\nUsenixMatched{} records). We scraped the title, authors and abstract of all \nUsenixScanned{} papers in NSDI~2016--2026 and USENIX ATC~2016--2025 (there are no ATC~2026 proceedings) and applied the query locally.
+  \item \textbf{Citation searching.} Forward snowballing collected every 2016--2026 work that cites one of ten seed reports of nine landmark studies (Aurora, in its preprint and ICML versions, Orca, Pantheon/Indigo, MVFST-RL, Sage, QTCP, Eagle, TCP-RL and DRL-CC for MPTCP) and mentions ``congestion'' in its title or abstract (\nForwardRetrieved{} works, \nForwardNew{} not already found). Backward snowballing screened the reference lists of sixteen recent included reports with long related-work sections (\nBackwardNew{} new records in range). Finally, \nReviewerKnown{} records known to the reviewers but missed by every search were added and labelled as such.
+\end{itemize}
+
+\paragraph{Deviation from the protocol.} Our proposal named IEEE Xplore, the ACM Digital Library and Scopus as sources. Their programmatic search interfaces require institutional API keys, and their web interfaces block scripted queries, so we did not query them directly. OpenAlex covers the same publisher records under an open license and makes the search reproducible by anyone, but it may miss records whose abstracts are absent from its index. Forward and backward citation searching was added to offset this risk. It recovered several well-known studies that the Boolean query cannot match because their abstracts never use the exact phrases: MVFST-RL's abstract, for instance, spells ``ReinforcementLearning'' without a space. The query strings for the three subscription databases are provided in \cref{app:search} so that the search can be repeated with institutional access.
+
+\subsection{Selection process and data collection}
+\label{sec:selection}
+
+Records were deduplicated by DOI, arXiv identifier and normalized title (fuzzy similarity above 0.93), and then screened on title and abstract against \cref{tab:eligibility}. Records whose eligibility could not be decided from the abstract went on to full-text assessment. Every decision is stored with a reason code and a one-line justification. For full-text assessment and data collection we retrieved open-access versions (arXiv, author copies, open-access publisher PDFs) for \nFulltext{} of the \nSoughtAll{} reports sought. For the remaining reports, eligibility and data items were assessed from the abstract, the publisher metadata and, where available, a machine-generated summary; data items those sources do not report are coded \emph{not reported} (NR) rather than guessed. Screening and extraction used extensive tool support, namely keyword pre-filtering, automatic mining of candidate evidence (algorithm names, simulator and testbed names, code links, and the sentences that define state, action and reward) and an AI assistant. Every coded value is stored with the source it was coded from (full text, abstract, or reviewers' knowledge), so that it can be audited. \Cref{sec:threats} discusses the resulting limitations. Multiple reports of the same study (for example a conference paper and its journal extension) were linked and counted once as a \emph{study}.
+
+\subsection{Data items}
+\label{sec:items}
+
+For each study we coded the items listed in our protocol: the \textbf{setting} (\cref{tab:settings}); the \textbf{control point} (sender, receiver, network device, central controller); the \textbf{RL method} (algorithm and family); the \textbf{state} signals, the \textbf{action} type and the \textbf{reward} terms; the \textbf{training setup}; the \textbf{evaluation environment} at three levels, namely \emph{simulation} (a discrete-event or fluid model, e.g., ns-3, OMNeT++, custom Python simulators), \emph{emulation} (real protocol stacks over emulated links, e.g., Mahimahi, Mininet, NetEm), and \emph{real network} (real links or production traffic, including hardware testbeds); whether \textbf{generalization} to conditions outside the training distribution was explicitly tested; whether \textbf{fairness} or friendliness was evaluated; \textbf{code availability}; and the headline \textbf{result}. Each study's \emph{highest} evaluation level is the most realistic of the three it reports.
+
+\subsection{Study appraisal}
+\label{sec:appraisal}
+
+PRISMA asks reviews to assess the risk of bias of included studies. Tools for that purpose, such as those for clinical trials, do not fit engineering studies whose evidence is an experiment the authors designed. We therefore appraise each design study on five \emph{evidence practices} that determine how far its results can be trusted outside the authors' setup. They are: (i) the evaluation environment is reported; (ii) the evaluation includes emulation with real stacks or a real network; (iii) generalization is tested on conditions outside the training range; (iv) fairness or friendliness is evaluated; and (v) code or artifacts are released. The sum is a study's \emph{practice score} from 0 to 5. It appraises the reported evidence, not the merit of the idea, and it is a lower bound for studies coded from abstracts. \Cref{sec:practices} reports the results.
+
+\subsection{Synthesis}
+\label{sec:synthesis}
+
+We synthesize narratively by setting (Chapters~\ref{ch:internet}--\ref{ch:datacenter}) and quantitatively across the corpus by tabulating the coded items (\cref{sec:corpus,ch:training}). We do not pool effect sizes. Studies use incomparable baselines, links and metrics, so a meta-analysis of reported gains would be misleading. That incomparability is itself one of our findings.
+
+\paragraph{Registration, funding and competing interests.} The review was not registered. Its protocol is our course project proposal, and \cref{sec:search} reports the deviations from it. The review received no funding, and the authors declare no competing interests. \Cref{app:prisma} maps each PRISMA~2020 item to the place where it is reported.
+
+\begin{figure}[p]
+\centering
+\input{generated/prisma_flow}
+\caption{PRISMA~2020 flow diagram. Left: identification via databases and registers. Right: identification via other methods (citation searching and records known to the reviewers). ``Reports assessed'' counts full texts where openly available and abstracts plus metadata otherwise (\cref{sec:method}).}
+\label{fig:prisma}
+\end{figure}

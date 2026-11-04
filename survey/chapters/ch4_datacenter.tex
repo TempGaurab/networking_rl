@@ -1,0 +1,40 @@
+% ======================================================================
+\chapter{Data-Center Networks}
+\label{ch:datacenter}
+% ======================================================================
+
+Data centers differ from the Internet in ways that change what RL is used for. Round-trip times are tens of microseconds, so a neural network cannot sit in the per-packet or even per-RTT loop of a host's transport stack. Switch buffers are shallow, and many-to-one \emph{incast} traffic can overflow them within a few RTTs. RDMA fabrics add lossless operation through Priority Flow Control, with its own pathologies. On the other hand, a single operator controls the hosts, the NICs and the switches. Switches can mark ECN and export in-band telemetry, and workloads are measurable. The classic designs (DCTCP, DCQCN, TIMELY, HPCC, Swift; \cref{sec:cc-primer}) therefore depend on parameters, above all the ECN marking threshold and the rate-increase and rate-decrease constants, that operators tune by hand for their traffic.
+
+The \nChDatacenterN{} data-center studies in the corpus reflect this. More than half of the \nChDatacenterDesign{} design studies are hybrid (\nChDatacenterPctHybrid\%, the highest share of any setting). The agent sets host rates in \nChDatacenterActRate{} studies, but in \nChDatacenterActEcn{} it tunes switch ECN thresholds and in \nChDatacenterActParam{} the parameters of an existing scheme. Multi-agent RL is the most frequently named family (\nChDatacenterMarl{} of the \nChDatacenterFamKnown{} studies that name their algorithm), because switches are natural agents.
+
+% ----------------------------------------------------------------------
+\section{Learning to Tune ECN at the Switch}
+\label{sec:dc-ecn}
+
+Static ECN thresholds face a trade-off. A low threshold keeps queues short and protects latency-sensitive short flows, whereas a high threshold keeps throughput high for large flows. The right setting depends on the traffic mix, which changes over time. ACC~\cite{yan2021acc} made this a multi-agent RL problem. Every switch runs an agent that adjusts its ECN marking threshold at run time, the agents work in a distributed fashion, and they rely only on features of commodity switching chips. Training combines an offline phase with online refinement. In heterogeneous production environments with 300 machines, ACC achieved up to 20\% higher storage IOPS and 30\% lower flow completion time (FCT) than well-tuned static thresholds, and it has been applied in production data centers. ACC is the reference design for this line of work, much as Orca is for the Internet.
+
+Its successors address ACC's independent agents and its generalization. GraphCC~\cite{bernardez2024graphcc} lets switch agents exchange messages through a graph neural network. It beats ACC in every scenario tested, including unseen workloads and link failures, with up to 20\% lower FCT and 38--86\% lower buffer occupancy. EMPRN uses a similar message-passing design with recurrent state~\cite{zaeri2024emprn}. LAECN makes the tuner hierarchical and lightweight~\cite{hu2024lightweight}. BBQ bounds the learned threshold by the per-port buffer to keep incast loss below 3\% in shallow-buffer switches~\cite{zhang2024bbq}. A dual-agent design couples a host-rate agent and a switch-ECN agent through a centralized critic and evaluates it on the BMv2 software switch~\cite{chaurasiya2026cross}. Two further designs go beyond ECN. RSCAT classifies congestion at an SDN controller and lowers FCT for DCTCP and CUBIC without changing end hosts~\cite{diel2023rscat}, and D$^2$T* uses DRL to tune dynamic buffer-sharing thresholds on programmable switches, cutting short-flow FCT by 29\% on average and 62\% at the tail~\cite{liu2025automatic}.
+
+% ----------------------------------------------------------------------
+\section{End-Host and NIC Rate Control}
+\label{sec:dc-host}
+
+\paragraph{RL-CC: from simulation to NICs.} Tessler et al.~\cite{tessler2022rlcc} formulated RDMA congestion control as a multi-agent problem in which every flow runs the same policy. Their policy-gradient method uses an analytic derivative of the reward, and in simulation it beat both RL baselines and production data-center algorithms and generalized to unseen scenarios. The follow-up by NVIDIA~\cite{fuhrer2023nvidia} is the clearest account in the corpus of what deploying a learned controller in hardware requires. The neural policy was too slow for the NIC's microsecond budget, so it was \emph{distilled into decision trees}, which cut inference time by a factor of 500. On live NICs, RL-CC was the only algorithm that did well on all benchmarks across a wide range of flow counts. The path from paper to product thus required both a training method that generalizes across flow counts and a change of model class to fit the datapath. \Cref{ch:deployment} returns to both points.
+
+\paragraph{Other host-side designs.} For RDMA in HPC clusters, Dolce-RC runs a multi-armed bandit on a SmartNIC that selects among rate-increase and rate-decrease rules, cutting MPI message completion time by up to 68\% relative to DCQCN without switch changes~\cite{ye2023data}. RDI combines online and offline learning for RDMA in edge data centers~\cite{wang2025rdma}. Several designs act on the window or rate with ECN or neighbor information, among them DECC~\cite{liu2023decc}, DuetCC~\cite{chengfeng2025duetcc}, NCC~\cite{wang2022ncc} and others~\cite{xiao2022optimal,hassan2021tcp}. Two designs target power-utility data centers~\cite{huang2023acc,chen2025research}. A multi-agent design tunes BBR's parameters inside the data center~\cite{ketabi2023deep}, and a hierarchical selector invokes RL-based algorithm selection only when conditions change, which reduces its overhead by 31\%~\cite{hu2025hierarchical}. SDN controllers with a global view can also allocate rates centrally, with Q-learning or SARSA~\cite{jin2018congestion} or with DRL that anticipates incast~\cite{guo2022congestion}.
+
+% ----------------------------------------------------------------------
+\section{Training Infrastructure}
+\label{sec:dc-infra}
+
+Iroko~\cite{ruffy2018iroko} was an early gym-style environment for data-center congestion control. It emulates dumbbell and fat-tree topologies and exposes them to PPO, REINFORCE and DDPG agents. Its DRL agents beat TCP New Vegas, but its authors also reported training instability and overfitting to the training topology. Those warnings anticipate the generalization work of \cref{ch:training}. Since then, most data-center studies have trained in packet-level simulators, either custom ones or ns-3 and OMNeT++. Only \nChDatacenterCode{} data-center design study releases code, so the results of this subfield are the hardest in the corpus to reproduce.
+
+% ----------------------------------------------------------------------
+\section{Summary}
+\label{sec:dc-summary}
+
+\begin{itemize}
+  \item \textbf{Design (\RQ{1}).} Data-center RL more often acts at a slower timescale and inside the network than Internet RL does. It tunes ECN thresholds, buffer thresholds or the constants of existing algorithms, often with one agent per switch. The one host-side neural controller deployed on NICs had to be distilled into decision trees to fit the microsecond budget, and a SmartNIC design avoids neural inference altogether by letting a bandit choose among rule sets.
+  \item \textbf{Evidence (\RQ{2}).} Of the \nChDatacenterDesign{} design studies, \nChDatacenterSim{} are evaluated in simulation only, \nChDatacenterEmu{} in emulation, \nChDatacenterReal{} on real hardware, and \nChDatacenterNR{} do not report their environment. Only \nChDatacenterGen{} explicitly test generalization.
+  \item \textbf{Deployment (\RQ{3}).} Relative to its size, this is the setting with the strongest deployment evidence: ACC runs in production, and NVIDIA's RL-CC runs on live NICs. Both succeeded because the operator controls the whole fabric and because the learned component is either slow-timescale (ECN tuning) or distilled. Both results come from industry. Of the two, only RL-CC's code is public~\cite{fuhrer2023nvidia}.
+\end{itemize}

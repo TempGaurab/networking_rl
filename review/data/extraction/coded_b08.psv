@@ -1,0 +1,76 @@
+id|inc|name|setting|tags|ctrl|action|aspace|state|reward|family|algo|hybrid|train|sim|emu|real|real_kind|gen|fair|code|contrib|src|result
+S057|EX-EC3|Antelope (ICNP)|||||||||||||||||||||CCA selection by a generic ML model; RL not reported in accessible text
+S095|EX-EC3|Antelope (ToN)|||||||||||||||||||||CCA selection by a generic ML model; RL not reported in accessible text
+S014|Y|MVFST-RL|WAN|QUIC,framework|S|cwnd|D|rtt,queuedelay,acks,prevaction|thr,delay|PG+AC|IMPALA (asynchronous actor-learner, V-trace off-policy correction) with delayed actions|N|Pantheon|0|1|0||NR|NR|Y|framework|FT|non-blocking asynchronous RL for QUIC (mvfst); trained and tested on Pantheon-calibrated emulators
+S206|EX-EC3|RNN-CUBIC|||||||||||||||||||||in-kernel RNN predictor; no RL/IL training reported
+S117|Y|DuGu|WAN|video upload|S|rate|NR|probedmetrics|NA|IL|NN imitates an optimal solver in an omniscient emulator|N|emulation|0|1|1|real-world A/B tests in a short-video upload service|NR|NR|N|deploy|AB|rivals or beats existing CCs in trace-driven tests and real-world A/B tests
+S142|EX-EC3|Gemini|||||||||||||||||||||parameters tuned online by Bayesian optimization (author PDF), not RL
+S053|Y|HRCC|WAN|RTC|R|param|C|NR|qoe|NR|RL agent sets a gain on the heuristic (GCC-like) bandwidth estimate|Y|sim|1|0|0||NR|NR|N|ctrl|AB|higher utilization than fully heuristic at similar delay/loss; beats the fully RL scheme
+S154|EX-EC3|PACC|||||||||||||||||||||CNN quality sensor + rule-based bitrate tuning; no RL/IL
+S088|Y|TCP-RL in an SDN data centre|DC|SDN|S|cwnd|NR|hostmetrics|thr|NR|RL|N|NR|?|?|?||NR|NR|N|ctrl|AB|reduces congestion impact on end-to-end throughput within an SDN data centre
+S056|Y|TCP-DQN|WAN|HPC data migration|S|cwnd|D|NR|thr,delay|DQN|DQN|N|NR|?|?|?||NR|NR|N|ctrl|FT|>2x throughput of CUBIC/HighSpeed/NewReno at similar latency
+S071|EX-EC3|Learning-based CC simulator (education)|||||||||||||||||||||CCA recommendation by a learning model; RL not reported
+S074|LINK|MPLibra (conf.)|||||||||||||||||||||linked report of S213
+S122|LINK|TCP-RL in DCs (dup.)|||||||||||||||||||||linked report of S088
+S096|Y|MP-OL|GEN|MP|S|rate|D|NR|util|BANDIT|multi-armed bandit per subflow, switchable to a traditional method|Y|NR|?|?|1|real networks|NR|Y|N|ctrl|AB|better fairness and utilization than MPTCP variants; resilient to non-congestion loss; higher throughput in real networks
+S224|Y|EchoCC|WAN|overhead reduction|S|rate|||||WordBook lookup replacing learned-CCA inference (action-supervised contrastive learning)|N|emulation|0|1|1|live Internet|NR|NR|N|method|AB|-64% running time and -60% CPU vs the original learned CCA with unchanged throughput/latency
+S135|EX-EC3|Disco|||||||||||||||||||||runtime multipath CCA selection; no learning method reported
+S213|Y|MPLibra|GEN|MP|S|select|D|NR|NR|NR|classic and learned MPTCP decisions compared at run time; MPLibra+ adds a safety module|Y|ns-3|1|0|0||Y|Y|N|ctrl|AB|+40.5% throughput, -29.9% download time vs LIA; MPLibra+ copes with untrained environments
+S159|Y|PPO cwnd strategy|GEN||S|cwnd|NR|NR|NR|PG|PPO with advantage estimation|N|NR|?|?|?||NR|NR|N|ctrl|AB|regulates sending rate and raises throughput vs NewReno and CUBIC
+S116|Y|OAC-TCPCC|SAT|deep space|S|cwnd|C|NR|thr,fct|AC|optimistic actor-critic|N|sim|1|0|0||NR|NR|N|ctrl|AB|large throughput and file-transfer-time gains vs DRL-CC, TP-Planet, FAST, Peach, BBR, CUBIC (simulation)
+S137|Y|LUC (bandit-feedback game CC)|GEN|theory|S|rate|D|NR|thr|BANDIT|swap-regret-minimizing no-regret learning|N|Mininet|0|1|0||NR|Y|N|ctrl|AB|provable convergence to correlated equilibria; fair among LUC flows, TCP-friendly otherwise (Linux kernel)
+S220|Y|Anole|WAN|hybrid|S|rate|NR|NR|NR|NR|hybrid classic + learning-based CC with selection, deprecation and rate inference|Y|emulation|0|1|1|real-world wired and Wi-Fi networks|NR|Y|N|ctrl|AB|~6% higher throughput on real links, 34% lower delay at 48 Mbit/s vs state-of-the-art hybrid CC
+S273|Y|AERO|WAN|QUIC,video|S|rate|NR|NR|NR|NR|learning-based plug-and-play QUIC CC|N|sim|1|0|0||NR|NR|N|ctrl|AB|+~13% VMAF, -30% rebuffering (VoD); +~12% VMAF, -65% stalls (low-latency live)
+S249|Y|ALCHEMY|WAN|QUIC,select|S|select|D|crosslayer|thr,delay|OFF|offline-trained DRL selects expert CCAs with state-preserving midstream switching|Y|emulation|0|1|0||NR|NR|N|ctrl|AB|+~29% scenario-wise winning rate over the best single heuristic across 26 scenarios
+S185|EX-EC3|XCC|||||||||||||||||||||context-aware cross-layer CC without RL/IL
+S223|Y|Digital-twin actor-critic QUIC CC|CELL|5G,QUIC|S|param|NR|NR|thr,delay|AC|actor-critic with a digital-twin network model|Y|sim|1|0|0||NR|NR|N|ctrl|AB|higher throughput, lower delay, faster convergence in 5G simulations
+S215|EX-EC4|Overview of hybrid TCP CC|||||||||||||||||||||overview without primary evaluation
+S196|LINK|Digital-twin QUIC CC (conf.)|||||||||||||||||||||linked report of S223
+S148|Y|Q-learning/DQN MPTCP (deep-space video)|SAT|deep space,MP|S|cwnd|D|NR|thr|DQN|Q-learning and DQN|N|sim|1|0|0||NR|NR|N|ctrl|AB|up to +257%/+73% throughput vs CUBIC/Westwood; better playback than BBR, DRL-TCP, QLE-DS (simulation)
+S261|EX-EC3|Genet (2026 hybrid meta-controller)|||||||||||||||||||||confidence-based tenure + learned rate inference; no RL/IL reported
+S226|EX-EC3|Deadline-aware scheduling + learning-enhanced CC|||||||||||||||||||||ML model of unspecified type invoked selectively; RL not reported
+S187|Y|Hierarchical DRL anti-jamming PHY + CC|CELL|anti-jamming,cross-layer|S|multi|D|NR|qoe,thr|HIER|hierarchical DRL|N|sim|1|0|0||NR|NR|N|ctrl|AB|better QoS and throughput than baselines under jamming (simulation)
+S262|Y|ICCP|GEN|runtime framework|||||||decoupled runtime hosting heuristic and RL CCAs (Sage, Orca, DTCC)|N|both|1|0|1|real-world experiments|-|-|N|framework|AB|asynchronous inference keeps communication and inference robust as concurrent flows scale
+S264|EX-EC3|LQC|||||||||||||||||||||unspecified online learning + classic CC; RL not reported
+S255|EX-EC3|Decentralized adaptive ICW (5G)|||||||||||||||||||||ML flow classification + unspecified online learning; RL not reported
+S244|EX-EC3|Seagull (Concentrator method)|||||||||||||||||||||unspecified online learning module guiding classic CC; RL not reported
+S225|Y|EE-AOBF-MPTCP-DDPG|GEN|MP|S|param|C|bw,delay,loss,cwnd|NR|AC|DDPG optimizes the MPTCP balancing factor|Y|ns-3|1|0|0||NR|Y|N|ctrl|FT|DDPG-tuned balancing factor adapts multipath CC (ns-3)
+S257|Y|PPO CoAP-QUIC cross-layer CC|IOT|CoAP,QUIC,edge|C|cwnd;param|C|NR|delay,thr|PG|PPO with traffic-class-aware reward weights|Y|ns-3|1|0|0||NR|NR|N|ctrl|FT|critical-traffic latency <100 ms, +21.5% energy efficiency, 98.2% PDR (ns-3)
+S037|EX-EC3|Learning-based on-AP TCP enhancement|||||||||||||||||||||prediction-driven AP rate control; no RL/IL
+S055|EX-EC3|HDAS|||||||||||||||||||||heuristic delay-based scheme
+S165|Y|TCP-RLLD|IOT|MANET|S|cwnd|NR|NR|NR|NR|RL-based loss differentiation steering TCP's response|Y|NR|?|?|?||NR|NR|N|ctrl|AB|RL predicts the cause of loss to steer TCP in MANETs (summary only)
+S239|Y|PulseQUIC|WAN|QUIC,video|S|rate|NR|transport,clientfeedback|NR|NR|DRL-guided adaptive pacing|Y|NR|?|?|?||NR|NR|N|ctrl|AB|+~33% client VMAF, -~30% server RTT in low-latency live streaming
+S178|Y|RL-TCP vs QTCP comparison (ns-2)|GEN|comparison|||||||comparison of RL-TCP, QTCP and classic TCPs|N|ns-2|1|0|0||-|-|N|analysis|AB|RL-TCP beats QTCP, NewReno, Hybla and L-TCP on throughput, delay, PDR, jitter, fairness (ns-2)
+S240|Y|EPPO (power emergency RTC)|CELL|RTC,4G|S|bitrate|NR|NR|NR|PG|PPO with parallel sampling, GAE and entropy optimization|N|NR|?|?|?||NR|NR|N|ctrl|AB|p95 RTT 189->175 ms, loss 0.09->0.05%, -77% freezes vs GCC on 4G
+S256|NOTRET|Ditto|||||||||||||||||||||no abstract and no learning term in title; eligibility cannot be confirmed
+S100|EX-EC3|AutoPlex|||||||||||||||||||||automatic CC parameter adjustment; RL/IL not reported
+S152|LINK|LiteFlow (ToN)|||||||||||||||||||||linked report of B085
+S019|Y|Robustifying protocols with adversarial examples|GEN|robustness|||||||RL-generated adversarial network conditions|N|sim|1|0|0||-|-|N|analysis|AB|automatically finds network conditions in which protocols, including learned CC, perform poorly
+S134|Y|Dolce-RC|DC|RDMA,HPC,SmartNIC|S|param|D|NR|fct|BANDIT|multi-armed bandit over rate-increase/decrease rules|Y|testbed|1|0|1|commodity SmartNIC testbed|NR|NR|N|ctrl|AB|up to -68% MPI message completion time vs DCQCN; no switch changes
+S192|Y|Game-theoretic bandits (swap regret)|GEN|theory|S|rate|D|NR|NR|BANDIT|online-mirror-descent multi-agent bandit|N|emulation|0|1|0||NR|NR|N|ctrl|AB|near-optimal swap-regret bounds; correlated equilibria in polynomial rounds; kernel CC emulation
+S004|LINK|Muses (poster)|||||||||||||||||||||linked report of R0157
+S252|Y|AutoNetFlow|GEN|queue management|N|aqm|NR|queue|thr,delay,other|NR|RL agent optimizing packet-handling strategies|N|sim|1|0|0||Y|NR|N|ctrl|AB|better than static or rule-based controllers across topologies (simulation)
+S013|Y|Concerto|WAN|RTC,mobile video telephony|S|bitrate|C|codec,network history|NA|IL|custom imitation learning on >1M logged sessions|N|dataset|0|0|1|operational mobile video-telephony service|NR|NR|N|deploy|AB|incorporated in a production video-telephony app; better quality, multi-fold lower stalls
+S186|Y|DESiRED (P4 AQM)|GEN|AQM,P4,INT|N|aqm|D|int|NR|DQN|DQN with in-band network telemetry|Y|emulation|0|1|0||NR|NR|Y|ctrl|FT|DRL-tuned P4 AQM driven by INT
+S058|Y|Arsenal|CELL|RTC,evaluation|||||||evaluation platform for AI-driven video transport over WiFi/3G/4G/5G traces|N|sim|1|0|0||-|-|N|analysis|AB|uniform comparison of AI-driven RTC CCAs over massive real traces reveals previously unobserved behaviours
+S205|Y|Network-assist MAB|GEN|bandit framework|S|rate|D|NR|thr|BANDIT|network-assisted MAB with discrete and continuous arms|N|sim|1|0|0||NR|NR|N|method|AB|sub-linear regret; applied to channel selection and rate-based TCP CC
+S221|Y|D2T*|DC|buffer,P4|N|buffer|NR|NR|fct|NR|dual-threshold buffer sharing + DRL threshold tuning|Y|testbed|1|0|1|P4-programmable switch|NR|NR|N|ctrl|AB|-29% average and -62% tail FCT for short flows vs state-of-the-art buffer policies
+B007|Y|Q-learning TCP for memory-constrained IoT|IOT|memory-constrained|S|cwnd|D|NR|thr,delay|TAB|Q-learning with function approximation|N|sim|1|0|0||NR|NR|N|ctrl|AB|+33.8% throughput, -12.1% delay vs NewReno; function approximation cuts memory (simulation)
+B036|Y|Pantheon (Indigo)|WAN|testbed,IL|S|cwnd|D|delay,rate,cwnd|NA|IL|imitation learning from emulator oracles (Indigo, LSTM)|N|Pantheon|0|1|1|Pantheon nodes on real Internet paths (wired and cellular, several countries)|NR|NR|Y|framework|FT|community testbed with calibrated emulators; Indigo trained in emulators and evaluated on real paths
+B037|Y|QARC|WAN|RTC|S|bitrate|D|netstatus,predictedquality|qoe|PG|A3C + video-quality prediction network|N|sim|1|0|0||NR|NR|N|ctrl|FT|higher video quality at lower bitrate than baselines (trace-driven)
+B055|EX-EC2|ns3-gym|||||||||||||||||||||generic RL-for-networking framework; CC not studied in the paper (cited as a tool)
+B057|Y|Metis|GEN|interpretability|||||||decision-tree and hypergraph interpretation of DL networking systems|N|sim|1|0|0||-|-|Y|analysis|FT|interprets Aurora (and other DL systems) as decision trees with almost no performance loss
+B064|EX-EC2|Online safety assurance|||||||||||||||||||||illustrated on RL video streaming, not CC (cited in Ch. 6)
+B071|Y|DeepCC (Abbasloo et al.)|CELL|plug-in|S|param|C|delay,thr,cwnd|delay|AC|DDPG plug-in capping the cwnd of existing TCP|Y|Mahimahi|0|1|1|real-world cellular experiments|NR|NR|Y|ctrl|FT|steers CUBIC, BBR, Westwood, Illinois to target delays; beats cellular-specific and clean-slate learned CC
+B074|LINK|Libra (CoNEXT)|||||||||||||||||||||linked report of R0290
+B076|Y|Loki|WAN|RTC|S|bitrate|C|ruleNN,rlfeatures|qoe|NR|RL model fused with a reverse-engineered rule-based model (dual attention), trained online|Y|real|0|0|1|commercial real-time video system (101M sessions)|NR|NR|N|deploy|AB|-26.3-44.2% stall rate and +1.8-2.2% p95 throughput vs rule- and learning-based baselines
+B084|Y|Genet|WAN|curriculum|S|rate|C|aurora|thr,delay,loss|PG|curriculum learning promoting environments where RL lags rule-based baselines|N|custom-sim|1|1|1|real-world network paths|Y|NR|Y|method|FT|curriculum-trained CC/ABR/LB policies beat regularly trained RL and rule-based baselines, incl. real environments
+B085|Y|LiteFlow|GEN|kernel deployment|S|rate|||||kernel fast path for NN inference + userspace slow path for tuning|N|emulation|0|1|?||NR|NR|N|method|AB|+44.4% goodput for NN-based CC vs prior deployment approaches
+B090|Y|Sage|WAN|offline,data-driven|S|cwnd|C|general representation|thr,delay|OFF|offline RL learning from a pool of existing heuristics' trajectories|N|emulation|0|1|1|Internet paths|NR|NR|Y|ctrl|AB|purely data-driven design that learns a better policy than the heuristics it observed (Internet and controlled tests)
+B092|Y|Internet CC benchmarking|WAN|benchmark|||||||general benchmarks ranking Internet CCs incl. learned ones|N|emulation|0|1|0||-|-|N|analysis|FT|common benchmarks rank CC schemes; large room for improvement remains
+B143|Y|OnRL|CELL|RTC,mobile|S|bitrate|C|NR|qoe|NR|online RL: per-user agents, aggregated model, safeguards against risky exploration|Y|real|0|0|1|Alibaba Taobao-live (543 h, 151 users)|Y|NR|N|deploy|AB|-14.2% stalling at similar quality in a month-long production evaluation
+B155|Y|Zwei|WAN|RTC,self-play|S|bitrate|||||self-play RL using the actual requirement as win/loss signal|N|sim|1|0|0||NR|NR|N|method|AB|meets assigned requirements on ABR, live scheduling and RTC better than state of the art
+K001|Y|Canopy|WAN|property-driven|S|cwnd|C|orca|thr,delay,loss,property|AC|Orca (TD3) trained with quantitative certificates from abstract interpretation|Y|Mahimahi|0|1|1|global testbed|Y|NR|Y|ctrl|FT|up to 1.4x higher worst-case property satisfaction than Orca with preserved or better average performance
+K002|Y|Agua|GEN|explainability|||||||concept-based explanations for learned controllers|N||?|?|?||-|-|Y|analysis|KN|human-understandable concept-based explanations for learned controllers incl. CC (and DDoS detection, ABR)
+K003|Y|MMSys'24 offline-RL BWE challenge|WAN|RTC,offline RL,benchmark|R|bitrate|||||offline RL on logged Microsoft Teams data with objective-quality rewards|N|dataset|1|0|1|real-world RTC evaluation|-|-|Y|framework|FT|grand challenge: offline-RL bandwidth estimators reach the top behaviour policy's performance
+K004|Y|MOCC|WAN|multi-objective|S|rate|C|netstats,objectiveweights|thr,delay,loss|PG+MO|PPO with preference sub-network + transfer learning (user- and kernel-space)|N|custom-sim|1|0|1|real-world Internet experiments|Y|Y|N|ctrl|FT|one model competes with the best CCA per objective; adapts to new objectives 14.2x faster than prior work

@@ -1,0 +1,17 @@
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.synctex.gz
+# Python
+__pycache__/
+*.pyc
+.DS_Store
+survey/build/

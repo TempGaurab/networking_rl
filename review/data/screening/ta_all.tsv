@@ -1,0 +1,504 @@
+R0001	INC	DTN node-level CC with Q-learning (Smart-DTN-CC)
+R0002	EC2	generic DRL decision-support method; title not about network CC; no abstract
+R0003	INC	Kanerva-coding RL for TCP CC (precursor of QTCP)
+R0004	EC5	thesis (bandwidth allocation for video QoE)
+R0005	INC	Q-learning/Sarsa flow-based CC in SDN data center
+R0006	EC5	book chapter on ATM usage parameter control
+R0007	EC2	RL ABR video streaming; CC only as cross-layer factor
+R0008	EC5	machine-generated nonsense text (SCIgen-style)
+R0009	INC	Q-learning sending-rate control for wireless multimedia sensor networks (eqCC)
+R0010	INC	RL-TCP / LP-TCP, Q-learning cwnd (NetAI'18)
+R0011	INC	Aurora workshop/arXiv version
+R0012	INC	Iroko RL data-center CC framework
+R0013	INC	actor-critic RL CC algorithm
+R0014	INC	QTCP
+R0015	INC	SmartIW: RL TCP initial window
+R0016	INC	DRL CC for NDN
+R0017	INC	Aurora ICML'19
+R0018	EC5	machine-generated nonsense text (SCIgen-style)
+R0019	INC	title in scope (fairness of RL CC); IEICE tech report, full text to be sought
+R0020	INC	Smart-DTN-CC journal version
+R0021	INC	DRL initial cwnd decision in 5G MEC
+R0022	EC2	SDN rerouting with fuzzy logic + RL (routing)
+R0023	EC5	keyword-only record with no venue, authors' report or abstract
+R0024	EC5	MS thesis (work reported in Aurora papers)
+R0025	EC5	thesis (work reported in Iroko)
+R0026	INC	DRL CC for packetized C-RAN fronthaul
+R0027	INC	TCP-RL: dynamic IW and CC-scheme selection (JSAC'19)
+R0028	EC1	traffic-light control (road traffic)
+R0029	INC	DRL-CC for MPTCP (experience-driven)
+R0030	EC5	dissertation (function approximation RL)
+R0031	INC	RL-based AQM with ECN
+R0032	EC2	UAV positioning
+R0033	EC2	gigapixel video streaming acceleration
+R0034	EC2	computation offloading
+R0035	EC2	RL routing for underwater sensor networks
+R0036	INC	Rax online DRL CC
+R0037	INC	RL approach to improve TCP
+R0038	INC	RL CC in satellite IoT
+R0039	INC	RL bandwidth estimation / CC for real-time communications
+R0040	INC	SmartCC MPTCP
+R0041	INC	TCP-Drinc
+R0042	INC	Verily: formal verification of deep-RL systems (CC among case studies; confirm in full text)
+R0043	INC	RL in-network (switch) CC
+R0044	INC	SDN actor-critic DRL MPTCP subflow cwnd for IoT
+R0045	EC2	resource auto-scaling / orchestration (poster)
+R0046	EC2	IoT status update caching ("ECN" = edge caching node)
+R0047	EC2	edge computing resource allocation
+R0048	INC	Orca
+R0049	INC	multi-task DRL CC in SDN
+R0050	EC2	smart-city communication networks (general DRL)
+R0051	INC	Eagle
+R0052	INC	handover-aware cross-layer DRL TCP for high-speed rail
+R0053	EC2	mobile edge computing architecture
+R0054	EC4	survey (ML for wireless/IoT)
+R0055	INC	DRL CC for high-speed-railway mobile networks
+R0056	INC	LFQ: DRL per-flow queue (buffer) management at routers
+R0057	EC5	thesis (MAC-layer sidelink)
+R0058	EC4	book chapter overview of ML for CC
+R0059	EC2	MARL routing in opportunistic networks
+R0060	EC2	call admission control in cellular networks
+R0061	INC	Partner: DRL MPTCP CC
+R0062	EC1	EV charging in smart grid
+R0063	INC	RL-based AQM performance analysis
+R0064	EC2	multipath packet scheduler
+R0065	INC	Q-learning CC for ICN
+R0066	INC	RL CC in a real environment
+R0067	EC4	editorial / special-issue overview
+R0068	INC	TCP-PPCC PPO CC
+R0069	EC5	thesis (data-intensive systems)
+R0070	EC2	C-V2X resource allocation
+R0071	INC	multi-objective RL for Internet CC (IWQoS'21)
+R0072	EC2	LoRa MAC backoff
+R0073	INC	DRL CC with bandwidth-probing mechanism
+R0074	INC	ACC: DRL ECN-threshold tuning in data centers
+R0075	INC	AUTO: multi-objective RL CC for satellite-ground networks
+R0076	EC2	IAB access/radio resource management
+R0077	INC	DRL AQM for undersea networks
+R0078	EC1	EV charging in smart grid
+R0079	INC	DRL AQM (Computer Networks'21)
+R0080	EC2	router QoS queue policing/shaping configuration (not CC)
+R0081	EC2	in-network caching
+R0082	EC5	thesis
+R0083	EC2	C-V2X channel-load (DCC-style) congestion control
+R0084	INC	DRL handover-aware MPTCP CC (space-ground railway)
+R0085	EC2	C-V2X distributed (channel) congestion control
+R0086	INC	DeepCC (MARL MPTCP CC with self-attention)
+R0087	EC2	data-center load balancing
+R0088	EC2	mMTC access classification
+R0089	INC	Teacher-Student robust DRL networking (check CC case study)
+R0090	EC5	dissertation
+R0091	INC	fairness improvement of RL CC (JIP'21)
+R0092	EC2	NDN forwarding/rerouting strategy
+R0093	EC1	intelligent transportation (road)
+R0094	INC	DRL-CC deadline-aware CC
+R0095	EC4	survey (DRL for traffic engineering)
+R0096	INC	domain-knowledge robust DRL (check CC case study)
+R0097	EC5	thesis
+R0098	EC1	traffic-light control
+R0099	EC2	router QoS queue configuration (journal version of R0080)
+R0100	EC2	HPC task scheduling
+R0101	INC	MOCC arXiv
+R0102	INC	constrained-RL multi-objective CC
+R0103	EC2	random access in cellular IoT
+R0104	EC2	IoT caching status update
+R0105	INC	Owl
+R0106	EC2	fuzzy routing in opportunistic networks
+R0107	INC	policy distillation for fronthaul CC
+R0108	INC	DRL-3R RAN-assisted TCP CC (journal)
+R0109	INC	DRL-3R (conference)
+R0110	INC	RLCC
+R0111	INC	Rainbow DQN TCP CC
+R0112	EC2	access class barring for RAN slicing
+R0113	INC	RL-PSD MPTCP CC for AR/VR
+R0114	INC	Q-learning SDN CC adjusting transmission rate
+R0115	EC1	autonomous-vehicle road traffic (backdoor attack)
+R0116	INC	MARL + transfer learning TCP CC for video
+R0117	INC	TCP-NeuRoc DRL + changepoint detection
+R0118	INC	TD-learning TCP CC in heterogeneous wireless networks
+R0119	EC4	survey (AI for MPTCP)
+R0120	INC	whiRL 2.0 verification of learning-augmented systems (Aurora)
+R0121	EC4	survey (ML meets CC)
+R0122	EC5	journal table-of-contents page
+R0123	EC2	VANET safety-message channel congestion (DCC)
+R0124	INC	DRL CC for TCP incast in SDN DCN
+R0125	INC	ablation study of DRL CC in cellular settings
+R0126	EC2	DetNet packet scheduling
+R0127	EC2	task offloading / NFV placement
+R0128	INC	ICCDRL: DRL selects congestion window in heterogeneous V2X
+R0129	EC2	vehicular beaconing (channel-load) congestion
+R0130	INC	Genet curriculum generation (arXiv)
+R0131	INC	BBR-FIT: RL-tuned BBR
+R0132	INC	BoB: heuristic + RL bandwidth prediction for RTC
+R0133	EC4	tutorial (causal inference)
+R0134	INC	RSCAT: actor-critic RL tunes TCP parameters in SDN DCs (conference)
+R0135	INC	DRL CC for delay-sensitive multimedia
+R0136	EC1	ride-hailing pricing
+R0137	INC	DRL node-level CC in WSN
+R0138	EC2	C-V2X distributed power control (channel congestion)
+R0139	INC	DeepCC multi-objective (ToN'22)
+R0140	EC2	multipath traffic scheduling (QUIC)
+R0141	INC	federated DRL sets per-stream bandwidth weights enforced by CC
+R0142	EC2	virtual network embedding
+R0143	EC2	V2X sidelink channel congestion
+R0144	INC	RL queue management for undersea networks (ns-3)
+R0145	INC	DQN TCP CC fairness enhancement
+R0146	INC	GDMD: RL CC controlling sending rate for multimedia blocks
+R0147	INC	Glider DRL CC
+R0148	INC	adversarial attack on RL-based CC (analysis)
+R0149	INC	HybridRTS rule + RL CC for WebRTC
+R0150	INC	IEACC DRL CC for NDN
+R0151	INC	RL datacenter CC on NVIDIA NICs
+R0152	INC	DQN parameter tuning of AQM
+R0153	EC2	MPTCP subflow steering (path selection)
+R0154	EC1	network-on-chip congestion-aware routing
+R0155	INC	MACC cross-layer multi-agent CC (arXiv)
+R0156	EC4	review
+R0157	INC	Muses: imitation-learned CC distilled to decision trees
+R0158	INC	NCC neighbor-aware RL DC CC
+R0159	INC	policy-based RL CC for power IoT
+R0160	INC	Nuwa-RL receiver-side CC
+R0161	INC	OpenNetLab platform for RL CC in RTC
+R0162	INC	RL rate control for latency-constrained big-data streams
+R0163	INC	Pareto fair CC with online RL
+R0164	INC	Owl journal version (partially oblivious CC)
+R0165	INC	Plume lightweight DRL CC (China Communications)
+R0166	INC	Q-learning adaptive CC
+R0167	INC	RLRBM DRL RAN buffer-size tuning
+R0168	EC2	opportunistic-network routing/replication
+R0169	INC	RL cross-layer CC for RTC
+R0170	INC	RL for datacenter CC (Tessler et al.)
+R0171	EC4	perspective (metaverse)
+R0172	INC	scenario-assisted DRL (Aurora case study; confirm)
+R0173	INC	Spine (CoNEXT'22)
+R0174	INC	symbolic distillation of learned CC
+R0175	INC	TCP-CFCC PPO CC
+R0176	INC	RL local queue-management policies in lossy networks
+R0177	EC1	road traffic congestion
+R0178	EC2	NB-IoT massive access
+R0179	INC	ZiXia ranking-reward RL CC
+R0180	INC	MARL CC in data centers (NOMS'23)
+R0181	INC	MARL CC in SDN
+R0182	INC	distributed RL training system for CC
+R0183	EC2	RL routing
+R0184	EC2	VANET safety-message channel congestion
+R0185	INC	inverse-RL CC with parallel training
+R0186	INC	ACC-RL RL CC in data-center power-distribution networks
+R0187	INC	ACCT learning-based CC with explicit network feedback
+R0188	INC	ACoCo RL CoAP CC
+R0189	INC	CoAP CC for underwater IoT (confirm RL)
+R0190	EC2	routing
+R0191	EC2	NR-V2X MAC
+R0192	INC	DRL adaptive CC for wireless networks (TNSM'23)
+R0193	EC2	WSN routing (Q-routing)
+R0194	EC2	SD-WAN policy / autoscaling
+R0195	INC	Floo: RL-based QoE-oriented CC selection (ATC'23)
+R0196	INC	comparison of RL-based protocols incl. QTCP in ns-3
+R0197	EC1	urban road intersections
+R0198	INC	PeaceKeeper RL-enhanced LEDBAT++
+R0199	INC	CARLA learning-automata data-rate control in WSN-IoT
+R0200	INC	RL CC for multicast QUIC
+R0201	INC	DECC DRL for DCN low latency
+R0202	INC	DRLFcc DRL fast recovery
+R0203	INC	DRL CC for SDN/NDN satellite networks
+R0204	INC	DRL TCP CC in UAV-assisted networks
+R0205	INC	DRL for reliable IoT transmission (title in scope; no abstract)
+R0206	INC	DRL joint CC and routing in LEO satellite networks
+R0207	EC2	C-V2X safety-message power/rate (channel congestion)
+R0208	INC	DRL loss-tolerant CC for 6LoWPAN
+R0209	EC2	tactical networks backpressure routing / QoS
+R0210	EC5	editorial
+R0211	INC	Spine journal version (ToN'23)
+R0212	INC	weighted-ensemble DRL CC (no abstract; title in scope)
+R0213	INC	scenario-based modeling DRL (journal; confirm CC case study)
+R0214	INC	interval configuration of DRL CC
+R0215	INC	DeepFC DRL transmission-unit / cwnd flow control
+R0216	INC	implementability of DRL CC in cellular networks
+R0217	INC	RL hierarchical queue management (maritime)
+R0218	INC	MARLIN tactical environments (MILCOM'23)
+R0219	EC2	RLNC coding-window control (network coding, not CC)
+R0220	INC	LRCC LSTM + RL CC for RTC
+R0221	INC	learning-based MPTCP transmission control
+R0222	INC	Leopard multipath CC
+R0223	INC	RL CC + FEC for non-terrestrial networks
+R0224	INC	MA-CC cross-layer MARL CC (published version of MACC)
+R0225	INC	MARLIN SAC CC (NOMS'23)
+R0226	INC	MIA RL plugin for mmWave TCP
+R0227	INC	ML vs classical CC evaluation
+R0228	INC	adaptive BBR pacing with domain-knowledge RL
+R0229	INC	Marten secure DRL CC
+R0230	EC2	vehicular channel resource allocation
+R0231	EC2	MANET cross-layer scheduling / power control
+R0232	EC5	PhD thesis (Astraea etc. reported elsewhere)
+R0233	EC2	O-RAN traffic steering
+R0234	EC2	memory mapping (not networking)
+R0235	EC2	V2X channel congestion
+R0236	INC	actor-critic DRL CC for wireless mesh IoT (confirm in full text)
+R0237	INC	PBQ-enhanced QUIC DRL CC
+R0238	INC	BBR improvement using Genet RL
+R0239	INC	Plume prioritized trace sampling framework
+R0240	EC1	network-on-chip routing
+R0241	INC	RLECN dynamic ECN threshold
+R0242	INC	RSCAT journal version
+R0243	INC	ReCoCo RL CC for RTC
+R0244	EC5	book chapter
+R0245	EC2	intra-domain routing
+R0246	INC	STOP send-buffer + transmission control via curriculum DRL
+R0247	EC5	thesis
+R0248	EC1	transportation
+R0249	EC2	tactical networks backpressure routing (journal/SoS version)
+R0250	INC	TCP-QNCC DQN CC
+R0251	INC	TRCC transferable RL CC
+R0252	INC	verifying generalization of DNN/DRL policies (Aurora case study; confirm)
+R0253	INC	iCoCoA DRL CoAP CC
+R0254	EC5	non-English grant/project report
+R0255	INC	receiver-driven NDN CC with RL
+R0256	INC	RL CC for smart-grid communication networks
+R0257	INC	cache-aware DRL CC for WSN (journal)
+R0258	EC2	DRL route generation in WSN
+R0259	INC	A3C AQM for L4S in FreeBSD
+R0260	INC	DRL adaptive RED
+R0261	EC4	survey (VANET resource management)
+R0262	EC2	WSN routing
+R0263	EC2	cooperative perception in C-ITS
+R0264	INC	BBQ dynamic-buffer ECN tuning in data centers
+R0265	INC	non-blocking MPTCP CC with single-subflow RL
+R0266	INC	symbolic regression distillation of RL fronthaul CC
+R0267	INC	evaluation of traditional vs learning-based TCP (FCT, sharing)
+R0268	EC2	LEO routing optimisation / load balancing (abstract is routing only)
+R0269	EC2	auction-based route selection with learning automata
+R0270	INC	CrystalBox explanations for DRL controllers (CC case study; confirm)
+R0271	INC	DDPG-MPCC multipath CC
+R0272	EC5	doctoral-consortium summary (work reported in MARLIN papers)
+R0273	INC	DRL CC for file transfer over QUIC
+R0274	EC2	V2X safety-message channel congestion (MARL)
+R0275	INC	EMPRN RL ECN tuning with graph recurrent networks
+R0276	EC1	road traffic (episodic MARL)
+R0277	EC2	SDN traffic-engineering routing
+R0278	EC2	data aggregation and scheduling in WSN
+R0279	INC	DRL-CaCC cache-aware CC (conference version)
+R0280	EC2	serverless analytics orchestration
+R0281	INC	GraphCC graph-learning MARL ECN tuning in data centers
+R0282	INC	Gymir5G OMNeT++ platform with DRL for WebRTC rate control
+R0283	INC	HACC hierarchical CC-algorithm selection
+R0284	INC	HAECN hierarchical ECN tuning
+R0285	EC2	O-RAN user association and scheduling
+R0286	INC	RL CC for LEO satellite networks (Information Sciences)
+R0287	INC	KerDqn in-kernel DRL CC
+R0288	INC	hierarchical adaptive CC selection with low training overhead (conference)
+R0289	EC2	resource allocation ("ECN" = emergency communication network)
+R0290	INC	Libra (ToN'24)
+R0291	INC	lightweight DRL ECN tuning in data centers (TNSM'24)
+R0292	INC	neural-codec-aware RL CC for RTC
+R0293	INC	MIQA mmWave application agent (journal version of MIA)
+R0294	INC	Q-learning CC for multi-band multi-network transmission
+R0295	INC	multi-context RL INT-based CC
+R0296	EC5	dissertation
+R0297	INC	fairness of DRL CC over WiFi
+R0298	INC	DRL CC for deep-space DTN
+R0299	EC2	fronthaul packet scheduling
+R0300	EC2	O-RAN resource management
+R0301	INC	evaluation of traditional vs ML congestion management in wireless (confirm RL detail)
+R0302	INC	RayNet RL protocol simulation platform (journal)
+R0303	INC	DRL WebRTC rate control in 5G
+R0304	INC	RL adaptive TCP CC over wireless
+R0305	INC	systematic evaluation of RL CC fairness/efficiency/responsiveness
+R0306	INC	DDQN dynamic CC for power IoT
+R0307	EC5	thesis
+R0308	INC	Astraea (arXiv)
+R0309	EC2	VANET transmission-power (channel) congestion
+R0310	INC	title ambiguous, network journal, no abstract; check full text
+R0311	EC4	review
+R0312	EC1	VANET road-traffic congestion forecasting
+R0313	INC	verifying OOD generalization (journal version)
+R0314	INC	Zygos reward correction for RL CC
+R0315	EC2	satellite access user association / resource pre-allocation
+R0316	EC2	DQN flow routing in SDWN
+R0317	INC	DQN TCP CC design and evaluation (arXiv'25)
+R0318	EC3	metaheuristic traffic engineering
+R0319	INC	meta-diffusion policy for RTC bandwidth prediction
+R0320	INC	handover-aware DRL CC for LEO satellites
+R0321	EC2	MA-DRL traffic management (routing)
+R0322	INC	RL framework for application-specific TCP CC
+R0323	EC4	review
+R0324	EC4	survey of DRL for CC
+R0325	EC4	survey (MANET routing)
+R0326	EC4	survey (DTN routing)
+R0327	INC	unified DRL CC framework for mobile networks (IWQoS'25)
+R0328	INC	ACKurate-DQN
+R0329	EC2	edge bandwidth/resource allocation
+R0330	EC1	urban mobility
+R0331	EC2	data-center load balancing
+R0332	EC4	literature review
+R0333	EC2	routing
+R0334	EC1	traffic signals
+R0335	EC4	review
+R0336	EC2	SDN traffic engineering
+R0337	EC2	VANET MARL routing/communication strategies
+R0338	INC	Jury fairness generalizability (EuroSys'25)
+R0339	EC2	LAN bandwidth scheduling
+R0340	INC	meta-RL CC protocol
+R0341	EC2	SDN routing / bandwidth management
+R0342	EC2	VANET MARL routing (preprint version)
+R0343	EC2	routing
+R0344	INC	Auto: interpretable multi-objective RL CC service (TSC'25)
+R0345	INC	CC for computing power network (no abstract; check)
+R0346	INC	RDI RL RDMA CC enhancement in edge DCs
+R0347	EC4	review
+R0348	INC	lightweight RL CC with switch-buffer allocation for IoT
+R0349	EC4	review
+R0350	INC	CUBIC-Learn Q-learning
+R0351	INC	heuristic + RL receiver-side CC (arXiv'25)
+R0352	EC4	challenges / position
+R0353	INC	active-inference RL CC for blockchain SDN (check)
+R0354	INC	DNCCQ-PPO for XQUIC
+R0355	INC	DRL-ABS adaptive router buffer sizing
+R0356	INC	debunking RL for RTC bandwidth estimation (analysis)
+R0357	EC1	road traffic
+R0358	EC2	IIoT transmission scheduling
+R0359	INC	design principles for RL CC environments
+R0360	INC	diffusion-enhanced DRL traffic control in 6G (check CC case study)
+R0361	EC2	UASN localisation and congestion-aware routing
+R0362	INC	dual-agent RL bandwidth allocation for SDN congestion (check)
+R0363	INC	DuetCC hybrid DRL DC CC
+R0364	EC3	swarm intelligence (not RL), VANET
+R0365	EC1	toll roads
+R0366	INC	transformer-agent edge-served multipath CC (arXiv'25)
+R0367	INC	DRL CC for wireless networks (LNNS'25)
+R0368	INC	DC buffer management (no abstract; check)
+R0369	EC5	thesis
+R0370	EC5	thesis
+R0371	EC5	edited reprint book
+R0372	EC1	crowd evacuation
+R0373	INC	expert-driven jumpstart RL CC
+R0374	INC	adversarial-policy vulnerabilities of DRL CC
+R0375	EC4	survey (fairness-aware CC)
+R0376	EC1	roundabout road traffic
+R0377	INC	Flecto cross-layer RL CC
+R0378	INC	fusion data-driven/rule CC for power IoT (check RL)
+R0379	INC	HTPCCS CC-scheme selection
+R0380	INC	hierarchical adaptive CC selection for DCNs (TNSM'25)
+R0381	EC2	model retraining in UAV edge computing networks ("ECN" = edge computing network)
+R0382	INC	DRL integration with NDN simulators (tooling; confirm CC use case)
+R0383	INC	intelligent CC for HEO/LEO satellite networks
+R0384	EC2	GAN clustering + ACO routing in WSN (not RL)
+R0385	INC	cross-layer RL CC for mmWave
+R0386	EC2	cloud load balancing
+R0387	EC2	O-RAN user association
+R0388	INC	multipath CC with subflow coupling perception (no abstract; check)
+R0389	INC	KONTROL offloaded data-driven CC for IoT
+R0390	EC2	SDN congestion-avoidance routing
+R0391	INC	semantic CC for cyber-physical systems
+R0392	INC	learning-based vs human-derived CC experimental study
+R0393	INC	MACC MAPPO fair CC (2025)
+R0394	EC4	review (ML for Linux kernel)
+R0395	EC4	survey (ML for AQM)
+R0396	INC	MetaCon meta-RL CC
+R0397	INC	multi-heterogeneous-agent DRL CC for SAGIN
+R0398	EC1	highway traffic
+R0399	INC	Mutant online RL CC (NSDI'25)
+R0400	EC2	V2V channel congestion (rate/power)
+R0401	EC2	ABR video streaming
+R0402	INC	DQN CC in mobile multi-hop wireless networks
+R0403	INC	Pisces multi-agent meta-RL CC
+R0404	EC4	practice overview
+R0405	INC	ProCC programmatic RL CC
+R0406	INC	Q-AIMD
+R0407	INC	RL CC for wireless mesh networks
+R0408	INC	RL + Bayesian-network CC in power data centers
+R0409	EC4	review
+R0410	INC	safety in DRL CC via expert refinement (journal version of Marten)
+R0411	EC2	VANET MARL routing/power/scheduling
+R0412	EC1	urban road traffic
+R0413	INC	TransAL-CC asynchronous RL multipath CC for power IoT
+R0414	EC1	urban road traffic
+R0415	INC	DRL CC for home WiFi
+R0416	EC5	non-English report (English version R0492)
+R0417	INC	DRL CC in VANET (no abstract; check whether transport CC)
+R0418	INC	delay-based RL RTT-jitter-aware CC (no abstract)
+R0419	INC	MARL CC protocol for wireless ad-hoc networks
+R0420	INC	hierarchical intelligent CC for space-air-ground-sea networks (no abstract)
+R0421	EC4	review
+R0422	EC2	task offloading
+R0423	EC4	scoping review
+R0424	INC	fuzzy + RL AQM
+R0425	EC1	power-grid congestion
+R0426	EC2	VANET MARL (routing/channel)
+R0427	EC2	federated MARL multipath routing
+R0428	INC	DDPG CC for distributed MQTT brokers
+R0429	INC	DRL CUBIC parameter optimisation
+R0430	INC	ReCoCo journal version
+R0431	EC1	semiconductor-fab vehicle congestion
+R0432	INC	hierarchical meta-agent CC for IP networks
+R0433	INC	MADRL MPTCP CC for IIoT
+R0434	INC	symbolic property analysis of DRL agents (CC case study)
+R0435	INC	centralized RL augmenting end-to-end CC
+R0436	INC	multi-agent deep Q-learning CC for high-speed networks
+R0437	EC5	corrupted record (title/abstract mismatch)
+R0438	EC2	routing
+R0439	INC	CCLab adversarial testing of CCs
+R0440	EC2	generic DRL network optimisation framework
+R0441	INC	RL-assisted ECN dynamic threshold for TT&C microbursts (check)
+R0442	EC4	review
+R0443	INC	cross-layer dual-agent RL CC in P4 data planes
+R0444	INC	DDPG-enhanced BLUE AQM
+R0445	EC5	dissertation (DARA, reported in R0447)
+R0446	INC	DTCC decision-transformer CC
+R0447	INC	DARA DQN computes per-path cwnd fractions (multipath)
+R0448	INC	DRL cross-layer semantic CC
+R0449	INC	DRL least-squares CC (check)
+R0450	EC4	overview of DRL for communication networks
+R0451	INC	continuous-action PPO TCP CC for UAV FANETs
+R0452	EC1	traffic signals
+R0453	INC	DRL CC for urban multi-hop vehicular networks (check)
+R0454	EC5	book chapter
+R0455	INC	digital-twin robust RL CC (check)
+R0456	EC1	road traffic (drone + LLM)
+R0457	INC	DynA learning-augmented GCC
+R0458	EC4	review (RL-based CC)
+R0459	EC2	SDN path selection
+R0460	EC2	generic traffic prediction/optimisation
+R0461	INC	emulation vs simulation for LEO CC incl. RL-based CC
+R0462	EC4	survey (BLUE AQM + DRL)
+R0463	EC5	thesis
+R0464	EC4	book chapter overview
+R0465	INC	explainable cache-aware DRL CC in robotic sensor networks
+R0466	INC	Fair-Aurora
+R0467	EC2	cognitive radio routing
+R0468	INC	GenRL-CC GAN-augmented DRL RTC CC
+R0469	EC2	vehicular cloud resource management (DCC replacement)
+R0470	INC	HAN uncertainty-aware DRL CC
+R0471	EC1	vehicle route optimisation
+R0472	INC	SDN-based PPO CC in VANETs (no abstract; check)
+R0473	EC1	VLSI floor planning
+R0474	INC	Learn-to-Probe
+R0475	INC	lightweight RL TCP CC for multi-hop ad hoc networks
+R0476	EC2	MPQUIC scheduler
+R0477	EC2	MARL routing / traffic splitting
+R0478	EC2	5G resource allocation
+R0479	EC2	MANET-VANET cooperative communication
+R0480	EC2	D2D spectrum management
+R0481	EC2	data-center prefetching
+R0482	EC3	Bayesian optimisation of node-level CC parameters (not RL)
+R0483	INC	NetRL NetGRPO multi-task RL incl. CC
+R0484	EC3	neural congestion prediction and scheduling (not RL)
+R0485	EC4	systematic review
+R0486	INC	online RL from existing heuristics (journal; Mutant line)
+R0487	INC	POCC pessimistic offline RL CC
+R0488	INC	LLM fine-tuned with RL from verifiable rewards for CC (poster)
+R0489	INC	PPO Aurora-style CC high-BDP scaling analysis
+R0490	INC	PRO-SAC RTC CC with delayed feedback
+R0491	INC	Pacemaker ceiling-normalised RL CC
+R0492	INC	RL adaptive CC performance enhancement
+R0493	INC	Q-learning selection of queuing discipline (AQM)
+R0494	EC4	systematic review
+R0495	EC5	thesis (LLMs for CC; noted for Chapter 6)
+R0496	EC2	RDMA traffic scheduling
+R0497	INC	RL-assisted hybrid CC for 6G
+R0498	EC2	C-V2X DCC
+R0499	INC	SAC-BBR (check whether RL is used)
+R0500	INC	Syntra (minimax synthesis distilled via imitation learning)
+R0501	EC2	SDN traffic engineering
+R0502	INC	Astraea journal version (ToN'26)
+R0503	INC	transformer multipath CC for wireless uplinks
+R0504	INC	SymDistill-CC distilled DRL CC for power IoT

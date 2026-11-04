@@ -1,0 +1,356 @@
+id,arm,title,fulltext,source
+R0001,databases,Smart Congestion Control for Delay- and Disruption Tolerant Networks,not_retrieved,
+R0003,databases,Dynamic Generalization Kanerva Coding in Reinforcement Learning for TCP Congestion Control Design,not_retrieved,
+R0005,databases,A congestion control method of SDN data center based on reinforcement learning,not_retrieved,
+R0009,databases,Energy-Efficient QoS-Based Congestion Control for Reliable Communications in Wireless Multimedia Sensor Networks,not_retrieved,
+R0010,databases,Improving TCP Congestion Control with Machine Intelligence,not_retrieved,
+R0011,databases,Internet Congestion Control via Deep Reinforcement Learning,retrieved,https://arxiv.org/pdf/1810.03259
+R0012,databases,Iroko: A Framework to Prototype Reinforcement Learning for Data Center Traffic Control,retrieved,https://arxiv.org/pdf/1812.09975
+R0013,databases,Network congestion control algorithm based on Actor-Critic reinforcement learning model,not_retrieved,
+R0014,databases,QTCP: Adaptive Congestion Control with Reinforcement Learning,not_retrieved,
+R0015,databases,Reducing Web Latency Through Dynamically Setting TCP Initial Window with Reinforcement Learning,not_retrieved,
+R0016,databases,A Deep Reinforcement Learning Based Congestion Control Mechanism for NDN,not_retrieved,
+R0017,databases,A Deep Reinforcement Learning Perspective on Internet Congestion Control,not_retrieved,
+R0019,databases,A Study on Fairness of Reinforcement Learning Based Congestion Control,not_retrieved,
+R0020,databases,A congestion control framework for delay- and disruption tolerant networks,not_retrieved,
+R0021,databases,Adaptive Online Decision Method for Initial Congestion Window in 5G Mobile Edge Computing Using Deep Reinforcement Learning,not_retrieved,
+R0026,databases,Deep Reinforcement Learning Applied to Congestion Control in Fronthaul Networks,not_retrieved,
+R0027,databases,Dynamic TCP Initial Windows and Congestion Control Schemes Through Reinforcement Learning,not_retrieved,
+R0029,databases,Experience-Driven Congestion Control: When Multi-Path TCP Meets Deep Reinforcement Learning,not_retrieved,
+R0031,databases,Intelligent Active Queue Management Using Explicit Congestion Notification,retrieved,https://arxiv.org/pdf/1909.08386
+R0036,databases,Rax: Deep Reinforcement Learning for Congestion Control,not_retrieved,
+R0037,databases,Reinforcement Learning Approach to Improve Transmission Control Protocol,not_retrieved,
+R0038,databases,Reinforcement Learning Based Congestion Control in Satellite Internet of Things,not_retrieved,
+R0039,databases,Reinforcement learning for bandwidth estimation and congestion control in real-time communications,retrieved,https://arxiv.org/pdf/1912.02222
+R0040,databases,SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks,not_retrieved,
+R0041,databases,TCP-Drinc: Smart Congestion Control Based on Deep Reinforcement Learning,retrieved,https://ieeexplore.ieee.org/ielx7/6287639/8600701/08610116.pdf
+R0042,databases,Verifying Deep-RL-Driven Systems,not_retrieved,
+R0043,databases,A Distributed Reinforcement Learning Approach to In-network Congestion Control,not_retrieved,
+R0044,databases,A Software Defined Network Based Fuzzy Normalized Neural Adaptive Multipath Congestion Control for the Internet of Things,not_retrieved,
+R0048,databases,Classic Meets Modern,not_retrieved,
+R0049,databases,Congestion Control in SDN-Based Networks via Multi-Task Deep Reinforcement Learning,not_retrieved,
+R0051,databases,Eagle: Refining Congestion Control by Learning from the Experts,not_retrieved,
+R0052,databases,Handover-Aware Cross-Layer Aided TCP With Deep Reinforcement Learning for High-Speed Railway Networks,not_retrieved,
+R0055,databases,Improving the Congestion Control Performance for Mobile Networks in High-Speed Railway via Deep Reinforcement Learning,not_retrieved,
+R0056,databases,LFQ: Online Learning of Per-flow Queuing Policies using Deep Reinforcement Learning,retrieved,https://arxiv.org/pdf/2007.02735
+R0061,databases,Objective-Oriented Resource Pooling in MPTCP: A Deep Reinforcement Learning Approach,not_retrieved,
+R0063,databases,Performance Analysis of Active Queue Management Algorithm Based on Reinforcement Learning,retrieved,https://www.iieta.org/download/file/fid/44030
+R0065,databases,Q‐learning‐based congestion control strategy for information‐centric networking,not_retrieved,
+R0066,databases,Reinforcement Learning Based Congestion Control in a Real Environment,not_retrieved,
+R0068,databases,TCP-PPCC: Online-Learning Proximal Policy for Congestion Control,not_retrieved,
+R0071,databases,A Multi-objective Reinforcement Learning Perspective on Internet Congestion Control,not_retrieved,
+R0073,databases,A TCP Congestion Control Algorithm Based on Deep Reinforcement Learning Combined with Probe Bandwidth Mechanism,not_retrieved,
+R0074,databases,ACC,not_retrieved,
+R0075,databases,AUTO: Adaptive Congestion Control Based on Multi-Objective Reinforcement Learning for the Satellite-Ground Integrated Network,retrieved,https://www.usenix.org/system/files/atc21-li-xu.pdf
+R0077,databases,Active Queue-Management Policies for Undersea Networking via Deep Reinforcement Learning,not_retrieved,
+R0079,databases,An intelligent scheme for congestion control: When active queue management meets deep reinforcement learning,not_retrieved,
+R0084,databases,Deep Reinforcement Learning for Handover-Aware MPTCP Congestion Control in Space-Ground Integrated Network of Railways,not_retrieved,
+R0086,databases,DeepCC: Multi-Agent Deep Reinforcement Learning Congestion Control for Multi-Path TCP Based on Self-Attention,not_retrieved,
+R0089,databases,Enabling Robust DRL-Driven Networking Systems via Teacher-Student Learning,not_retrieved,
+R0091,databases,Fairness Improvement of Congestion Control with Reinforcement Learning,retrieved,https://www.jstage.jst.go.jp/article/ipsjjip/29/0/29_592/_pdf
+R0094,databases,Learning Based Deadline Aware Congestion Control,not_retrieved,
+R0096,databases,Leveraging Domain Knowledge for Robust Deep Reinforcement Learning in Networking,not_retrieved,
+R0101,databases,Multi-Objective Congestion Control,retrieved,https://arxiv.org/pdf/2107.01427
+R0102,databases,Multi-Objective Network Congestion Control via Constrained Reinforcement Learning,not_retrieved,
+R0105,databases,Owl: Congestion Control with Partially Invisible Networks via Reinforcement Learning,retrieved,https://iris.polito.it/bitstream/11583/2862067/1/INFOCOM%202021-camera%20ready.pdf
+R0107,databases,Policy Distillation for Real-Time Inference in Fronthaul Congestion Control,retrieved,https://ieeexplore.ieee.org/ielx7/6287639/9312710/09618962.pdf
+R0108,databases,RAN Information-Assisted TCP Congestion Control Using Deep Reinforcement Learning With Reward Redistribution,not_retrieved,
+R0109,databases,RAN Information-assisted TCP Congestion Control via DRL with Reward Redistribution,not_retrieved,
+R0110,databases,RLCC: Practical Learning-based Congestion Control for the Internet,not_retrieved,
+R0111,databases,Rainbow deep reinforcement learning for TCP congestion control,not_retrieved,
+R0113,databases,Reinforcement Learning-Based Mobile AR/VR Multipath Transmission With Streaming Power Spectrum Density Analysis,not_retrieved,
+R0114,databases,Research on SDN Congestion Control Based on Reinforcement Learning,retrieved,https://iopscience.iop.org/article/10.1088/1742-6596/2010/1/012164/pdf
+R0116,databases,TCP Congestion Control with Multiagent Reinforcement and Transfer Learning,not_retrieved,
+R0117,databases,TCP-NeuRoc: Neural Adaptive TCP Congestion Control With Online Changepoint Detection,not_retrieved,
+R0118,databases,Temporal Difference Learning Model for TCP End-To-End Congestion Control in Heterogeneous Wireless Networks,not_retrieved,
+R0120,databases,Verifying learning-augmented systems,not_retrieved,
+R0124,databases,A congestion control algorithm based on deep reinforcement learning in SDN data center networks,not_retrieved,
+R0125,databases,Ablation Study of Deep Reinforcement Learning Congestion Control in Cellular Network Settings,not_retrieved,
+R0128,databases,An Intelligent Congestion Control Strategy in Heterogeneous V2X Based on Deep Reinforcement Learning,retrieved,https://www.mdpi.com/2073-8994/14/5/947/pdf?version=1655957307
+R0130,databases,Automatic Curriculum Generation for Learning Adaptation in Networking,retrieved,https://arxiv.org/pdf/2202.05940
+R0131,databases,BBR-FIT: An Intelligent BBR based on the Reinforcement Learning to Boost the Network Efficiency over Time-Varying Networks,not_retrieved,
+R0132,databases,BoB: Bandwidth Prediction for Real-Time Communications Using Heuristic and Reinforcement Learning,retrieved,https://ieeexplore.ieee.org/ielx7/6046/4456689/09926128.pdf
+R0134,databases,Data classification and reinforcement learning to avoid congestion on SDN-based data centers,not_retrieved,
+R0135,databases,Deep Reinforcement Learning Based Congestion Control for Delay-Sensitive Multimedia Streaming,not_retrieved,
+R0137,databases,Deep reinforcement learning based sensing bidirectional nodes congestion control mechanism in wireless sensor networks,not_retrieved,
+R0139,databases,DeepCC: Bridging the Gap Between Congestion Control and Applications via Multiobjective Optimization,retrieved,https://arxiv.org/pdf/2107.08617
+R0141,databases,Distributed Bandwidth Allocation Strategy for QoE Fairness of Multiple Video Streams in Bottleneck Links,retrieved,https://www.mdpi.com/1999-5903/14/5/152/pdf?version=1652856107
+R0144,databases,Evaluation of Reinforcement-Learning Queue Management Algorithm for Undersea Acoustic Networks Using ns-3,not_retrieved,
+R0145,databases,Fairness Enhancement of TCP Congestion Control Using Reinforcement Learning,not_retrieved,
+R0146,databases,GDMD: A Transmission Control Scheme with Block Information-aware for Delay Sensitive Multimedia,not_retrieved,
+R0147,databases,Glider: rethinking congestion control with deep reinforcement learning,not_retrieved,
+R0148,databases,"Good Learning, Bad Performance: A Novel Attack Against RL-Based Congestion Control Systems",not_retrieved,
+R0149,databases,HybridRTS: A Hybrid Congestion Control Framework with Rule and Reinforcement Learning for Low-Latency WebRTC Live Video Streaming,not_retrieved,
+R0150,databases,IEACC: An Intelligent Edge-Aided Congestion Control Scheme for Named Data Networking With Deep Reinforcement Learning,not_retrieved,
+R0151,databases,Implementing Reinforcement Learning Datacenter Congestion Control in NVIDIA NICs,retrieved,https://arxiv.org/pdf/2207.02295
+R0152,databases,Intelligent Parameter Tuning using Deep Q-network in Adaptive Queue Management Systems,not_retrieved,
+R0155,databases,MACC: Cross-Layer Multi-Agent Congestion Control with Deep Reinforcement Learning,retrieved,https://arxiv.org/pdf/2206.01972
+R0157,databases,Muses: Enabling Lightweight Learning-Based Congestion Control for Mobile Devices,not_retrieved,
+R0158,databases,NCC: Neighbor-aware Congestion Control based on Reinforcement Learning for Datacenter Networks,not_retrieved,
+R0159,databases,Noninvasive real-time traffic and congestion control algorithm based on policy,not_retrieved,
+R0160,databases,Nuwa-RL: A Reinforcement Learning based Receiver-side Congestion Control Algorithm to Meet Applications Demands over Dynamic Wireless Networks,not_retrieved,
+R0161,databases,OpenNetLab: Open Platform for RL-based Congestion Control for Real-Time Communications,not_retrieved,
+R0162,databases,Optimal Rate Control for Latency-constrained High Throughput Big Data Applications,not_retrieved,
+R0163,databases,Pareto: Fair Congestion Control With Online Reinforcement Learning,not_retrieved,
+R0164,databases,Partially Oblivious Congestion Control for the Internet via Reinforcement Learning,retrieved,https://iris.polito.it/bitstream/11583/2972499/1/FINAL%20VERSION.pdf
+R0165,databases,Plume: Lightweight and generalized congestion control with deep reinforcement learning,not_retrieved,
+R0166,databases,Q Learning Algorithm Is ImplementedImprove Network Qos Using Adaptive Congestion Control,not_retrieved,
+R0167,databases,RLRBM: A Reinforcement Learning-based RAN Buffer Management Scheme,not_retrieved,
+R0169,databases,Reinforcement Learning Based Cross-Layer Congestion Control for Real-Time Communication,not_retrieved,
+R0170,databases,Reinforcement Learning for Datacenter Congestion Control,retrieved,https://arxiv.org/pdf/2102.09337
+R0172,databases,Scenario-assisted Deep Reinforcement Learning,retrieved,https://arxiv.org/pdf/2202.04337
+R0173,databases,Spine,not_retrieved,
+R0174,databases,Symbolic Distillation for Learned TCP Congestion Control,retrieved,https://arxiv.org/pdf/2210.16987
+R0175,databases,TCP-CFCC: Proximal Policy Optimization for Congestion Control,not_retrieved,
+R0176,databases,Toward Congestion Control in Lossy Networks via Local Queue-Management Policies,not_retrieved,
+R0179,databases,ZiXia: A Reinforcement Learning Approach via Adjusted Ranking Reward for Internet Congestion Control,not_retrieved,
+R0180,databases,A Deep Reinforcement Learning Framework for Optimizing Congestion Control in Data Centers,retrieved,https://arxiv.org/pdf/2301.12558
+R0181,databases,A Multi-Agent Reinforcement Learning Approach for Congestion Control in network based-SDN,not_retrieved,
+R0182,databases,A Novel Distributed Reinforcement Learning Training System for Network Congestion Control,not_retrieved,
+R0185,databases,A novel Congestion Control algorithm based on inverse reinforcement learning with parallel training,not_retrieved,
+R0186,databases,ACC-RL: Adaptive Congestion Control Based on Reinforcement Learning in Power Distribution Networks with Data Centers,retrieved,https://www.mdpi.com/1996-1073/16/14/5385/pdf?version=1689341290
+R0187,databases,ACCT: An Intelligent Congestion Control Mechanism for Future Internet,retrieved,https://discovery.ucl.ac.uk/10192377/1/a915-kheirkhah%20final.pdf
+R0188,databases,ACoCo: An Adaptive Congestion Control Approach for Enhancing CoAP Performance in IoT Network,not_retrieved,
+R0189,databases,AI-Enabled Reliable Delay Sensitive Communication Mechanism in IoUT Using CoAP,not_retrieved,
+R0192,databases,An Adaptive Congestion Control Protocol for Wireless Networks Using Deep Reinforcement Learning,not_retrieved,
+R0195,databases,Bridging the Gap between QoE and QoS in Congestion Control: A Large-scale Mobile Web Service Perspective,not_retrieved,
+R0196,databases,COMPARISON AND IMPLEMENTATION OF PROTOCOLS TO COMPENSATE FOR CONGESTION IN NETWORKS WITH REINFORCEMENT LEARNING,not_retrieved,
+R0198,databases,Combining reinforcement learning method to enhance LEDBAT++ over diversified network environments,not_retrieved,
+R0199,databases,Congestion Avoidance in Intelligent Transport Networks Based on WSN-IoT through Controlling Data Rate of Zigbee Protocol by Learning Automata,retrieved,https://www.mdpi.com/2079-9292/12/9/2070/pdf?version=1683358300
+R0200,databases,Congestion Control Design of Multicast QUIC Based on Reinforcement Learning,not_retrieved,
+R0201,databases,DECC: Achieving Low Latency in Data Center Networks With Deep Reinforcement Learning,not_retrieved,
+R0202,databases,DRLFcc: Deep Reinforcement Learning-empowered Congestion Control Mechanism for TCP Fast Recovery in High Loss Wireless Networks,not_retrieved,
+R0203,databases,Deep Reinforcement Learning Based Congestion Control Mechanism for SDN and NDN in Satellite Networks,not_retrieved,
+R0204,databases,Deep Reinforcement Learning Based TCP Congestion Control in UAV Assisted Wireless Networks,not_retrieved,
+R0205,databases,"Deep Reinforcement Learning Perspectives on Improving Reliable Transmissions in IoT Networks: Problem Formulation, Parameter Choices, Challenges, and Future Directions",not_retrieved,
+R0206,databases,Deep Reinforcement Learning for Congestion Control and Routing Optimization in LEO Satellite Networks,not_retrieved,
+R0208,databases,Deep-Reinforcement-Learning-Aided Loss-Tolerant Congestion Control for 6LoWPAN Networks,not_retrieved,
+R0211,databases,Efficient DRL-Based Congestion Control With Ultra-Low Overhead,not_retrieved,
+R0212,databases,Efficient congestion control in communications using novel weighted ensemble deep reinforcement learning,not_retrieved,
+R0213,databases,Enhancing Deep Reinforcement Learning with Scenario-Based Modeling,not_retrieved,
+R0214,databases,Fine Tuning of Interval Configuration for Deep Reinforcement Learning Based Congestion Control,retrieved,https://jiki.cs.ui.ac.id/index.php/jiki/article/download/1159/496
+R0215,databases,Fine-Grained Flow Control Agent on Path MTU for IoT Software,not_retrieved,
+R0216,databases,Implementability improvement of deep reinforcement learning based congestion control in cellular network,not_retrieved,
+R0217,databases,Learning Hierarchical Management Policies for Data Queues with Applications to Maritime Networking,not_retrieved,
+R0218,databases,Learning to Sail Dynamic Networks: The MARLIN Reinforcement Learning Framework for Congestion Control in Tactical Environments,retrieved,https://arxiv.org/pdf/2306.15591
+R0220,databases,Learning-Based Congestion Control Assisted by Recurrent Neural Networks for Real-Time Communication,not_retrieved,
+R0221,databases,Learning-Based Real-Time Transmission Control for Multi-Path TCP Networks,not_retrieved,
+R0222,databases,Leopard: A Pragmatic Learning-Based Multipath Congestion Control for Rapid Adaptation to New Network Conditions,not_retrieved,
+R0223,databases,Low-Delay Transmission for Non-Terrestrial Networks Based on FEC and Reinforcement Learning,not_retrieved,
+R0224,databases,MA-CC: Cross-Layer Congestion Control via Multi-agent Reinforcement Learning,not_retrieved,
+R0225,databases,MARLIN: Soft Actor-Critic based Reinforcement Learning for Congestion Control in Real Networks,retrieved,https://arxiv.org/pdf/2302.01301
+R0226,databases,MIA: A Transport-Layer Plugin for Immersive Applications in Millimeter Wave Access Networks,not_retrieved,
+R0227,databases,Machine Learning vs. Classical Methods: Evaluating Congestion Control Performance in the Transport Layer,error:ConnectTimeout,
+R0228,databases,Making TCP BBR Pacing Adaptive With Domain Knowledge Assisted Reinforcement Learning,not_retrieved,
+R0229,databases,Marten: A Built-in Security DRL-Based Congestion Control Framework by Polishing the Expert,not_retrieved,
+R0236,databases,Ornstein Uhlenbeck Cache Obliviousness Neural Congestion Control in Wireless Network for IOT Data Transmission,retrieved,https://doi.org/10.22247/ijcna/2023/218512
+R0237,databases,PBQ-Enhanced QUIC: QUIC with Deep Reinforcement Learning Congestion Control Mechanism,retrieved,https://www.mdpi.com/1099-4300/25/2/294/pdf?version=1676530997
+R0238,databases,Plausibility of BBR as CUBIC’S Replacement and proposed improvement to BBR using GENET,not_retrieved,
+R0239,databases,Plume: A Framework for High Performance Deep RL Network Controllers via Prioritized Trace Sampling,retrieved,https://arxiv.org/pdf/2302.12403
+R0241,databases,RLECN—A learning based dynamic threshold control of ECN,not_retrieved,
+R0242,databases,RSCAT: Towards zero touch congestion control based on actor–critic reinforcement learning and software-defined networking,not_retrieved,
+R0243,databases,ReCoCo: Reinforcement learning-based Congestion control for Real-time applications,retrieved,https://iris.polito.it/bitstream/11583/2979663/2/ReCoCo_HPSR_2023.pdf
+R0246,databases,STOP: Joint send buffer and transmission control for user-perceived deadline guarantee via curriculum guided-deep reinforcement learning,not_retrieved,
+R0250,databases,TCP-QNCC: congestion control algorithm based on deep Q-network,not_retrieved,
+R0251,databases,TRCC: Transferable Congestion Control With Reinforcement Learning,not_retrieved,
+R0252,databases,Verifying Generalization in Deep Learning,retrieved,https://arxiv.org/pdf/2302.05745
+R0253,databases,iCoCoA: intelligent congestion control algorithm for CoAP using deep reinforcement learning,not_retrieved,
+R0255,databases,A Receiver-Driven Named Data Networking (NDN) Congestion Control Method Based on Reinforcement Learning,retrieved,https://www.mdpi.com/2079-9292/13/23/4609/pdf?version=1732269892
+R0256,databases,A Reinforcement Learning Congestion Control Algorithm for Smart Grid Networks,not_retrieved,
+R0257,databases,A cache-aware congestion control mechanism using deep reinforcement learning for wireless sensor networks,not_retrieved,
+R0259,databases,Active Queue Management in L4S with Asynchronous Advantage Actor-Critic: A FreeBSD Networking Stack Perspective,not_retrieved,
+R0260,databases,Adaptive Random Early Detection Using Deep Reinforcement Learning for Enhanced Congestion Control in Dynamic TCP/IP Networks,retrieved,https://journal.alsalam.edu.iq/index.php/ajest/article/download/440/165
+R0264,databases,BBQ: Dynamic-Buffer-Driven Automatic ECN Tunning in Datacenter,not_retrieved,
+R0265,databases,Breaking the Inertial Thinking: Non-Blocking Multipath Congestion Control Based on the Single-Subflow Reinforcement Learning Model,not_retrieved,
+R0266,databases,Closed-form congestion control via deep symbolic regression,retrieved,https://arxiv.org/pdf/2405.01435
+R0267,databases,Comparing Link Sharing and Flow Completion Time in Traditional and Learning-based TCP,not_retrieved,
+R0270,databases,CrystalBox: Future-Based Explanations for Input-Driven Deep RL Systems,retrieved,https://arxiv.org/pdf/2302.13483
+R0271,databases,DDPG-MPCC: An Experience Driven Multipath Performance Oriented Congestion Control,retrieved,https://www.mdpi.com/1999-5903/16/2/37/pdf?version=1706017459
+R0273,databases,Deep Reinforcement Learning-Based Congestion Control for File Transfer over QUIC,not_retrieved,
+R0275,databases,EMPRN: Reinforcement Learning-based ECN Tuning Using Message Passing Graph Recurrent Networks for Datacenters,not_retrieved,
+R0279,databases,Enhancing WSN Performance with DRL-CaCC: An Adaptive Cache-Aware Congestion Control Mechanism,not_retrieved,
+R0281,databases,GraphCC: A practical graph learning-based approach to Congestion Control in datacenters,retrieved,https://arxiv.org/pdf/2308.04905
+R0282,databases,Gymir5G: A Simulation Platform to Study Data Transmission over WebRTC in 5G Networks with Deep Learning Assistance,not_retrieved,
+R0283,databases,HACC: Hierarchical Automatic Selection of Congestion Control Algorithms,not_retrieved,
+R0284,databases,HAECN: Hierarchical Automatic ECN Tuning with Ultra-Low Overhead in Datacenter Networks,not_retrieved,
+R0286,databases,Intelligent congestion control of data transmission in low Earth orbit satellite networks based on reinforcement learning: Analysis and optimization,not_retrieved,
+R0287,databases,KerDqn: Deep Reinforcement Learning Enhanced Congestion Control in Kernel,not_retrieved,
+R0288,databases,Learning-Based Hierarchical Adaptive Congestion Control with Low Training Overhead,not_retrieved,
+R0290,databases,Libra: A Congestion Control Framework for Diverse Application Preferences and Network Conditions,not_retrieved,
+R0291,databases,Lightweight Automatic ECN Tuning Based on Deep Reinforcement Learning With Ultra-Low Overhead in Datacenter Networks,not_retrieved,
+R0292,databases,Loss-tolerant neural video codec aware congestion control for real time video communication,retrieved,https://arxiv.org/pdf/2411.06742
+R0293,databases,MIQA: An Application Agent for Immersive Content Delivery Over Millimeter Waves,not_retrieved,
+R0294,databases,Multi-Band and Multi-Network Cooperative Transmission Algorithm for Wireless Resource Optimization,not_retrieved,
+R0295,databases,Multi-Context-aware RL approach towards INT-based Congestion Control Algorithm,retrieved,https://biblio.ugent.be/publication/01JJXWM2Q7M9E1PPNTTZQKE8G9/file/01JJXWP1366G3M60FY712NAB0Y.pdf
+R0297,databases,On the Fairness of Internet Congestion Control over WiFi with Deep Reinforcement Learning,retrieved,https://www.mdpi.com/1999-5903/16/9/330/pdf?version=1725963673
+R0298,databases,Optimizing deep-space DTN congestion control via deep reinforcement learning,not_retrieved,
+R0301,databases,Proactive Congestion Management in Next-Generation Wireless Networks: Evaluating Traditional Approaches Against Machine Learning Models,not_retrieved,
+R0302,databases,RayNet: A Simulation Platform for Developing Reinforcement Learning-Driven Network Protocols,retrieved,https://arxiv.org/pdf/2302.04519
+R0303,databases,Real-time rate control of WebRTC video streams in 5G networks: Improving quality of experience with Deep Reinforcement Learning,not_retrieved,
+R0304,databases,Reinforcement Learning based Adaptive Congestion Control for TCP over Wireless Networks,retrieved,https://doi.org/10.22247/ijcna/2024/39
+R0305,databases,"Reinforcement Learning-based Congestion Control: A Systematic Evaluation of Fairness, Efficiency and Responsiveness",not_retrieved,
+R0306,databases,Research on Reinforcement Learning Algorithm for Dynamic Congestion Control of Power Internet of Things in Complex Environment,not_retrieved,
+R0308,databases,Towards Fair and Efficient Learning-based Congestion Control,retrieved,https://arxiv.org/pdf/2403.01798
+R0310,databases,Troubleshooting solution for traffic congestion control,not_retrieved,
+R0313,databases,Verifying the Generalization of Deep Learning to Out-of-Distribution Domains,retrieved,https://arxiv.org/pdf/2406.02024
+R0314,databases,Zygos: A Reward Correction Mechanism for Reinforcement Learning-based Congestion Control,not_retrieved,
+R0317,databases,"A Deep Reinforcement Learning-Based TCP Congestion Control Algorithm: Design, Simulation, and Evaluation",retrieved,https://arxiv.org/pdf/2508.01047
+R0319,databases,A Generalizable and Expressive Meta-Diffusion Policy for RTC Bandwidth Prediction,not_retrieved,
+R0320,databases,A Handover-Aware Congestion Control Algorithm Assisted by DRL in LEO Satellite Networks,not_retrieved,
+R0322,databases,A Reinforcement Learning Framework for Application-Specific TCP Congestion-Control,retrieved,https://arxiv.org/pdf/2505.07042
+R0327,databases,A Unified Framework for DRL-Based Congestion Control to Optimize QoS Over Mobile Networks,not_retrieved,
+R0328,databases,ACKurate-DQN: Adaptive Throughput-Based Congestion Control Using Deep Reinforcement Learning,not_retrieved,
+R0338,databases,Achieving Fairness Generalizability for Learning-based Congestion Control with Jury,not_retrieved,
+R0340,databases,Adaptive Congestion Control Protocol based on Meta-Reinforcement Learning for Data Communication Networks,retrieved,https://doi.org/10.5120/ijca2025924423
+R0344,databases,An Adaptive and Interpretable Congestion Control Service Based on Multi-Objective Reinforcement Learning,not_retrieved,
+R0345,databases,An Intelligent Congestion Control Algorithm for Computing Power Network,not_retrieved,
+R0346,databases,An RDMA Congestion Control Enhancement Framework for Edge Datacenters,not_retrieved,
+R0348,databases,Bandwidth Fair Share Using Reinforcement Learning for IoT Networks,not_retrieved,
+R0350,databases,CUBIC-Learn: A Reinforcement Learning Approach to CUBIC Congestion Control,not_retrieved,
+R0351,databases,Combining Heuristic and Reinforcement Learning to Achieve the Low-latency and High-throughput Receiver-side Congestion Control,retrieved,https://arxiv.org/pdf/2502.16498
+R0353,databases,Congestion Control for Blockchain-enabled SDN in Web 4.0: A Reinforcement Learning Approach through Active Inference,not_retrieved,
+R0354,databases,DNCCQ-PPO: A dynamic network congestion control algorithm based on deep reinforcement learning for XQUIC,not_retrieved,
+R0355,databases,DRL-ABS: Deep Reinforcement Learning-Based Adaptive Buffer Sizing for Edge Routers in AIoT Networks,not_retrieved,
+R0356,databases,Debunking Reinforcement Learning for Bandwidth Estimation in Real-Time Communications: When a Simple Regressor Suffices,retrieved,https://iris.polito.it/bitstream/11583/3007597/1/Debunking_RL_for_BWE_in_RTC__When_a_Simple_Regressor_Suffices__CNSM___camera_ready_.pdf
+R0359,databases,Design Principles for Reinforcement Learning in Congestion Control Environments,not_retrieved,
+R0360,databases,Diffusion Model Enhanced Deep Reinforcement Learning for Traffic Control in 6G Networks,not_retrieved,
+R0362,databases,Dual-Agent Reinforcement Learning for Adaptive Bandwidth Allocation and Congestion Control in SDN,retrieved,https://doi.org/10.22266/ijies2025.0831.24
+R0363,databases,DuetCC: A Hybrid Data Driven and Model Guided Congestion Control for Data Center Networks,not_retrieved,
+R0366,databases,Edge-Served Congestion Control for Wireless Multipath Transmission with a Transformer Agent,retrieved,https://arxiv.org/pdf/2512.20186
+R0367,databases,Effective Congestion Control Algorithm for Wireless Networks Based on Deep Reinforcement Learning,not_retrieved,
+R0368,databases,Efficient Cross-Layer Coordinated Buffer Management in Datacenter Networks,not_retrieved,
+R0373,databases,Expert-Driven Jumpstart Reinforcement Learning for Managing Network Congestion Control,not_retrieved,
+R0374,databases,Exploring Potential Vulnerabilities in DRL-Based Congestion Control with Adversarial Policy,not_retrieved,
+R0377,databases,Flecto: Cross-Layer Adaptive Congestion Control with Reinforcement Learning,retrieved,https://iris.polito.it/bitstream/11583/3001660/1/2025_HPSR_Flecto%20%281%29.pdf
+R0378,databases,Fusion-based congestion control method for the power internet of things combining data-driven and rule-engine models,not_retrieved,
+R0379,databases,HTPCCS: A Hybrid Two-Phase Learning Framework for Congestion Control Scheme Selection,not_retrieved,
+R0380,databases,Hierarchical Adaptive Learning-Based Congestion Control With Low Training Overhead for Datacenter Networks,not_retrieved,
+R0382,databases,Integrating Deep Reinforcement Learning with NDN Simulators,not_retrieved,
+R0383,databases,Intelligent Congestion Control in Satellite Networks,not_retrieved,
+R0385,databases,Intelligent Cross-Layer Congestion Control for Dynamic mmWave Networks with High Throughput and Fairness,not_retrieved,
+R0388,databases,Intelligent multipath congestion control algorithm based on subflow coupling perception,not_retrieved,
+R0389,databases,KONTROL: Offloading Data-Driven Congestion Control Intelligence for IoT Networks,not_retrieved,
+R0391,databases,Learning Semantic Congestion Control for Cyber Physical Systems,not_retrieved,
+R0392,databases,Learning-Based vs Human-Derived Congestion Control: An In-Depth Experimental Study,not_retrieved,
+R0393,databases,MACC: Multi-Agent Reinforcement Learning for Scalable and Fair Network Congestion Control,not_retrieved,
+R0396,databases,MetaCon: Revitalizing Internet Congestion Control with Meta-Reinforcement Learning,not_retrieved,
+R0397,databases,Multi-Heterogeneous-Agent DRL for Efficient Congestion Control With Reward Redistribution in Space–Air–Ground Integrated Networks,not_retrieved,
+R0399,databases,Mutant: Learning Congestion Control from Existing Protocols via Online Reinforcement Learning,retrieved,https://www.usenix.org/system/files/nsdi25-pappone.pdf
+R0402,databases,Performance Evaluation of DQN-Based Reinforcement Learning Congestion Control in Mobile Multi-Hop Wireless Networks,not_retrieved,
+R0403,databases,Pisces: Towards Adaptive and Fair Congestion Control via Multi-Agent Meta-Reinforcement Learning,not_retrieved,
+R0405,databases,ProCC: Programmatic Reinforcement Learning for Efficient and Transparent TCP Congestion Control,not_retrieved,
+R0406,databases,Q-AIMD: AIMD-based Window Flow Control with Reinforcement Learning,not_retrieved,
+R0407,databases,Reinforcement Learning Based Congestion Control Technique for Wireless Mesh Networks,not_retrieved,
+R0408,databases,Research on Congestion Adaptive Control in Power Data Centers Based on Reinforcement Learning and Bayesian Networks,not_retrieved,
+R0410,databases,Safety in DRL-Based Congestion Control: A Framework Empowered by Expert Refinement,not_retrieved,
+R0413,databases,TransAL-CC: An Asynchronous Reinforcement Learning Approach for Multipath Transmission Congestion Control in Power IoT,not_retrieved,
+R0415,databases,WiFi Network Congestion Control Using Deep Reinforcement Learning,not_retrieved,
+R0417,databases,A Deep Reinforcement Learning Approach for Congestion Control in VANET,not_retrieved,
+R0418,databases,A Delay-Based Reinforcement Learning Approach for RTT Jitter-Aware Congestion Control,not_retrieved,
+R0419,databases,A Multi-Agent Reinforcement Learning Congestion Control Protocol for Wireless Networks,not_retrieved,
+R0420,databases,A QoS-aware hierarchical intelligent congestion control framework for space–air–ground–sea integrated network,not_retrieved,
+R0424,databases,Active queue management based on fuzzy logic and reinforcement learning,not_retrieved,
+R0428,databases,Adaptive Markov Decision Process-Based Congestion Control Using Deep Deterministic Policy Gradient in Distributed MQTT Brokers,retrieved,https://irojournals.com/tcsst/article/download/2132/1944
+R0429,databases,Adaptive TCP Congestion Control using Deep Reinforcement Learning for TCP CUBIC Parameter Optimization,not_retrieved,
+R0430,databases,Advancing Congestion Control for Real-Time Communications With Reinforcement Learning: The ReCoCo Framework,not_retrieved,
+R0432,databases,An Adaptive Hirarchical Meta Agent for Intelligent Congestion Control in IP Networks using Machine Intelligence,retrieved,https://www.jamris.org/index.php/JAMRIS/article/download/1961/857
+R0433,databases,An MPTCP congestion control method for heterogeneous IIoT networks based on multi-agent deep reinforcement learning,not_retrieved,
+R0434,databases,Analyzing Symbolic Properties for DRL Agents in Systems and Networking,not_retrieved,
+R0435,databases,Augmenting End-to-End Congestion Control with Centralized Reinforcement Learning,not_retrieved,
+R0436,databases,Autonomous Congestion Control in High-Speed Networks Via Multiagent Deep Q Learning,not_retrieved,
+R0439,databases,CCLab: Adversarial Testing of Learning- and Non-Learning-Based Congestion Controllers,retrieved,https://arxiv.org/pdf/2605.21915
+R0441,databases,Collaborative optimization method for TT&C microburst traffic using deep learning,not_retrieved,
+R0443,databases,Cross-Layer Dual-Agent Reinforcement Learning for Intelligent Congestion Control in P4-Enabled Data Planes,not_retrieved,
+R0444,databases,DDPG-Enhanced Integration of the BLUE Algorithm for Adaptive Active Queue Management and Congestion Control,retrieved,https://dergipark.org.tr/tr/download/article-file/5363228
+R0446,databases,DTCC: Decision Transformer-driven framework for adaptive network congestion control,not_retrieved,
+R0447,databases,Deep Adaptive Rate Allocation in Volatile Heterogeneous Wireless Networks,retrieved,https://arxiv.org/pdf/2603.20926
+R0448,databases,Deep Reinforcement Learning Enabled Adaptive Cross-Layer Semantic Congestion Control for Real-Time Semantic Tasks,not_retrieved,
+R0449,databases,Deep Reinforcement Learning Framework with Least Squares Congestion Minimization for Intelligent Network Congestion Control and Latency–Bandwidth Optimization,not_retrieved,
+R0451,databases,Deep Reinforcement Learning for TCP Congestion Control in UAV Flying Ad-Hoc Networks: A Continuous-Action PPO Approach,not_retrieved,
+R0453,databases,Deep reinforcement learning-based congestion control for urban multi-hop vehicular networks,not_retrieved,
+R0455,databases,"Digital Twin-Assisted Robust Reinforcement Learning for Detection, Intelligent Congestion Control, and Autonomous Recovery from GOOSE Flooding Attacks in IEC 61850-Based Smart Substations",not_retrieved,
+R0457,databases,DynA: Breaking Fixed-Increase Rigidity in Google Congestion Control,not_retrieved,
+R0461,databases,Emulation vs Simulation: A Case Study from Congestion Control Algorithms in Low Earth Orbit Satellite Networks,retrieved,https://arxiv.org/pdf/2608.02095
+R0465,databases,Explainable cache aware congestion control with using deep reinforcement learning in robotic sensor networks,not_retrieved,
+R0466,databases,Fair-Aurora: Comparing Fairness Strategies for Reinforcement Learning-Based Congestion Control in Multi-Flow Environments,retrieved,https://arxiv.org/pdf/2605.19909
+R0468,databases,GenRL-CC: A GAN-Augmented Deep Reinforcement Learning Framework for Adaptive Congestion Control in Real-Time Communication,not_retrieved,
+R0470,databases,HAN: Adaptive DRL-Based Congestion Control via Model Uncertainty,not_retrieved,
+R0472,databases,Intelligent Congestion Control and Scheduling in VANETs: An SDN-Based PPO Approach,not_retrieved,
+R0474,databases,Learn-to-Probe: Achieving Signal Distinguishability in Learning-based Congestion Control,not_retrieved,
+R0475,databases,Lightweight Adaptive Reinforcement Learning-Based TCP Congestion Control for Multi-Hop Ad Hoc Networks,retrieved,https://www.mdpi.com/2079-9292/15/5/947/pdf?version=1772034125
+R0483,databases,NetRL: Powering Network Decisions via NetGRPO-Driven Reinforcement Learning,retrieved,https://arxiv.org/pdf/2610.16226
+R0486,databases,Online Reinforcement Learning From Existing Heuristics for TCP Congestion Control,not_retrieved,
+R0487,databases,POCC: Learning Robust Congestion Control via Pessimistic Offline Reinforcement Learning,not_retrieved,
+R0488,databases,POSTER: Fine-Tuning Large Language Models via Reinforcement Learning with Verifiable Rewards for Congestion Control,not_retrieved,
+R0489,databases,PPO-Driven Reinforcement Learning Congestion Control Under High- BDP Wide-Area Deployment: A Scaling Analysis,not_retrieved,
+R0490,databases,PRO-SAC: Deep Reinforcement Learning-Based Congestion Control for Real-Time Video Streaming With Delayed RTP/RTCP Feedback,not_retrieved,
+R0491,databases,Pacemaker Congestion Control: Ceiling-Normalized Reinforcement Learning for TCP,not_retrieved,
+R0492,databases,Performance Enhancement of Adaptive Network Congestion Control Using Reinforcement Learning,retrieved,https://eprints.lib.hokudai.ac.jp/repo/huscap/all/100417/11431550.pdf
+R0493,databases,Q-Learning-Based Adaptive Scheduling Strategy for Library Network Congestion Control,not_retrieved,
+R0497,databases,Reinforcement Learning-Assisted Hybrid Congestion Control for 6G Ultra-Low Latency Networks,not_retrieved,
+R0499,databases,SAC-BBR: A Semantic-Aware and Cross-Layer Collaborative Congestion Control Mechanism for Heterogeneous Campus Networks,not_retrieved,
+R0500,databases,Syntra: Synthesizing Cross-Layer Controllers for Low-Latency Video Streaming,retrieved,https://www.usenix.org/system/files/nsdi26-pan.pdf
+R0502,databases,Towards Fair and Efficient Congestion Control Through Multi-Agent Deep Reinforcement Learning,not_retrieved,
+R0503,databases,Transformer-Based Multipath Congestion Control: A Decoupled Approach for Wireless Uplinks,not_retrieved,
+R0504,databases,WAPI-Integrated Congestion Control and Adaptive Transmission for Power IoT,retrieved,https://www.aemjournal.org/index.php/AEM/article/download/4195/1848
+S070,citation,Learning to Harness Bandwidth With Multipath Congestion Control and Scheduling,retrieved,https://arxiv.org/pdf/2105.14271
+S218,citation,Aero: A Pluggable Congestion Control for QUIC,not_retrieved,
+S057,citation,Antelope: A Framework for Dynamic Selection of Congestion Control Algorithms,not_retrieved,
+S149,citation,Intelligent TCP Congestion Control Policy Optimization,retrieved,https://www.mdpi.com/2076-3417/13/11/6644/pdf?version=1685501573
+S072,citation,LearningCC: An online learning approach for congestion control,retrieved,https://arxiv.org/pdf/2008.00086
+S176,citation,Astraea: Towards Fair and Efficient Learning-based Congestion Control,retrieved,https://arxiv.org/pdf/2403.01798
+S014,citation,MVFST-RL: An Asynchronous RL Framework for Congestion Control with Delayed Actions,retrieved,https://arxiv.org/pdf/1910.04054
+S206,citation,RNN-based Congestion Control in the Linux Kernel,not_retrieved,
+S117,citation,Learned Internet Congestion Control for Short Video Uploading,not_retrieved,
+S142,citation,Gemini: Divide-and-Conquer for Practical Learning-Based Internet Congestion Control,not_retrieved,
+S053,citation,A Hybrid Receiver-side Congestion Control Scheme for Web Real-time Communication,not_retrieved,
+S154,citation,PACC: Perception Aware Congestion Control for Real-time Communication,not_retrieved,
+S088,citation,TCP Congestion Avoidance in Data Centres using Reinforcement Learning,not_retrieved,
+S056,citation,An Intelligent TCP Congestion Control Method Based on Deep Q Network,retrieved,https://www.mdpi.com/1999-5903/13/10/261/pdf?version=1634112120
+S071,citation,Learning-based congestion control simulator for mobile internet education,not_retrieved,
+S074,citation,MPLibra: Complementing the Benefits of Classic and Learning-based Multipath Congestion Control,not_retrieved,
+S122,citation,TCP Congestion Avoidance in Data Centres using Reinforcement Learning,not_retrieved,
+S096,citation,Achieving Flexible and Lightweight Multipath Congestion Control Through Online Learning,not_retrieved,
+S095,citation,A Machine Learning-Based Framework for Dynamic Selection of Congestion Control Algorithms,not_retrieved,
+S224,citation,EchoCC: Refining Learning-Based Congestion Control With WordBook,not_retrieved,
+S135,citation,Disco: A Framework for Dynamic Selection of Multipath Congestion Control Algorithms,not_retrieved,
+S213,citation,When Classic Meets Intelligence: A Hybrid Multipath Congestion Control Framework,not_retrieved,
+S159,citation,Research on TCP Congestion Control Strategy Based on Proximal Policy Optimization,not_retrieved,
+S116,citation,Intelligent TCP Congestion Control Scheme in Internet of Deep Space Things Communication,not_retrieved,
+S137,citation,End-to-End Congestion Control as Learning for Unknown Games with Bandit Feedback,not_retrieved,
+S220,citation,Anole: A Pragmatic Blend of Classic and Learning-Based Algorithms in Congestion Control,not_retrieved,
+S273,citation,Towards a Pluggable and Implementation-Agnostic Learning-Based Congestion Control for QUIC,not_retrieved,
+S249,citation,ALCHEMY: Reusing Congestion Control Wisdom for Adaptive QUIC Transport,not_retrieved,
+S185,citation,Context-Aware Cross-Layer Congestion Control for Large-Scale Live Streaming,not_retrieved,
+S223,citation,Digital Twin-Enabled Intelligent Congestion Control for QUIC-based E2E Communication,not_retrieved,
+S215,citation,“Comparison of TCP Congestion Control Algorithms: Harnessing the power of Traditional Hybrid and Machine Learning Fusion.”,not_retrieved,
+S196,citation,Intelligent Congestion Control in QUIC for Reliable E2E Communication Network: A Digital Twin-Based Approach,not_retrieved,
+S148,citation,Intelligent Multi-Path TCP Congestion Control for video streaming in Internet of Deep Space Things communication,not_retrieved,
+S261,citation,Genet: A Hybrid Congestion Control Framework with a Dynamic Tenure System and Learned Inference,not_retrieved,
+S226,citation,Enhancing Mobile Immersive Streaming Experience via Deadline-Aware Scheduling and Learning-Enhanced Congestion Control,not_retrieved,
+S187,citation,DRL-based Cross-layer Design for PHY Scheduling and Congestion Control in Anti-jamming Communications,not_retrieved,
+S262,citation,ICCP: Toward Congestion Control Agent via Controlling Logic Decoupling and Algorithm Integration,not_retrieved,
+S264,citation,LQC: Cross-Layer Congestion Control Algorithm Based on Online Learning and Driver-Queue,not_retrieved,
+S255,citation,Decentralized Adaptive Initial Congestion Window in 5G Using Handshake-Based Flow Classification and Online Learning,not_retrieved,
+S244,citation,Teaching to Fish Rather Than Giving a Fish: The Concentrator Method of Teaching Classic Congestion Control With Learning-Based module,not_retrieved,
+S225,citation,Enhancing Efficiency with Adaptive Optimized Balancing Factor for MPTCP Congestion Control Using Deep Deterministic Policy Gradient: EE-AOBF-MPTCP-DDPG,retrieved,https://www.ijcesen.com/index.php/ijcesen/article/download/1409/695
+S257,citation,Energy-Efficient Dynamic Retransmission Timeouts with Enhanced Stability for Constrained Application Protocol-Based Internet of Things Networks via Edge Intelligence-Assisted Cross-Layer Congestion Control,retrieved,https://www.mdpi.com/2079-9292/15/13/2884/pdf?version=1782899906
+S037,citation,Learn-ing-Based On-AP TCP Performance Enhancement,not_retrieved,
+S055,citation,An Adaptive Control Scheme for Deadline-aware Streaming,not_retrieved,
+S165,citation,TCP-RLLD: TCP with reinforcement learning based loss differentiation for mobile adhoc networks,not_retrieved,
+S239,citation,PulseQUIC: Enhancing QUIC-Based Video Streaming through DRL-Guided Adaptive Pacing,not_retrieved,
+S178,citation,Comparative Analysis of Different Transport Layer Protocol Techniques Incognitive Network,not_retrieved,
+S240,citation,Research on Real-Time Audio and Video Communication Technology for Power Emergency Command Based on Deep Learning,not_retrieved,
+S256,citation,Ditto: A Flexible Transmission Control Mechanism for Diverse User Demands and Network Conditions,not_retrieved,
+S100,citation,AutoPlex,not_retrieved,
+S152,citation,LiteFlow: Toward High-Performance Adaptive Neural Networks for Kernel Datapath,not_retrieved,
+S019,citation,Robustifying Network Protocols with Adversarial Examples,not_retrieved,
+S134,citation,Data-Driven Rate Control for RDMA Networks: A Lightweight Online Learning Approach,not_retrieved,
+S192,citation,Game-Theoretic Bandits for Network Optimization With High-Probability Swap-Regret Upper Bounds,not_retrieved,
+S004,citation,Muses,not_retrieved,
+S252,citation,AutoNetFlow: An Intelligent Reinforcement Learning Framework for Adaptive Process Automation in Network Traffic Control,not_retrieved,
+S013,citation,Learning to Coordinate Video Codec with Transport Protocol for Mobile Video Telephony,not_retrieved,
+S186,citation,"DESiRED — Dynamic, Enhanced, and Smart iRED: A P4-AQM with Deep Reinforcement Learning and In-band Network Telemetry",retrieved,https://arxiv.org/pdf/2310.18159
+S058,citation,Arsenal: Understanding Learning-Based Wireless Video Transport via In-Depth Evaluation,not_retrieved,
+S205,citation,Quantifying the Merits of Network-Assist Online Learning in Optimizing Network Protocols,not_retrieved,
+S221,citation,Automatic Dual Threshold Tuning for Switch Buffer Sharing in Datacenter Networking,not_retrieved,

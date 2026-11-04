@@ -1,0 +1,239 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\definecolor{accent}{HTML}{1D4ED8}
+\definecolor{muted}{HTML}{525252}
+\setbeamercolor{structure}{fg=accent}
+\setbeamercolor{frametitle}{fg=accent}
+\setbeamerfont{frametitle}{series=\bfseries}
+\usepackage{booktabs,tikz,xspace}
+\usetikzlibrary{arrows.meta,positioning}
+\input{../survey/generated/numbers}
+\xspaceaddexceptions{\%}
+\input{../survey/generated/case_study}
+\graphicspath{{../survey/figures/}}
+\newcommand{\RQ}[1]{\textbf{RQ#1}}
+
+\title{Reinforcement Learning for Congestion Control}
+\subtitle{A Systematic Survey of Designs, Evaluation Practice, and Barriers to Deployment}
+\author{Gaurab Baral \and Nityashree Vangala}
+\institute{CS 6043: Networking}
+\date{Fall 2026}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{Why learn congestion control?}
+\begin{columns}[T]
+\column{0.52\textwidth}
+\begin{itemize}
+  \item Classic CC (Reno, CUBIC, BBR, Copa, DCTCP) is \textbf{hand-tuned} for one kind of network.
+  \item Wireless, satellite and data-center links break its assumptions: non-congestive loss, noisy delay, microsecond RTTs.
+  \item RL: an agent watches throughput, delay and loss, adjusts the rate or window each interval, and is \textbf{rewarded} for high throughput and low delay.
+  \item Aurora (2019) made deep RL the standard formulation, and the field has grown quickly since.
+\end{itemize}
+\column{0.46\textwidth}
+\centering
+\begin{tikzpicture}[node distance=14mm, box/.style={draw, rounded corners=3pt, align=center, font=\small, minimum width=24mm, minimum height=9mm}, lab/.style={font=\scriptsize, align=center, text=muted}, >={Stealth[length=2mm]}]
+  \node[box, fill=accent!8] (a) {RL agent};
+  \node[box, below=of a] (n) {Network};
+  \draw[->, thick] ([xshift=6mm]a.south) -- node[right, lab]{rate or\\ cwnd} ([xshift=6mm]n.north);
+  \draw[->, thick] ([xshift=-6mm]n.north) -- node[left, lab]{state,\\ reward} ([xshift=-6mm]a.south);
+\end{tikzpicture}
+\end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{Research questions and method}
+\begin{itemize}
+  \item \RQ{1} \textbf{Design}: what do RL controllers observe, change, and learn from?
+  \item \RQ{2} \textbf{Testing}: how are they trained and tested, and do they generalize?
+  \item \RQ{3} \textbf{Deployment}: what stops operators from using them?
+\end{itemize}
+\vspace{4mm}
+\textbf{PRISMA 2020 systematic review}, searches run 31 Oct 2026:
+\begin{itemize}
+  \item OpenAlex (stand-in for IEEE/ACM/Scopus), arXiv, USENIX NSDI/ATC, and forward and backward citation searching
+  \item \nIdentifiedTotal{} records $\rightarrow$ \textbf{\nStudies{} studies} (\nReportsIncluded{} reports), 2016--2026
+  \item Coded per study: setting, control point, state, action, reward, algorithm, training environment, \textbf{highest evaluation level}, out-of-distribution testing, fairness, code
+  \item Everything is scripted and released: every decision, every number in the paper
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{The field is growing fast}
+\centering
+\includegraphics[width=0.86\textwidth]{fig_trend.pdf}\\[2mm]
+\small \nPctSinceTwentyThree\% of studies appeared in 2023 or later. Settings: Internet/generic \nGroupInternetGeneric, wireless \nGroupWirelessCellular, IoT \nGroupIotAdHocSensor, data center \nGroupDataCenter, satellite \nGroupSatelliteSpace.
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{\RQ{1}: What RL controllers observe, change and optimize}
+\centering
+\includegraphics[width=\textwidth]{fig_design.pdf}\\[1mm]
+\small Window (\nActCwnd) or rate (\nActRate) actions; throughput/delay/loss rewards. Only \nRewardFairness{} rewards include fairness.
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{\RQ{1}: From clean-slate policies to hybrids}
+\begin{columns}[T]
+\column{0.5\textwidth}
+\textbf{Clean slate} (2018--)
+\begin{itemize}\small
+  \item Aurora (PPO), Indigo (imitation), MVFST-RL (async.\ in QUIC)
+  \item Many DQN/PPO/SAC variants evaluated in ns-3
+\end{itemize}
+\textbf{Hybrid}: learning tunes, selects or bounds classic CC
+\begin{itemize}\small
+  \item Orca: TD3 scales CUBIC's cwnd; Canopy adds certificates
+  \item Spine, Libra, Mutant, Floo, TCP-RL
+\end{itemize}
+\column{0.5\textwidth}
+\textbf{Learning from data}
+\begin{itemize}\small
+  \item Sage: offline RL from heuristics' logs
+  \item RTC: offline-RL challenge on Teams logs
+\end{itemize}
+\vspace{3mm}
+\begin{block}{Trend}
+Hybrid share: \textbf{\nPctHybridPre\%} of designs before 2023 $\rightarrow$ \textbf{\nPctHybridPost\%} since.\\
+Data centers: \nChDatacenterPctHybrid\% hybrid (ECN tuning per switch, e.g., ACC).
+\end{block}
+\end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{\RQ{2}: The evaluation ladder}
+\begin{center}
+\begin{tikzpicture}[node distance=2mm, st/.style={draw, rounded corners=2pt, text width=27mm, minimum height=11mm, align=center, font=\footnotesize}]
+  \node[st, fill=accent!6] (s) {\textbf{Simulation}\\ ns-3, \mbox{OMNeT++}, custom};
+  \node[st, fill=accent!14, right=of s] (e) {\textbf{Emulation}\\ Mininet, Mahimahi, NetEm};
+  \node[st, fill=accent!24, right=of e] (t) {\textbf{Testbeds}\\ Pantheon, OpenNetLab};
+  \node[st, fill=accent!36, right=of t] (r) {\textbf{Real / production}\\ cloud paths, A/B tests};
+  \draw[-{Stealth}, thick, muted] ([yshift=-4mm]s.south west) -- node[below, font=\scriptsize]{more of the real system: OS stack, real links, real traffic} ([yshift=-4mm]r.south east);
+\end{tikzpicture}
+\end{center}
+\vspace{2mm}
+\begin{alertblock}{Correction to our proposal}
+\textbf{Wireshark is not a simulator.} It is a packet analyzer that captures and decodes real or emulated traffic. It is useful on every rung, but it does not model a network.
+\end{alertblock}
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{\RQ{2}: Where the evidence comes from}
+\centering
+\includegraphics[width=0.92\textwidth]{fig_evaluation.pdf}\\[1mm]
+\small Of studies with a known level, \textbf{\nPctSimOnlyOfKnown\%} are simulation-only and \textbf{\nPctRealOfKnown\%} reach a real network.\\
+The real-network share \emph{fell}: \nPeriodBReal\% (2020--21) $\rightarrow$ \nPeriodDReal\% (2024--26).
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{\RQ{2}: Practices that decide whether results transfer}
+\centering
+\small
+\input{../survey/generated/tab_practices}\\[4mm]
+\normalsize Independent re-evaluations: public RL controllers are \textbf{unfair in almost all setups} and lag under bandwidth or latency changes; a simulator-trained PPO reached \textbf{0.5\%} of a 10\,Gbit/s path.
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{Case study: does the training distribution matter?}
+\begin{columns}[T]
+\column{0.42\textwidth}
+\small
+\begin{itemize}
+  \item Aurora-style env: delayed feedback, latency features, multiplicative rate actions
+  \item PPO, \nCsSeeds{} seeds $\times$ 2 training distributions:\\ \textbf{narrow} (1--5\,Mbit/s, no noise) vs.\ \textbf{broad} (1--100\,Mbit/s, loss, jitter, drift)
+  \item Baselines: Reno-like AIMD, BBR-like
+  \item One factor shifted at a time
+\end{itemize}
+\column{0.56\textwidth}
+\centering
+\includegraphics[width=\textwidth]{case_study_util.pdf}
+\end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{Case study: results}
+\centering
+\resizebox{\textwidth}{!}{\input{../survey/generated/tab_case_study}}
+\vspace{4mm}
+\begin{itemize}
+  \item In distribution, the RL policy scores best on its own objective: \nCsNarrowRefUtil\% utilization with the smallest queue.
+  \item 10\,ms of RTT jitter $\Rightarrow$ \textbf{\nCsNarrowJitterTenUtil\%}: latency features read noise as congestion.
+  \item Broad training helps only within its coverage, queues more, and 1 of \nCsSeeds{} seeds collapsed.
+  \item Learned and classic controllers fail \emph{differently}, so tests must target the policy's weaknesses.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{\RQ{3}: What deployed systems have in common}
+\small
+SmartIW/TCP-RL (search engine, $>$1 year), OnRL (543\,h, 151 users), Loki (101M sessions), ACC (production DCs), Floo, DuGu, Concerto, NVIDIA RL-CC (live NICs), Marten
+\vspace{3mm}
+\begin{enumerate}
+  \item \textbf{The learned part is bounded}: 6 of 9 keep a classic algorithm or safeguard in the loop; the rest imitate logs or a solver, or are distilled into trees.
+  \item \textbf{The operator owns the endpoints and the data}: it can A/B test, roll back, and train on its own logs.
+  \item \textbf{The objective is narrow}: stalls, short-flow completion time, IOPS.
+\end{enumerate}
+\vspace{2mm}
+No learned controller has been deployed for \emph{general} Internet traffic.
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{\RQ{3}: Nine barriers}
+\begin{columns}[T]
+\column{0.5\textwidth}
+\small
+\begin{enumerate}
+  \item Generalization under shift \hfill \emph{partly addressed}
+  \item Safety, worst case \hfill \emph{runtime fallbacks}
+  \item Fairness to CUBIC/BBR \hfill \emph{open}
+  \item Overhead, datapath \hfill \emph{solved in principle}
+  \item Interpretability \hfill \emph{prototypes}
+\end{enumerate}
+\column{0.5\textwidth}
+\small
+\begin{enumerate}\setcounter{enumi}{5}
+  \item Adversarial robustness \hfill \emph{early}
+  \item Objective specification \hfill \emph{active}
+  \item Evaluation, reproducibility \hfill \emph{low adoption}
+  \item Training cost, lifecycle \hfill \emph{open}
+\end{enumerate}
+\end{columns}
+\vspace{5mm}
+\small Only \nPctCodeDesign\% of design studies release code, and only \nPctGen\% test outside their training distribution.
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{New direction: LLM-designed and LLM-driven controllers}
+\small
+\begin{itemize}
+  \item \textbf{Designer} (offline): LLMs generate controller code or utility functions, scored in an emulator (PolicySmith, GenCC; He et al.: up to 27\% over BBR in a QUIC code base)
+  \item \textbf{Translator}: natural-language intent $\rightarrow$ eBPF controller (NECC)
+  \item \textbf{Policy} (online, triggered): CCA Reimagined, NetRL (+24\% utility vs.\ Orca), Trailblazer (Douyin A/B test)
+\end{itemize}
+\vspace{3mm}
+\begin{block}{Assessment}
+The hybrid lesson is being relearned: LLMs stay off the fast path. Generated \emph{code} is reviewable, which is good for trust. RL returns as the fine-tuning method. The evidence is still mostly emulation.
+\end{block}
+\end{frame}
+
+% ------------------------------------------------------------------
+\begin{frame}{Takeaways}
+\begin{itemize}
+  \item The bottleneck is not the learning algorithm but the \textbf{gap between training/test conditions and real networks}.
+  \item Hybrids and learning from logs are how RL reached production.
+  \item Agenda: distribution-shift benchmarks, harm-based coexistence tests, validated wireless and satellite emulators, runtime assurance, offline RL from logs, datapath co-design, LLMs at design time, lifecycle operations.
+  \item Checklist: state the evaluation level, test out of distribution (including delay noise), compare with CUBIC/BBR, report seeds and failures, release code.
+\end{itemize}
+\vspace{4mm}
+\centering\small Replication package: search scripts, all decisions, coded data, case study.
+\end{frame}
+
+\end{document}

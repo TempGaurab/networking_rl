@@ -1,0 +1,29 @@
+\begin{tikzpicture}[font=\scriptsize,
+  box/.style={draw=black!70, rounded corners=1.5pt, align=left, text width=46mm, inner sep=3pt, fill=white, anchor=north},
+  ex/.style={draw=black!70, rounded corners=1.5pt, align=left, text width=44mm, inner sep=3pt, fill=black!3, anchor=north},
+  hdr/.style={draw=none, fill=accent!12, align=center, inner sep=3pt, font=\scriptsize\bfseries, anchor=south},
+  >={Stealth[length=1.6mm]}]
+% columns: databases (x=0), exclusions (x=52mm), other methods (x=105mm); rows: y = 0, -24, -52, -62 mm
+\node[box] (id1) at (0,0) {Records identified ($n=567$):\\ OpenAlex: IEEE, ACM, Elsevier, Springer, \dots{} ($n=515$)\\ arXiv API ($n=48$ of 474 retrieved)\\ USENIX NSDI/ATC ($n=4$ of 1,558 papers)};
+\node[ex] (dup) at (52mm,0) {Duplicate records removed\\ ($n=63$)};
+\node[box] (sc1) at (0,-24mm) {Records screened on title and abstract ($n=504$)};
+\node[ex] (ex1) at (52mm,-24mm) {Records excluded ($n=210$):\\ EC1 non-network congestion: 29\\ EC2 other networking task: 112\\ EC3 not RL/IL: 4\\ EC4 secondary study: 34\\ EC5 not a research report: 31};
+\node[box] (so1) at (0,-52mm) {Reports sought for retrieval ($n=294$)};
+\node[ex] (nr1) at (52mm,-52mm) {Reports not retrieved ($n=11$)};
+\node[box] (as1) at (0,-62mm) {Reports assessed for eligibility ($n=283$)};
+\node[ex] (ex2) at (52mm,-62mm) {Reports excluded ($n=12$):\\ EC2 ($n=6$), EC3 ($n=1$),\\ EC4 ($n=3$), EC5 ($n=2$)};
+\node[box, text width=42mm] (id2) at (105mm,0) {Forward citation search:\\ $n=275$ new (of 446 citing works)\\ Backward citation search:\\ $n=151$ new\\ Known to the reviewers: $n=4$};
+\node[box, text width=42mm] (sc2) at (105mm,-24mm) {Records screened ($n=426$)\\ Records excluded ($n=350$)};
+\node[box, text width=42mm] (so2) at (105mm,-52mm) {Reports sought ($n=80$)\\ Reports not retrieved ($n=1$)};
+\node[box, text width=42mm] (as2) at (105mm,-62mm) {Reports assessed ($n=79$)\\ Reports excluded ($n=19$):\\ EC2 ($n=2$), EC3 ($n=16$), EC4 ($n=1$)};
+\node[hdr, text width=46mm] (h1) at ([yshift=2mm]id1.north) {Identification via databases};
+\node[hdr, text width=42mm] (h2) at ([yshift=2mm]id2.north) {Identification via other methods};
+\node[box, text width=80mm, align=center, fill=accent!6] (inc) at (52mm,-84mm) {\textbf{Studies included in the review: 301}\\ Reports of included studies ($n=331$), including 30 further reports\\ (e.g., journal extensions) of an already included study};
+\draw[->] (id1) -- (sc1); \draw[->] (sc1) -- (so1); \draw[->] (so1) -- (as1);
+\draw[->] (id1.east |- dup.west) -- (dup.west);
+\draw[->] (sc1.east) -- (sc1.east -| ex1.west);
+\draw[->] (so1) -- (nr1); \draw[->] (as1.east) -- (as1.east -| ex2.west);
+\draw[->] (id2) -- (sc2); \draw[->] (sc2) -- (so2); \draw[->] (so2) -- (as2);
+\draw[->] (as1.south) |- ([yshift=4mm]inc.north) -| ([xshift=-12mm]inc.north);
+\draw[->] (as2.south) |- ([yshift=4mm]inc.north) -| ([xshift=12mm]inc.north);
+\end{tikzpicture}

@@ -1,0 +1,41 @@
+id|inc|name|setting|tags|ctrl|action|aspace|state|reward|family|algo|hybrid|train|sim|emu|real|real_kind|gen|fair|code|contrib|src|result
+R0260|Y|DRL-RED|GEN|AQM|N|aqm|D|queue,queuerate,queuedelay|thr,delay,loss|DQN|DQN tunes RED queue weight|Y|ns-2|1|0|0||NR|NR|N|ctrl|FT|vs RED: higher throughput, lower delay and drop rate
+R0264|Y|BBQ|DC|ECN,shallow buffer|N|ecn|NR|buffer|NR|NR|RL ECN tuning bounded by per-port buffer|Y|NR|?|?|?||Y|NR|N|ctrl|AB|incast loss within 3%, 1.2x lower than state of the art in shallow buffers
+R0265|Y|Maggey|GEN|MP|S|cwnd|NR|NR|thr,fair|NR|single-subflow RL model + non-blocking mode transitions (Linux kernel)|N|emulation|0|1|1|live experiments|NR|Y|N|ctrl|AB|+26% throughput vs DRL-CC at high bandwidth, +2-60% vs traditional MPTCP; fair
+R0266|Y|Closed-form CC via symbolic regression|CELL|fronthaul,interpretability|S|rate|C|acks,rtt,loss|thr,delay,loss|AC|TD3 policy distilled by deep symbolic regression|N|ns-3|1|0|0||Y|Y|Y|method|FT|closed-form expressions match the RL policy's utilization, delay and fairness with negligible inference cost
+R0267|Y|RL-TCP+ (FCT vs sharing)|GEN|analysis|S|cwnd|NR|NR|fct|NR|modified RL-TCP|N|NR|?|?|?||NR|Y|N|analysis|AB|greater link sharing/fairness does not always lower FCT; prioritization can help
+R0270|Y|CrystalBox|GEN|explainability|||||||post-hoc future-based explanations via decomposed returns|N|custom-sim|1|0|0||-|-|Y|analysis|FT|high-fidelity explanations for ABR and CC controllers; aids reward design and observability
+R0271|Y|DDPG-MPCC|GEN|MP|S|rate|C|rate,rtt,loss|util|AC|DDPG + online convex optimization (kernel implementation)|N|testbed|0|1|?||NR|Y|Y|ctrl|FT|kernel implementation competitive with state-of-the-art multipath CC
+R0273|Y|SAC-MWL (QUIC)|WAN|QUIC|S|cwnd|C|NR|NR|AC|SAC with monitor-window limit|N|sim|1|1|1|worldwide real network endpoints|NR|NR|N|ctrl|AB|up to 66.9% shorter file-transfer time than CUBIC and BBR
+R0275|Y|EMPRN|DC|ECN|N|ecn|NR|portgraph|NR|MARL|MARL with message-passing GNN + GRU|Y|sim|1|0|0||NR|NR|N|ctrl|AB|-21% FCT, -87.9% queue length vs an RL ECN-tuning baseline (simulation)
+R0279|LINK|DRL-CaCC (conf.)|||||||||||||||||||||linked report of R0257
+R0281|Y|GraphCC|DC|ECN|N|ecn|NR|txrate,queue,ecn|delay,thr|MARL|MARL + GNN message passing between switch agents|Y|ns-3|1|0|0||Y|NR|N|ctrl|FT|beats ACC in every scenario incl. unseen workloads/failures: up to -20% FCT, -38-86% buffer occupancy
+R0282|Y|Gymir5G|CELL|RTC,5G,platform|S|bitrate|||||OMNeT++/Simu5G WebRTC platform with a DRL bridge|N|OMNeT++|1|0|0||-|-|Y|framework|AB|open-source simulation platform for DRL rate control of WebRTC over 4G/5G/Wi-Fi
+R0283|NOTRET|HACC (LNEE)|||||||||||||||||||||no abstract and no learning term in title; eligibility cannot be confirmed
+R0284|NOTRET|HAECN|||||||||||||||||||||no abstract and no learning term in title; eligibility cannot be confirmed
+R0286|Y|RL CC for LEO (Inf. Sci.)|SAT|LEO|S|NR|NR|NR|NR|NR|RL|N|NR|?|?|?||NR|NR|N|ctrl|AB|RL-based CC for LEO data transmission (abstract unavailable; coded from title)
+R0287|Y|KerDqn|GEN|kernel|S|cwnd|D|NR|util|DQN|DQN with kernel CC + user-space learning framework|N|NR|?|?|?||NR|Y|N|ctrl|AB|goodput robust to high loss; 1.6x CUBIC and 1.2x Vivace throughput at 15 KB buffer; best friendliness
+R0288|LINK|HACC (conf.)|||||||||||||||||||||linked report of R0380
+R0290|Y|Libra|WAN||S|rate|C|NR|util|PG|classic and RL candidates compared in exploration/evaluation stages|Y|emulation|0|1|1|live Internet paths|NR|Y|N|ctrl|AB|1.2x Orca throughput on dynamic networks; meets application preferences; lower overhead; good fairness/convergence
+R0291|Y|LAECN|DC|ECN|N|ecn|NR|NR|thr,delay|NR|lightweight hierarchical DRL ECN tuning|Y|sim|1|0|0||NR|NR|N|ctrl|AB|up to +47/34/32/24% throughput vs DCQCN/TIMELY/HPCC/ACC (simulation)
+R0292|Y|NVC-aware RL CC|WAN|RTC,neural codec|S|bitrate|C|aurora|qoe|PG|online RL exploiting neural-codec loss tolerance|N|custom-sim|1|0|0||NR|NR|N|ctrl|FT|-41% training time; +0.3-1.6 dB quality, lower tail frame delay, -20-77% stalls (simulation)
+R0293|Y|MIQA / MIA|CELL|mmWave,QUIC|S|rate|NR|NR|NR|NR|RL bandwidth predictor steering TCP/QUIC CC|Y|testbed|1|0|1|mmWave immersive testbed|NR|NR|N|ctrl|AB|higher throughput, lower latency for immersive apps on a mmWave testbed
+R0294|Y|Q-learning CC (multi-band)|CELL|multi-network|S|rate|D|NR|NR|TAB|Q-learning (+RL coding parameters)|N|NR|?|?|?||NR|NR|N|ctrl|AB|~99% bandwidth utilization with fast recovery after congestion
+R0295|Y|Multi-context RL INT CC|CELL|private wireless,INT|S|cwnd|D|app,context,int|NR|NR|RL (three designs; one implemented)|N|NR|?|?|?||NR|NR|N|ctrl|FT|adapts to changing application/network context (preliminary)
+R0297|Y|DRL CCA switching for Wi-Fi fairness|CELL|WiFi,fairness|S|select|D|thr,rtt,loss,jitter|fair,other|DQN|DQN switching among CUBIC/BBR/PCC (offline)|Y|dataset|1|0|0||NR|Y|N|ctrl|FT|preliminary: switching prevents extreme unfairness and starvation on realistic datasets
+R0298|Y|DRL deep-space DTN CC|SAT|deep-space,DTN|NR|NR|NR|NR|NR|NR|DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|DRL CC for deep-space DTN (abstract unavailable; coded from title)
+R0301|EX-EC3|ML vs traditional wireless congestion management|||||||||||||||||||||generic comparison; no identifiable RL congestion controller
+R0302|Y|RayNet|GEN|platform|S|cwnd|||||OMNeT++ + Ray/RLlib platform|N|OMNeT++|1|0|0||-|-|Y|framework|FT|scalable RL protocol platform; faster experience collection than ns3-gym; proof-of-concept RL CC
+R0303|Y|DRL WebRTC uplink rate control (5G)|CELL|RTC,5G|S|bitrate|NR|webrtcstats|qoe|NR|online model-free DRL|N|OMNeT++|1|0|0||NR|NR|N|ctrl|AB|higher rates than GCC at comparable loss and delay (OMNeT++/Simu5G)
+R0304|Y|TCP-RLACC|CELL|wireless|S|cwnd|D|sendint,ackint,rtt|thr,delay|TAB|Q-learning selecting linear/polynomial/exponential cwnd growth|Y|ns-3|1|0|0||NR|NR|N|ctrl|FT|higher throughput and delivery ratio than Westwood+ (ns-3)
+R0305|Y|Systematic evaluation of RL CC|GEN|evaluation|||||||reproducible large-scale evaluation of public RL CCAs|N|emulation|0|1|0||Y|Y|Y|analysis|AB|RL CCs grab bandwidth fast and resist random loss but cause excess loss, are unfair in almost all setups, and lag when bandwidth/latency change
+R0306|Y|DDQN power-IoT CC|IOT|power-IoT|NR|NR|NR|NR|NR|DQN|double DQN|N|NR|?|?|?||NR|NR|N|ctrl|AB|DDQN learns dynamic CC policy for power IoT
+R0308|LINK|Astraea (arXiv)|||||||||||||||||||||linked report of S176
+R0310|NOTRET|Troubleshooting traffic congestion control|||||||||||||||||||||neither abstract nor full text retrievable; eligibility undeterminable
+R0313|Y|Verifying OOD generalization|GEN|verification|||||||agreement of independently trained DNNs checked by verification|N||-|-|-||-|-|N|analysis|FT|verification identifies well-generalizing DRL policies; Aurora CC case study
+R0314|Y|Zygos|GEN|reward correction|S|NR|NR|NR|other|META|distribution-based reward correction + meta-gradient RL|N|NR|?|?|?||NR|NR|N|method|AB|+20-30% throughput, -20% delay when added to an RL CC
+R0317|Y|DQN TCP CC (ns3-gym)|GEN||S|cwnd|D|NR|thr,delay|DQN|DQN via ns3-gym|N|ns-3|1|0|0||NR|NR|N|ctrl|FT|vs CUBIC: similar throughput, -46.3% RTT, near-zero loss (ns-3)
+R0319|Y|Meta-diffusion BWE policy|WAN|RTC|R|bitrate|C|netstate,dynamics|NR|OFF+META|offline DRL with diffusion meta-policy|N|dataset|1|0|0||Y|NR|N|ctrl|AB|-7.8% prediction error, -27.1% overestimation; better cross-scenario generalization
+R0320|Y|Creo|SAT|LEO,handover|S|cwnd|NR|NR|NR|NR|DRL in connected phase + handover-aware cross-layer notifications|Y|sim|1|0|0||NR|NR|N|ctrl|AB|-60.5% handover recovery time, +55% throughput with low latency/jitter (simulation)
+R0322|Y|ASCRL|GEN|application objectives|S|cwnd|C|NR|multi|AC|DRL (SAC-family) with client-server architecture|N|ns-3|1|0|?||NR|Y|N|ctrl|FT|meets arbitrary application objectives; beats specialized schemes on their own objectives
+R0327|Y|NMS + Galaxy|CELL|mobile|S|cwnd|NR|NR|NR|NR|network-segmented model specialization + clean-slate DRL CCA|N|NR|?|?|?||Y|NR|N|method|AB|segment-specialized models raise QoS of DRL CCAs; Galaxy clean-slate CCA

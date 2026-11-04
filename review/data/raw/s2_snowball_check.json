@@ -1,0 +1,1397 @@
+{
+ "ids": [
+  "DOI:10.1155/2020/8863420",
+  "DOI:10.1109/icisfall51598.2021.9627345",
+  "DOI:10.1109/icnp52444.2021.9651912",
+  "DOI:10.1109/tvt.2021.3105479",
+  "DOI:10.1016/j.comnet.2021.108511",
+  "DOI:10.1145/3477091.3482760",
+  "DOI:10.1109/icce-tw52618.2021.9603132",
+  "DOI:10.1109/tnet.2022.3220225",
+  "DOI:10.1145/3538401.3546596",
+  "DOI:10.1145/3503161.3548436",
+  "DOI:10.1109/icnp59255.2023.10355608",
+  "DOI:10.1109/infocom53939.2023.10229069",
+  "DOI:10.1109/icme55011.2023.00172",
+  "DOI:10.1109/tnet.2024.3397671",
+  "DOI:10.1109/tnet.2024.3444593",
+  "DOI:10.1109/iwqos61813.2024.10682895",
+  "DOI:10.1109/candarw64572.2024.00028",
+  "DOI:10.1109/iceccc61767.2024.10593994",
+  "DOI:10.1145/3712678.3721878",
+  "DOI:10.1109/tc.2025.3566872",
+  "DOI:10.1109/ton.2025.3566495",
+  "DOI:10.1109/jiot.2025.3621630",
+  "DOI:10.1109/noms57970.2025.11073635",
+  "DOI:10.1109/tmc.2025.3567582",
+  "DOI:10.1109/icc52391.2025.11160790",
+  "DOI:10.1109/ton.2026.3651621",
+  "DOI:10.1109/iwqos70441.2026.11661091",
+  "DOI:10.1109/iccraids67816.2026.11519680",
+  "DOI:10.1109/tnsm.2026.3698279",
+  "DOI:10.1007/978-981-95-8408-6_26",
+  "DOI:10.1109/cisce69494.2026.11504607",
+  "DOI:10.1109/tnsm.2026.3714992",
+  "DOI:10.1109/wcnc65185.2026.11555580",
+  "DOI:10.1145/3827616"
+ ],
+ "res": [
+  {
+   "paperId": "0c9efa7670281ea33f2244018bd01d0dc97e9699",
+   "externalIds": {
+    "DBLP": "journals/wicomm/LinJ20",
+    "MAG": "3048762404",
+    "DOI": "10.1155/2020/8863420",
+    "CorpusId": 221354475
+   },
+   "title": "Learn-ing-Based On-AP TCP Performance Enhancement",
+   "venue": "Wireless Communications and Mobile Computing",
+   "year": 2020,
+   "openAccessPdf": {
+    "url": "https://downloads.hindawi.com/journals/wcmc/2020/8863420.pdf",
+    "status": "HYBRID",
+    "license": "CCBY",
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1155/2020/8863420?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1155/2020/8863420, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": {
+    "model": "tldr@v2.0.0",
+    "text": "This work implements an integral data sampling, network monitoring, and rate control software-defined wireless networking (SDWN) system, and finds that there exist strong relationships between congestion packet loss behaviors and the instant cross-layer network metric measurements (states)."
+   },
+   "authors": [
+    {
+     "authorId": "1390618219",
+     "name": "Shirong Lin"
+    },
+    {
+     "authorId": "2343326",
+     "name": "Shouxu Jiang"
+    }
+   ],
+   "abstract": "Data transmissions suffer from TCP\u2019s poor performance since the introduction of the first commercial wireless services in the 1990s. Recent years have witnessed a surge of academia and industry activities in the field of TCP performance optimization. For a TCP flow whose last hop is a wireless link, congestions in the last hop dominate its performance. We implement an integral data sampling, network monitoring, and rate control software-defined wireless networking (SDWN) system. By analysing our sampled data, we find that there exist strong relationships between congestion packet loss behaviors and the instant cross-layer network metric measurements (states). We utilize these qualitative relationships to predict future congestions in wireless links and enhance TCP performance by launch necessary rate control locally on the access points (AP) before the congestions. We also implement modeling and rate control modules on this platform. Our platform senses the instant wireless dynamic and takes actions promptly to avoid future congestions. We conduct real-world experiments to evaluate its performance. The experiment results show that our methods outperform the bottleneck bandwidth and RTT (BBR) protocol and a recently proposed protocol Vivace on throughput, delay, and jitter performance at least 16.5%, 25%, and 12.6%, respectively."
+  },
+  {
+   "paperId": "4c827189256c595a8a268c8c0baf41ca6f00fd70",
+   "externalIds": {
+    "DOI": "10.1109/icisfall51598.2021.9627345",
+    "CorpusId": 244925253
+   },
+   "title": "An Adaptive Control Scheme for Deadline-aware Streaming",
+   "venue": "2021 IEEE/ACIS 20th International Fall Conference on Computer and Information Science (ICIS Fall)",
+   "year": 2021,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/icisfall51598.2021.9627345?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/icisfall51598.2021.9627345, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2142990915",
+     "name": "Yongbei Yang"
+    },
+    {
+     "authorId": "2439316389",
+     "name": "Yuan Zhang"
+    },
+    {
+     "authorId": "2144355898",
+     "name": "Yang Chen"
+    },
+    {
+     "authorId": "2789380",
+     "name": "Jinyao Yan"
+    }
+   ],
+   "abstract": "With increasing popularity on deadline-aware streaming service, how to deliver these multimedia data quickly and efficiently has become critical. Traditional transport protocols and congestion control schemes fail to meet expectations. On one hand, the traditional transport protocols like TCP are far away from minimizing the queuing delay. On the other hand, existing congestion control schemes is limited in transport layer, resulting in the neglect of features and deadline requirements in application layer. To address these issues, we propose a Heuristic Delay-based Adaptive Scheme, namely HDAS, based on Deadline-aware Transport Protocol (DTP). HDAS not only adjusts the window size and sending rate according to the network feedback but also schedules packets to improve the overall Quality of Experience (QoE). The proposed scheme adopts delay-based adaptive adjustment for congestion control and greedy strategy for scheduler. Extensive simulations demonstrate that our scheme outperforms most of the existing schemes on overall QoE."
+  },
+  {
+   "paperId": "edd9b0265cb4216496eca8d73a67c5529a04f803",
+   "externalIds": {
+    "DBLP": "conf/icnp/ZhouQLTLDW21",
+    "DOI": "10.1109/ICNP52444.2021.9651912",
+    "CorpusId": 245540899
+   },
+   "title": "Antelope: A Framework for Dynamic Selection of Congestion Control Algorithms",
+   "venue": "IEEE International Conference on Network Protocols",
+   "year": 2021,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICNP52444.2021.9651912?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICNP52444.2021.9651912, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "9162567",
+     "name": "Jian-Er Zhou"
+    },
+    {
+     "authorId": "2041290218",
+     "name": "Xin-Yi Qiu"
+    },
+    {
+     "authorId": "2109725540",
+     "name": "Zhenyu Li"
+    },
+    {
+     "authorId": "1749012",
+     "name": "Gareth Tyson"
+    },
+    {
+     "authorId": "2117896966",
+     "name": "Qing Li"
+    },
+    {
+     "authorId": "3113511",
+     "name": "Jing-Pu Duan"
+    },
+    {
+     "authorId": "2154462288",
+     "name": "Yi Wang"
+    }
+   ],
+   "abstract": "Most congestion control mechanisms are designed for specific network environments. Hence, there is no known algorithm that achieves uniformly good performance in all scenarios for all flows. Rather than devising such a one-size-fits-all algorithm, we propose a system to dynamically switch between the most suitable congestion control mechanisms for specific flows in specific environments. This raises a number of challenges, which we address through the design and implementation of Antelope, a system that can dynamically reconfigure to use the most suitable congestion control mechanism for an individual flow. We build a machine learning approach to learn which algorithm works best for individual conditions and implement kernel-level support for dynamically adjusting congestion control algorithms. We have implemented Antelope in Linux, and evaluated it in both emulated and production networks. We show that in WAN, DCN, and cellular networks, Antelope achieves an average 16% improvement in throughput compared with BBR; compared with Cubic, Antelope achieves an average 19% improvement in throughput and 10% reduction in delay."
+  },
+  {
+   "paperId": "4e581ac9ae26dfbd15becb21e8a5e2ee8ca1c3d6",
+   "externalIds": {
+    "MAG": "3195058958",
+    "DBLP": "journals/tvt/ZhangZMLM21",
+    "DOI": "10.1109/TVT.2021.3105479",
+    "CorpusId": 238920154
+   },
+   "title": "Arsenal: Understanding Learning-Based Wireless Video Transport via In-Depth Evaluation",
+   "venue": "IEEE Transactions on Vehicular Technology",
+   "year": 2021,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TVT.2021.3105479?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TVT.2021.3105479, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2109067860",
+     "name": "Huanhuan Zhang"
+    },
+    {
+     "authorId": "2786986",
+     "name": "An-Fu Zhou"
+    },
+    {
+     "authorId": "1384421085",
+     "name": "Ruoxuan Ma"
+    },
+    {
+     "authorId": "2331475333",
+     "name": "Jia-Ming Lu"
+    },
+    {
+     "authorId": "144258295",
+     "name": "Huadong Ma"
+    }
+   ],
+   "abstract": "Recent years have witnessed a rise of learning-based (i.e., artificial intelligence driven or AI-driven) video transport design, in order to achieve consistently high performance, even when the modern Internet is becoming increasingly heterogeneous while the applications are becoming unprecedentedly demanding (i.e., the simultaneous high-throughput and low-latency requirements of HD video telephony or intelligent remote driving). While separate evaluation using proprietary platform has shown the advantage of AI-driven algorithms over their non-AI counterparts, a systematic study is missing for directly comparing these AI-driven design under a uniform and practical platform. To bridge the gap, in this work, we first design and implement a full-fledged evaluation platform named Arsenal, which incorporates multiple state-of-the-art congestion control algorithms, most of which are AI-driven. Using Arsenal, we carry out a thorough comparative study of the algorithms, over massive traces collected from heterogeneous networks including WiFi, 4G, 3G and even the rare commercial 5G wireless networks. In particular, to enable convincing measurements for the dominated real-time video applications, we collect millions of practical video sessions in cooperation with a prevailing video service provider. The evaluation provides a handful of important observations, which are undiscovered before and have important impacts on future protocol design. Moreover, we will make the platform and algorithms open-source to enrich the research tools in the intelligent transportation community."
+  },
+  {
+   "paperId": "42a9788d0b20ca93a0d8842e3d6122b48d16daf1",
+   "externalIds": {
+    "MAG": "3205438423",
+    "DBLP": "journals/cn/MaoZHBK21",
+    "DOI": "10.1016/j.comnet.2021.108511",
+    "CorpusId": 244592072
+   },
+   "title": "Deep Learning (DL)-based adaptive transport layer control in UAV Swarm Networks",
+   "venue": "Comput. Networks",
+   "year": 2021,
+   "openAccessPdf": {
+    "url": "https://doi.org/10.1016/j.comnet.2021.108511",
+    "status": "BRONZE",
+    "license": null,
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.comnet.2021.108511?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.comnet.2021.108511, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": {
+    "model": "tldr@v2.0.0",
+    "text": "Experimental results show that the DL-based network coding scheme provides improved throughput and end-to-end delay compared to TCP and general network coding schemes."
+   },
+   "authors": [
+    {
+     "authorId": "1557348883",
+     "name": "Qian Mao"
+    },
+    {
+     "authorId": "2143835354",
+     "name": "Lin Zhang"
+    },
+    {
+     "authorId": "145399168",
+     "name": "Fei Hu"
+    },
+    {
+     "authorId": "1971712",
+     "name": "E. S. Bentley"
+    },
+    {
+     "authorId": "2503907903",
+     "name": "Sunil Kumar"
+    }
+   ],
+   "abstract": "Abstract This paper focuses on the congestion control issues of Unmanned Aerial Vehicle (UAV) Swarm Networks (USNs). In a USN, many network factors can cause segment loss, such as dynamic swarming, high mobility, etc. With traditional transport layer protocols such as Transmission Control Protocol (TCP), these losses are interpreted as congestion events and will cause the data sending rate being decreased dramatically, therefore impacting throughput. In this paper, a learning-based adaptive network coding scheme is proposed to handle segment loss. In this scheme, a certain amount of redundancy is attached to the original data. If the segment loss is caused by random factors (such as radio interference), the lost segments are retrieved by decoding. However, if the loss is caused by congestion, the sender will retransmit the lost segments and decrease the sending rate. The coding rate is a critical factor, which should guarantee that the random loss can be retrieved by decoding while the congestion loss triggers retransmission and sending rate deduction. To achieve this goal, a Deep Learning (DL) algorithm is proposed, which comprehensively considers the wireless network conditions and dynamically optimizes the coding rate. Our experimental results show that the DL-based network coding scheme provides improved throughput and end-to-end delay compared to TCP and general network coding schemes."
+  },
+  {
+   "paperId": "e82eee0d99202228c57eb90b5e3fa0855aaba583",
+   "externalIds": {
+    "DBLP": "conf/mobiarch/HuangKWLLW21",
+    "DOI": "10.1145/3477091.3482760",
+    "CorpusId": 237549046
+   },
+   "title": "Learning-based congestion control simulator for mobile internet education",
+   "venue": "International Workshop on Mobility in the Evolving Internet Architecture",
+   "year": 2021,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3477091.3482760?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3477091.3482760, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": {
+    "model": "tldr@v2.0.0",
+    "text": "A learning-based CC simulator for mobile Internet education is proposed, which provides intuitive suggestions to students on the CC algorithm selections via its learning ability in practical network environments and helps students in understanding the working mechanisms of CC algorithms intuitively."
+   },
+   "authors": [
+    {
+     "authorId": "3173029",
+     "name": "Junqin Huang"
+    },
+    {
+     "authorId": "3254296",
+     "name": "L. Kong"
+    },
+    {
+     "authorId": "2145185811",
+     "name": "Jiejian Wu"
+    },
+    {
+     "authorId": "47909559",
+     "name": "Yu-Tong Liu"
+    },
+    {
+     "authorId": "2110482469",
+     "name": "Yuchen Li"
+    },
+    {
+     "authorId": "2155544979",
+     "name": "Zhe Wang"
+    }
+   ],
+   "abstract": "Mobile Internet enables a huge amount of access requests, leading to severe network congestion. To alleviate congestion in the transmission layer, lots of Congestion Control (CC) algorithms have been proposed recently in the research domain, which are specifically designed for various network environments. However, one of the teaching difficulties in mobile Internet education is to allow students to accurately choose the appropriate CC algorithm under the known or measurable network environment. In this paper, we propose a learning-based CC simulator for mobile Internet education, which provides intuitive suggestions to students on the CC algorithm selections via its learning ability in practical network environments. Our simulator consists of three key modules: the network data module, learning module, and CC module. It has built-in several default CC algorithms and supports students' customized algorithms. The performance of the proposed simulator is evaluated on the implemented simulator prototype with both real and simulated network links. Evaluation results show that the simulator can dynamically select proper CC algorithms in the light of network environments to achieve higher throughput, which benefits students in understanding the working mechanisms of CC algorithms intuitively."
+  },
+  {
+   "paperId": "acae2ace19c0a92962eac4c731ae6132798d7930",
+   "externalIds": {
+    "DBLP": "conf/icce-tw/KatsumataMY21",
+    "DOI": "10.1109/ICCE-TW52618.2021.9603132",
+    "CorpusId": 244405206
+   },
+   "title": "Managing TCP Congestion Control of Smartphones toward Advanced Control",
+   "venue": "International Conference on Consumer Electronics-Taiwan",
+   "year": 2021,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICCE-TW52618.2021.9603132?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICCE-TW52618.2021.9603132, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2141320362",
+     "name": "Natsuki Katsumata"
+    },
+    {
+     "authorId": "2483450383",
+     "name": "Koto Miyazawa"
+    },
+    {
+     "authorId": "1954707",
+     "name": "Saneyasu Yamaguchi"
+    }
+   ],
+   "abstract": "A communication throughput is an important performance of a smartphone, in particular for big data applications. The output speed is controlled by its congestion control algorithm that is running in its kernel space. One of the promising methods for improving congestion control is congestion control via deep learning. However, most of all the deep learning systems run in the userspace, and the congestion control algorithm runs in the kernel space. For achieving this, managing the congestion control behavior in the kernel space from userspace is necessary. In this paper, we propose a system in which a userspace process can set the congestion window size in the kernel space of the Linux kernel by focusing on the Android operating system. We then present system evaluations and show that the proposed system can suitably manage the congestion control behavior in the operating system. The proposed system monitors the congestion window size in the kernel space and transmits it to the userspace via /proc filesystem. Similarly, this transmits a value specified by a userspace process to the kernel space and applies the value to the congestion window size."
+  },
+  {
+   "paperId": "db0c25ae56eeffc5699e49e44c2405311c5d7564",
+   "externalIds": {
+    "DBLP": "journals/ton/ZhouQLLTDWPW23",
+    "DOI": "10.1109/TNET.2022.3220225",
+    "CorpusId": 253606634
+   },
+   "title": "A Machine Learning-Based Framework for Dynamic Selection of Congestion Control Algorithms",
+   "venue": "IEEE/ACM Transactions on Networking",
+   "year": 2023,
+   "openAccessPdf": {
+    "url": "https://qmro.qmul.ac.uk/xmlui/bitstream/123456789/84518/2/Tyson%20A%20Machine%20Learning-Based%202022%20Published.pdf",
+    "status": "GREEN",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TNET.2022.3220225?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TNET.2022.3220225, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "9162567",
+     "name": "Jian-Er Zhou"
+    },
+    {
+     "authorId": "2041290218",
+     "name": "Xin-Yi Qiu"
+    },
+    {
+     "authorId": "2109725540",
+     "name": "Zhenyu Li"
+    },
+    {
+     "authorId": "2117896966",
+     "name": "Qing Li"
+    },
+    {
+     "authorId": "1749012",
+     "name": "Gareth Tyson"
+    },
+    {
+     "authorId": "3113511",
+     "name": "Jing-Pu Duan"
+    },
+    {
+     "authorId": "2154462288",
+     "name": "Yi Wang"
+    },
+    {
+     "authorId": "49349231",
+     "name": "H. Pan"
+    },
+    {
+     "authorId": "2152862695",
+     "name": "Qinghua Wu"
+    }
+   ],
+   "abstract": "Most congestion control algorithms (CCAs) are designed for specific network environments. As such, there is no known algorithm that achieves uniformly good performance in all scenarios for all flows. Rather than devising a one-size-fits-all algorithm (which is a likely impossible task), we propose a system to dynamically switch between the most suitable CCAs for specific flows in specific environments. This raises a number of challenges, which we address through the design and implementation of Antelope, a system that can dynamically reconfigure the stack to use the most suitable CCA for individual flows. We build a machine learning model to learn which algorithm works best for individual conditions and implement kernel-level support for dynamically switching between CCAs. The framework also takes application requirements of performance into consideration to fine-tune the selection based on application-layer needs. Moreover, to reduce the overhead introduced by machine learning on individual front-end servers, we (optionally) implement the CCA selection process in the cloud, which allows the share of models and the selection among front-end servers. We have implemented Antelope in Linux, and evaluated it in both emulated and production networks. The results demonstrate the effectiveness of Antelope via dynamic adjusting the CCAs for individual flows. Specifically, Antelope achieves an average 16% improvement in throughput compared with BBR, and an average 19% improvement in throughput and 10% reduction in delay compared with CUBIC."
+  },
+  {
+   "paperId": "b008e8e142b7630d7c54b1b167c88c98c5750745",
+   "externalIds": {
+    "DBLP": "conf/sigcomm/Wu0LODW22",
+    "DOI": "10.1145/3538401.3546596",
+    "CorpusId": 251814900
+   },
+   "title": "AutoPlex: inter-session multiplexing congestion control for large-scale live video services",
+   "venue": "NAI@SIGCOMM",
+   "year": 2022,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3538401.3546596?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3538401.3546596, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": {
+    "model": "tldr@v2.0.0",
+    "text": "The proposed AutoPlex is an inter-session multiplexing CC framework that makes full use of similarity in the same user group and automatically adjusts CC parameters (i.e., pacing rate and congestion window size), and supports user-defined policies that can act as standards to learn QoS features of better-performed sessions."
+   },
+   "authors": [
+    {
+     "authorId": "2183082045",
+     "name": "Bo Wu"
+    },
+    {
+     "authorId": "2139098677",
+     "name": "Tong Li"
+    },
+    {
+     "authorId": "2112751905",
+     "name": "Cheng Luo"
+    },
+    {
+     "authorId": "2182737680",
+     "name": "Changkui Ouyang"
+    },
+    {
+     "authorId": "22545155",
+     "name": "Xin-Le Du"
+    },
+    {
+     "authorId": "3285422",
+     "name": "Fu-Ju Wang"
+    }
+   ],
+   "abstract": "The increasingly obvious advances in live video services introduce the urgent need for enhancing network transmission performance, especially by designing an efficient congestion control (CC) scheme. Unfortunately, the previous rule-based CC methods cannot adapt well to various network conditions and statuses while machine-learning-powered CC paradigms always suffer from non-trivial system overhead and unstable effects. In this paper, we first conduct a large-scale network measurement for 800+ million live video streams, and find that QoS metrics of better-performed sessions show similarity in the same user group. We then propose AutoPlex, an inter-session multiplexing CC framework that makes full use of this similarity and automatically adjusts CC parameters (i.e., pacing rate and congestion window size). AutoPlex supports user-defined policies that can act as standards to learn QoS features of better-performed sessions. We implement the proposed AutoPlex prototype based on QUIC protocol and BBR algorithm, and conduct experiments in the real live CDN proxy. The experimental results demonstrate the potentials of AutoPlex for the transmission optimization of live video applications, in which the average (or 90th-percentile) retransmission ratio can be reduced by 24% ~ 27% (or 32% ~ 40%) while the average value of goodput/rtt is promoted by 14% ~ 32%."
+  },
+  {
+   "paperId": "3b9c15275ac9c796e7afcc37e127eb86b7095e94",
+   "externalIds": {
+    "DBLP": "conf/mm/HuangZJZS22",
+    "DOI": "10.1145/3503161.3548436",
+    "CorpusId": 252783111
+   },
+   "title": "Learned Internet Congestion Control for Short Video Uploading",
+   "venue": "ACM Multimedia",
+   "year": 2022,
+   "openAccessPdf": {
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3503161.3548436",
+    "status": "HYBRID",
+    "license": "CCBY",
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3503161.3548436?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3503161.3548436, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": {
+    "model": "tldr@v2.0.0",
+    "text": "This work presents DuGu, a novel learning-based CC algorithm designed by considering the unique proprieties of video uploading via the probing phase and internet networking via the control phase, that supports multi-objective and rivals or outperforms existing CC algorithms across all considered scenarios."
+   },
+   "authors": [
+    {
+     "authorId": "41021998",
+     "name": "Tianchi Huang"
+    },
+    {
+     "authorId": "2152552345",
+     "name": "Chao Zhou"
+    },
+    {
+     "authorId": "2181286514",
+     "name": "Lianchen Jia"
+    },
+    {
+     "authorId": "48263901",
+     "name": "Ruixiao Zhang"
+    },
+    {
+     "authorId": "1720782061",
+     "name": "Li-Feng Sun"
+    }
+   ],
+   "abstract": "Short video uploading service has become increasingly important, as at least 30 million videos are uploaded per day. However, we find that existing congestion control (CC) algorithms, either heuristics or learning-based, are not applicable for video uploading -- i.e., lacking in the design of the fundamental mechanism and being short of leveraging network modeling. We present DuGu, a novel learning-based CC algorithm designed by considering the unique proprieties of video uploading via the probing phase and internet networking via the control phase. During the probing phase, DuGu leverages the transmission gap of uploading short videos to actively detect the network metrics to better understand network dynamics. DuGu uses a neural network~(NN) to avoid congestion during the control phase. Here, instead of using handcrafted reward functions, the NN is learned by imitating the expert policy given by the optimal solver, improving both performance and learning efficiency. To build this system, we construct an omniscient-like network emulator, implement an optimal solver and collect a large corpus of real-world network traces to learn expert strategies. Trace-driven and real-world A/B tests reveal that DuGu supports multi-objective and rivals or outperforms existing CC algorithms across all considered scenarios."
+  },
+  {
+   "paperId": "305804f5b843a944b26176d47b7d56113f70eb2e",
+   "externalIds": {
+    "DBLP": "conf/icnp/Yang0ZZW0X23",
+    "DOI": "10.1109/ICNP59255.2023.10355608",
+    "CorpusId": 266438715
+   },
+   "title": "Disco: A Framework for Dynamic Selection of Multipath Congestion Control Algorithms",
+   "venue": "IEEE International Conference on Network Protocols",
+   "year": 2023,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICNP59255.2023.10355608?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICNP59255.2023.10355608, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2254235550",
+     "name": "Furong Yang"
+    },
+    {
+     "authorId": "2109725540",
+     "name": "Zhenyu Li"
+    },
+    {
+     "authorId": "9162567",
+     "name": "Jian-Er Zhou"
+    },
+    {
+     "authorId": "2108263082",
+     "name": "Xin-Yi Zhang"
+    },
+    {
+     "authorId": "2152862695",
+     "name": "Qinghua Wu"
+    },
+    {
+     "authorId": "2285737479",
+     "name": "G. Pau"
+    },
+    {
+     "authorId": "1744392",
+     "name": "Gao-Gang Xie"
+    }
+   ],
+   "abstract": "Many mobile devices are usually equipped with multiple interfaces, providing the opportunity of using multipath transport protocols such as Multipath TCP (MPTCP) to boost performance. The multipath congestion control algorithm (CCA) in MPTCP plays a vital role in achieving high performance and multipath fairness in mobile environments where the paths are often heterogeneous and dynamic. Such environments are very challenging for existing one-size-fits-all CCAs to achieve high performance while ensuring multipath fairness. In this paper, we present a novel framework, Disco, to dynamically select the most appropriate CCAs for MPTCP subflows at runtime according to the perceived network condition. Extensive experiments show that compared with existing multipath CCAs, the proposed solution can improve the average throughput by 19% \u2013 25% and reduce the average queuing delay by up to 21 % while it barely does harm to multipath fairness."
+  },
+  {
+   "paperId": "9615fa3faaaadb6c3d1d1f6918cd7ca7dd7e0f6e",
+   "externalIds": {
+    "DBLP": "conf/infocom/YangLTJG23",
+    "DOI": "10.1109/INFOCOM53939.2023.10229069",
+    "CorpusId": 261373398
+   },
+   "title": "Gemini: Divide-and-Conquer for Practical Learning-Based Internet Congestion Control",
+   "venue": "IEEE Conference on Computer Communications",
+   "year": 2023,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/INFOCOM53939.2023.10229069?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/INFOCOM53939.2023.10229069, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2124829641",
+     "name": "Wenzheng Yang"
+    },
+    {
+     "authorId": "1679704",
+     "name": "Y. Liu"
+    },
+    {
+     "authorId": "2277300529",
+     "name": "Chen Tian"
+    },
+    {
+     "authorId": "1727978",
+     "name": "Junchen Jiang"
+    },
+    {
+     "authorId": "1959347061",
+     "name": "Lingfeng Guo"
+    }
+   ],
+   "abstract": "Learning-based Internet congestion control algorithms have attracted much attention due to their potential performance improvement over traditional algorithms. However, such performance improvement is usually at the expense of black-box design and high computational overhead, which prevent them from large-scale deployment over production networks. To address this problem, we propose a novel Internet congestion control algorithm called Gemini. It contains a parameterized congestion control module, which is white-box designed with low computational overhead, and an online parameter optimization module, which serves to adapt the parameterized congestion control module to different networks for higher transmission performance. Extensive trace-driven emulations reveal Gemini achieves better balances between delay and throughput than state-of-the-art algorithms. Moreover, we successfully deploy Gemini over production networks. The evaluation results show that the average throughput of Gemini is 5% higher than that of Cubic (4% higher than that of BBR) over a mobile application downloading service and 61% higher than that of Cubic (33% higher than that of BBR) over a commercial network speed-test benchmarking service."
+  },
+  {
+   "paperId": "d13189728747d3da16e5ebe95a919378d6bebaf6",
+   "externalIds": {
+    "DBLP": "conf/icmcs/PengLSXLC23",
+    "DOI": "10.1109/ICME55011.2023.00172",
+    "CorpusId": 261126839
+   },
+   "title": "PACC: Perception Aware Congestion Control for Real-time Communication",
+   "venue": "IEEE International Conference on Multimedia and Expo",
+   "year": 2023,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICME55011.2023.00172?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICME55011.2023.00172, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2233499015",
+     "name": "Feng Peng"
+    },
+    {
+     "authorId": "2150794614",
+     "name": "Bing-Cong Lu"
+    },
+    {
+     "authorId": "2150597192",
+     "name": "Li Song"
+    },
+    {
+     "authorId": "1773394",
+     "name": "Rong Xie"
+    },
+    {
+     "authorId": "2108491216",
+     "name": "Yan-Min Liu"
+    },
+    {
+     "authorId": "2118428094",
+     "name": "Ying Chen"
+    }
+   ],
+   "abstract": "Due to the network fluctuations, congestion control is indispensable to guarantee the quality of experience (QoE) for Real-Time Communication (RTC) users. This component adjusts the sending rate of media data, which determines the video encoding bitrate. However, existing control schemes either only focus on network numerical indicators or fail to adapt to various network environments. Logically, we propose PACC (Perception Aware Congestion Control) for RTC in this paper. Leveraging the convolutional neural network (CNN), we develop a quality sensor to infer the video quality increasing rate. Assisted with the variation trend analysis for user perception, PACC tunes the bitrate towards the direction of better QoE. Extensive tracedriven experiments demonstrate the effectiveness of PACC, which outperforms the existing landmark schemes by 8.2% to 32.4% and 6.8% to 18.0% in terms of transport and application layer QoE metrics, respectively."
+  },
+  {
+   "paperId": "8abcee77f011775f498378539a0dbfc1e73f4b27",
+   "externalIds": {
+    "DBLP": "journals/ton/YuanZQHYCXYHZ24",
+    "DOI": "10.1109/TNET.2024.3397671",
+    "CorpusId": 269828749
+   },
+   "title": "Context-Aware Cross-Layer Congestion Control for Large-Scale Live Streaming",
+   "venue": "IEEE/ACM Transactions on Networking",
+   "year": 2024,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TNET.2024.3397671?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TNET.2024.3397671, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2164142946",
+     "name": "Danfu Yuan"
+    },
+    {
+     "authorId": "2306875007",
+     "name": "Wei-Zhan Zhang"
+    },
+    {
+     "authorId": "2324715999",
+     "name": "Yubing Qiu"
+    },
+    {
+     "authorId": "2301968018",
+     "name": "Haiyu Huang"
+    },
+    {
+     "authorId": "2301918147",
+     "name": "Mingliang Yang"
+    },
+    {
+     "authorId": "2301664139",
+     "name": "Peng Chen"
+    },
+    {
+     "authorId": "2301674159",
+     "name": "Kai Xiao"
+    },
+    {
+     "authorId": "2301751417",
+     "name": "Hongfei Yan"
+    },
+    {
+     "authorId": "2427378062",
+     "name": "Ya-Ming He"
+    },
+    {
+     "authorId": "2358286668",
+     "name": "Yiping Zhang"
+    }
+   ],
+   "abstract": "Live video streaming has come to dominate today\u2019s Internet traffic. Content Delivery Network (CDN) providers, responsible for hosting outsourced live streaming services, are now striving to ensure an enhanced quality of experience (QoE) to meet the ever-increasing user expectations. Existing congestion control (CC) schemes in the kernel, however, suffer from unsatisfactory performance for live video delivery due to disparities in traffic characteristics and differentiated optimization goals between generic traffic and live video traffic. In this paper, we propose XCC, a streaming context-aware CC approach that helps achieve better QoE for the live streaming services from CDN provider. The core of XCC is to adaptively coordinate the transmission strategy and frame rate through a cross-layer feedback framework, responding to the fluctuating traffic dynamics and network conditions in the short term. Further, XCC matches the long-term traffic characteristics (i.e., two-stage delivery mode) by employing a task-specific state transition mechanism as the underlying TCP. XCC has been implemented in the Linux kernel\u2019s TCP stack and media engine and has been fully deployed in Alibaba Cloud\u2019s production service. Evaluation in experimental environments and A/B testing serving tens of millions of sessions demonstrate that XCC is competitive in streaming delay against the most prevalent TCP in today\u2019s Operating Systems, while reducing startup delay by 9.9%, stall time by 36.4%, and stall frequency by 42.5% on average in deployment."
+  },
+  {
+   "paperId": "57f6b02a98249d80bc567377aa04dd20a6df5176",
+   "externalIds": {
+    "DBLP": "journals/ton/HuangP24",
+    "DOI": "10.1109/TNET.2024.3444593",
+    "CorpusId": 272119975
+   },
+   "title": "Game-Theoretic Bandits for Network Optimization With High-Probability Swap-Regret Upper Bounds",
+   "venue": "IEEE/ACM Transactions on Networking",
+   "year": 2024,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TNET.2024.3444593?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TNET.2024.3444593, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "152582320",
+     "name": "Zhiming Huang"
+    },
+    {
+     "authorId": "2244581985",
+     "name": "Jian-Ping Pan"
+    }
+   ],
+   "abstract": "In this paper, we study a multi-agent bandit problem in an unknown general-sum game repeated for a number of rounds (i.e., learning in a black-box game with bandit feedback), where a set of agents have no information about the underlying game structure and cannot observe each other\u2019s actions and rewards. In each round, each agent needs to play an arm (i.e., action) from a (possibly different) arm set (i.e., action set), and only receives the reward of the played arm that is affected by other agents\u2019 actions. The objective of each agent is to minimize her own cumulative swap regret, where the swap regret is a generic performance measure for online learning algorithms. Many network optimization problems can be cast with the framework of this multi-agent bandit problem, such as wireless medium access control and end-to-end congestion control. We propose an online-mirror-descent-based algorithm and provide near-optimal high-probability swap-regret upper bounds based on refined martingale analyses, which can further bound the expected swap regret instead of the pseudo-regret studied in the literature. Moreover, the high-probability bounds guarantee that correlated equilibria can be achieved in a polynomial number of rounds if the algorithms are played by all agents. To assess the performance of the studied algorithm, we conducted numerical experiments in the context of wireless medium access control, and we performed emulation experiments by implementing the studied algorithms through the Linux Kernel for the end-to-end congestion control."
+  },
+  {
+   "paperId": "936f65036c94722f8071eb86ebfa649d9b7ed71f",
+   "externalIds": {
+    "DBLP": "conf/iwqos/DaiWYL24",
+    "DOI": "10.1109/IWQoS61813.2024.10682895",
+    "CorpusId": 272915480
+   },
+   "title": "Quantifying the Merits of Network-Assist Online Learning in Optimizing Network Protocols",
+   "venue": "International Workshop on Quality of Service",
+   "year": 2024,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/IWQoS61813.2024.10682895?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/IWQoS61813.2024.10682895, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2303941298",
+     "name": "Xiang-Xiang Dai"
+    },
+    {
+     "authorId": "2287469941",
+     "name": "Zhiyong Wang"
+    },
+    {
+     "authorId": "2116475763",
+     "name": "Jiancheng Ye"
+    },
+    {
+     "authorId": "2253686436",
+     "name": "John C. S. Lui"
+    }
+   ],
+   "abstract": "Optimizing network protocols is crucial for improving application performance. Recent research works use multi-armed bandit (MAB) online learning methods to address network optimization problems, aiming to improve cumulative payoffs such as network throughput. However, existing MAB frameworks are ineffective since they inherently assume the network environment is static, or they have high complexity in detecting environmental changes. In this work, we advocate using lightweight \"network-assist\" techniques together with online learning to optimize network protocols, and show it can effectively detect environmental changes and maximize network performance. Furthermore, optimizing network protocols often face two types of decision (or arm) spaces: discrete and continuous choices, while most prior MAB models only handle discrete settings. This paper proposes a framework capable of managing both spaces. To our best knowledge, we are the first to develop an MAB framework that incorporates network-assist signals in handling dynamic environments, while considering the distinct characteristics of discrete and continuous arm spaces. Our framework can achieve optimality by showing its sub-linear regret bound, matching the state-of-the-art results in several degenerate cases. We also illustrate how to apply our framework to two network applications: (1) wireless network channel selection, and (2) rate-based TCP congestion control. We demonstrate the merits of our algorithms via both numerical simulations and packet-level experiments."
+  },
+  {
+   "paperId": "30ae714e98fad7818b6306deee62c69ea4cb6cb0",
+   "externalIds": {
+    "DBLP": "conf/candar/KojimaKAL24",
+    "DOI": "10.1109/CANDARW64572.2024.00028",
+    "CorpusId": 275175506
+   },
+   "title": "RNN-based Congestion Control in the Linux Kernel",
+   "venue": "2024 Twelfth International Symposium on Computing and Networking Workshops (CANDARW)",
+   "year": 2024,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/CANDARW64572.2024.00028?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/CANDARW64572.2024.00028, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2313187752",
+     "name": "Yohei Kojima"
+    },
+    {
+     "authorId": "2188268121",
+     "name": "Ryu Kazama"
+    },
+    {
+     "authorId": "2283344456",
+     "name": "Hirotake Abe"
+    },
+    {
+     "authorId": "2273661487",
+     "name": "Chung-Han Lee"
+    }
+   ],
+   "abstract": "This paper presents a lightweight in-kernel design of RNN-CUBIC, a loss-based machine learning (ML)-based congestion control algorithm (CCA), which optimizes the TCP sending rate regarding throughput, latency, and packet loss rate. While previous studies on ML-based CCAs primarily tested performance on simulated networks, this paper evaluates RNN-CUBIC on the Internet. RNN-CUBIC minimizes the overhead by (1) using an in-kernel recurrent neural network (RNN) predictor to reduce context switching cost, (2) avoiding floating-point arithmetic, and (3) adopting an activation function that does not require the exponential function. Compared to CUBIC, a widely used CCA, RNN-CUBIC achieved a 20.4% increase in throughput with only an additional average overhead of 0.692 ms for RNN prediction. This preliminary result suggests the significant potential for ML-based CCAs on the Internet."
+  },
+  {
+   "paperId": "e7aeed59bf16aa245829ee153b6f5fb8116387cd",
+   "externalIds": {
+    "DOI": "10.1109/ICECCC61767.2024.10593994",
+    "CorpusId": 271407926
+   },
+   "title": "\u201cComparison of TCP Congestion Control Algorithms: Harnessing the power of Traditional Hybrid and Machine Learning Fusion.\u201d",
+   "venue": "2024 International Conference on Electronics, Computing, Communication and Control Technology (ICECCC)",
+   "year": 2024,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICECCC61767.2024.10593994?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICECCC61767.2024.10593994, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2312776640",
+     "name": "Asha M. Raikar"
+    },
+    {
+     "authorId": "1492128730",
+     "name": "Manjaiah D. H."
+    },
+    {
+     "authorId": "2312766482",
+     "name": "R. Elumalai"
+    }
+   ],
+   "abstract": "Modern evolution of communication technologies have resulted in complexity of network communications. In addition increasing diversity of preferred applications with large number of end users have further exaggerated this complexity. As a result the traditional rule-based Transmission Control Protocol (TCP) congestion control approach have now become absolute to efficiently handle this new type of intricacy. Presently machine learning approach finds a major role in solving TCP congestion issue. Both the traditional TCP congestion control and congestion control by machine learning approach have their own merits and demerits. The traditional TCP have less overhead, faster convergence, and show fairness and hence are practical but not adaptable and flexible to the dynamic environment of the networks[1]. On the other hand the machine learning algorithms are good at adaptability and flexibility but are not practical. This paper presents overview on hybrid modes of TCP congestion control namely (i) Combining more than one traditional rule-based approach, (ii) Combining Traditional rule-based and machine learning-based approach and (iii) The combination of more than one machine learning based approach, in order to overcome the present intricacy in communication networks. The main focus of this overview is to highlight that hybrid mode of TCP with machine learning can be an efficient solution for the present TCP congestion issues."
+  },
+  {
+   "paperId": "8c8ac7a71ae79c424790e2525be762952512b35c",
+   "externalIds": {
+    "DBLP": "conf/nossdav/SidhuB25a",
+    "DOI": "10.1145/3712678.3721878",
+    "CorpusId": 277566102
+   },
+   "title": "Aero: A Pluggable Congestion Control for QUIC",
+   "venue": "International Workshop on Network and Operating System Support for Digital Audio and Video",
+   "year": 2025,
+   "openAccessPdf": {
+    "url": "",
+    "status": null,
+    "license": null,
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3712678.3721878?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3712678.3721878, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": {
+    "model": "tldr@v2.0.0",
+    "text": "Aero--- the first learning-based plug-and-play congestion control algorithm for QUIC that considers the varying network statistics and can easily be integrated with any QUIC implementation is developed."
+   },
+   "authors": [
+    {
+     "authorId": "2333919029",
+     "name": "Jashanjot Singh Sidhu"
+    },
+    {
+     "authorId": "47738767",
+     "name": "Abdelhak Bentaleb"
+    }
+   ],
+   "abstract": "QUIC is rapidly emerging as the de-facto standard for HTTP Adaptive Streaming (HAS). QUIC relies on heuristic-based congestion control algorithms which were predominantly designed for TCP and thus have poor generalizability, ultimately degrading the user's Quality of Experience (QoE). Existing learning-based solutions for TCP are not pluggable and require a lot of engineering work, impacting their integration with QUIC. To tackle these challenges, we develop Aero--- the first learning-based plug-and-play congestion control algorithm for QUIC that considers the varying network statistics and can easily be integrated with any QUIC implementation. To analyze the performance of Aero, we conduct a series of comprehensive trace-driven experiments and evaluate its efficiency not only from a congestion control perspective but also the impact it has on the client-driven adaptive bitrate scheme (ABR). Experimental results demonstrate that Aero improves VMAF by ~12% with ~65% less rebuffering for low latency live streaming sessions compared to its competitors. Moreover, Aero excels in terms of delivery rate and delay across different network conditions."
+  },
+  {
+   "paperId": "00bc5e8a0ceb0c0c601cccdffda3e5f6783e2f6a",
+   "externalIds": {
+    "DBLP": "journals/tc/HanWZLZJ25",
+    "DOI": "10.1109/TC.2025.3566872",
+    "CorpusId": 278681686
+   },
+   "title": "Anole: A Pragmatic Blend of Classic and Learning-Based Algorithms in Congestion Control",
+   "venue": "IEEE transactions on computers",
+   "year": 2025,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TC.2025.3566872?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TC.2025.3566872, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "9941750",
+     "name": "Fei-Xue Han"
+    },
+    {
+     "authorId": "2361852076",
+     "name": "Yike Wang"
+    },
+    {
+     "authorId": "2430003264",
+     "name": "Yun-Bo Zhang"
+    },
+    {
+     "authorId": "2328155748",
+     "name": "Qing Li"
+    },
+    {
+     "authorId": "2361907102",
+     "name": "Dayi Zhao"
+    },
+    {
+     "authorId": "2257136915",
+     "name": "Yong Jiang"
+    }
+   ],
+   "abstract": "In recent years, hybrid congestion control (CC) algorithms that combine rule-based CC and learning-based CC have gained significant attention. They incorporate the fast adaption ability of learning-based CC and the stability of rule-based CC, tending to select the better-performing rate based on the network feedback. However, the practical implementation of such algorithms has revealed primary issues. Specifically, they require both CCs to run alternately, which results in a poorly performing CC continuing to run in the network. Moreover, hybrid CCs cannot converge to the optimal rate when both CCs perform poorly. This paper proposes Anole to address these issues. Anole has three main algorithmic contributions: 1) Anole always selects the better-performing CC, 2) Anole temporarily deprecates the consistently underperforming CC, 3) when both CCs perform poorly, Anole infers the optimal sending rate based on the network feedback. We carry out comprehensive experiments in both emulated and real-world wired networks, as well as in real-world WiFi networks, to assess the performance of Anole. The experiment results demonstrate that Anole achieves approximately 6% higher throughput in real-world links and 34% lower delay in the 48Mbps link compared to the state-of-the-art CC. Anole also exhibits superior performance in adaptability and fair convergence."
+  },
+  {
+   "paperId": "4a35a1bdd647e87c0c59beee110371713a0a5ef7",
+   "externalIds": {
+    "DBLP": "journals/ton/FanHXLM25",
+    "DOI": "10.1109/TON.2025.3566495",
+    "CorpusId": 278657625
+   },
+   "title": "EchoCC: Refining Learning-Based Congestion Control With WordBook",
+   "venue": "IEEE Transactions on Networking",
+   "year": 2025,
+   "openAccessPdf": {
+    "url": "",
+    "status": null,
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TON.2025.3566495?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TON.2025.3566495, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2303195889",
+     "name": "Yu Fan"
+    },
+    {
+     "authorId": "2342153223",
+     "name": "Bo Hou"
+    },
+    {
+     "authorId": "51200773",
+     "name": "Pengjin Xie"
+    },
+    {
+     "authorId": "2303087295",
+     "name": "Liang Liu"
+    },
+    {
+     "authorId": "2248034542",
+     "name": "Hua-Dong Ma"
+    }
+   ],
+   "abstract": "Over the past decade, learning-based congestion control algorithms (CCAs) have experienced a significant increase in popularity. Recently, some approaches aim to tackle the computational overhead challenge in previous CCAs caused by extensive neural network parameters and computation delays, which can hinder algorithm effectiveness. Though effective, these approaches have certain constraints in achieving an optimal balance between performance and efficiency. To guarantee decision performance with increased efficiency, we stand on the shoulders of existing learning-based CCAs, gather their wise decisions, and replay them in a suitable manner. In this paper, we propose EchoCC, a unified framework that refines any deterministic learning-based CCA to reduce computation overhead and keep the performance of the original model. EchoCC maintains a \u201cWordBook\u201d which offers effective mapping between inputs and decisions. To ensure the high-quality mapping, we propose action-supervised contrastive learning which aligns the distributions of inputs and decisions. To realize EchoCC in an actual network environment, we address two practical challenges: performance-oriented updating for adaptability and a redundancy-reduction method for limited storage. Extensive evaluations conducted on both live Internet networks and emulated environments, achieve up to 64% reductions in running time and 60% CPU utilization compared to the original model. Importantly, EchoCC maintains network throughput and latency."
+  },
+  {
+   "paperId": "c8e10d16f84b2a8101d3633e8ef0f7013312c447",
+   "externalIds": {
+    "DBLP": "journals/iotj/LuoZSLWY25",
+    "DOI": "10.1109/JIOT.2025.3621630",
+    "CorpusId": 282142071
+   },
+   "title": "Enhancing Mobile Immersive Streaming Experience via Deadline-Aware Scheduling and Learning-Enhanced Congestion Control",
+   "venue": "IEEE Internet of Things Journal",
+   "year": 2025,
+   "openAccessPdf": {
+    "url": "",
+    "status": null,
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/JIOT.2025.3621630?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/JIOT.2025.3621630, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2064538",
+     "name": "Long Luo"
+    },
+    {
+     "authorId": "2385732451",
+     "name": "Yun-Xiang Zhou"
+    },
+    {
+     "authorId": "2386077829",
+     "name": "Jin Shen"
+    },
+    {
+     "authorId": "2386386327",
+     "name": "Haozhe Luo"
+    },
+    {
+     "authorId": "2386860954",
+     "name": "Wei-Hong Wu"
+    },
+    {
+     "authorId": "2261821423",
+     "name": "Hong-Fang Yu"
+    }
+   ],
+   "abstract": "Mobile immersive streaming applications, such as virtual reality (VR) and augmented reality (AR), impose stringent requirements on network transmission to deliver a seamless user experience. However, existing transmission control methods often fall short in dynamic mobile network environments. Traditional transport-layer protocols typically prioritize network-wide quality of service (QoS), overlooking the strict deadlines and varying priorities intrinsic to immersive streaming content, thereby adversely impacting application-specific quality of experience (QoE). Furthermore, heuristic-based congestion control (CC) methods lack adaptability to rapidly changing network environments, whereas machine learning (ML)-driven approaches, despite their adaptability potential, frequently prove computationally intensive and impractical for deployment on resource-constrained mobile devices. To address these drawbacks, we propose an intelligent transmission control approach that integrates a deadline- and priority-aware scheduler with a learning enhanced CC mechanism to optimize immersive streaming content delivery. The scheduling module dynamically prioritizes data packets based on their urgency and importance, timely delivering critical data within strict deadlines as much as possible. Complementing this, the hybrid CC module strategically combines lightweight heuristics for baseline performance efficiency with a selectively invoked ML model designed to adaptively adjust the sending rate, efficiently responding to real-time fluctuations in network conditions. Experimental results highlight the effectiveness of our approach, achieving QoE improvements of 15%\u201345% compared to existing methods across a range of streaming applications and mobile network scenarios."
+  },
+  {
+   "paperId": "0c7ea34d067b45e797a22ab2e517fed276ff8e3f",
+   "externalIds": {
+    "DBLP": "conf/noms/NunesBS25",
+    "DOI": "10.1109/NOMS57970.2025.11073635",
+    "CorpusId": 280154148
+   },
+   "title": "SafeNetCC: Towards Safety-Oriented Congestion Control",
+   "venue": "IEEE/IFIP Network Operations and Management Symposium",
+   "year": 2025,
+   "openAccessPdf": {
+    "url": "http://hdl.handle.net/10183/268912",
+    "status": "GREEN",
+    "license": "other-oa",
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/NOMS57970.2025.11073635?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/NOMS57970.2025.11073635, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2220202958",
+     "name": "Diego Cardoso Nunes"
+    },
+    {
+     "authorId": "2136841891",
+     "name": "Theophilus A. Benson"
+    },
+    {
+     "authorId": "1402991153",
+     "name": "A. Schaeffer-Filho"
+    }
+   ],
+   "abstract": "Congestion control mechanisms limit the end hosts' transmission rates, preventing the depletion of network resources. Typically, these systems focus only on fair resource allocation between competing flows. However, thinking only about fairness is insufficient: novel ML-powered congestion control mechanisms may be unpredictable, and even some of the already widely adopted congestion control mechanisms may still harm the network operation in some scenarios. In this context, it is important to also think about the safety of those systems. In this work, we present and analyze formally the concept of safety in congestion control. We use this formalization to design and implement SafeNetCC, a system capable of improving safety of potentially unsafe congestion control mechanisms. Our preliminary results show that SafeNetCC can improve network safety, reducing delays and improving fairness, even when incompatible congestion controls coexist in the same network. In an emulated scenario, we observed an RTT reduction of up to 80% and fairness improvements for incompatible congestion controls."
+  },
+  {
+   "paperId": "9c779b27f10d6adff769d8938588265ddade16ec",
+   "externalIds": {
+    "DBLP": "journals/tmc/LiJWWHSW25",
+    "DOI": "10.1109/TMC.2025.3567582",
+    "CorpusId": 278407892
+   },
+   "title": "Teaching to Fish Rather Than Giving a Fish: The Concentrator Method of Teaching Classic Congestion Control With Learning-Based module",
+   "venue": "IEEE Transactions on Mobile Computing",
+   "year": 2025,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TMC.2025.3567582?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TMC.2025.3567582, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2145538112",
+     "name": "Hao-Yang Li"
+    },
+    {
+     "authorId": "3292019",
+     "name": "Wanchun Jiang"
+    },
+    {
+     "authorId": "2146044749",
+     "name": "Jie Wang"
+    },
+    {
+     "authorId": "2360010322",
+     "name": "Ying Wang"
+    },
+    {
+     "authorId": "2135963135",
+     "name": "Jia-Wei Huang"
+    },
+    {
+     "authorId": "145773981",
+     "name": "Danfeng Shan"
+    },
+    {
+     "authorId": "2323106693",
+     "name": "Jianxin Wang"
+    }
+   ],
+   "abstract": "Nowadays, Congestion Control (CC) algorithms are expected to satisfy the diverse demands of applications running over diverse networks. To achieve this goal, the combinations, aiming to inherit both the advantages of classic CC in terms of convergence, overhead, and explainability, and the advantages of learning-based CC on adapting to diverse networks and demands, become a hot topic. In this paper, we reveal the existing combination works are either <bold>giving a fish</bold> or <bold>teaching to fish</bold>. Based on the insight of their essential issues, we develop the Concentrator method of <bold>teaching to fish</bold>. According to this method, we propose Seagull. Specifically, Seagull captures the network characteristics and application demands in a coarse-grained manner via an online learning module. Moreover, this module guides to customize the rate adjustment rules of the classic CC module for fine-grained system evolution. Replacing the assumption on networks by the captured characteristics, the classic CC module of Seagull can fulfill the specified application demands. Real-world experimental results show Seagull respectively outperforms Orca, PCC-Vivace, and CUBIC by <inline-formula><tex-math notation=\"LaTeX\">$49.3\\%,\\ 30.4\\%$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>49</mml:mn><mml:mo>.</mml:mo><mml:mn>3</mml:mn><mml:mo>%</mml:mo><mml:mo>,</mml:mo><mml:mspace width=\"4pt\"/><mml:mn>30</mml:mn><mml:mo>.</mml:mo><mml:mn>4</mml:mn><mml:mo>%</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"jiang-ieq1-3567582.gif\"/></alternatives></inline-formula>, and 24.9% in terms of throughput over the Internet, and improves the video quality of experience (QoE) by <inline-formula><tex-math notation=\"LaTeX\">$12.9\\sim 33.5\\%$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>12</mml:mn><mml:mo>.</mml:mo><mml:mn>9</mml:mn><mml:mo>\u223c</mml:mo><mml:mn>33</mml:mn><mml:mo>.</mml:mo><mml:mn>5</mml:mn><mml:mo>%</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"jiang-ieq2-3567582.gif\"/></alternatives></inline-formula> compared to CUBIC over cellular links."
+  },
+  {
+   "paperId": "f93ce29857ddf54fd27c02ea989faeb1e35846c0",
+   "externalIds": {
+    "DBLP": "conf/icc/ZhangBX25",
+    "ArXiv": "2601.22461",
+    "DOI": "10.1109/ICC52391.2025.11160790",
+    "CorpusId": 281605920
+   },
+   "title": "Toward Non-Expert Customized Congestion Control",
+   "venue": "ICC 2025 - IEEE International Conference on Communications",
+   "year": 2025,
+   "openAccessPdf": {
+    "url": "https://arxiv.org/pdf/2601.22461",
+    "status": "GREEN",
+    "license": null,
+    "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2601.22461, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": {
+    "model": "tldr@v2.0.0",
+    "text": "This paper presents an exploratory non-expert customized CCA framework, named NECC, which enables non-expert users to easily model, implement, and deploy their customized CCAs by leveraging Large Language Models and the Berkeley Packet Filter interface."
+   },
+   "authors": [
+    {
+     "authorId": "2344052702",
+     "name": "Ming-Rui Zhang"
+    },
+    {
+     "authorId": "2257307390",
+     "name": "Hamid Bagheri"
+    },
+    {
+     "authorId": "33112995",
+     "name": "Li-Song Xu"
+    }
+   ],
+   "abstract": "General-purpose congestion control algorithms (CCAs) are designed to achieve general congestion control goals, but they may not meet the specific requirements of certain users. Customized CCAs can meet certain users' specific requirements; however, non-expert users often lack the expertise to implement them. In this paper, we present an exploratory non-expert customized CCA framework, named NECC, which enables non-expert users to easily model, implement, and deploy their customized CCAs by leveraging Large Language Models and the Berkeley Packet Filter (BPF) interface. To the best of our knowledge, we are the first to address the customized CCA implementation problem. Our evaluations using real-world CCAs show that the performance of NECC is very promising, and we discuss the insights that we find and possible future research directions."
+  },
+  {
+   "paperId": "b5e1071b05b105986c1814e57470579ea82b1307",
+   "externalIds": {
+    "DBLP": "journals/ton/YuanQZYDWZ26",
+    "DOI": "10.1109/TON.2026.3651621",
+    "CorpusId": 284764111
+   },
+   "title": "A Concern-Decoupled Architecture for Scenario-Optimized Congestion Control in Large-Scale Live Video CDNs",
+   "venue": "IEEE Transactions on Networking",
+   "year": 2026,
+   "openAccessPdf": {
+    "url": "",
+    "status": null,
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TON.2026.3651621?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TON.2026.3651621, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2164142946",
+     "name": "Danfu Yuan"
+    },
+    {
+     "authorId": "2324715999",
+     "name": "Yubing Qiu"
+    },
+    {
+     "authorId": "2277806928",
+     "name": "Wei-Zhan Zhang"
+    },
+    {
+     "authorId": "2301918147",
+     "name": "Mingliang Yang"
+    },
+    {
+     "authorId": "2354672336",
+     "name": "Haipeng Du"
+    },
+    {
+     "authorId": "2108288669",
+     "name": "Zhi-Wen Wang"
+    },
+    {
+     "authorId": "2358286668",
+     "name": "Yiping Zhang"
+    }
+   ],
+   "abstract": "Optimizing quality of experience (QoE) for live video streaming (LVS) remains a long-standing challenge for content delivery network (CDN) providers. Today\u2019s CDNs predominantly employ static congestion control (CC) configurations, yet the heterogeneity of LVS scenarios undermines the efficacy of a uniform CC solution applicable to all users, as evidenced by our production measurements. While learning-based CC approaches show promise, they often suffer from limited generalizability, non-transparent design, and high computational overhead, struggling in large-scale CDNs. In this paper, we propose Bifrost, a new CC architecture grounded in a concern-decoupling paradigm. Bifrost separates fixed control logic from scenario-specific parameter optimization, enabling CDN systems to adapt dynamically to diverse LVS scenarios. To materialize it at CDN scale, Bifrost introduces a bilateral collaboration mechanism that identifies the LVS scenarios of each session by extracting client-side characteristics from viewing requests. It further employs offline model-based optimization to derive more effective control parameters for each scenario. We have deployed Bifrost on Alibaba Cloud\u2019s production CDN for nearly a year, serving a commercial LVS application. Bifrost has markedly improved QoE metrics by 2.7% to 32.1%, reinforcing the competitive edge in the CDN market. We also share our experiences and lessons learned from its large-scale deployment."
+  },
+  {
+   "paperId": "90c8088f52952905f025b238c050b36dbfffb54b",
+   "externalIds": {
+    "DBLP": "conf/iwqos/LiSB26",
+    "DOI": "10.1109/IWQoS70441.2026.11661091",
+    "CorpusId": 291374754
+   },
+   "title": "ALCHEMY: Reusing Congestion Control Wisdom for Adaptive QUIC Transport",
+   "venue": "International Workshop on Quality of Service",
+   "year": 2026,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/IWQoS70441.2026.11661091?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/IWQoS70441.2026.11661091, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2459857588",
+     "name": "Yan-Bing Li"
+    },
+    {
+     "authorId": "2333919029",
+     "name": "Jashanjot Singh Sidhu"
+    },
+    {
+     "authorId": "47738767",
+     "name": "Abdelhak Bentaleb"
+    }
+   ],
+   "abstract": "No single congestion control (CC) algorithm performs well across heterogeneous and time-varying network conditions. While loss-based, delay-based, and hybrid designs excel in specific regimes, they degrade outside them. Conversely, fully learned CC approaches offer adaptability but raise concerns regarding interpretability and deployment safety. Consequently, today\u2019s systems lack a robust mechanism to dynamically select the optimal strategy during an active connection. We address this gap with ALCHEMY, a framework that enables adaptive CC selection in QUIC. ALCHEMY introduces a state-preserving midstream switching mechanism that allows CC algorithms to be safely changed within an ongoing connection without triggering slow-start resets or control instability. Building on this capability, ALCHEMY employs an offline-trained deep reinforcement learning policy to select the most appropriate expert algorithm at runtime using cross-layer transport signals. Rather than replacing existing CC logic, ALCHEMY orchestrates established heuristics, leveraging their complementary strengths. Implemented in a high-fidelity emulated QUIC stack and evaluated across 26 diverse network scenarios, ALCHEMY demonstrates superior adaptability compared to static baselines. It improves the scenario-wise winning rate by approximately 29% relative to the best-performing individual heuristic CC algorithm. Here, winning rate denotes the frequency of achieving the highest composite throughput\u2013delay score among all evaluated schemes. Unlike static algorithms that are bound to a fixed design envelope, ALCHEMY consistently maintains near-optimal throughput-delay trade-offs across heterogeneous and volatile regimes."
+  },
+  {
+   "paperId": "d406c740d4ef6a049eabaff6531c28229b3b3d29",
+   "externalIds": {
+    "DOI": "10.1109/ICCRAIDS67816.2026.11519680",
+    "CorpusId": 288584328
+   },
+   "title": "AutoNetFlow: An Intelligent Reinforcement Learning Framework for Adaptive Process Automation in Network Traffic Control",
+   "venue": "2026 International Conference on Current Research in Artificial Intelligence and Data Science (ICCRAIDS)",
+   "year": 2026,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICCRAIDS67816.2026.11519680?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICCRAIDS67816.2026.11519680, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2437974461",
+     "name": "Anurag Bhargav Gandrakota"
+    }
+   ],
+   "abstract": "Efficient network traffic management is a critical component of modern process automation, particularly in systems requiring adaptive control under fluctuating workloads. This research presents AutoNetFlow, an intelligent framework that leverages reinforcement learning to autonomously regulate data flow and congestion across network channels. The system continuously monitors real-time queue dynamics and employs a learning agent to optimize packet-handling strategies without manual configuration. By integrating neural decision models within a closed-loop control pipeline, AutoNetFlow dynamically balances throughput, delay, and stability metrics across diverse operating environments. Simulation-based evaluations demonstrate significant performance improvements over static or rule-based controllers, highlighting the framework's ability to generalize across varying network topologies. The proposed approach illustrates the potential of deep learning-driven automation for complex process optimization, setting the foundation for self-adaptive communication infrastructures that operate with minimal human oversight."
+  },
+  {
+   "paperId": "e322ef127705eb8ff8747ca86f6a00ad267386c3",
+   "externalIds": {
+    "DBLP": "journals/tnsm/SAR26",
+    "DOI": "10.1109/TNSM.2026.3698279",
+    "CorpusId": 288851806
+   },
+   "title": "Decentralized Adaptive Initial Congestion Window in 5G Using Handshake-Based Flow Classification and Online Learning",
+   "venue": "IEEE Transactions on Network and Service Management",
+   "year": 2026,
+   "openAccessPdf": {
+    "url": "",
+    "status": null,
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TNSM.2026.3698279?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TNSM.2026.3698279, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "119839304",
+     "name": "S. Gangadhar"
+    },
+    {
+     "authorId": "146040476",
+     "name": "A. Chinmayananda"
+    },
+    {
+     "authorId": "2363286152",
+     "name": "Animesh Roy"
+    }
+   ],
+   "abstract": "The growing prevalence of latency-sensitive applications necessitates increasingly adaptive network congestion control mechanisms. This is particularly critical in Next-Generation Networks, e.g., 5G and beyond 5G networks, which promise low-latency and high-throughput support for diverse traffic. Traditional TCP variants employ a fixed Initial Congestion Window (ICW), resulting in suboptimal performance for short and long flows. This is because a small, fixed ICW unnecessarily prolongs short flows, while also delaying the ramp-up of long flows, leading to under-utilized bandwidth and increased latency. While machine learning based solutions offer improvements, they often rely on centralized architectures, limiting their applicability in decentralized scenarios. This paper introduces a novel decentralized framework that combines lightweight machine learning -based flow classification with online learning for real-time adaptive ICW. We first generate a unique dataset using OMNeT++/Simu5G simulations and select a suitable classifier that leverages TCP handshake features to distinguish short flows from long flows with 97.1% accuracy. This prediction drives an online learning model to dynamically select the efficient ICW before data transmission. Rigorous evaluation across TCP variants such as Reno, NewReno, and Westwood through simulations shows that our proposed framework achieves a 27\u201336% reduction in flow completion time and a 104-204% increase in throughput compared to baseline implementations. Robustness of our framework is further validated via an ablation study, threshold sensitivity analysis, missing TCP options, statistical significance with 95% confidence intervals (10-seed experiments, p < 0.0001), and multi-UE fairness (Jain index > 0.99). Operating entirely at the UE, our proposed solution eliminates dependence on centralized control, offering a scalable and resilient strategy for Next-Generation Networks."
+  },
+  {
+   "paperId": "a62eabe9dbeca0ad63ce999b0be6dfa8560c5ed7",
+   "externalIds": {
+    "DBLP": "conf/ica3pp/WangDCS25",
+    "DOI": "10.1007/978-981-95-8408-6_26",
+    "CorpusId": 289321243
+   },
+   "title": "Ditto: A Flexible Transmission Control Mechanism for Diverse User Demands and Network Conditions",
+   "venue": "International Conference on Algorithms and Architectures for Parallel Processing",
+   "year": 2025,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/978-981-95-8408-6_26?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/978-981-95-8408-6_26, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2424911309",
+     "name": "Qingnan Wang"
+    },
+    {
+     "authorId": "2443046177",
+     "name": "Jinnuo Du"
+    },
+    {
+     "authorId": "2149503882",
+     "name": "Fang-Zhou Chen"
+    },
+    {
+     "authorId": "145773981",
+     "name": "Danfeng Shan"
+    }
+   ],
+   "abstract": null
+  },
+  {
+   "paperId": "09ad088000ce2b101f2df36af85b3eab32d49225",
+   "externalIds": {
+    "DOI": "10.1109/CISCE69494.2026.11504607",
+    "CorpusId": 288181757
+   },
+   "title": "Genet: A Hybrid Congestion Control Framework with a Dynamic Tenure System and Learned Inference",
+   "venue": "2026 IEEE 8th International Conference on Communications, Information System and Computer Engineering (CISCE)",
+   "year": 2026,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/CISCE69494.2026.11504607?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/CISCE69494.2026.11504607, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2299852317",
+     "name": "Wenjie Xi"
+    },
+    {
+     "authorId": "2319831570",
+     "name": "Yifan Su"
+    },
+    {
+     "authorId": "2285728199",
+     "name": "Xiao-Wei Wang"
+    },
+    {
+     "authorId": "1968712",
+     "name": "Tong Xin"
+    }
+   ],
+   "abstract": "In this paper, we propose Genet to address the structural inefficiencies of static coordination in hybrid congestion control. Genet operates as a modular meta-controller that orchestrates a diverse portfolio of candidate algorithms; standard rate regulation is delegated to the active candidate. To optimize the exploration-exploitation trade-off, Genet introduces a Dynamic Tenure System (DTS) that dynamically scales execution tenure based on component confidence, thereby amortizing probing overhead. The Physically-Gated Learned Rate Inference Engine (LRIE) intervenes only during \u201cheuristic collapse\u201d to resolve signal ambiguity via dimensionless invariants, strictly anchored by empirical capacity. Experimental results on commercial 4G/5G traces show that, compared to state-of-the-art hybrids like Anole, Genet not only improves throughput by 9.5% and reduces tail latency by 15%, but also reduces throughput jitter by 75%."
+  },
+  {
+   "paperId": "eba081b3ae44a7858c93c77e4df78a6bb7ddfaab",
+   "externalIds": {
+    "DBLP": "journals/tnsm/JiHXS26",
+    "DOI": "10.1109/TNSM.2026.3714992",
+    "CorpusId": 290432784
+   },
+   "title": "ICCP: Toward Congestion Control Agent via Controlling Logic Decoupling and Algorithm Integration",
+   "venue": "IEEE Transactions on Network and Service Management",
+   "year": 2026,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TNSM.2026.3714992?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TNSM.2026.3714992, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2256798086",
+     "name": "Xiaolan Ji"
+    },
+    {
+     "authorId": "2257285100",
+     "name": "Biao Han"
+    },
+    {
+     "authorId": "1722346",
+     "name": "Yue-Dong Xu"
+    },
+    {
+     "authorId": "2152771703",
+     "name": "Jin-Shu Su"
+    }
+   ],
+   "abstract": "To address the limitations of single congestion control algorithms (CCAs) in dynamic and heterogeneous network environments, selecting an appropriate algorithm from a pool of existing ones has become a widely adopted strategy. Existing mechanisms, however, are typically constrained by the Linux kernel\u2019s unified abstractions, which limit the flexibility of selecting from a small set of in-kernel CCAs. Learning-based CCAs further increase the deployment cost because their inference logic is often compute-intensive and can block concurrent flows when executed within a synchronous control path. In this paper, we present ICCP, a unified congestion control framework that supports both heuristic and compute-intensive algorithms for concurrent flows. Rather than introducing a new reinforcement learning method, ICCP provides a three-layer, decoupled runtime framework consisting of the protocol stack, the user-space algorithm library, and the congestion control agent. ICCP uses asynchronous request handling, a shared proxy, and a \u201czero-copy\u201d serialization-based RPC path to support both batch and single-inference modes with controlled communication overhead. We implement three distinct reinforcement learning-based congestion control algorithms within ICCP, including Sage, Orca, and DTCC, to evaluate the framework using representative compute-intensive CCAs. Simulations and real-world experiments demonstrate that ICCP maintains robust and efficient communication and inference performance as the number of concurrent flows increases. Overall, ICCP provides a practical runtime framework for integrating, evaluating, and deploying heterogeneous congestion control algorithms in multi-flow environments."
+  },
+  {
+   "paperId": "1d671f380a2b1d871519c7f7b3d69859fc26e745",
+   "externalIds": {
+    "DBLP": "conf/wcnc/WuL26",
+    "DOI": "10.1109/WCNC65185.2026.11555580",
+    "CorpusId": 289330971
+   },
+   "title": "LQC: Cross-Layer Congestion Control Algorithm Based on Online Learning and Driver-Queue",
+   "venue": "IEEE Wireless Communications and Networking Conference",
+   "year": 2026,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'tldr'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/WCNC65185.2026.11555580?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/WCNC65185.2026.11555580, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": null,
+   "authors": [
+    {
+     "authorId": "2443056773",
+     "name": "Fei-Hong Wu"
+    },
+    {
+     "authorId": "50704121",
+     "name": "Ling-Zhi Li"
+    }
+   ],
+   "abstract": "With the rapid development of wireless and heterogeneous networks, traditional congestion control (CC) algorithms often struggle to adapt to time-varying wireless links and diverse application requirements. In recent years, learningbased CC approaches have demonstrated significant potential, but they still suffer from high overhead, slow convergence, and poor generalization to unknown network conditions. To address these challenges, this paper proposes a cross-layer, two-level CC algorithm. The core idea is as follows: in user space, an online learning module leverages NIC driver residual queue length to quickly capture network states and application requirements, enabling adaptive adjustment to congestion trends; in kernel space, a classical congestion control algorithm is employed to fine-tune the congestion window (cwnd). These two levels of control work in coordination, allowing the sender to more promptly and accurately track time-varying wireless links and to achieve efficient transmission across diverse network scenarios. Experimental results on real Wi-Fi networks show that, under the same network conditions, LQC can improve throughput by up to $38.5 \\%, 26.1 \\%$, and 11.5% compared with Orca, BBR, and CUBIC, respectively, while reducing delay by up to 27.9%, $\\mathbf{2 1. 0 \\%}$, and $\\mathbf{3 1. 9 \\%}$."
+  },
+  {
+   "paperId": "41d4874e848b0a97757d30e8e17a688bce0179c5",
+   "externalIds": {
+    "DOI": "10.1145/3827616",
+    "CorpusId": 289852573
+   },
+   "title": "Towards a Pluggable and Implementation-Agnostic Learning-Based Congestion Control for QUIC",
+   "venue": "ACM Transactions on Multimedia Computing, Communications, and Applications (TOMCCAP)",
+   "year": 2026,
+   "openAccessPdf": {
+    "url": "",
+    "status": "CLOSED",
+    "license": null,
+    "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3827616?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3827616, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+   },
+   "tldr": {
+    "model": "tldr@v2.0.0",
+    "text": "This work proposes AERO, the first learning-based, plug-and-play congestion control algorithm designed for portable integration across QUIC stacks, which dynamically adapts to varying network characteristics and can be seamlessly integrated into any QUIC stack without extensive engineering effort."
+   },
+   "authors": [
+    {
+     "authorId": "2333919029",
+     "name": "Jashanjot Singh Sidhu"
+    },
+    {
+     "authorId": "47738767",
+     "name": "Abdelhak Bentaleb"
+    }
+   ],
+   "abstract": "QUIC is rapidly becoming the de facto transport standard for HTTP Adaptive Streaming (HAS), offering multiplexed, lowlatency delivery over UDP. However, most existing QUIC congestion control (CC) algorithms are heuristic-based and largely inherited from TCP designs, limiting their adaptability across diverse network conditions and ultimately degrading the user\u2019s Quality of Experience (QoE). Learning-based CC approaches have shown promise in TCP but are typically non-modular and tightly coupled to specific implementations, making their integration with QUIC impractical. To address these limitations, we propose AERO \u2014the first learning-based, plug-and-play congestion control algorithm designed for portable integration across QUIC stacks. AERO dynamically adapts to varying network characteristics and can be seamlessly integrated into any QUIC stack without extensive engineering effort. We conduct extensive trace-driven evaluations to assess AERO \u2019s performance from both the transport and application layers, examining its influence on client-driven adaptive bitrate (ABR) algorithms. Experimental results show that AERO enhances video quality (VMAF) by approximately 13% and reduces rebuffering by 30% in video-on-demand scenarios, while achieving around 12% VMAF improvement and 65% fewer stalls in low-latency live streaming compared to state-of-the-art approaches. Moreover, AERO performs favorably in terms of delivery rate and delay across diverse network conditions, demonstrating its robustness and QUIC-friendliness."
+  }
+ ]
+}

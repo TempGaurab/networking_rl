@@ -1,0 +1,41 @@
+id|inc|name|setting|tags|ctrl|action|aspace|state|reward|family|algo|hybrid|train|sim|emu|real|real_kind|gen|fair|code|contrib|src|result
+R0148|Y|Adversarial attack on RL CC|GEN|security|||||||state-estimating adversarial perturbation attack|N||1|0|0||-|-|N|analysis|AB|attack cuts average throughput ~50%, raises latency >36x and loss 45%
+R0149|Y|HybridRTS|WAN|RTC|S|bitrate|NR|NR|qoe|NR|switching between rule-based and RL rate control|Y|sim|1|0|1|real-world WebRTC experiments|NR|NR|N|ctrl|AB|+11.6-18.6% QoS score vs GCC; -11.5-29.7% latency vs standalone rule or RL
+R0150|Y|IEACC|WAN|NDN|R|rate|NR|routerfeedback|thr,loss,fair|NR|DRL with edge-aided congestion degrees|N|sim|1|0|0||NR|Y|N|ctrl|AB|higher rate, lower loss, fairness maintained vs NDN schemes (simulation)
+R0151|Y|RL-CC on NVIDIA NICs|DC|RDMA,NIC|S|rate|C|rttinflation,prevaction|other|PG|RL-CC policy distilled into decision trees|N|OMNeT++|1|0|1|live cluster with NVIDIA ConnectX NICs|NR|NR|Y|deploy|FT|distillation cuts inference 500x to meet microsecond budget; on live NICs only RL-CC does well on all benchmarks over a wide range of flow counts
+R0152|Y|DQN-tuned AQM|GEN|AQM|N|aqm|D|NR|delay,thr|DQN|DQN|Y|ns-3|1|0|0||NR|NR|N|ctrl|AB|vs RED ~2% lower drop rate and ~3% better throughput (ns-3)
+R0155|Y|MACC (cross-layer)|GEN|AQM|S;N|cwnd;aqm|D|acked,inflight,rtt,queue|util|MARL+DQN|two cooperating DQN agents (TCP + AQM)|N|ns-3|1|0|0||NR|NR|N|ctrl|FT|cooperating transport and AQM agents beat CC/AQM combinations in throughput and delay (ns-3)
+R0157|Y|Muses|CELL|mobile,lightweight|S|cwnd|NR|NR|NA|IL|imitation-learned LSTM distilled into per-environment decision trees|N|NR|?|?|?||NR|NR|N|ctrl|AB|light per-flow decision trees with high throughput across diverse mobile environments
+R0158|Y|NCC|DC|neighbor info|S|rate|NR|local,neighbor|delay,thr|NR|RL (per-node agents)|N|testbed|0|1|?||NR|NR|N|ctrl|AB|better congestion avoidance than end-to-end and centralized schemes (trace-driven implementation)
+R0159|Y|Transformer-BBR (power IoT)|IOT|power-IoT|S|cwnd|NR|NR|NR|NR|DRL with Transformer agent in BBR probing|Y|sim|1|0|0||NR|NR|N|ctrl|AB|lower delay with good bandwidth; higher throughput than mainstream CCAs (simulation)
+R0160|Y|Nuwa-RL|CELL|wireless,AP switching|R|param|NR|NR|NR|PG|PPO-LSTM tunes receiver-side heuristic|Y|NR|?|?|?||NR|NR|N|ctrl|AB|less throughput loss during network switching
+R0161|Y|OpenNetLab|WAN|RTC,platform|R|bitrate|||||platform for training/evaluating RL RTC CC|N|testbed|1|1|1|distributed real-network testbed nodes|-|-|Y|framework|AB|open platform (gym + distributed real nodes) for RL-based RTC CC
+R0162|Y|Coefficient-free RL rate control|DC|big-data streaming|S|rate|NR|NR|other|NR|RL with coefficient-free objective|N|NR|?|?|?||NR|NR|N|ctrl|AB|up to 48% less loss and +4% throughput under tight latency constraints
+R0163|Y|Pareto|WAN|fairness|S|rate|C|NR|thr,delay,fair|MARL+PG|communication-free MARL, staged training + online learning|N|NR|?|?|?||Y|Y|N|ctrl|AB|generalizes across environments; best fairness against competing flows; improves further with online learning
+R0164|LINK|Owl (TNSM)|||||||||||||||||||||linked report of R0105
+R0165|Y|Plume (lightweight DRL CC)|GEN|lightweight|S|rate|NR|NR|thr,delay|NR|compressed DRL framework; reward re-parameterized during retraining|N|NR|?|?|?||NR|NR|N|method|AB|>50% smaller model, >20% lower decision latency with nearly unchanged performance
+R0166|Y|Q-learning adaptive TCP CC|GEN|wireless,high-BDP|S|cwnd|D|NR|NR|TAB|Q-learning|N|NR|?|?|?||NR|NR|N|ctrl|AB|improves on existing TCP CC, more so in wireless and high-BDP networks
+R0167|Y|RLRBM|CELL|RAN buffer|N|buffer|NR|NR|thr,delay|NR|DRL|N|sim|1|0|0||NR|NR|N|ctrl|AB|best throughput-latency trade-off for RAN buffer sizing (simulation)
+R0169|Y|CLCC|WAN|RTC|S|bitrate|NR|packet,frame|qoe|NR|RL with frame-level features|N|sim|1|0|0||NR|NR|N|ctrl|AB|+0.4-0.6 dB frame PSNR and -17-23% frame delay vs GCC (trace-driven)
+R0170|Y|RL-CC (Tessler et al.)|DC|RDMA|S|rate|C|rttinflation,prevaction|other|PG+MARL|policy gradient with analytic reward derivative (multi-agent, partially observable)|N|OMNeT++|1|0|0||Y|Y|N|ctrl|FT|beats RL baselines and production DC CCs in simulation; generalizes to unseen scenarios; being productized
+R0172|LINK|Scenario-assisted DRL (WIP)|||||||||||||||||||||linked report of R0213
+R0173|LINK|Spine (CoNEXT)|||||||||||||||||||||linked report of R0211
+R0174|Y|Symbolic distillation|WAN|interpretability|S|rate|C|aurora|thr,delay,loss|PG|Aurora PPO policy distilled into symbolic trees|N|custom-sim|1|1|0||NR|NR|Y|method|FT|distilled symbolic rules match or beat NN policies while faster and simpler
+R0175|Y|TCP-CFCC|WAN||S|rate|NR|thr,rtt|NR|PG|PPO (CNN / F-CNN)|N|Pantheon|?|1|?||NR|NR|N|ctrl|AB|beats CUBIC and Vegas across Pantheon scenarios
+R0176|Y|RL local flow control (lossy networks)|IOT|hop-by-hop|N|rate;buffer|NR|queue,sojourn|NR|NR|RL + portfolio-based buffer allocation|N|sim|1|0|0||NR|NR|N|ctrl|AB|reacts quickly to congestion with local actions (simulation)
+R0179|Y|ZiXia|WAN||S|rate|NR|NR|other|NR|DRL with adjusted ranking reward|N|sim|1|0|1|global real-world paths|NR|NR|N|ctrl|AB|sim: highest throughput, -87% delay vs BBR; real-world: +13% throughput, -3% delay vs BBR
+R0180|Y|MARL BBR parameter tuning (DC)|DC|param|S|param|NR|flowstats|thr,delay|MARL|multi-agent RL tuning BBR parameters|Y|Mininet|0|1|0||NR|NR|N|ctrl|FT|dynamic BBR parameter tuning mitigates static-parameter problems (Mininet)
+R0181|Y|MARL SDN CC|GEN|SDN|C|other|D|NR|NR|MARL+TAB|improved cooperative Q-learning|N|NR|?|?|?||NR|NR|N|ctrl|AB|agents address link and controller congestion (no quantitative results in abstract)
+R0182|Y|Distributed RL training system for CC|GEN|training-system|||||||distributed sample generation + online analysis kit|N||?|?|?||-|-|N|framework|AB|multi-machine sample generation; reproduces Indigo
+R0185|Y|Inverse-RL CC|GEN||S|NR|NR|NR|NA|IL|inverse RL with parallel training|N|NR|?|?|?||NR|NR|N|ctrl|AB|inverse-RL-based CC (abstract unavailable; coded from title)
+R0186|Y|ACC-RL (power DC)|DC|power-DC|S|rate|C|rate,rtt,queue|other|AC|deterministic policy gradient|N|ns-3|1|0|0||NR|Y|N|ctrl|FT|better fairness, utilization and throughput than TIMELY, DCQCN, HPCC (ns-3)
+R0187|Y|ACCT|GEN|explicit feedback|S|param|D|NR|multi|AC|actor-critic with multiple reward functions|Y|ns-3|1|0|0||NR|Y|N|ctrl|FT|beats CUBIC and other TCPs in wired and wireless ns-3 scenarios; fair among ACCT flows
+R0188|Y|ACoCo|IOT|CoAP,6TiSCH|S|param|NR|NR|delay,other|NR|RL adapts CoAP CC parameters|Y|sim|1|0|0||NR|NR|N|ctrl|AB|lower transaction delay and higher delivery under congestion (simulation)
+R0189|Y|IoUT CoAP copies|IOT|CoAP,underwater|N|param|NR|NR|NR|NR|RL at the sink sets per-node copy count|Y|sim|1|0|0||NR|NR|N|ctrl|AB|higher PDR, lower delay and energy vs default CoAP (simulation)
+R0192|Y|DNN+DRL wireless CC|CELL|wireless|S|cwnd|NR|NR|thr|NR|DRL (+DNN flow classifier)|N|NR|?|?|?||NR|NR|N|ctrl|AB|+25.6/23.5/21.9/16% throughput vs CUBIC/LEDBAT/BBR/N-step TD
+R0195|Y|Floo|WAN|mobile web,QoE|S|select|D|NR|qoe|NR|RL-based CCA selection with smooth switching|Y|real|0|1|1|production mobile web service|NR|NR|N|deploy|AB|+14.3-52.7% QoE in production and emulation
+R0196|Y|RL protocol comparison (ns-3)|IOT|comparison|||||||comparison of RL-based protocols incl. QTCP|N|ns-3|1|0|0||-|-|N|analysis|AB|QTCP gives better delivery, throughput and energy than CORPL and RTCP (ns-3)
+R0198|Y|PeaceKeeper|GEN|less-than-best-effort|S|param|NR|NR|NR|NR|RL adjusts LEDBAT++ delay target|Y|sim|1|0|0||NR|Y|N|ctrl|AB|competing primary flows +30.8-173.6% throughput vs LEDBAT++; +50.9% utilization vs heuristic tuning
+R0199|Y|CARLA|IOT|WSN,Zigbee|N|rate|D|congestionstate|NR|LA|learning automata|N|sim|1|0|0||NR|NR|Y|ctrl|FT|+4.6% PDR, -11.4% energy, -25.3% delay vs Zigbee and state of the art
+R0200|Y|Multicast QUIC RL CC|WAN|QUIC,multicast|S|rate|NR|NR|NR|AC|actor-critic with decaying epsilon-greedy|N|sim|1|0|0||NR|NR|N|ctrl|AB|much lower loss and good adaptability (simulation)
+R0201|Y|DECC|DC|ECN|S|cwnd|NR|ecn,rtt|multi|NR|DRL + ECN with decoupled cwnd adjustment|Y|sim|1|0|0||NR|NR|N|ctrl|AB|>50% shorter switch queues than DCTCP with high utilization and lower FCT (simulation)

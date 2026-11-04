@@ -1,0 +1,123 @@
+% ======================================================================
+\chapter{Introduction and Background}
+\label{ch:background}
+% ======================================================================
+
+\section{Motivation}
+\label{sec:motivation}
+
+Congestion control (CC) decides how fast a sender may inject data into a shared network. It is one of the oldest control problems in networking: after the Internet's congestion collapses of 1986, Jacobson's slow start and additive-increase/multiplicative-decrease (AIMD) rules restored stability by reacting to packet loss~\cite{jacobson1988congestion,chiu1989analysis}. Almost four decades later the problem has not gone away; it has fragmented. Today's flows cross gigabit fiber, shared Wi-Fi, cellular links whose capacity changes every few milliseconds, satellite constellations with frequent handovers, and data-center fabrics where a full round trip takes tens of microseconds. Each environment breaks some assumption of the classic designs. Loss is no longer a reliable congestion signal on wireless links, delay is noisy under ACK aggregation, and buffers range from a few kilobytes in data-center switches to seconds of queueing in cellular base stations. The result is a long line of hand-designed algorithms, each tuned to one environment: Vegas, CUBIC, BBR and Copa for the Internet~\cite{brakmo1995vegas,ha2008cubic,cardwell2016bbr,arun2018copa}, Sprout and Verus for cellular links~\cite{winstein2013sprout,zaki2015verus}, and DCTCP, DCQCN, TIMELY, HPCC and Swift for data centers~\cite{alizadeh2010dctcp,zhu2015dcqcn,mittal2015timely,li2019hpcc,kumar2020swift}.
+
+Reinforcement learning (RL) offers a different route: instead of writing the control law, let a sender \emph{learn} it. In RL-based congestion control, an agent at the sender (or in the network) watches signals such as delay, throughput, and packet loss. Every short interval it raises or lowers the sending rate or the congestion window, and it receives a reward that is high for fast delivery and low for long delays or lost packets. Over many trials it learns which action works best in each network state. Remy~\cite{winstein2013remy} and PCC~\cite{dong2015pcc,dong2018vivace} showed that machine-generated or online-learned controllers can beat hand-tuned ones. Aurora~\cite{jay2019aurora} then cast Internet congestion control explicitly as a deep RL problem in 2018--2019, and the field has grown quickly since. Our searches retrieved \nIdentifiedTotal{} records, and \nStudies{} primary studies met our eligibility criteria (\cref{sec:method}). The growth has also exposed uncomfortable questions. Learned controllers that look excellent in a simulator sometimes fail on links they never saw. Few of them run inside an operating-system kernel, and fewer still have been deployed by an operator.
+
+This survey takes stock of that literature. It focuses only on RL (including imitation learning, offline RL, bandits and multi-agent RL), covers controllers published from 2016 through October 2026, and records for every study \emph{where its results come from}: simulation, emulation, or a real network. That last dimension is our main new contribution. Without it, a reader cannot tell whether a reported gain reflects the network or the simulator.
+
+\section{Research Questions and Contributions}
+\label{sec:rqs}
+
+We organize the survey around three research questions.
+
+\begin{description}[leftmargin=1.2cm,labelwidth=1cm]
+  \item[\RQ{1}] \textbf{Design.} How do RL methods control congestion: what do they observe, what do they change, and what reward do they learn from?
+  \item[\RQ{2}] \textbf{Testing.} How are these methods trained and tested, and do they still work on networks they did not see in training?
+  \item[\RQ{3}] \textbf{Deployment.} What stops operators from using RL-based congestion control in real networks, and what research could fix these problems?
+\end{description}
+
+\noindent Our contributions are:
+\begin{enumerate}
+  \item A \textbf{systematic, reproducible corpus} of \nStudies{} RL/IL congestion-control studies (\nReportsIncluded{} reports), identified with PRISMA~2020~\cite{page2021prisma} from open scholarly indexes, USENIX proceedings, and forward and backward citation searching. Every screening decision and extracted field is released with a reason or an evidence snippet.
+  \item A \textbf{design taxonomy} (\RQ{1}) that codes each study's setting, control point, state signals, action, reward terms and RL algorithm family (Chapters~\ref{ch:internet}--\ref{ch:datacenter}).
+  \item An \textbf{evaluation-practice analysis} (\RQ{2}, \cref{ch:training}). We code the highest evaluation level reached by every study, the tools used, whether generalization to unseen conditions was tested, and whether code was released. We complement this with a small, fully reproducible case study that shows how the choice of training distribution shapes a learned controller's behavior outside that distribution.
+  \item A \textbf{deployment-barrier analysis and research agenda} (\RQ{3}, \cref{ch:deployment}). It maps nine barriers to the studies that address them and reviews the newest direction: congestion controllers designed, tuned or executed by large language models (LLMs).
+\end{enumerate}
+
+\paragraph{Roadmap.} The rest of this chapter gives the background needed for the remaining chapters (\cref{sec:cc-primer,sec:rl-primer,sec:formulation}), describes the review method (\cref{sec:method}), positions this survey against earlier ones (\cref{sec:related}), and gives an overview of the corpus (\cref{sec:corpus}). Chapters~\ref{ch:internet}--\ref{ch:datacenter} survey designs by setting: the wide-area Internet; wireless, cellular and satellite networks; and data centers. \Cref{ch:training} covers training and testing, and \cref{ch:deployment} covers deployment barriers, LLM-designed controllers, and open problems.
+
+% ----------------------------------------------------------------------
+\section{Congestion Control in Brief}
+\label{sec:cc-primer}
+
+\paragraph{Goals.} A congestion controller should (i) use the available bottleneck capacity (\emph{efficiency}), (ii) avoid standing queues and loss (\emph{low delay}), (iii) share capacity among competing flows (\emph{fairness}, often measured with Jain's index~\cite{jain1984fairness}), (iv) converge quickly and stay stable when conditions change, and (v) coexist with the deployed base, which in practice means not starving CUBIC and BBR flows (\emph{friendliness}). Network utility maximization frames these goals as each flow maximizing a concave utility of its rate~\cite{kelly1998rate}. More recent work argues that deployability should instead be judged by the \emph{harm} a new algorithm inflicts on existing traffic~\cite{ware2019beyond}.
+
+\paragraph{Signals and knobs.} End-to-end controllers infer congestion from what they can measure: packet loss, round-trip time (RTT) and its trend, delivery rate, and Explicit Congestion Notification (ECN) marks set by routers~\cite{rfc3168}. They act through two knobs. The \emph{congestion window} (cwnd) caps the data in flight, so the sending rate is self-clocked by returning ACKs. The \emph{pacing rate} spaces packets in time directly.
+
+\paragraph{Classic end-host algorithms.} \Cref{tab:classic} summarizes the families that RL work compares against. Loss-based AIMD (Reno~\cite{rfc5681}) grows cwnd by one packet per RTT and halves it on loss. Its throughput falls as $1/\sqrt{p}$ with random loss rate $p$~\cite{mathis1997macroscopic}. CUBIC~\cite{ha2008cubic,rfc9438}, the Linux default, grows cwnd as a cubic function of the time since the last loss. Delay-based designs such as Vegas~\cite{brakmo1995vegas} and Copa~\cite{arun2018copa} back off when the RTT rises above its minimum. Model-based BBR~\cite{cardwell2016bbr} estimates the bottleneck bandwidth and minimum RTT and paces at the estimated bandwidth, but its interaction with loss-based flows can be unfair~\cite{ware2019bbr}. Two lines of work anticipate RL directly. Remy~\cite{winstein2013remy} searched offline for a rule table that maximizes an objective under assumed network conditions. A follow-up study showed that such learned controllers degrade when the assumptions are wrong~\cite{sivaraman2014learnability}, which is exactly the generalization problem this survey revisits. PCC Allegro and Vivace~\cite{dong2015pcc,dong2018vivace} run online micro-experiments at slightly different rates and move toward the rate with higher utility, a function of throughput and loss (and, in Vivace, latency).
+
+\paragraph{Network-assisted control.} Routers and switches influence congestion through active queue management (AQM), which drops or marks packets before the buffer fills: RED~\cite{floyd1993red}, CoDel~\cite{nichols2012codel}, PIE~\cite{rfc8033}, and the L4S architecture with shallow ECN marking~\cite{rfc9330}. In data centers, DCTCP~\cite{alizadeh2010dctcp} reacts to the \emph{fraction} of ECN-marked packets, DCQCN~\cite{zhu2015dcqcn} controls RDMA traffic with ECN-driven rate cuts, TIMELY and Swift~\cite{mittal2015timely,kumar2020swift} use precise delay, and HPCC~\cite{li2019hpcc} uses in-band network telemetry (INT). Their performance hinges on parameters, most prominently the ECN marking threshold, that operators tune by hand, which is why several RL studies learn these parameters instead of the end-host control law (\cref{ch:datacenter}).
+
+\begin{table}[t]
+\centering
+\caption{Classic congestion-control families used as baselines by the RL literature.}
+\label{tab:classic}
+\small
+\begin{tabularx}{\linewidth}{@{}L{2.5cm}L{3.3cm}Y@{}}
+\toprule
+Family & Examples & Control law (simplified) \\
+\midrule
+Loss-based AIMD & Reno/NewReno~\cite{rfc5681}, CUBIC~\cite{ha2008cubic} & Grow cwnd until loss; multiplicative decrease on loss. \\
+Delay-based & Vegas~\cite{brakmo1995vegas}, Copa~\cite{arun2018copa}, Swift~\cite{kumar2020swift} & Keep queueing delay near a target inferred from RTT minus its minimum. \\
+Model-based & BBR~\cite{cardwell2016bbr} & Estimate bottleneck bandwidth and propagation RTT; pace at the estimate and cap in-flight data. \\
+Online learning & PCC Allegro/Vivace~\cite{dong2015pcc,dong2018vivace} & Compare a utility of throughput and loss (Vivace: also latency) across rate micro-experiments and move toward the better rate. \\
+Offline optimization & Remy~\cite{winstein2013remy} & Search a state-to-action table offline for an objective under an assumed network model. \\
+ECN-based (DC) & DCTCP~\cite{alizadeh2010dctcp}, DCQCN~\cite{zhu2015dcqcn} & Switches mark above a queue threshold; senders cut in proportion to the marked fraction. \\
+AQM & RED~\cite{floyd1993red}, CoDel~\cite{nichols2012codel}, PIE~\cite{rfc8033} & Router drops or marks early, based on queue length or sojourn time. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ----------------------------------------------------------------------
+\section{Reinforcement Learning in Brief}
+\label{sec:rl-primer}
+
+RL formalizes sequential decision making as a Markov decision process (MDP) $(\mathcal{S},\mathcal{A},P,r,\gamma)$: at each step the agent observes a state $s_t$, takes an action $a_t \sim \pi(\cdot\mid s_t)$, receives a reward $r_t$, and the environment moves to $s_{t+1}$. The goal is a policy that maximizes the expected discounted return $\mathbb{E}\big[\sum_t \gamma^t r_t\big]$~\cite{sutton2018reinforcement}. A congestion controller never sees the whole network, only its own feedback, so the problem is formally a \emph{partially observable} MDP. Most designs compensate by feeding the agent a short history of observations. We group the methods used in the corpus as follows; \cref{fig:rl-families} gives the overall picture.
+
+\begin{itemize}
+  \item \textbf{Value-based methods} learn the action-value function $Q(s,a)$. Tabular Q-learning and SARSA suit small discrete state spaces. The Deep Q-Network (DQN)~\cite{mnih2015human} and its variants (double, dueling, Rainbow) approximate $Q$ with a neural network and pick from a discrete set of cwnd or rate adjustments.
+  \item \textbf{Policy-gradient methods} optimize $\pi$ directly. Proximal Policy Optimization (PPO)~\cite{schulman2017ppo}, TRPO~\cite{schulman2015trpo} and A3C/A2C~\cite{mnih2016a3c} are the common choices, and they handle continuous rate multipliers naturally.
+  \item \textbf{Off-policy actor-critic methods} such as DDPG~\cite{lillicrap2016ddpg}, TD3~\cite{fujimoto2018td3} and SAC~\cite{haarnoja2018sac} reuse past experience from a replay buffer. Distributed variants such as IMPALA~\cite{espeholt2018impala} decouple acting from learning.
+  \item \textbf{Offline RL} learns from a fixed dataset of logged interactions without exploring online, e.g., CQL~\cite{kumar2020cql}, CRR~\cite{wang2020crr}, and sequence-modelling approaches such as the Decision Transformer~\cite{chen2021decision}.
+  \item \textbf{Imitation learning (IL)} trains a policy to copy an expert, either by behavior cloning or by interactive methods such as DAgger~\cite{ross2011dagger}. In congestion control the expert can be an oracle with full knowledge of a simulated link or an existing heuristic.
+  \item \textbf{Bandits and online learning} treat each decision interval as a single-step problem (no state transitions). They are the closest relatives of PCC-style utility ascent.
+  \item \textbf{Multi-agent RL (MARL)} trains several interacting agents, for example competing flows or switches, using centralized-training/decentralized-execution methods such as MADDPG~\cite{lowe2017maddpg} and MAPPO~\cite{yu2022mappo}.
+\end{itemize}
+
+% ----------------------------------------------------------------------
+\section{Congestion Control as an RL Problem}
+\label{sec:formulation}
+
+\Cref{fig:loop} shows the canonical formulation, which Aurora made popular~\cite{jay2019aurora}. Time is divided into \emph{monitor intervals} (MIs). At the start of each MI the agent picks an action, which is applied for the whole interval. When ACKs for that interval return, the sender computes statistics and the reward. Every design must answer five questions.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 14mm,
+  box/.style={draw, rounded corners=3pt, align=center, minimum height=10mm, inner sep=5pt, font=\small},
+  lab/.style={font=\scriptsize, align=center, text=muted},
+  >={Stealth[length=2.2mm]}]
+  \node[box, fill=accent!8, minimum width=34mm] (agent) {\textbf{RL agent} $\pi_\theta$\\ (sender, receiver,\\ switch or controller)};
+  \node[box, right=26mm of agent, minimum width=30mm] (dp) {\textbf{Datapath}\\ cwnd / pacing rate /\\ ECN threshold};
+  \node[box, below=16mm of dp, minimum width=30mm, fill=black!4] (net) {\textbf{Network}\\ bottleneck queue,\\ cross traffic, wireless link};
+  \node[box, below=16mm of agent, minimum width=34mm] (stats) {\textbf{Feedback statistics}\\ per monitor interval};
+  \draw[->, thick] (agent) -- node[above, lab]{action $a_t$\\(e.g., $x_t = x_{t-1}(1+\alpha a_t)$)} (dp);
+  \draw[->, thick] (dp) -- node[right, lab]{packets} (net);
+  \draw[->, thick] (net) -- node[below, lab]{ACKs, ECN marks, losses\\(delayed by one RTT)} (stats);
+  \draw[->, thick] (stats) -- node[left, lab, xshift=-1mm]{state $s_{t+1}$ (history of $k$ MIs):\\ throughput, RTT, RTT gradient,\\ loss, sending ratio, \dots\\[2pt] reward $r_t = f(\text{thr}, \text{delay}, \text{loss})$} (agent);
+\end{tikzpicture}
+\caption{The canonical RL congestion-control loop. The agent acts once per monitor interval and observes the consequences one RTT later. Designs differ in where the agent runs, what it observes, what it changes, and how the reward trades throughput against delay and loss.}
+\label{fig:loop}
+\end{figure}
+
+\begin{enumerate}
+  \item \textbf{Where does the agent run?} Most agents run at the sender. Some run at the receiver, which is common for real-time video (\cref{sec:rtc}). Network-side agents sit in switches and routers, where they tune ECN or AQM parameters, and a few run in a centralized SDN controller.
+  \item \textbf{What does it observe?} Typical observations are a short history of per-interval statistics: throughput or delivery rate, RTT and its minimum, RTT gradient, loss rate, ECN fraction, the current cwnd or rate, and sometimes cross-layer radio information or in-network telemetry. Aurora deliberately chose \emph{scale-free} features (latency gradient, latency ratio and sending ratio) to help generalization across link speeds~\cite{jay2019aurora}.
+  \item \textbf{What does it change?} The action can directly set the cwnd or rate, usually as a bounded multiplicative change. It can tune the parameters of a classic algorithm (an initial window, a BBR pacing gain, a CUBIC parameter). It can select among existing algorithms. Or it can set network parameters such as ECN thresholds, AQM drop probabilities and buffer sizes. Discrete actions suit value-based methods; continuous actions suit policy-gradient and actor-critic methods.
+  \item \textbf{What does it optimize?} Most rewards are weighted combinations of throughput, delay and loss. Aurora, for example, uses $10\cdot\text{throughput} - 1000\cdot\text{latency} - 2000\cdot\text{loss}$ with throughput in packets per second~\cite{jay2019aurora}. Others use Kleinrock's \emph{power} (throughput over delay), PCC-style utility functions, fairness terms, or application-level quality of experience (QoE). Because the reward fixes the operating point, it is effectively the controller's specification.
+  \item \textbf{How often does it act?} Per-ACK decisions are too expensive for neural inference at line rate. Most designs act once per MI, which ranges from milliseconds to one or more RTTs. Several hybrid designs let a classic algorithm react per ACK while the agent adjusts it at a coarser time scale (\cref{sec:hybrid}).
+\end{enumerate}
+
+\noindent Two properties make congestion control harder than the games on which deep RL was popularized. First, the consequences of an action arrive \emph{one RTT later} and are mixed with the effects of other flows' actions, so credit assignment is noisy and the environment is non-stationary. Second, the controller is deployed on networks whose statistics differ from any training environment. That makes generalization under distribution shift, rather than in-distribution reward, the property that matters (\cref{ch:training}).
+
+% ----------------------------------------------------------------------
+\input{chapters/ch1_method}
+\input{chapters/ch1_related}
+\input{chapters/ch1_corpus}

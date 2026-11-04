@@ -1,0 +1,12 @@
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{In distribution} & \multicolumn{4}{c}{Utilization (\%) under one shifted factor} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-7}
+Controller & Util.\ (\%) & Queue (RTT) & 200\,Mbit/s & 5\% loss & 10\,ms jitter & Worst case \\
+\midrule
+PPO-narrow & 96 & 0.03 & 63 & 94 & 29 & 29 (20\,ms jitter) \\
+PPO-broad & 94 & 0.09 & 69 & 93 & 69 & 49 (40\,ms jitter) \\
+AIMD (Reno-like) & 99 & 0.72 & 87 & 44 & 99 & 44 (5\% loss) \\
+BBR-like & 100 & 0.09 & 95 & 95 & 100 & 92 (40\,ms jitter) \\
+\bottomrule
+\end{tabular}

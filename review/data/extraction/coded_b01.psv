@@ -1,0 +1,41 @@
+id|inc|name|setting|tags|ctrl|action|aspace|state|reward|family|algo|hybrid|train|sim|emu|real|real_kind|gen|fair|code|contrib|src|result
+R0001|LINK|Smart-DTN-CC (conf.)|||||||||||||||||||||linked report of R0020
+R0003|Y|Kanerva-coding RL TCP|GEN||S|cwnd|D|NR|thr,delay|TAB|Q-learning + generalization-based Kanerva coding|N|NR|?|?|?||N|NR|N|ctrl|AB|+59.5% throughput and -6.5% delay vs NewReno
+R0005|Y|SDN-DC Q-learning/SARSA CC|DC|SDN|C|rate|D|NR|util|TAB|Q-learning; SARSA|N|NR|?|?|?||NR|NR|N|ctrl|AB|SARSA +2.4% link utilisation vs Q-learning, +4.48% vs on-demand allocation
+R0009|Y|eqCC|IOT|WSN|S|rate|D|qosfb,energy|qoe,energy|TAB|Q-learning|N|sim|1|0|0||N|NR|N|ctrl|AB|outperforms TCP and Flush under high and low load (simulation)
+R0010|Y|RL-TCP|GEN|shallow-buffer|S|cwnd|D|NR|thr,delay|TAB|Q-learning|N|ns-2|1|0|0||N|NR|N|ctrl|AB|better throughput-delay trade-off than NewReno and prior Q-learning TCP (ns-2)
+R0011|LINK|Aurora (arXiv)|||||||||||||||||||||linked report of R0017
+R0012|Y|Iroko|DC|framework|C|rate|C|queue,util|util,delay|PG+AC|PPO; REINFORCE; DDPG|N|Mininet|0|1|0||N|NR|Y|framework|FT|emulator + gym interface; DRL beats TCP New Vegas on dumbbell and fat-tree; instability/over-fitting noted
+R0013|Y|Actor-critic AQM|GEN|AQM|N|aqm|C|queue|NR|AC|actor-critic (+genetic algorithm)|N|sim|1|0|0||N|NR|N|ctrl|AB|adaptive drop probability avoids TCP congestion (simulation)
+R0014|Y|QTCP|GEN||S|cwnd|D|NR|thr,delay|TAB|Q-learning + generalized Kanerva coding|N|NR|?|?|?||N|NR|N|ctrl|AB|59.5% higher throughput than rule-based TCP with low latency
+R0015|LINK|SmartIW|||||||||||||||||||||linked report of R0027
+R0016|Y|DRL-CCP|WAN|NDN|R|rate|NR|NR|other|NR|DRL (unspecified)|N|NR|0|0|1|physical NDN test platform|NR|NR|N|ctrl|AB|outperforms typical NDN CC schemes on a real test platform
+R0017|Y|Aurora|WAN||S|rate|C|rttgrad,rttratio,sendratio|thr,delay,loss|PG|PPO|N|custom-sim|1|1|0||Y|N|Y|ctrl|FT|trained on simulated 1.2-6 Mbit/s, 50-500 ms, 0-5% loss links; in emulation near-full utilization from 1 to 128 Mbit/s and over wide buffer/loss ranges vs CUBIC and Vivace; poor at 1 ms latency (untrained ~1 ms processing noise); flags fairness, safety, generalization
+R0019|NOTRET|IEICE fairness study|||||||||||||||||||||IEICE technical report; neither abstract nor full text retrievable
+R0020|Y|Smart-DTN-CC|IOT|DTN|N|other|D|buffer,neighbors|other|NR|RL (unspecified)|N|sim|1|0|0||NR|NR|N|ctrl|AB|outperforms existing DTN congestion-control mechanisms over a wide range of conditions
+R0021|Y|DRL initial window for 5G MEC|CELL|5G-MEC,SDN|S|param|NR|NR|fct,loss|NR|DRL (+supervised refinement)|Y|ns-3|1|0|0||NR|NR|N|ctrl|AB|lower flow completion time than existing IW methods with little congestion (ns-3)
+R0026|Y|DRL fronthaul CC|CELL|C-RAN|S|rate|NR|NR|thr,delay,loss|NR|several DRL methods|N|sim|1|0|0||NR|NR|N|ctrl|AB|satisfactory throughput with lower delay and loss than TCP baseline (discrete-event simulation)
+R0027|Y|TCP-RL|WAN|web|S|param;select|D|flowstats|fct,thr|BANDIT+DQN|group-based RL (IW) + deep RL (CCA selection among 14)|Y|real|0|0|1|production web servers of a top global search engine (>1 year)|NR|NR|N|deploy|AB|-23% average transmission time for short flows; top-5 of 14 CCAs in ~85% of 288 conditions
+R0029|Y|DRL-CC (MPTCP)|GEN|MP|S|cwnd|C|perflow|util|AC|deterministic policy gradient actor-critic + LSTM|N|Linux kernel|0|1|?||N|Y|N|ctrl|AB|higher goodput than MPTCP CCAs without sacrificing fairness; TCP-friendly; robust to dynamic flows
+R0031|Y|Intelligent AQM with ECN|GEN|AQM|N|aqm|D|congestion-level|power|TAB|Q-learning (+ANN congestion predictor)|Y|Mininet|0|1|0||NR|N|N|ctrl|FT|improves deployed AQM with existing TCP (Mininet)
+R0036|Y|Rax|GEN||S|cwnd|NR|NR|NR|NR|online deep RL with Partial Action Learning|N|NR|?|?|?||NR|NR|N|ctrl|AB|converges online within minutes; competes with CUBIC
+R0037|Y|RL loss-differentiating TCP|CELL|wireless|S|cwnd|NR|NR|NR|NR|RL (unspecified)|Y|NR|?|?|?||NR|NR|N|ctrl|AB|learns wireless vs congestion loss and sets cwnd; higher throughput
+R0038|Y|LGFCC|SAT|DTN,IoT|N|other|NR|NR|NR|NR|RL + incomplete-information game|N|sim|1|0|0||NR|NR|N|ctrl|AB|~30% lower bundle abort rate, ~60% faster convergence
+R0039|Y|RL BWE for RTC (Microsoft)|WAN|RTC|S|bitrate|C|recvrate,pktinterval,loss,rtt|qoe|PG|PPO (actor-critic)|N|custom-sim|1|0|1|real Internet video calls|NR|NR|N|ctrl|FT|first RL rate controller for RTC; evaluated in simulation and on real calls; reward design and sim-to-real gap highlighted
+R0040|Y|SmartCC|CELL|MP|S|cwnd|D|NR|thr|TAB|Q-learning + hierarchical tile coding (asynchronous)|N|NR|?|?|?||NR|NR|N|ctrl|AB|higher aggregate throughput than state-of-the-art MPTCP CCAs
+R0041|Y|TCP-Drinc|GEN||S|cwnd|D|history|thr,delay|DQN|DQN with CNN+LSTM|N|ns-3|1|0|0||NR|Y|N|ctrl|FT|outperforms five benchmark schemes in ns-3
+R0042|Y|Verily|GEN|verification|||||||formal verification of DRL policies|N||-|-|-||-|-|N|analysis|AB|verifies Pensieve, DeepRM and Aurora; exposes undesirable learned behaviour
+R0043|Y|Distributed RL in-network CC|GEN|in-network|N|rate|NR|NR|NR|MARL|CTDE with centralized critic|N|OMNeT++|1|0|0||NR|NR|N|ctrl|AB|switch-resident agents beat state of the art (OMNeT++)
+R0044|Y|SDN actor-critic MPTCP for IoT|IOT|MP,SDN|C|cwnd|C|NR|NR|AC|actor-critic with fuzzy normalized NN|N|sim|1|0|0||NR|NR|N|ctrl|AB|higher goodput under dynamic IoT (simulation)
+R0048|Y|Orca|WAN||S|cwnd|C|thr,rtt,loss,cwnd|power|AC|TD3 (distributed actors)|Y|Mahimahi|0|1|1|global Internet testbeds (cloud servers across continents)|Y|Y|Y|ctrl|KN|DRL adjusts CUBIC's cwnd every monitoring period; consistent performance on emulated links and global testbeds; lower overhead than clean-slate learned CC
+R0049|Y|Multi-task DRL CC (SDN)|GEN|SDN|C|rate|NR|NR|NR|NR|multi-task DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|CC (main) + load balancing (auxiliary) learned jointly
+R0051|Y|Eagle|WAN||S|rate|NR|history|thr,delay,loss|IL+PG|DRL with LSTM guided by BBR as expert|N|NR|?|1|?||NR|NR|N|ctrl|KN|matches or beats its BBR teacher and many recent CCAs
+R0052|Y|RTCP (HSR)|CELL|HSR|S|cwnd|NR|crosslayer|thr|NR|DRL|N|sim|1|0|0||NR|NR|N|ctrl|AB|higher goodput than existing TCP in HSR handover scenarios (simulation)
+R0055|Y|Hd-TCP|CELL|HSR|S|cwnd|NR|crosslayer|thr,delay|NR|DRL|N|sim|1|0|0||NR|NR|N|ctrl|AB|beats traditional CC in throughput and latency on field-measured HSR conditions (simulation)
+R0056|Y|LFQ|GEN|AQM,FQ|N|buffer|C|NR|thr,delay|NR|online DRL|N|ns-3|1|0|0||NR|Y|Y|ctrl|FT|smaller per-flow queues than fair AQMs at same or higher throughput
+R0061|Y|Partner|GEN|MP|S|cwnd|NR|NR|other|MARL|distributed DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|reward aligned with MPTCP scheduler; beats state-of-the-art MPTCP CC
+R0063|Y|RLAQM|GEN|AQM|N|aqm|D|queue|other|TAB|Q-learning|Y|ns-2|1|0|0||NR|NR|N|ctrl|FT|stabilises average queue across loads better than RED (ns-2)
+R0065|EX-EC2|Q-learning ICN forwarding|||||||||||||||||||||Q-value drives hop-by-hop forwarding decisions (routing), as R0092
+R0066|Y|ARC|WAN||S|cwnd|NR|NR|NR|NR|asynchronous RL trained in real networks|N|real|0|0|1|real testbed (training and test)|NR|NR|N|ctrl|AB|training in real networks; higher throughput, lower latency than existing schemes
+R0068|Y|TCP-PPCC|GEN||S|cwnd|NR|NR|NR|PG|PPO|N|ns-3|1|0|0||NR|NR|N|ctrl|AB|-58.8% delay, +27.8% throughput vs NewReno in one ns-3 scenario
+R0071|Y|MOCC (Xia et al.)|WAN||S|rate|NR|NR|thr,delay,loss|MO|multi-objective RL with preferences|N|NR|?|?|?||NR|NR|N|ctrl|AB|preference-conditioned trade-off of throughput, latency and loss

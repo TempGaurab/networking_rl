@@ -1,0 +1,41 @@
+id|inc|name|setting|tags|ctrl|action|aspace|state|reward|family|algo|hybrid|train|sim|emu|real|real_kind|gen|fair|code|contrib|src|result
+R0073|Y|RL-explore|GEN||S|cwnd|NR|NR|NR|NR|RL + bandwidth-probing mechanism|Y|NR|?|?|?||NR|NR|N|ctrl|AB|uses bandwidth effectively and converges more easily than other RL schemes
+R0074|Y|ACC|DC|ECN|N|ecn|D|queue,rate,ecn|thr,delay|MARL+DQN|multi-agent DRL per switch (offline + online training)|Y|testbed|1|0|1|production DCs (300 machines, storage service)|NR|NR|N|deploy|AB|tunes switch ECN thresholds at run time; up to +20% IOPS and -30% FCT vs tuned static ECN; applied in production
+R0075|Y|AUTO|SAT|satellite-ground|S|rate|D|history|thr,delay|MO+PG|multi-objective RL + preference-adaptation model|N|NR|0|1|1|real Internet paths (cloud)|NR|Y|N|ctrl|FT|beats state of the art in emulation and on the real Internet; robust to random loss and rapid change; fair to other CCs
+R0077|EX-EC2|Undersea WFQ allocation (DRL)|||||||||||||||||||||RL allocates WFQ bandwidth shares among traffic types (scheduling); AQM part is rule-based
+R0079|Y|AQM meets DRL|GEN|AQM|N|aqm|NR|NR|NR|NR|DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|DRL-based AQM (abstract unavailable; coded from title and metadata)
+R0084|Y|HSR-CC (space-ground MPTCP)|SAT|MP,HSR|S|cwnd|NR|crosslayer|thr|NR|DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|higher goodput than MPTCP CCAs under frequent handovers
+R0086|Y|DeepCC (He et al., MPTCP)|CELL|MP|S|cwnd|NR|NR|thr|MARL|multi-agent DRL with self-attention|N|NR|?|?|?||NR|NR|N|ctrl|AB|beats heuristic and DRL MPTCP CC in goodput and jitter; ~50% faster convergence
+R0089|Y|Teacher-Student robust DRL|GEN|robustness|S|rate|C|aurora|thr,delay,loss|PG+IL|teacher advice + reward shaping + prioritized replay on Aurora|N|custom-sim|1|0|0||NR|NR|N|method|AB|applied to Aurora: 2x faster early learning and more stable behaviour in dynamic environments
+R0091|Y|AIMD-QTCP|GEN|fairness|S|cwnd|D|NR|util|TAB|Q-learning (QTCP) + AIMD window rule|Y|ns-3|1|0|0||NR|Y|N|ctrl|FT|shows QTCP flows are selfish/unfair; AIMD-based control restores fairness without losing throughput/latency
+R0094|Y|DRL-CC (deadline-aware)|GEN|deadline|S|rate|NR|NR|other|NR|DRL|N|NR|?|?|?||NR|NR|N|ctrl|AB|more packets meet deadlines than existing CCs (initial experiments)
+R0096|LINK|Teacher-Student (INFOCOM)|||||||||||||||||||||linked report of R0089
+R0101|LINK|MOCC (arXiv)|||||||||||||||||||||linked report of K004
+R0102|Y|CRL-CC|WAN||S|rate|NR|NR|thr,delay,fair|NR|constrained RL (Lagrangian reward weights)|N|custom-sim|1|1|0||NR|Y|N|ctrl|AB|+21.7% throughput, -27.4% delay, +5.3% fairness vs benchmark on Pantheon
+R0105|Y|Owl|WAN|in-network signals|S|cwnd|D|rtt,thr,loss,netsignal|util|DQN|DQN in a Linux kernel module|N|Mininet/Mahimahi|0|1|0||NR|Y|N|ctrl|FT|converges to fair allocation; beats end-to-end and in-network CC on emulated and large virtual testbeds
+R0107|Y|Policy distillation (fronthaul)|CELL|C-RAN|S|rate|C|NR|util,fair|AC|TD3 distilled into decision trees / C++ rules|N|ns-3|1|0|0||NR|Y|Y|method|FT|depth-limited trees match TD3; sub-microsecond inference
+R0108|Y|DRL-3R|CELL|RAN-info|S|cwnd|NR|crosslayer|util|NR|DRL with reward redistribution|N|NR|?|?|?||NR|Y|N|ctrl|AB|beats Reno, Westwood, CUBIC, BBR and DRL-CC on utility with reasonable fairness
+R0109|LINK|DRL-3R (conf.)|||||||||||||||||||||linked report of R0108
+R0110|Y|RLCC|WAN||S|cwnd|D|NR|NR|DQN|DQN|N|NR|?|0|1|Pantheon nodes on AWS|NR|NR|N|ctrl|AB|higher throughput, lower latency than TCP variants and a learned CC (Pantheon/AWS)
+R0111|Y|Rainbow vs DQN for TCP CC|GEN||S|cwnd|D|NR|NR|DQN|Rainbow and DQN extensions|N|sim|1|0|0||NR|NR|N|analysis|AB|Rainbow beats DQN; individual extensions behave differently than in Atari
+R0113|Y|RL-PSD|CELL|MP,AR-VR|S|cwnd|NR|app,netstats|NR|NR|two-stage RL|N|NR|?|?|?||NR|NR|N|ctrl|AB|outperforms multipath AR/VR transmission schemes
+R0114|Y|SDN Q-learning rate allocation|GEN|SDN|C|rate|D|util|util|TAB|Q-learning|N|Mininet|0|1|0||NR|NR|N|ctrl|FT|allocates per-flow rates; higher utilization than traditional SDN scheme
+R0116|Y|MARL + transfer TCP CC|GEN|video|S|cwnd|NR|NR|thr,delay|MARL|transfer-learning-assisted RL; coordinated MARL|N|NR|?|?|?||NR|NR|N|ctrl|AB|higher throughput, lower delay; separates non-congestion loss
+R0117|Y|TCP-NeuRoc|GEN||S|cwnd|NR|NR|power|NR|DRL + online changepoint detection; cold-start deployment|N|emulation|0|1|0||NR|NR|N|ctrl|AB|best throughput-latency trade-off vs state of the art (emulation via Linux stack)
+R0118|Y|TD actor-critic TCP|CELL|wireless|S|cwnd|NR|NR|thr,delay|AC|actor-critic TD learning|N|NR|?|?|?||NR|NR|N|ctrl|AB|+40% throughput with low latency
+R0120|Y|whiRL 2.0|GEN|verification|||||||DNN verification + model checking of DRL policies|N||-|-|-||-|-|N|analysis|AB|verifies requirements of Aurora (and ABR, job scheduling); proves some, finds counter-examples for others
+R0124|Y|SDN-DC incast DRL|DC|SDN,incast|C|rate|NR|queue|NR|NR|DRL|N|sim|1|0|0||NR|NR|N|ctrl|AB|controller learns per-server rates that avoid incast congestion (simulation)
+R0125|Y|DRL-CC ablation (cellular)|CELL|ablation|S|rate|NR|NR|NR|NR|ablation of DRL training choices|N|sim|1|0|0||NR|NR|N|analysis|AB|clipping/scaling help; initialization matters; higher reward does not imply better network performance
+R0128|Y|ICCDRL|CELL|V2X|S|cwnd|NR|acks,rtt,thr,loss|NR|NR|DRL|N|ns-3|1|0|0||NR|Y|N|ctrl|FT|beats traditional CC in throughput, convergence, friendliness and fairness (ns-3)
+R0130|LINK|Genet (arXiv)|||||||||||||||||||||linked report of B084
+R0131|Y|BBR-FIT|CELL|5G|S|param|NR|NR|thr,delay|NR|RL tunes BBR gain|Y|Mahimahi|0|1|1|real 5G/WiFi testbed|NR|NR|N|ctrl|AB|2x link utilization vs BBR without extra delay
+R0132|Y|BoB|WAN|RTC|R|bitrate|C|recvrate,loss,delay,history|qoe|PG|PPO + heuristic warm start|Y|OpenNetLab|1|1|?||NR|NR|Y|ctrl|FT|more accurate bandwidth prediction and higher utilization than MMSys'21 winners
+R0134|LINK|RSCAT (conf.)|||||||||||||||||||||linked report of R0242
+R0135|Y|SAC-CC|GEN|multimedia|S|rate|C|history|NR|AC|SAC with GRU + self-attention|N|NR|?|?|?||NR|NR|N|ctrl|AB|outperforms baselines across scenarios
+R0137|Y|DRL bidirectional-node WSN CC|IOT|WSN|N|rate|NR|queue|loss,other|NR|DRL|N|sim|1|0|0||NR|NR|N|ctrl|AB|better loss/delivery/buffer trade-off than WSN schemes
+R0139|Y|DeepCC (Zhang et al.)|WAN||S|rate|C|NR|thr,delay,loss|AC+MO|DDPG-based multi-objective offline training + online fine-tuning|N|Mahimahi|1|1|1|inter-continental real-world paths|Y|NR|N|ctrl|FT|near-Pareto policies for any throughput/delay/loss weighting without retraining; +67.4% target completion, incl. untrained environments
+R0141|Y|Federated DRL bandwidth weights|WAN|video,fairness|R|param|C|playerstate,global|qoe,fair|MARL+PG|federated multi-agent DRL|Y|NR|?|?|?||NR|Y|N|ctrl|FT|+8% QoE fairness, +7% QoE efficiency vs latest scheme
+R0144|EX-EC2|Undersea WFQ allocation (ns-3)|||||||||||||||||||||RL allocates WFQ bandwidth shares (scheduling), not congestion control
+R0145|Y|DQN TCP v2 fairness|GEN|fairness|S|cwnd|D|NR|NR|DQN|DQN|N|ns-3|1|0|0||NR|Y|N|ctrl|AB|higher throughput and better inter-protocol fairness (ns-3)
+R0146|Y|GDMD|GEN|multimedia|S|rate|NR|NR|NR|NR|RL CC + block scheduler|N|NR|?|?|?||NR|NR|N|ctrl|AB|better QoE for delay-sensitive multimedia
+R0147|Y|Glider|WAN||S|rate|NR|NR|NR|NR|DRL|N|Pantheon|?|1|?||NR|NR|N|ctrl|AB|adapts to buffer sizes, resilient to random loss, comparable to learned CCs (Pantheon)

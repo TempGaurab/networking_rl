@@ -1,0 +1,26 @@
+bibkey,name,setting,ctrl,action,family,level,gen,fair,code,recheck
+zaeri2024emprn,EMPRN,DC,N,ecn,MARL,Simulation,NR,NR,N,confirmed
+boussaoud2023multi,MARL SDN CC,GEN,C,other,MARL+TAB,Not reported,NR,NR,N,confirmed
+silva2019congestion,Smart-DTN-CC,IOT,N,other,NR,Simulation,NR,NR,N,confirmed
+zhang2022liteflow,LiteFlow,GEN,S,rate,,Emulation,NR,NR,N,confirmed
+wei2024breaking,Maggey,GEN,S,cwnd,NR,Real network,NR,Y,N,confirmed
+jin2018congestion,SDN-DC Q-learning/SARSA CC,DC,C,rate,TAB,Not reported,NR,NR,N,confirmed
+kanojia2026reinforcement,RL-HCC (6G),CELL,S,cwnd;rate,NR,Simulation,NR,Y,N,confirmed
+guo2026deep,SCC-RT,GEN,S,bitrate;buffer,HIER,Not reported,NR,NR,N,confirmed
+du2023learning,LRCC,WAN,R,bitrate,NR,Simulation,NR,NR,N,"borderline: receiver placement inferred from the RTC application, not stated in abstract"
+dara2026autonomous,Multi-agent DQN CC (high-speed),GEN,S,rate,MARL+DQN,Not reported,NR,NR,N,confirmed
+liu2026q,Q-learning queue-discipline selection,GEN,N,aqm,TAB,Simulation,NR,NR,N,confirmed
+sidhu2026pluggable,AERO,WAN,S,rate,NR,Simulation,NR,NR,N,borderline: trace-driven evaluation coded as simulation
+liu2023leopard,Leopard,CELL,S,cwnd,NR,Real network,Y,NR,N,confirmed
+cao2023drlfcc,DRLFcc,CELL,S,cwnd,NR,Simulation,NR,NR,N,confirmed
+ali2023efficient,Weighted-ensemble DRL CC,GEN,NR,NR,NR,Not reported,NR,NR,N,confirmed
+kiarie2025expert,Expert-driven jumpstart RL CC,GEN,S,NR,IL+PG,Not reported,NR,NR,N,confirmed
+sharma2026adaptive,"PPO-tuned CUBIC (beta, C)",GEN,S,param,PG,Simulation,NR,Y,N,confirmed
+xu2024kerdqn,KerDqn,GEN,S,cwnd,DQN,Not reported,NR,Y,N,confirmed
+zheng2022teacher,Teacher-Student robust DRL,GEN,S,rate,PG+IL,Simulation,NR,NR,N,confirmed
+hu2025hierarchical,LACC / HACC (hierarchical CCA selection),DC,S,select,NR,Simulation,NR,NR,N,confirmed
+xu2020handover,RTCP (HSR),CELL,S,cwnd,NR,Simulation,NR,NR,N,confirmed
+yang2022ieacc,IEACC,WAN,R,rate,NR,Simulation,NR,Y,N,confirmed
+hassan2021tcp,TCP-RL in an SDN data centre,DC,S,cwnd,NR,Not reported,NR,NR,N,confirmed
+blokhin2024deep,SAC-MWL (QUIC),WAN,S,cwnd,AC,Real network,NR,NR,N,confirmed
+yang2024optimizing,DRL deep-space DTN CC,SAT,NR,NR,NR,Not reported,NR,NR,N,confirmed
