@@ -42,10 +42,10 @@ Marten~\cite{zhou2025safety} & QUIC & DRL guided by BBR, safe exploration & \cma
 
 \finding{Every deployed learned controller in the corpus is run by an operator that owns the endpoints and the data, optimizes a narrow service metric, and in most cases keeps a classic algorithm or safeguard in the loop. None is a general-purpose controller for Internet traffic.}
 
-\noindent Production systems built on \emph{non-RL} learning show the same pattern. Antelope selects among kernel algorithms with a (non-RL) machine-learning model and was evaluated in production networks~\cite{zhou2021antelope}. Gemini pairs a white-box parameterized controller with online Bayesian optimization of its parameters and was deployed over production networks~\cite{yang2023gemini}. XCC, a context-aware cross-layer controller for live streaming, is fully deployed in a cloud provider's production CDN service, where A/B tests over tens of millions of sessions cut stall time by 36\%~\cite{yuan2024context}; a concern-decoupled design for live-video CDNs follows the same approach~\cite{yuan2026concern}. When operators can choose, they choose interpretable structure with learned parameters.
+\noindent Production systems built on \emph{non-RL} learning show the same pattern. Antelope selects among kernel algorithms with a (non-RL) machine-learning model and was evaluated in production networks~\cite{zhou2021antelope}. Gemini pairs a white-box parameterized controller with online Bayesian optimization of its parameters and was deployed over production networks~\cite{yang2023gemini}. XCC, a context-aware cross-layer controller for live streaming, is fully deployed in a cloud provider's production CDN service, where A/B tests over tens of millions of sessions cut stall time by 36\%~\cite{yuan2024context}; a concern-decoupled design for live-video CDNs follows the same approach~\cite{yuan2026concern}. These systems also favor interpretable structure with learned parameters.
 
 % ----------------------------------------------------------------------
-\section{Nine Barriers to Deployment}
+\section{Barriers to Deployment}
 \label{sec:barriers}
 
 \Cref{tab:barriers} summarizes the barriers we identified, the evidence for each in the corpus, and the mitigations proposed. The barriers are not independent. Hybrid designs, for example, address safety, overhead and generalization at once, which explains their spread (\cref{sec:hybrid}).
@@ -74,7 +74,7 @@ B9 Training cost and lifecycle & millions of interactions; online exploration is
 \end{tabularx}
 \end{table}
 
-\paragraph{B1 Generalization.} This is the barrier the community discusses most, and \cref{ch:training} examined it in detail. The deployment record adds one point. Successful deployments avoided the problem rather than solving it, by training on their own traffic (OnRL, Loki, Concerto) or by limiting what a wrong decision can do (ACC, Floo, SmartIW).
+\paragraph{B1 Generalization.} This is the barrier the community discusses most, and \cref{ch:training} examined it in detail. Successful deployments avoided the problem rather than solving it, by training on their own traffic (OnRL, Loki, Concerto) or by limiting what a wrong decision can do (ACC, Floo, SmartIW).
 
 \paragraph{B2 Safety.} A congestion controller that collapses its rate, or floods a queue, harms users in a way that average-case metrics hide. Canopy shows a well-known learned controller entering states from which it recovers only slowly~\cite{yang2024canopy}. The corpus offers two remedies. \emph{Verification} proves properties of the trained policy or finds counterexamples to them~\cite{kazak2019verily,eliyahu2021whirl,zangooei2026analyzing}, but it scales only to small policies and properties. \emph{Runtime assurance} monitors the policy and falls back to a safe controller when it is uncertain or misbehaves~\cite{rotman2020online,zhang2020onrl,jia2026han}. Most deployed systems rely on the second.
 
@@ -88,7 +88,7 @@ B9 Training cost and lifecycle & millions of interactions; online exploration is
 
 \paragraph{B7 Objectives.} Every RL design hard-codes a trade-off in its reward. Deployments sidestep the question by optimizing one service metric. Research designs condition on preferences~\cite{ma2022mocc} or constraints~\cite{liu2021multi}, and LLM-based work proposes to write utilities from natural-language requirements (\cref{sec:llm}).
 
-\paragraph{B8 Evaluation.} The tools for credible evaluation exist (\cref{ch:training}), but their use is low and declining. Credible evaluation is arguably the cheapest barrier to lower, because it requires only practice, not new research.
+\paragraph{B8 Evaluation.} The tools for credible evaluation exist (\cref{ch:training}), but their use is low and declining. This barrier is arguably the easiest to lower, because it requires changes in practice rather than new research.
 
 \paragraph{B9 Lifecycle.} Almost no study discusses what happens after deployment: when to retrain, how to detect drift, how to roll out a new model, or how to version models across a fleet. OnRL's per-user agents with aggregation and safeguards~\cite{zhang2020onrl} are the most complete answer in the corpus. Federated training of bandwidth-weight agents~\cite{liu2022distributed} is a related idea.
 
@@ -122,29 +122,29 @@ Since 2024 a new line of work uses large language models in congestion control. 
 
 \paragraph{LLMs as policies.} Running an LLM in the control loop raises the overhead barrier (B4) to an extreme, and every design in this group works around it. CCA Reimagined first confines the LLM to congestion avoidance, studying when to invoke it, what to tell it and how to phrase its instructions, and then extends it to several phases. It reports up to 50\% lower latency than traditional algorithms with under 0.3\% throughput loss, and stresses that an effective \emph{triggering} mechanism is essential~\cite{qin2026cca}. NetRL fine-tunes an LLM policy with supervised learning and then with a group-relative policy-optimization variant (NetGRPO). It reports 24.1\% higher network utility than Orca and generalization to unseen traces~\cite{peng2026netrl}. Trailblazer aligns compact LLMs to network control and invokes them only in complex conditions. In a large online A/B test of congestion control on Douyin, it outperformed a highly optimized industrial policy, with a projected reduction of about 3,145 hours of video stalls per day~\cite{wu2025grounding}. This is the only user-facing deployment of an LLM-based controller we found. Smaller studies adapt LLMs to TCP fairness and starvation over Wi-Fi~\cite{shrestha2024adapting}, fine-tune small language models with LoRA to choose BBR pacing gains over Starlink~\cite{desilva2026small}, and train an LLM with RL from verifiable rewards to select rate actions~\cite{varkey2026poster,varkey2026reasoning}. NetLLM provides a general framework for adapting LLMs to networking tasks~\cite{wu2024netllm}.
 
-\paragraph{Assessment.} Four observations connect this line of work to the barriers above.
+\paragraph{Assessment.} This line of work relates to the barriers above as follows.
 \begin{enumerate}
-  \item \textbf{The hybrid lesson is being relearned.} Every LLM policy we found stays off the per-packet path. It is triggered only in hard cases, acts at a coarse timescale, or tunes a classic controller (BBR's gains). This is the same division of labor that Orca and Spine adopted for neural policies.
-  \item \textbf{Code generation turns a black box into a white box.} A generated controller is source code that can be reviewed, tested, verified and versioned like any heuristic. That addresses interpretability (B5) and part of safety (B2) better than any neural policy, and it fits operators' revealed preference for interpretable structure (\cref{sec:deployed}). The risk moves to the search process: the generator is likely to overfit to the emulator's conditions unless held-out conditions and real-network tests are part of the loop.
-  \item \textbf{RL returns as the training method.} NetRL's NetGRPO and RLVR-CC fine-tune language models with RL, so the two lines are converging rather than competing. The question for RL thus shifts from ``which policy network'' to ``which verifiable reward''.
-  \item \textbf{The evidence is thinner still.} Apart from Trailblazer's A/B test, these studies are evaluated in emulation, in simulation or on recorded traces, and He et al.'s gains are measured for a production QUIC code base under emulated conditions. Several rely on proprietary models, which limits reproducibility, and many are preprints from 2025--26.
+  \item \textbf{Hybrid structure.} Every LLM policy we found stays off the per-packet path. It is triggered only in hard cases, acts at a coarse timescale, or tunes a classic controller (BBR's gains). This is the same division of labor that Orca and Spine adopted for neural policies.
+  \item \textbf{Generated code.} A generated controller is source code that can be reviewed, tested, verified and versioned like any heuristic. That addresses interpretability (B5) and part of safety (B2) better than any neural policy, and it matches the interpretable structure favored in the deployments of \cref{sec:deployed}. The risk moves to the search process: the generator is likely to overfit to the emulator's conditions unless held-out conditions and real-network tests are part of the loop.
+  \item \textbf{RL as the training method.} NetRL's NetGRPO and RLVR-CC fine-tune language models with RL, so the two lines are converging. In these systems the RL design effort moves from the policy network to the verifiable reward.
+  \item \textbf{Evidence.} Apart from Trailblazer's A/B test, these studies are evaluated in emulation, in simulation or on recorded traces, and He et al.'s gains are measured for a production QUIC code base under emulated conditions. Several rely on proprietary models, which limits reproducibility, and many are preprints from 2025--26.
 \end{enumerate}
 
 % ----------------------------------------------------------------------
 \section{Research Agenda}
 \label{sec:agenda}
 
-We close the analysis with eight directions, each tied to the evidence above.
+The evidence above points to the following research directions.
 
 \begin{enumerate}
   \item \textbf{Distribution-shift benchmarks.} The field needs a benchmark with explicit training and test distributions along named factors (bandwidth, RTT, buffer, loss, delay noise, capacity variation, competing traffic, wireless traces), in the spirit of ReCoCo's split for real-time media~\cite{markudova2026advancing}. Results should be reported per factor, as in our case study, rather than as one average.
   \item \textbf{Harm-based coexistence testing.} Every learned controller should be evaluated against CUBIC and BBR using harm metrics~\cite{ware2019beyond}, and against non-congestive delay, which can starve delay-sensitive designs~\cite{arun2022starvation}.
-  \item \textbf{Validated simulators and emulators for wireless and space.} Simulators should be calibrated against emulation and real traces, as Pantheon did for wired paths~\cite{yan2018pantheon}. This matters most for satellite and IoT settings, where nearly all evidence is simulation-only and known to miss stack effects~\cite{valentine2026emulation}.
-  \item \textbf{Runtime assurance as a first-class component.} Since most deployments rely on fallbacks, their design deserves study: when to switch, how quickly, and what guarantees result. Certificates in training~\cite{yang2024canopy} and monitors at run time~\cite{rotman2020online} could be combined.
+  \item \textbf{Validated simulators and emulators for wireless and space.} Simulators should be calibrated against emulation and real traces, as Pantheon did for wired paths~\cite{yan2018pantheon}. This matters most for satellite and IoT settings, where simulation-only evidence predominates and is known to miss stack effects~\cite{valentine2026emulation}.
+  \item \textbf{Runtime assurance as a design component.} Since most deployments rely on fallbacks, their design deserves study: when to switch, how quickly, and what guarantees result. Certificates in training~\cite{yang2024canopy} and monitors at run time~\cite{rotman2020online} could be combined.
   \item \textbf{Learning from logs at scale.} Offline RL from deployed controllers' logs~\cite{yen2023sage,khairy2024acm} removes the simulator from training. It needs shared datasets, off-policy evaluation, and pessimism against extrapolation~\cite{jia2026pocc}.
   \item \textbf{Datapath co-design.} Learned components should target eBPF, QUIC, NIC and P4 deployment from the start, through timescale separation, distillation or lookup, rather than retrofitting a neural network.
-  \item \textbf{LLMs at design time, with honest evaluation.} The most promising LLM role is generating interpretable controllers. Its evaluation must guard against search overfitting through held-out conditions, real-network tests and released generated code.
-  \item \textbf{Lifecycle and operations.} Model updates, drift detection, rollbacks and fleet-wide versioning are unaddressed, yet they decide whether a learned controller survives its first year in production.
+  \item \textbf{LLMs at design time, with held-out evaluation.} The most promising LLM role is generating interpretable controllers. Its evaluation must guard against search overfitting through held-out conditions, real-network tests and released generated code.
+  \item \textbf{Lifecycle and operations.} Model updates, drift detection, rollbacks and fleet-wide versioning are unaddressed, although a controller in production needs all of them.
 \end{enumerate}
 
 % ----------------------------------------------------------------------
@@ -157,7 +157,7 @@ We close the analysis with eight directions, each tied to the evidence above.
 
 \paragraph{Evidence depth.} Only \nSrcFT{} studies were coded from full texts, and \nSrcAB{} from abstracts and metadata. Items that abstracts rarely report (algorithm family, training environment, code availability) are therefore undercounted, which is why we report the full-text subset separately (\cref{tab:practices}). Results reported by the studies themselves were not re-validated.
 
-\paragraph{Time window.} The search was run on 31 October 2026, so the 2026 counts cover ten months. The LLM literature in particular is moving faster than any survey can track.
+\paragraph{Time window.} The search was run on 31 October 2026, so the 2026 counts cover ten months. The LLM literature in particular is growing quickly, so this review is likely to miss recent work in it.
 
 % ----------------------------------------------------------------------
 \section{Conclusion}
@@ -171,4 +171,4 @@ We surveyed \nStudies{} studies of reinforcement and imitation learning for cong
 
 \noindent\textbf{\RQ{3} (Deployment).} The deployments that exist either keep a classic algorithm or safeguard in the loop or learn from the operator's own logs, are run by operators who own the endpoints, and optimize a narrow service metric. Overhead is largely solved. Safety relies on runtime fallbacks, fairness to the deployed base is rarely measured, and the lifecycle of a deployed model is unstudied. LLMs are a promising design-time tool for producing interpretable controllers, but their evaluation is as thin as that of early RL work.
 
-\noindent The main obstacle to RL-based congestion control today is not the learning algorithm. It is the gap between the conditions under which controllers are trained and tested and the networks on which they would run. Closing that gap requires better benchmarks and more realistic evaluation, more than new architectures.
+\noindent The main obstacle to RL-based congestion control today is the gap between the conditions under which controllers are trained and tested and the networks on which they would run. Closing it depends more on better benchmarks and more realistic evaluation than on new architectures.
