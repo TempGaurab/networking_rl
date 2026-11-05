@@ -132,7 +132,9 @@ def prisma_counts(ext):
     n["ReportsIncluded"] = int(ext.inc.isin(["Y", "LINK"]).sum())
     n["Studies"] = int((ext.inc == "Y").sum())
     n["LinkedReports"] = int((ext.inc == "LINK").sum())
-    ft = {p.stem for p in (DATA / "fulltext").glob("*.txt")}
+    # The retrieval logs, not data/fulltext/, are the record: the texts are not redistributed.
+    logs = pd.concat(pd.read_csv(DATA / f) for f in ("retrieval_log.csv", "retrieval_log_other.csv"))
+    ft = set(logs.loc[logs.fulltext == "retrieved", "id"])
     n["Fulltext"] = len(set(ext.id) & ft)
     n["FulltextIncluded"] = len(set(ext[ext.inc.isin(["Y", "LINK"])].id) & ft)
     n["Secondary"] = int((ta.dec == "EC4").sum() + (sn.decision == "EC4").sum() + (bk.decision == "EC4").sum()
