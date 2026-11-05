@@ -1,12 +1,12 @@
 % ======================================================================
-\chapter{Training and Testing: From Simulators to Real Networks}
+\chapter{Training and testing: from simulators to real networks}
 \label{ch:training}
 % ======================================================================
 
 This chapter answers \RQ{2}: how RL congestion controllers are trained and tested, and whether they still work on networks they did not see. We first define the \emph{evaluation ladder} from simulation to production (\cref{sec:ladder}) and measure where the corpus stands on it (\cref{sec:where}). We then examine evaluation practices (\cref{sec:practices}) and the evidence on generalization (\cref{sec:generalization}). A small reproducible case study isolates the effect of the training distribution (\cref{sec:case-study}), and we close with recommendations (\cref{sec:recommendations}).
 
 % ----------------------------------------------------------------------
-\section{The Evaluation Ladder}
+\section{The evaluation ladder}
 \label{sec:ladder}
 
 We distinguish four rungs, ordered by how much of the real system they include.
@@ -23,7 +23,7 @@ We distinguish four rungs, ordered by how much of the real system they include.
 \paragraph{A note on Wireshark.} Our project proposal described the path ``from simulators (Wireshark) to shared testbeds (Pantheon) and real networks''. That was a mistake that we correct here. Wireshark is a \emph{packet analyzer}: it captures and decodes traffic on a real or emulated interface. It does not generate traffic or model a network, so it is not a simulator. Packet capture is useful on every rung, for example to inspect a testbed trace, to validate an emulator against a real path, or to debug a controller's behavior in a kernel. The simulators in this literature are ns-2, ns-3, OMNeT++ and custom models, and the emulators are Mininet, Mahimahi and NetEm.
 
 % ----------------------------------------------------------------------
-\section{Where the Corpus Stands}
+\section{Where the corpus stands}
 \label{sec:where}
 
 \Cref{fig:evaluation} shows the highest evaluation level reached by the \nEmpiricalN{} empirical studies (all included studies except formal analyses). \nLevelSimulation{} studies (\nPctLevelSimulation\%) stop at simulation, \nLevelEmulation{} (\nPctLevelEmulation\%) at emulation, and \nLevelRealnetwork{} (\nPctLevelRealnetwork\%) reach a real network. The remaining \nLevelNotreported{} (\nPctLevelNotreported\%) do not report their environment in the material we could access. These are mostly studies coded from abstracts, which typically say ``extensive experiments'' without saying where. Among the \nKnownLevelN{} studies whose level is known, \nPctSimOnlyOfKnown\% are simulation-only and \nPctRealOfKnown\% reach a real network. In the subset coded from full texts, which is more complete but skewed toward prominent venues, \nPctRealOfFT\% reach a real network.
@@ -44,10 +44,10 @@ We distinguish four rungs, ordered by how much of the real system they include.
 \paragraph{Where agents are trained.} The training environment is reported by \nTrainReported{} of the \nDesignN{} design studies. Simulators dominate (\nTrainSim, of which \nTrainNsThree{} use ns-3), followed by emulators (\nTrainEmu), testbeds (\nTrainTestbed), real networks (\nTrainReal) and logged datasets (\nTrainData). Training in simulation is reasonable, since exploration on a real network is slow and risky. However, it makes testing outside the simulator essential, and that testing is what the corpus most often lacks.
 
 % ----------------------------------------------------------------------
-\section{Evaluation Practices}
+\section{Evaluation practices}
 \label{sec:practices}
 
-\Cref{tab:practices} reports how often design studies follow key evaluation practices, across all \nDesignN{} design studies and across the \nDesignFT{} whose full text we coded. Because abstracts omit details, the whole-corpus figures are lower bounds; the full-text figures come from a sample that over-represents prominent venues and are better read as upper bounds.
+\Cref{tab:practices} reports how often design studies follow the evaluation practices we coded, across all \nDesignN{} design studies and across the \nDesignFT{} whose full text we coded. Because abstracts omit details, the whole-corpus figures are lower bounds; the full-text figures come from a sample that over-represents prominent venues and are better read as upper bounds.
 
 \begin{table}[t]
 \centering
@@ -68,10 +68,10 @@ We distinguish four rungs, ordered by how much of the real system they include.
 \paragraph{Independent evaluations.} Four independent large-scale evaluations re-run many published learned controllers under common conditions. Abbasloo et al.\ propose general benchmarks that rank Internet controllers and find large room for improvement~\cite{abbasloo2023internet}. Giacomoni and Parisis evaluate public RL controllers reproducibly. They find that the controllers acquire bandwidth quickly and resist random loss, but cause excess loss, are unfair in almost all setups and lag when bandwidth or latency changes~\cite{giacomoni2024rlcc}. Mazilu et al.\ reach similar conclusions against CUBIC and BBRv3 and show that fairness terms in the reward do not generalize~\cite{mazilu2025learning}. CCLab attacks controllers with an RL adversary that perturbs inputs or the environment within bounds. It finds learned controllers (Orca, Canopy) generally \emph{more} robust than classic ones, and it shows that adversarial traces train more robust controllers~\cite{chen2026cclab}. Shared benchmarks have also emerged for real-time media, namely OpenNetLab, the MMSys'24 offline-RL challenge and ReCoCo's train/test trace split~\cite{eo2022opennetlab,khairy2024acm,markudova2026advancing}, along with automated assessment frameworks~\cite{pazhooheshy2025mahak} and a survey of congestion-control evaluation methodology in general~\cite{vielhaus2026evaluating}.
 
 % ----------------------------------------------------------------------
-\section{Evidence on Generalization}
+\section{Evidence on generalization}
 \label{sec:generalization}
 
-\paragraph{Evidence of failure.} Learned controllers' sensitivity to their training assumptions was demonstrated before deep RL: Remy's machine-generated rules degraded when the network differed from the assumed model~\cite{sivaraman2014learnability}. The corpus contains recent examples. Ghermezian et al.\ deployed an Aurora-style PPO controller, trained in simulation, on a 10\,Gbit/s wide-area path. It reached 0.5\% mean and 4.4\% peak utilization of the path, whereas CUBIC and BBR reached up to 9.9 and 9.7\,Gbit/s. The authors observe overshoot-and-collapse dynamics and call for scale-aware training~\cite{ghermezian2026ppo}. Iroko's agents overfit to the training topology~\cite{ruffy2018iroko}. Fang et al.\ document a gap between simulated and real reward for RTC~\cite{fang2019rtc}. A cellular ablation shows that higher training reward need not mean better network performance~\cite{naqvi2022ablation}. Valentine et al.\ show that a simulator's missing stack effects change an RL controller's behavior over LEO links~\cite{valentine2026emulation}. Adversarial studies find conditions, or competing flows, that degrade learned controllers severely~\cite{gilad2019robustifying,chen2025exploring}. One input-perturbation attack cuts throughput by about half and raises latency more than 36-fold~\cite{yang2022good}.
+\paragraph{Evidence of failure.} Learned controllers' sensitivity to their training assumptions was demonstrated before deep RL: Remy's machine-generated rules degraded when the network differed from the assumed model~\cite{sivaraman2014learnability}. Recent examples in the corpus are similar. Ghermezian et al.\ deployed an Aurora-style PPO controller, trained in simulation, on a 10\,Gbit/s wide-area path. It reached 0.5\% mean and 4.4\% peak utilization of the path, whereas CUBIC and BBR reached up to 9.9 and 9.7\,Gbit/s. The authors observe overshoot-and-collapse dynamics and call for scale-aware training~\cite{ghermezian2026ppo}. Iroko's agents overfit to the training topology~\cite{ruffy2018iroko}. Fang et al.\ document a gap between simulated and real reward for RTC~\cite{fang2019rtc}. A cellular ablation shows that higher training reward need not mean better network performance~\cite{naqvi2022ablation}. Valentine et al.\ show that a simulator's missing stack effects change an RL controller's behavior over LEO links~\cite{valentine2026emulation}. Adversarial studies find conditions, or competing flows, that degrade learned controllers severely~\cite{gilad2019robustifying,chen2025exploring}. One input-perturbation attack cuts throughput by about half and raises latency more than 36-fold~\cite{yang2022good}.
 
 \paragraph{Evidence of success.} Aurora generalized to bandwidths more than 20$\times$ above its training range, though not to links where latency noise it never saw dominated the signal~\cite{jay2019aurora}. Tessler et al.'s RL-CC generalized to unseen data-center scenarios and later to live NICs~\cite{tessler2022rlcc,fuhrer2023nvidia}, and GraphCC handled unseen workloads and link failures~\cite{bernardez2024graphcc}. ReCoCo's best policies kept a 3--20\% QoE advantage on more than 3,000 unseen traces~\cite{markudova2026advancing}. The successes share a pattern: deliberately broad or adversarial training data, an architecture that limits the damage a bad decision can do, or both.
 
@@ -96,7 +96,7 @@ Bound the policy & Hybrid control with a classic algorithm; fallback under uncer
 \end{table}
 
 % ----------------------------------------------------------------------
-\section{Case Study: How the Training Distribution Shapes Behavior Outside It}
+\section{Case study: how the training distribution shapes behavior outside it}
 \label{sec:case-study}
 
 Published studies rarely vary the training distribution while holding everything else fixed, so the corpus cannot say how much of a controller's out-of-distribution behavior is due to \emph{what it was trained on}. We therefore ran a small controlled experiment. Everything needed to reproduce it, including the environment, training, evaluation and figures, is in the replication package (\texttt{case\_study/}). Training takes about \nCsTrainMinutes{} minutes per seed on one CPU core.
@@ -121,7 +121,7 @@ The baselines are a window-based, ACK-clocked Reno-like AIMD with slow start and
   \item \textbf{In distribution.} Both learned policies reach at least \nCsBroadRefUtil\% utilization with queueing delay of \nCsNarrowRefQ{}--\nCsBroadRefQ{} RTT, against \nCsAimdRefQ{} RTT for AIMD. On its training distribution, the narrow policy scores best of all four controllers on the objective it was trained for (utilization minus queueing delay), slightly ahead of BBR-like, which has higher utilization but a larger queue.
   \item \textbf{RTT jitter.} With 10\,ms of mean RTT jitter, which is ordinary on Wi-Fi and cellular links, the narrow policy's utilization falls to \nCsNarrowJitterTenUtil\%. Its latency features read the noise as queue growth, and it backs off. AIMD, which ignores delay, and the BBR-like controller are unaffected (\nCsAimdJitterTenUtil\% and \nCsBbrJitterTenUtil\%). Aurora's authors observed the same failure mode: their policy performed poorly at 1\,ms latency because about 1\,ms of packet-processing noise, absent from training, dominated the latency signal~\cite{jay2019aurora}.
   \item \textbf{Broader training.} The broad policy, which saw up to 10\,ms of jitter, keeps \nCsBroadJitterTenUtil\% at 10\,ms but drops to \nCsBroadWorstUtil\% at 40\,ms, outside its range. In distribution it queues more (\nCsBroadRefQ{} vs.\ \nCsNarrowRefQ{} RTT). Training was also less reliable: one of \nCsSeeds{} broad seeds collapsed to \nCsCollapsedUtil\% utilization even on the reference link, whereas every narrow seed converged.
-  \item \textbf{Random loss.} With 5\% random loss the PPO policies keep \nCsBroadLossFiveUtil--\nCsNarrowLossFiveUtil\% utilization, while AIMD falls to \nCsAimdLossFiveUtil\%. Their weakness is delay noise. A test suite designed around classic controllers' known weaknesses (random loss, shallow buffers) would rate the learned controller highly and miss its actual failure mode.
+  \item \textbf{Random loss.} With 5\% random loss the PPO policies keep \nCsBroadLossFiveUtil--\nCsNarrowLossFiveUtil\% utilization, while AIMD falls to \nCsAimdLossFiveUtil\%. Their weakness is delay noise, so a test suite built around classic controllers' known weaknesses (random loss, shallow buffers) would rate the learned controller highly and miss how it fails.
   \item \textbf{High bandwidth.} At 200\,Mbit/s both PPO policies reach only \nCsNarrowBwTwoHundredUtil--\nCsBroadBwTwoHundredUtil\% utilization, against \nCsBbrBwTwoHundredUtil\% for BBR-like, even though the broad policy trained up to 100\,Mbit/s. Part of the gap is structural. An Aurora-style action changes the rate by at most 5\% per interval, so ramping up over two orders of magnitude takes seconds whatever the training data.
 \end{enumerate}
 
@@ -138,7 +138,7 @@ The baselines are a window-based, ACK-clocked Reno-like AIMD with slow start and
 \paragraph{Caveats.} The model has one flow, a fluid queue and no competing traffic, and the policies are small. The experiment isolates the effect of the training distribution; it makes no claim about any published controller.
 
 % ----------------------------------------------------------------------
-\section{Recommendations for Evaluating Learned Controllers}
+\section{Recommendations for evaluating learned controllers}
 \label{sec:recommendations}
 
 From the corpus analysis and the case study we derive a reporting checklist (\cref{tab:checklist}). Several of its items echo advice from the evaluation literature~\cite{vielhaus2026evaluating,giacomoni2024rlcc}. We add a measurement of how often the corpus follows them.

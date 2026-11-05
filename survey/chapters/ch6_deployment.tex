@@ -1,12 +1,12 @@
 % ======================================================================
-\chapter{Deployment: Barriers, LLM-Designed Controllers, and Open Problems}
+\chapter{Deployment: barriers, LLM-designed controllers, and open problems}
 \label{ch:deployment}
 % ======================================================================
 
-This chapter answers \RQ{3}: what stops operators from deploying RL-based congestion control, and what research could fix it. We first examine the deployments that did happen (\cref{sec:deployed}), because they show which barriers turned out to be surmountable. We then map nine barriers to the evidence and mitigations in the corpus (\cref{sec:barriers}) and review the newest direction: controllers designed, tuned or run by large language models (\cref{sec:llm}). The chapter closes with a research agenda (\cref{sec:agenda}), threats to validity (\cref{sec:threats}) and conclusions (\cref{sec:conclusion}).
+This chapter answers \RQ{3}: what stops operators from deploying RL-based congestion control, and what research could fix it. We first examine the deployments that did happen (\cref{sec:deployed}), because they show which barriers turned out to be surmountable. We then map nine barriers to the evidence and mitigations in the corpus (\cref{sec:barriers}) and review the newest work, on controllers designed, tuned or run by large language models (\cref{sec:llm}). The chapter closes with a research agenda (\cref{sec:agenda}), threats to validity (\cref{sec:threats}) and conclusions (\cref{sec:conclusion}).
 
 % ----------------------------------------------------------------------
-\section{What the Deployed Systems Have in Common}
+\section{What the deployed systems have in common}
 \label{sec:deployed}
 
 \Cref{tab:deployments} lists the studies in the corpus that report deployment in production or tests with real users, with the scale they report. Despite their different settings, they share three properties.
@@ -45,7 +45,7 @@ Marten~\cite{zhou2025safety} & QUIC & DRL guided by BBR, safe exploration & \cma
 \noindent Production systems built on \emph{non-RL} learning show the same pattern. Antelope selects among kernel algorithms with a (non-RL) machine-learning model and was evaluated in production networks~\cite{zhou2021antelope}. Gemini pairs a white-box parameterized controller with online Bayesian optimization of its parameters and was deployed over production networks~\cite{yang2023gemini}. XCC, a context-aware cross-layer controller for live streaming, is fully deployed in a cloud provider's production CDN service, where A/B tests over tens of millions of sessions cut stall time by 36\%~\cite{yuan2024context}; a concern-decoupled design for live-video CDNs follows the same approach~\cite{yuan2026concern}. These systems also favor interpretable structure with learned parameters.
 
 % ----------------------------------------------------------------------
-\section{Barriers to Deployment}
+\section{Barriers to deployment}
 \label{sec:barriers}
 
 \Cref{tab:barriers} summarizes the barriers we identified, the evidence for each in the corpus, and the mitigations proposed. The barriers are not independent. Hybrid designs, for example, address safety, overhead and generalization at once, which explains their spread (\cref{sec:hybrid}).
@@ -93,7 +93,7 @@ B9 Training cost and lifecycle & millions of interactions; online exploration is
 \paragraph{B9 Lifecycle.} Almost no study discusses what happens after deployment: when to retrain, how to detect drift, how to roll out a new model, or how to version models across a fleet. OnRL's per-user agents with aggregation and safeguards~\cite{zhang2020onrl} are the most complete answer in the corpus. Federated training of bandwidth-weight agents~\cite{liu2022distributed} is a related idea.
 
 % ----------------------------------------------------------------------
-\section{LLM-Designed and LLM-Driven Controllers}
+\section{LLM-designed and LLM-driven controllers}
 \label{sec:llm}
 
 Since 2024 a new line of work uses large language models in congestion control. Our Boolean query finds only part of it, because many of these papers do not use the phrase ``reinforcement learning''. We therefore searched for it separately (\cref{app:search}). The included corpus contains one LLM-based study~\cite{peng2026netrl}. Here we review it together with the closely related works found by that supplementary search and organize them by the role the LLM plays (\cref{fig:llm-roles}).
@@ -131,10 +131,10 @@ Since 2024 a new line of work uses large language models in congestion control. 
 \end{enumerate}
 
 % ----------------------------------------------------------------------
-\section{Research Agenda}
+\section{Research agenda}
 \label{sec:agenda}
 
-The evidence above points to the following research directions.
+We see eight research directions in this evidence.
 
 \begin{enumerate}
   \item \textbf{Distribution-shift benchmarks.} The field needs a benchmark with explicit training and test distributions along named factors (bandwidth, RTT, buffer, loss, delay noise, capacity variation, competing traffic, wireless traces), in the spirit of ReCoCo's split for real-time media~\cite{markudova2026advancing}. Results should be reported per factor, as in our case study, rather than as one average.
@@ -148,7 +148,7 @@ The evidence above points to the following research directions.
 \end{enumerate}
 
 % ----------------------------------------------------------------------
-\section{Threats to Validity}
+\section{Threats to validity}
 \label{sec:threats}
 
 \paragraph{Search.} We substituted OpenAlex for direct queries of IEEE Xplore, the ACM Digital Library and Scopus (\cref{sec:search}). OpenAlex indexes their records, but it can miss records whose abstracts it lacks. Citation searching mitigated this and recovered several well-known studies, which suggests that some studies remain missing. The Boolean query requires the exact phrases of our protocol, so studies that describe RL without those words (e.g., ``deep Q-network'' with ``TCP'') can be missed unless citation searching finds them. LLM-based work is the clearest example, and we treat it separately in \cref{sec:llm}.
