@@ -96,6 +96,8 @@ def prisma_counts(ext):
     sn = pd.read_csv(DATA / "screening" / "ta_snowball.csv")
     bk = pd.read_csv(DATA / "screening" / "ta_backward_reviewer.csv")
     fw = json.load(open(RAW / "snowball_forward.json"))
+    up = pd.read_csv(DATA / "screening" / "ta_update.csv", dtype=str, keep_default_na=False)
+    upc = json.load(open(RAW / "update_counts.json"))
     n = {}
     n["OpenAlex"] = len(oa["results"])
     n["ArxivRetrieved"] = len(ax["results"])
@@ -123,13 +125,21 @@ def prisma_counts(ext):
     n["ForwardRetrieved"] = fw["n_retrieved"]
     n["ForwardNew"] = len(sn)
     n["BackwardNew"] = int((bk.arm == "backward").sum())
-    n["ReviewerKnown"] = int((bk.arm == "reviewer").sum())
-    n["OtherScreened"] = n["ForwardNew"] + n["BackwardNew"]
-    n["OtherExcludedTA"] = int((sn.decision != "INC").sum() + ((bk.arm == "backward") & (bk.decision != "INC")).sum())
-    n["SoughtOther"] = int((sn.decision == "INC").sum() + (bk.decision == "INC").sum())
+    n["ReviewerKnown"] = int((bk.arm == "reviewer").sum()) + int((up.arm == "known").sum())
+    n["UpdateRetrieved"] = upc["retrieved"]
+    n["UpdateNew"] = upc["new"]
+    n["UpdateAuto"] = upc["auto"]
+    n["UpdateCandidates"] = upc["candidates"]
+    upb = up[up.arm == "broadened"]
+    n["UpdateSought"] = int((up.decision == "INC").sum())
+    n["OtherScreened"] = n["ForwardNew"] + n["BackwardNew"] + n["UpdateNew"]
+    n["OtherExcludedTA"] = int((sn.decision != "INC").sum() + ((bk.arm == "backward") & (bk.decision != "INC")).sum()
+                               + ((up.arm == "broadened") & (up.decision != "INC")).sum())
+    n["SoughtOther"] = int((sn.decision == "INC").sum() + (bk.decision == "INC").sum() + (up.decision == "INC").sum())
     n["SoughtAll"] = n["SoughtDB"] + n["SoughtOther"]
-    n["IdentifiedTotal"] = n["IdentifiedDB"] + n["ForwardNew"] + n["BackwardNew"] + n["ReviewerKnown"]
+    n["IdentifiedTotal"] = n["IdentifiedDB"] + n["ForwardNew"] + n["BackwardNew"] + n["UpdateNew"] + n["ReviewerKnown"]
     n["ReportsIncluded"] = int(ext.inc.isin(["Y", "LINK"]).sum())
+    n["UpdateStudies"] = int(((ext.inc == "Y") & ext.id.str.startswith("U")).sum())
     n["Studies"] = int((ext.inc == "Y").sum())
     n["LinkedReports"] = int((ext.inc == "LINK").sum())
     # The retrieval logs, not data/fulltext/, are the record: the texts are not redistributed.
@@ -138,7 +148,7 @@ def prisma_counts(ext):
     n["Fulltext"] = len(set(ext.id) & ft)
     n["FulltextIncluded"] = len(set(ext[ext.inc.isin(["Y", "LINK"])].id) & ft)
     n["Secondary"] = int((ta.dec == "EC4").sum() + (sn.decision == "EC4").sum() + (bk.decision == "EC4").sum()
-                         + (ext.inc == "EX-EC4").sum())
+                         + (up.decision == "EC4").sum() + (ext.inc == "EX-EC4").sum())
     origin = rec["db_of_origin"].value_counts()
     n["OriginIEEE"] = int(origin.get("IEEE Xplore", 0))
     n["OriginACM"] = int(origin.get("ACM DL", 0))
@@ -260,8 +270,8 @@ def prisma_tikz(n):
 \node[ex] (nr1) at (52mm,-52mm) {Reports not retrieved ($n=@NRDB@$)};
 \node[box] (as1) at (0,-62mm) {Reports assessed for eligibility ($n=@ASDB@$)};
 \node[ex] (ex2) at (52mm,-62mm) {Reports excluded ($n=@EXFTDB@$):\\ EC2 ($n=@FTEC2@$), EC3 ($n=@FTEC3@$),\\ EC4 ($n=@FTEC4@$), EC5 ($n=@FTEC5@$)};
-\node[box, text width=42mm] (id2) at (105mm,0) {Forward citation search:\\ $n=@FWN@$ new (of @FWR@ citing works)\\ Backward citation search:\\ $n=@BWN@$ new\\ Known to the reviewers: $n=@RK@$};
-\node[box, text width=42mm] (sc2) at (105mm,-24mm) {Records screened ($n=@OSC@$)\\ Records excluded ($n=@OEX@$)};
+\node[box, text width=42mm] (id2) at (105mm,0) {Forward citation search:\\ $n=@FWN@$ new (of @FWR@ citing works)\\ Backward citation search:\\ $n=@BWN@$ new\\ Update search, broadened terms:\\ $n=@UPN@$ new (of @UPR@ retrieved;\\ @UPA@ removed by keyword rule)\\ Known to the reviewers: $n=@RK@$};
+\node[box, text width=42mm] (sc2) at (105mm,-34mm) {Records screened ($n=@OSC@$)\\ Records excluded ($n=@OEX@$)};
 \node[box, text width=42mm] (so2) at (105mm,-52mm) {Reports sought ($n=@SOO@$)\\ Reports not retrieved ($n=@NRO@$)};
 \node[box, text width=42mm] (as2) at (105mm,-62mm) {Reports assessed ($n=@ASO@$)\\ Reports excluded ($n=@EXFTO@$):\\ EC2 ($n=@OFTEC2@$), EC3 ($n=@OFTEC3@$), EC4 ($n=@OFTEC4@$)};
 \node[hdr, text width=46mm] (h1) at ([yshift=2mm]id1.north) {Identification via databases};
@@ -283,11 +293,11 @@ def prisma_tikz(n):
            "OFTEC2": n["ExcludedFTOtherEC2"], "OFTEC3": n["ExcludedFTOtherEC3"], "OFTEC4": n["ExcludedFTOtherEC4"],
            "OFTEC5": n["ExcludedFTOtherEC5"], "FTEC2": n["ExcludedFTDBEC2"], "FTEC3": n["ExcludedFTDBEC3"],
            "FTEC4": n["ExcludedFTDBEC4"], "FTEC5": n["ExcludedFTDBEC5"], "FWN": n["ForwardNew"],
-           "FWR": n["ForwardRetrieved"], "BWN": n["BackwardNew"], "RK": n["ReviewerKnown"], "OSC": n["OtherScreened"],
+           "FWR": n["ForwardRetrieved"], "BWN": n["BackwardNew"], "RK": n["ReviewerKnown"], "UPN": n["UpdateNew"], "UPR": n["UpdateRetrieved"], "UPA": n["UpdateAuto"], "OSC": n["OtherScreened"],
            "OEX": n["OtherExcludedTA"], "SOO": n["SoughtOther"], "NRO": n["NotRetrievedOther"],
            "ASO": n["AssessedOther"], "ST": n["Studies"], "RI": n["ReportsIncluded"], "LK": n["LinkedReports"]}
     for k, v in rep.items():
-        t = t.replace(f"@{k}@", f"{v:,}" if isinstance(v, int) else str(v))
+        t = t.replace(f"@{k}@", f"{v:,}".replace(",", "{,}") if isinstance(v, int) else str(v))
     assert "@" not in t, "unreplaced PRISMA placeholder"
     (GEN / "prisma_flow.tex").write_text(t + "\n")
 

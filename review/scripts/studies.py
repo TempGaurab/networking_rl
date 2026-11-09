@@ -33,6 +33,10 @@ GROUPS = [
     ["B085", "S152"],            # LiteFlow: SIGCOMM'22 + ToN'23
     ["R0089", "R0096"],          # teacher-student robust DRL: JSAC + INFOCOM'21
     ["R0160", "R0351"],          # Nuwa-RL (peer-reviewed) + extended arXiv report
+    ["U0046", "U0058"],          # RL pacing scheduler for deadline flows: Globecom'19 + DDPG report
+    ["U0076", "U0065"],          # deep Q-learning DTN management: JAIS + SciTech conference
+    ["U0296", "U0349"],          # DIQL for Teams: arXiv/AAAI'26 + conference listing
+    ["R0468", "U0445"],          # GenRL-CC: TNSM/conference + ACM SIGAPP review article
 ]
 
 

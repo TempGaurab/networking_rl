@@ -3,7 +3,7 @@
 \label{app:search}
 % ======================================================================
 
-All searches were run on 31 October 2026 for publication years 2016--2026. The raw responses are stored in \texttt{review/data/raw/}.
+The database and citation searches were run on 31 October 2026, and the update search on 9 November 2026, for publication years 2016--2026. The raw responses are stored in \texttt{review/data/raw/}.
 
 \paragraph{OpenAlex (executed).} Works endpoint, Boolean search over titles and abstracts, page paging, 200 records per page:
 \begin{small}
@@ -55,6 +55,30 @@ Scopus (Advanced Search):
 
 \paragraph{Citation searching.} \emph{Forward}: all 2016--2026 works citing at least one of ten seed reports and mentioning ``congestion'' in the title or abstract. The seeds were Aurora (arXiv 2018 and ICML 2019), Orca, Pantheon/Indigo, MVFST-RL, Sage, QTCP, Eagle, TCP-RL, and DRL-CC for MPTCP. \emph{Backward}: the reference lists of sixteen recent included reports with long related-work sections. Sage, Orca and Astraea were among them, and the full list is stored with the raw responses. Records already identified were removed before screening.
 
+\paragraph{Update search with broadened terms (executed).} \texttt{review/scripts/search\_update.py} ran these queries, and \texttt{screen\_update.py} removed known records, applied the keyword rule and merged the reviewer decisions:
+\begin{small}
+\begin{verbatim}
+OpenAlex (2016-2026, titles and abstracts):
+  ("reinforcement learning" OR "imitation learning" OR "Q-learning"
+   OR "Q learning" OR "deep Q-network" OR DQN OR DDPG OR "actor-critic"
+   OR "policy gradient" OR "multi-armed bandit" OR "contextual bandit"
+   OR "offline RL" OR "deep RL" OR DRL OR "learned congestion"
+   OR "learning-based congestion") AND
+  ("congestion control" OR "congestion window" OR ECN OR TCP OR QUIC
+   OR "active queue management" OR AQM OR "bandwidth estimation"
+   OR "sending rate" OR "pacing rate" OR "congestion avoidance"
+   OR "congestion management" OR "network congestion" OR RDMA
+   OR incast OR "initial window" OR WebRTC)
+arXiv (2016-2026):
+  (ti:reinforcement OR abs:reinforcement OR ti:imitation OR abs:imitation
+   OR abs:bandit OR ti:bandit OR abs:"Q-learning" OR abs:DQN OR abs:DRL
+   OR abs:"actor-critic" OR abs:"offline RL" OR abs:"deep RL") AND
+  (abs:TCP OR ti:TCP OR abs:QUIC OR ti:QUIC OR abs:congestion
+   OR ti:congestion OR abs:AQM OR abs:"queue management"
+   OR abs:"bandwidth estimation" OR abs:WebRTC OR abs:RDMA OR abs:incast)
+\end{verbatim}
+\end{small}
+
 \paragraph{Supplementary search for LLM-based work (\cref{sec:llm}).} This scoped search informs the narrative of \cref{sec:llm} only and did not enter the PRISMA flow:
 \begin{small}
 \begin{verbatim}
@@ -93,12 +117,14 @@ arXiv (2022-2026), then a local filter for "congestion control|window":
 
 The replication package contains everything needed to regenerate every number, table and figure in this survey. Its \texttt{README.md} gives the exact commands.
 
+\begingroup\sloppy
 \begin{description}[leftmargin=0pt]
-  \item[\texttt{review/scripts/}] The pipeline. Search (\texttt{search\_openalex.py}, \texttt{search\_arxiv.py}, \texttt{search\_usenix.py}, \texttt{search\_snowball.py}, \texttt{search\_backward.py}, \texttt{search\_llm.py}), deduplication (\texttt{merge\_dedupe.py}), retrieval and evidence mining (\texttt{fulltext\_*.py}, \texttt{evidence.py}), study linking (\texttt{studies.py}), corpus and bibliography (\texttt{build\_corpus.py}, \texttt{assemble\_bib.py}), and statistics, figures and tables (\texttt{make\_numbers.py}, \texttt{make\_tables.py}).
+  \item[\texttt{review/scripts/}] The pipeline. Search (\texttt{search\_openalex.py}, \texttt{search\_arxiv.py}, \texttt{search\_usenix.py}, \texttt{search\_snowball.py}, \texttt{search\_backward.py}, \texttt{search\_update.py}, \texttt{search\_llm.py}), update screening (\texttt{screen\_update.py}), deduplication (\texttt{merge\_dedupe.py}), retrieval and evidence mining (\texttt{fulltext\_*.py}, \texttt{evidence.py}), study linking (\texttt{studies.py}), corpus and bibliography (\texttt{build\_corpus.py}, \texttt{assemble\_bib.py}), and statistics, figures and tables (\texttt{make\_numbers.py}, \texttt{make\_tables.py}).
   \item[\texttt{review/data/}] Records, every screening decision with its reason (\texttt{screening/}), the retrieval log, the coded extraction files (\texttt{extraction/coded\_b0*.psv}, one line per report with the evidence source), the study table, and the generated statistics.
   \item[\texttt{review/data/screening/second\_screener/}] A blinded sample of title/abstract records for an independent second screener, and \texttt{review/scripts/agreement.py}, which reports Cohen's $\kappa$~\cite{cohen1960kappa} against the original decisions.
   \item[\texttt{case\_study/}] Environment (\texttt{ccenv.py}), training (\texttt{train.py}), evaluation (\texttt{evaluate.py}), figures and tables (\texttt{plot\_case\_study.py}), and the eight trained models.
 \end{description}
+\endgroup
 
 \paragraph{Case-study configuration.} \Cref{tab:case-config} lists the settings used in \cref{sec:case-study}.
 
@@ -142,7 +168,7 @@ Baselines & Reno-like AIMD (window-based, ACK-clocked, slow start, halving at mo
 3 & Rationale & \Cref{sec:motivation,sec:related} \\
 4 & Objectives & \Cref{sec:rqs} (\RQ{1}--\RQ{3}) \\
 5 & Eligibility criteria & \Cref{sec:eligibility}, \cref{tab:eligibility} \\
-6 & Information sources & \Cref{sec:search}; search date 31 October 2026 \\
+6 & Information sources & \Cref{sec:search}; search dates 31 October and 9 November 2026 \\
 7 & Search strategy & \Cref{app:search} (executed strings and strings for the subscription databases) \\
 8 & Selection process & \Cref{sec:selection}; decisions in \texttt{review/data/screening/} \\
 9 & Data collection process & \Cref{sec:selection}; evidence and coding files in \texttt{review/data/} \\

@@ -31,14 +31,14 @@ case-study:
 	cd case_study && for d in narrow broad; do for s in 0 1 2 3; do $(PY) train.py --dist $$d --seed $$s; done; done
 	cd case_study && $(PY) evaluate.py && $(PY) plot_case_study.py
 
-# identification (re-runs the searches; results will differ from the 31 Oct 2026 snapshot)
+# identification (re-runs the searches; results will differ from the 31 Oct and 9 Nov 2026 snapshots)
 search:
-	cd $(S) && $(PY) search_openalex.py && $(PY) search_arxiv.py && $(PY) search_usenix.py && $(PY) merge_dedupe.py
+	cd $(S) && $(PY) search_openalex.py && $(PY) search_arxiv.py && $(PY) search_usenix.py && $(PY) merge_dedupe.py && $(PY) search_update.py && $(PY) screen_update.py
 
 clean:
 	cd survey && rm -rf build *.aux *.bbl *.blg *.log *.out *.toc *.fls *.fdb_latexmk *.synctex.gz
 
-# 15-slide summary deck (slides/slides.pdf); needs the beamer LaTeX package
+# summary deck (slides/slides.pdf); needs the beamer LaTeX package
 slides:
 	cd slides && pdflatex -interaction=nonstopmode slides.tex >/dev/null && pdflatex -interaction=nonstopmode slides.tex | tail -1 && \
 	  rm -f slides.aux slides.log slides.nav slides.out slides.snm slides.toc

@@ -5,36 +5,45 @@
 \toprule Study & Year & Set. & Action & Method & Level & Code \\ \midrule \endfirsthead
 \toprule Study & Year & Set. & Action & Method & Level & Code \\ \midrule \endhead
 \bottomrule \endfoot
+Q-learning TCP fairness for WMN~\cite{arianpoo2016how} & 2016 & IoT & param. & Q-learning over a MAC-layer state map tuning… & Real &  \\
 Q-learning TCP for memory-constrained IoT~\cite{li2016learning} & 2016 & IoT & cwnd & Q-learning with function approximation & Sim &  \\
 Smart-DTN-CC~\cite{silva2019congestion,silva2016smart} & 2016 & IoT & other & RL & Sim &  \\
 Kanerva-coding RL TCP~\cite{li2017dynamic} & 2017 & Gen. & cwnd & Q-learning + generalization-based Kanerva cod… & NR &  \\
 Actor-critic AQM~\cite{xu2018network} & 2018 & Gen. & AQM & actor-critic & Sim &  \\
 Aurora~\cite{jay2019aurora,jay2018internet} & 2018 & WAN & rate & PPO & Emu & \cmark \\
+DRL age-of-information over TCP/IP~\cite{sert2018optimizing} & 2018 & Gen. & rate & deep RL & Emu &  \\
 Iroko~\cite{ruffy2018iroko} & 2018 & DC & rate & PPO; REINFORCE; DDPG & Emu & \cmark \\
 Muses~\cite{zhong2022muses,wang2018muses} & 2018 & Wless & cwnd & imitation-learned LSTM distilled into per-env… & NR &  \\
 Pantheon (Indigo)~\cite{yan2018pantheon} & 2018 & WAN & cwnd & imitation learning from emulator oracles & Real & \cmark \\
+Q-learning MPTCP path and CC selection~\cite{beig2018mptcp} & 2018 & Wless & select & Q-learning over interfaces and congestion con… & NR &  \\
 QARC~\cite{huang2018qarc} & 2018 & WAN & bitrate & A3C + video-quality prediction network & Sim &  \\
+QRED~\cite{su2018qred} & 2018 & Gen. & param. & Q-learning tuning RED maxp & Sim &  \\
 QTCP~\cite{li2019qtcp} & 2018 & Gen. & cwnd & Q-learning + generalized Kanerva coding & NR &  \\
 RL-TCP~\cite{kong2018improving} & 2018 & Gen. & cwnd & Q-learning & Sim &  \\
 SDN-DC Q-learning/SARSA CC~\cite{jin2018congestion} & 2018 & DC & rate & Q-learning; SARSA & NR &  \\
 TCP-RL~\cite{nie2019tcprl,nie2018smartiw} & 2018 & WAN & param., select & group-based RL + deep RL & Real &  \\
 eqCC~\cite{trinh2018energy} & 2018 & IoT & rate & Q-learning & Sim &  \\
 Concerto~\cite{zhou2019concerto} & 2019 & WAN & bitrate & custom imitation learning on >1M logged sessi… & Real &  \\
+DDPG MPTCP for LEO satellites~\cite{mai2019self} & 2019 & Sat. & cwnd & DDPG & Sim &  \\
 DRL fronthaul CC~\cite{nascimento2019deep} & 2019 & Wless & rate & several DRL methods & Sim &  \\
 DRL initial window for 5G MEC~\cite{xie2019adaptive} & 2019 & Wless & param. & DRL & Sim &  \\
 DRL-CC (MPTCP)~\cite{xu2019drlcc} & 2019 & Gen. & cwnd & deterministic policy gradient actor-critic +… & Emu &  \\
 DRL-CCP~\cite{lan2019deep} & 2019 & WAN & rate & DRL & Real &  \\
+Dynamic-traffic-aware DRL AQM~\cite{jin2019dynamic} & 2019 & Gen. & AQM & deep RL with value iteration over fluid-model… & NR &  \\
 Intelligent AQM with ECN~\cite{gomez2019intelligent} & 2019 & Gen. & AQM & Q-learning & Emu &  \\
 LGFCC~\cite{wang2019reinforcement} & 2019 & Sat. & other & RL + incomplete-information game & Sim &  \\
 MVFST-RL~\cite{sivakumar2019mvfst} & 2019 & WAN & cwnd & IMPALA with delayed actions & Emu & \cmark \\
 RL BWE for RTC (Microsoft)~\cite{fang2019rtc} & 2019 & WAN & bitrate & PPO & Real &  \\
 RL loss-differentiating TCP~\cite{rani2019reinforcement} & 2019 & Wless & cwnd & RL & NR &  \\
+RL pacing scheduler for deadline flows~\cite{ghosal2019reinforcement,ghosal2020deep} & 2019 & Gen. & rate & central RL agent, DDPG in the extended report… & NR &  \\
+RL-adapted TCP CUBIC~\cite{anon2019development} & 2019 & Gen. & cwnd & RL on the TCP CUBIC window & Sim &  \\
 Rax~\cite{bachl2019rax} & 2019 & Gen. & cwnd & online deep RL with Partial Action Learning & NR &  \\
 Robustifying protocols with adversarial examples~\cite{gilad2019robustifying} & 2019 & Gen. & -- & RL-generated adversarial network conditions & Sim &  \\
 SmartCC~\cite{li2019smartcc} & 2019 & Wless & cwnd & Q-learning + hierarchical tile coding & NR &  \\
 TCP-Drinc~\cite{xiao2019drinc} & 2019 & Gen. & cwnd & DQN with CNN+LSTM & Sim &  \\
 Verily~\cite{kazak2019verily} & 2019 & Gen. & -- & formal verification of DRL policies & -- &  \\
 ARC~\cite{zhang2020reinforcement} & 2020 & WAN & cwnd & asynchronous RL trained in real networks & Real &  \\
+Deep Q-learning DTN relay management~\cite{buzzi2021autonomous,buzzi2020exploring} & 2020 & Sat. & multi & deep Q-learning drops packets, changes neighb… & NR &  \\
 DeepCC (Abbasloo et al.)~\cite{abbasloo2021deepcc} & 2020 & Wless & param. & DDPG plug-in capping the cwnd of existing TCP & Real & \cmark \\
 Distributed RL in-network CC~\cite{mai2020distributed} & 2020 & Gen. & rate & CTDE with centralized critic & Sim &  \\
 Eagle~\cite{emara2020eagle} & 2020 & WAN & rate & DRL with LSTM guided by BBR as expert & Emu &  \\
@@ -45,6 +54,7 @@ Multi-task DRL CC (SDN)~\cite{lei2020congestion} & 2020 & Gen. & rate & multi-ta
 OnRL~\cite{zhang2020onrl} & 2020 & Wless & bitrate & online RL: per-user agents, aggregated model… & Real &  \\
 Orca~\cite{abbasloo2020orca} & 2020 & WAN & cwnd & TD3 & Real & \cmark \\
 Partner~\cite{huang2020objective} & 2020 & Gen. & cwnd & distributed DRL & NR &  \\
+RL buffer management for a DTN node~\cite{harkavy2020utilizing} & 2020 & Sat. & multi & RL choosing client slow-down, extra capacity… & NR &  \\
 RLAQM~\cite{jiang2020performance} & 2020 & Gen. & AQM & Q-learning & Sim &  \\
 RTCP (HSR)~\cite{xu2020handover} & 2020 & Wless & cwnd & DRL & Sim &  \\
 SDN actor-critic MPTCP for IoT~\cite{naeem2020software} & 2020 & IoT & cwnd & actor-critic with fuzzy normalized NN & Sim &  \\
@@ -55,9 +65,12 @@ AQM meets DRL~\cite{ma2021intelligent} & 2021 & Gen. & AQM & DRL & NR &  \\
 AUTO~\cite{li2021auto} & 2021 & Sat. & rate & multi-objective RL + preference-adaptation mo… & Real &  \\
 Arsenal~\cite{zhang2021arsenal} & 2021 & Wless & -- & evaluation platform for AI-driven video trans… & Sim &  \\
 CRL-CC~\cite{liu2021multi} & 2021 & WAN & rate & constrained RL & Emu &  \\
+D3T~\cite{zhang2021deadline} & 2021 & WAN & multi & deep RL for sending rate and FEC ratio & Sim &  \\
 DQL-MPTCP~\cite{pokhrel2021learning} & 2021 & Gen. & cwnd, split & deep Q-learning with policy gradients, LSTM… & Emu &  \\
+DQN AQM for fog/edge IoT~\cite{kim2021deep} & 2021 & IoT & AQM & DQN & Sim &  \\
 DRL-3R~\cite{chen2021ran,chen2021rana} & 2021 & Wless & cwnd & DRL with reward redistribution & NR &  \\
 DRL-CC (deadline-aware)~\cite{liao2021learning} & 2021 & Gen. & rate & DRL & NR &  \\
+Deep Q-learning DTN management for EO constellations~\cite{buzzi2021deep} & 2021 & Sat. & multi & deep Q-learning & NR &  \\
 DeepCC (He et al., MPTCP)~\cite{he2021deepcc} & 2021 & Wless & cwnd & multi-agent DRL with self-attention & NR &  \\
 HRCC~\cite{wang2021hybrid} & 2021 & WAN & param. & RL agent sets a gain on the heuristic bandwid… & Sim &  \\
 HSR-CC (space-ground MPTCP)~\cite{xu2021deep} & 2021 & Sat. & cwnd & DRL & NR &  \\
@@ -70,6 +83,7 @@ MOCC (Xia et al.)~\cite{xia2021multi} & 2021 & WAN & rate & multi-objective RL w
 MPLibra~\cite{yu2024classic,yu2021mplibra} & 2021 & Gen. & select & classic and learned MPTCP decisions compared… & Sim &  \\
 Owl~\cite{sacco2021owl,sacco2022partially} & 2021 & WAN & cwnd & DQN in a Linux kernel module & Emu &  \\
 Policy distillation (fronthaul)~\cite{martins2021policy} & 2021 & Wless & rate & TD3 distilled into decision trees / C++ rules & Sim & \cmark \\
+RL-AQM~\cite{alwahab2021deep} & 2021 & Gen. & AQM & deep Q-learning through OpenAI Gym and ns-3 & Sim &  \\
 RL-PSD~\cite{xu2021reinforcement} & 2021 & Wless & cwnd & two-stage RL & NR &  \\
 RL-explore~\cite{li2021tcp} & 2021 & Gen. & cwnd & RL + bandwidth-probing mechanism & NR &  \\
 RLCC~\cite{xia2021rlcc} & 2021 & WAN & cwnd & DQN & Real &  \\
@@ -87,9 +101,13 @@ BBR-FIT~\cite{xie2022bbr} & 2022 & Wless & param. & RL tunes BBR gain & Real &  
 BoB~\cite{bentaleb2022bob} & 2022 & WAN & bitrate & PPO + heuristic warm start & Emu & \cmark \\
 CLCC~\cite{li2022reinforcement} & 2022 & WAN & bitrate & RL with frame-level features & Sim &  \\
 Coefficient-free RL rate control~\cite{xiao2022optimal} & 2022 & DC & rate & RL with coefficient-free objective & NR &  \\
+Cognitive DTN buffer RL for LEO~\cite{sun2022reinforcement} & 2022 & Sat. & buffer & centralized RL for DTN node buffers & NR &  \\
 DQN TCP v2 fairness~\cite{seo2022fairness} & 2022 & Gen. & cwnd & DQN & Sim &  \\
+DQN-based CUBIC~\cite{seo2022dqn} & 2022 & Gen. & cwnd & DQN combined with CUBIC & Sim &  \\
 DQN-tuned AQM~\cite{yousif2022intelligent} & 2022 & Gen. & AQM & DQN & Sim &  \\
+DQN-tuned RED~\cite{yousif2022applying} & 2022 & Gen. & param. & DQN adapting RED parameters & Sim &  \\
 DRL bidirectional-node WSN CC~\cite{lei2022deep} & 2022 & IoT & rate & DRL & Sim &  \\
+DRL smart RED study~\cite{ismael2022study} & 2022 & Gen. & param. & DRL adapting RED parameters & NR &  \\
 DRL-CC ablation (cellular)~\cite{naqvi2022ablation} & 2022 & Wless & rate & ablation of DRL training choices & Sim &  \\
 DeepCC (Zhang et al.)~\cite{zhang2022deepcc} & 2022 & WAN & rate & DDPG-based multi-objective offline training +… & Real &  \\
 DuGu~\cite{huang2022learned} & 2022 & WAN & rate & NN imitates an optimal solver in an omniscien… & Real &  \\
@@ -107,9 +125,13 @@ NCC~\cite{wang2022ncc} & 2022 & DC & rate & RL & Emu &  \\
 Nuwa-RL~\cite{gong2022nuwa,jiang2025combining} & 2022 & Wless & param. & PPO-LSTM tunes receiver-side heuristic & NR &  \\
 OAC-TCPCC~\cite{masood2022intelligent} & 2022 & Sat. & cwnd & optimistic actor-critic & Sim &  \\
 OpenNetLab~\cite{eo2022opennetlab} & 2022 & WAN & bitrate & platform for training/evaluating RL RTC CC & Real & \cmark \\
+Oppugno~\cite{zhang2022joint} & 2022 & WAN & multi & PPO for joint loss and bitrate adaptation & Sim &  \\
+PCC-DRL~\cite{ju2022network} & 2022 & Gen. & rate & DRL optimizing a PCC-style utility & NR &  \\
 Pareto~\cite{emara2022pareto} & 2022 & WAN & rate & communication-free MARL, staged training + on… & NR &  \\
 Plume (lightweight DRL CC)~\cite{wei2022plume} & 2022 & Gen. & rate & compressed DRL framework; reward re-parameter… & NR &  \\
 Q-learning adaptive TCP CC~\cite{satinge2022q} & 2022 & Gen. & cwnd & Q-learning & NR &  \\
+QP-AQM~\cite{liu2022active} & 2022 & Gen. & param. & Q-learning traffic predictor adapting ARED & NR &  \\
+RL for parallel TCP streams~\cite{jamil2022reinforcement} & 2022 & WAN & other & deep RL choosing the number of parallel TCP s… & NR &  \\
 RL local flow control (lossy networks)~\cite{forero2022congestion} & 2022 & IoT & rate, buffer & RL + portfolio-based buffer allocation & Sim &  \\
 RL-CC (Tessler et al.)~\cite{tessler2022rlcc} & 2022 & DC & rate & policy gradient with analytic reward derivati… & Sim &  \\
 RL-CC on NVIDIA NICs~\cite{fuhrer2023nvidia} & 2022 & DC & rate & RL-CC policy distilled into decision trees & Real & \cmark \\
@@ -135,11 +157,13 @@ DNN+DRL wireless CC~\cite{midhula2023adaptive} & 2023 & Wless & cwnd & DRL & NR 
 DRL CC for SDN/NDN satellites~\cite{xing2023deep} & 2023 & Sat. & NR & DRL & NR &  \\
 DRLFcc~\cite{cao2023drlfcc} & 2023 & Wless & cwnd & DRL combined with fast recovery & Sim &  \\
 DeepFC~\cite{he2023fine} & 2023 & IoT & param., cwnd & DRL predicts transmission-unit size coupled w… & NR &  \\
+DeepGame~\cite{brik2023adjusting} & 2023 & IoT & rate & federated multi-agent DRL on a non-cooperativ… & Emu &  \\
 Distributed RL training system for CC~\cite{luo2023novel} & 2023 & Gen. & -- & distributed sample generation + online analys… & NR &  \\
 Dolce-RC~\cite{ye2023data} & 2023 & DC & param. & multi-armed bandit over rate-increase/decreas… & Real &  \\
 Floo~\cite{zhang2023floo} & 2023 & WAN & select & RL-based CCA selection with smooth switching & Real &  \\
 Hierarchical MARL queue policies (maritime)~\cite{forero2023learning} & 2023 & IoT & rate, other & hierarchical multi-agent RL & Sim &  \\
 Implementability of DRL CC (cellular)~\cite{naqvi2023implementability} & 2023 & Wless & NR & DRL & NR &  \\
+Inter-protocol fairness of DQN CC~\cite{seo2023inter} & 2023 & Gen. & cwnd & DQN-based NewReno and CUBIC & Sim &  \\
 Internet CC benchmarking~\cite{abbasloo2023internet} & 2023 & WAN & -- & general benchmarks ranking Internet CCs incl… & Emu &  \\
 Interval configuration for DRL CC~\cite{naqvi2023fine} & 2023 & WAN & rate & PPO with different MI / RTT estimators & Emu &  \\
 Inverse-RL CC~\cite{luo2023novela} & 2023 & Gen. & NR & inverse RL with parallel training & NR &  \\
@@ -155,9 +179,11 @@ Marten~\cite{zhou2025safety,pan2023marten} & 2023 & WAN & rate & DRL guided by B
 Multicast QUIC RL CC~\cite{chen2023congestion} & 2023 & WAN & rate & actor-critic with decaying epsilon-greedy & Sim &  \\
 PBQ-enhanced QUIC~\cite{zhang2023pbq} & 2023 & WAN & cwnd & PPO sets cwnd, BBR sets pacing & Sim &  \\
 PPO cwnd strategy~\cite{yuan2023research} & 2023 & Gen. & cwnd & PPO with advantage estimation & NR &  \\
+Palette~\cite{li2023improving} & 2023 & WAN & bitrate & RL deriving a per-frame compression factor & NR &  \\
 PeaceKeeper~\cite{tang2023combining} & 2023 & Gen. & param. & RL adjusts LEDBAT++ delay target & Sim &  \\
 Plume (prioritized trace sampling)~\cite{patel2023plume} & 2023 & Gen. & rate & trace clustering and prioritized sampling & Sim & \cmark \\
 Q-learning/DQN MPTCP (deep-space video)~\cite{ha2023intelligent} & 2023 & Sat. & cwnd & Q-learning and DQN & Sim &  \\
+QCon~\cite{qayyum2023qcon} & 2023 & WAN & other & Q-learning hop-by-hop Interest forwarding & Sim &  \\
 RL CC + streaming FEC (NTN)~\cite{yu2023low} & 2023 & Sat. & rate & RL rate control with streaming FEC in quic-go & Emu &  \\
 RL protocol comparison (ns-3)~\cite{lakshmi2023comparison} & 2023 & IoT & -- & comparison of RL-based protocols incl. QTCP & Sim &  \\
 RLECN~\cite{shahzad2023rlecna} & 2023 & Gen. & ECN thr. & RL via SDN controller & NR &  \\
@@ -173,8 +199,11 @@ Verifying OOD generalization~\cite{amir2024verifying,amir2023verifying} & 2023 &
 Weighted-ensemble DRL CC~\cite{ali2023efficient} & 2023 & Gen. & NR & weighted ensemble DRL & NR &  \\
 iCoCoA~\cite{donta2023icocoa} & 2023 & IoT & param. & DRL & NR &  \\
 A3C-tuned L4S AQM (FreeBSD)~\cite{satish2024active} & 2024 & Gen. & AQM & A3C tuning DualQ coupled AQM & Emu & \cmark \\
+AFICC~\cite{vijayan2024improved} & 2024 & IoT & rate & Q-learning transmission-rate adjustment & Sim &  \\
+AoI-aware low-power DRL AQM~\cite{song2024deep} & 2024 & IoT & AQM & deep RL at the cluster head & Sim &  \\
 Astraea~\cite{liao2024astraea,liao2024fair,han2026fair} & 2024 & WAN & rate & multi-agent DRL with a faithful multi-flow tr… & Real &  \\
 BBQ~\cite{zhang2024bbq} & 2024 & DC & ECN thr. & RL ECN tuning bounded by per-port buffer & NR &  \\
+CQLBWE~\cite{chen2024bandwidth} & 2024 & WAN & bitrate & Conservative Q-Learning & NR &  \\
 Canopy~\cite{yang2024canopy} & 2024 & WAN & cwnd & Orca trained with quantitative certificates f… & Real & \cmark \\
 Closed-form CC via symbolic regression~\cite{martins2024closed} & 2024 & Wless & rate & TD3 policy distilled by deep symbolic regress… & Sim & \cmark \\
 CrystalBox~\cite{patel2024crystalbox} & 2024 & Gen. & -- & post-hoc future-based explanations via decomp… & Sim & \cmark \\
@@ -184,30 +213,41 @@ DESiRED (P4 AQM)~\cite{almeida2024desired} & 2024 & Gen. & AQM & DQN with in-ban
 DQN UDP CC for smart grid~\cite{andradezambrano2024reinforcement} & 2024 & IoT & rate & DQN & Sim &  \\
 DRL CCA switching for Wi-Fi fairness~\cite{shrestha2024fairness} & 2024 & Wless & select & DQN switching among CUBIC/BBR/PCC & Sim &  \\
 DRL WebRTC uplink rate control (5G)~\cite{smirnov2024real} & 2024 & Wless & bitrate & online model-free DRL & Sim &  \\
+DRL data-rate adaptation for MANET~\cite{karishma2024packet} & 2024 & IoT & rate & deep RL at forwarding nodes & NR &  \\
 DRL deep-space DTN CC~\cite{yang2024optimizing} & 2024 & Sat. & NR & DRL & NR &  \\
+DRL-AQM for RED~\cite{ali2024tcp} & 2024 & Gen. & AQM & deep RL trained offline & NR &  \\
 DRL-CaCC (cache-aware WSN CC)~\cite{alipio2024cache,alipio2024enhancing} & 2024 & IoT & cwnd & DRL & NR &  \\
 DRL-RED~\cite{matrood2024adaptive} & 2024 & Gen. & AQM & DQN tunes RED queue weight & Sim &  \\
 Digital-twin actor-critic QUIC CC~\cite{yang2025digital,yang2024intelligent} & 2024 & Wless & param. & actor-critic with a digital-twin network model & Sim &  \\
 EMPRN~\cite{zaeri2024emprn} & 2024 & DC & ECN thr. & MARL with message-passing GNN + GRU & Sim &  \\
+FARC~\cite{cetinkaya2024offline} & 2024 & WAN & bitrate & offline actor-critic with a conservative crit… & NR & \cmark \\
 Game-theoretic bandits (swap regret)~\cite{huang2024game} & 2024 & Gen. & rate & online-mirror-descent multi-agent bandit & Emu &  \\
 GraphCC~\cite{bernardez2024graphcc} & 2024 & DC & ECN thr. & MARL + GNN message passing between switch age… & Sim &  \\
 Gymir5G~\cite{smirnov2024gymir5g} & 2024 & Wless & bitrate & OMNeT++/Simu5G WebRTC platform with a DRL bri… & Sim & \cmark \\
 Hierarchical DRL anti-jamming PHY + CC~\cite{yuan2024drl} & 2024 & Wless & multi & hierarchical DRL & Sim &  \\
+Integrate~\cite{kattepur2024integrate} & 2024 & Wless & buffer & model-based RL on a network digital twin; int… & NR &  \\
 KerDqn~\cite{xu2024kerdqn} & 2024 & Gen. & cwnd & DQN with kernel CC + user-space learning fram… & NR &  \\
 LACC / HACC (hierarchical CCA selection)~\cite{hu2025hierarchical,hu2024learning} & 2024 & DC & select & RL-based CCA selection triggered only when ne… & Sim &  \\
 LAECN~\cite{hu2024lightweight} & 2024 & DC & ECN thr. & lightweight hierarchical DRL ECN tuning & Sim &  \\
 MMSys'24 offline-RL BWE challenge~\cite{khairy2024acm} & 2024 & WAN & bitrate & offline RL on logged Microsoft Teams data wit… & Real & \cmark \\
 Maggey~\cite{wei2024breaking} & 2024 & Gen. & cwnd & single-subflow RL model + non-blocking mode t… & Real &  \\
 Multi-context RL INT CC~\cite{bhat2024multi} & 2024 & Wless & cwnd & RL & NR &  \\
+NAORL~\cite{zhang2024naorl} & 2024 & WAN & bitrate & offline RL & NR &  \\
 NVC-aware RL CC~\cite{xia2024loss} & 2024 & WAN & bitrate & online RL exploiting neural-codec loss tolera… & Sim &  \\
 Network-assist MAB~\cite{dai2024quantifying} & 2024 & Gen. & rate & network-assisted MAB with discrete and contin… & Sim &  \\
+PET~\cite{cheng2024pet} & 2024 & DC & ECN thr. & independent PPO with decentralized training a… & Sim &  \\
+Pioneer~\cite{lu2024pioneer} & 2024 & WAN & bitrate & offline RL with a trajectory sampler & Sim &  \\
 Q-NDN~\cite{zheng2024receiver} & 2024 & WAN & cwnd & Q-learning & Sim &  \\
 Q-learning CC (multi-band)~\cite{meng2024multi} & 2024 & Wless & rate & Q-learning & NR &  \\
 RL CC for LEO (Inf. Sci.)~\cite{zhu2024intelligent} & 2024 & Sat. & NR & RL & NR &  \\
 RL-TCP vs QTCP comparison (ns-2)~\cite{kumar2024comparative} & 2024 & Gen. & -- & comparison of RL-TCP, QTCP and classic TCPs & Sim &  \\
 RL-TCP+ (FCT vs sharing)~\cite{komanduri2024comparing} & 2024 & Gen. & cwnd & modified RL-TCP & NR &  \\
+RR-WebRTC~\cite{luo2024rr} & 2024 & WAN & rate & joint RL and rule-based online rate control & NR &  \\
 RayNet~\cite{giacomoni2024raynet} & 2024 & Gen. & cwnd & OMNeT++ + Ray/RLlib platform & Sim & \cmark \\
 SAC-MWL (QUIC)~\cite{blokhin2024deep} & 2024 & WAN & cwnd & SAC with monitor-window limit & Real &  \\
+SAC-TCPW~\cite{fan2024cross} & 2024 & Wless & cwnd & Soft Actor-Critic with RAN information in the… & Sim &  \\
+Schaferct~\cite{tan2024accurate} & 2024 & WAN & bitrate & Implicit Q-Learning & Sim & \cmark \\
+Streetwise~\cite{soni2024streetwise} & 2024 & WAN & bitrate & post-deployment shaping of offline policies u… & Sim &  \\
 Systematic evaluation of RL CC~\cite{giacomoni2024rlcc} & 2024 & Gen. & -- & reproducible large-scale evaluation of public… & Emu & \cmark \\
 TCP-RLACC~\cite{molia2024reinforcement} & 2024 & Wless & cwnd & Q-learning selecting linear/polynomial/expone… & Sim &  \\
 Zygos~\cite{liu2024zygos} & 2024 & Gen. & NR & distribution-based reward correction + meta-g… & NR &  \\
@@ -222,6 +262,8 @@ CUBIC-Learn~\cite{abedini2025cubic} & 2025 & Gen. & param. & Q-learning adjusts 
 Creo~\cite{yan2025handover} & 2025 & Sat. & cwnd & DRL in connected phase + handover-aware cross… & Sim &  \\
 Cross-layer mmWave CC~\cite{pan2025intelligent} & 2025 & Wless & cwnd & DRL environment evaluation + LOS/NLOS classif… & NR &  \\
 D2T*~\cite{liu2025automatic} & 2025 & DC & buffer & dual-threshold buffer sharing + DRL threshold… & Real &  \\
+DBS-RL~\cite{jiao2025dynamic} & 2025 & Wless & buffer & RL buffer sizing through O-RAN & NR &  \\
+DIQL for Microsoft Teams~\cite{khairy2026human,cutler2026human} & 2025 & WAN & bitrate & Distributional Implicit Q-Learning on about 1… & Real &  \\
 DNCCQ-PPO (XQUIC)~\cite{yu2025dnccq} & 2025 & WAN & NR & PPO & NR &  \\
 DQN TCP CC (ns3-gym)~\cite{aglamazlar2025deep} & 2025 & Gen. & cwnd & DQN via ns3-gym & Sim &  \\
 DQN\_CC multi-hop mobile wireless~\cite{andradezambrano2025performance} & 2025 & IoT & rate & DQN & Sim &  \\
@@ -242,19 +284,26 @@ HTPCCS~\cite{peng2025htpccs} & 2025 & Gen. & select & offline profiling + contex
 Jazz~\cite{wang2025edge} & 2025 & Wless & cwnd & Transformer DRL agent on an edge server, deco… & Real &  \\
 Jury~\cite{tian2025jury} & 2025 & WAN & rate & DRL + post-processing fairness module & Real &  \\
 KONTROL~\cite{wang2025kontrol} & 2025 & IoT & cwnd & DRL agents on a central CC server & Sim &  \\
+LLM4Band~\cite{wang2025llm4band} & 2025 & WAN & bitrate & LLM policy network with offline RL and a bala… & NR &  \\
 Learning-based vs human-derived CC study~\cite{mazilu2025learning} & 2025 & Gen. & -- & reproducible large-scale comparison with CUBI… & Emu & \cmark \\
 MACC (MAPPO)~\cite{peng2025macc} & 2025 & WAN & rate & MAPPO with centralized training, decentralize… & Emu &  \\
 MHA-DRL-CC (SAGIN)~\cite{gui2025multi} & 2025 & Sat. & NR & heterogeneous multi-agent DRL + state predict… & Sim &  \\
+Merlin~\cite{gottipati2025offline} & 2025 & WAN & bitrate & behavioral cloning of a heuristic from logs… & Real &  \\
 Meta-RL CC protocol~\cite{mwaura2025adaptive} & 2025 & WAN & rate & meta-RL with latent task inference on an Auro… & Sim &  \\
 Meta-diffusion BWE policy~\cite{chen2025generalizable} & 2025 & WAN & bitrate & offline DRL with diffusion meta-policy & Sim &  \\
 MetaCon~\cite{bai2025metacon} & 2025 & WAN & rate & meta-RL & NR &  \\
 Mona adversarial policy~\cite{chen2025exploring} & 2025 & Gen. & -- & adversarial-policy attack via a stealthy comp… & Real &  \\
+Mowgli~\cite{agarwal2025mowgli} & 2025 & WAN & bitrate & SAC with Conservative Q-Learning and a distri… & Real &  \\
+Muno~\cite{tu2025muno} & 2025 & WAN & bitrate & deep RL bandwidth prediction & Real &  \\
 Mutant~\cite{pappone2025mutant,pappone2026online} & 2025 & WAN & select & online contextual bandit over a pool of exist… & Real & \cmark \\
 NMS + Galaxy~\cite{yao2025unified} & 2025 & Wless & cwnd & network-segmented model specialization + clea… & NR &  \\
+Octopus~\cite{xiao2025octopus} & 2025 & Wless & multi & meta-imitation RL over encoding and sending b… & Emu &  \\
+PRACC~\cite{he2025deep} & 2025 & DC & ECN thr. & PPO with a continuous action and adaptive rew… & Sim &  \\
 Pisces~\cite{bai2025pisces} & 2025 & WAN & rate & multi-agent meta-RL & NR &  \\
 ProCC~\cite{gu2025procc} & 2025 & Gen. & cwnd & programmatic RL: MCTS over a DSL of if/else p… & Sim &  \\
 PulseQUIC~\cite{suarez2025pulsequic} & 2025 & WAN & rate & DRL-guided adaptive pacing & NR &  \\
 Q-AIMD~\cite{takesada2025q} & 2025 & Gen. & cwnd & Q-learning over AIMD actions & NR &  \\
+RBWE~\cite{kai2025robust} & 2025 & WAN & bitrate & Q-ensemble with a Gaussian-mixture policy; he… & NR & \cmark \\
 RDI~\cite{wang2025rdma} & 2025 & DC & rate & RL with online + offline learning & Sim &  \\
 RL-BNCC (power DCs)~\cite{chen2025research} & 2025 & DC & NR & DRL + Bayesian network & NR &  \\
 SAB-RL~\cite{jiao2025bandwidth} & 2025 & IoT & buffer & lightweight RL allocating switch buffer & NR &  \\
@@ -266,25 +315,32 @@ ALCHEMY~\cite{li2026alchemy} & 2026 & WAN & select & offline-trained DRL selects
 AutoNetFlow~\cite{gandrakota2026autonetflow} & 2026 & Gen. & AQM & RL agent optimizing packet-handling strategies & Sim &  \\
 C3~\cite{konig2026augmenting} & 2026 & Gen. & cwnd & centralized RL agent periodically guiding end… & Sim &  \\
 CCLab~\cite{chen2026cclab} & 2026 & Gen. & -- & RL adversary perturbing inputs or environment… & Emu &  \\
+Chameleon~\cite{su2026chameleon} & 2026 & WAN & rate & detects competitor preference and switches po… & Real &  \\
 Cross-layer dual-agent RL (P4)~\cite{chaurasiya2026cross} & 2026 & DC & rate, ECN thr. & host-rate and switch-ECN agents with a centra… & Emu &  \\
 DARA~\cite{maglione2026deep} & 2026 & Wless & split & DQN + Transformer path-state forecasting & Emu &  \\
+DBSDD-AQM~\cite{pan2026dbsdd} & 2026 & IoT & multi & DDPG queue removal with a bounded buffer-sizi… & Sim &  \\
 DDPG MQTT-broker CC~\cite{janani2026adaptive} & 2026 & IoT & rate & DDPG & Sim &  \\
 DRL + least-squares congestion minimization~\cite{nguyen2026deep} & 2026 & Gen. & NR & DRL with least-squares congestion term & NR &  \\
 DRL-BLUE~\cite{mohammed2026ddpg} & 2026 & Gen. & AQM & DDPG tunes BLUE queue weight & Emu &  \\
 DTCC~\cite{ji2026dtcc} & 2026 & Gen. & NR & decision transformer & NR &  \\
 Delay-based RL jitter-aware CC~\cite{zhang2026delay} & 2026 & Gen. & NR & delay-based RL & NR &  \\
+Diff-Band~\cite{lu2026diff} & 2026 & WAN & bitrate & diffusion policy guided by a Q-function & Sim &  \\
 Digital-twin robust RL (substation GOOSE flooding)~\cite{abedini2026digital} & 2026 & IoT & rate & digital-twin-assisted robust RL & NR &  \\
 DynA~\cite{wu2026dyna} & 2026 & WAN & param. & dual-policy continuous-action RL with curricu… & NR &  \\
+EACC~\cite{alipio2026eacc} & 2026 & IoT & multi & event-conditioned DQN with cross-layer MAC re… & NR &  \\
 Emulation vs simulation (LEO CC)~\cite{valentine2026emulation} & 2026 & Sat. & -- & same CCs in OMNeT++/INET and Mininet & Emu & \cmark \\
+End-network RL for RDMA~\cite{pan2026end} & 2026 & DC & multi & RL congestion assessment with a DNN signal ma… & Real &  \\
 Explainable cache-aware DRL CC (robotic sensor nets)~\cite{mishra2026explainable} & 2026 & IoT & cwnd & explainable DRL & NR &  \\
 Fair-Aurora~\cite{mbrice2026fair} & 2026 & WAN & rate & PPO with reward shaping / observation augment… & Sim &  \\
 Fuzzy + RL AQM~\cite{zhang2026active} & 2026 & Gen. & AQM & fuzzy logic + RL & NR &  \\
-GenRL-CC~\cite{islam2026genrl} & 2026 & WAN & bitrate & TD3/SAC on ReCoCo with GAN-synthesized traini… & Sim &  \\
+GenRL-CC~\cite{islam2026genrl,islam2026genrla} & 2026 & WAN & bitrate & TD3/SAC on ReCoCo with GAN-synthesized traini… & Sim &  \\
 HAN~\cite{jia2026han} & 2026 & Gen. & rate & DRL with uncertainty-triggered fallback to cl… & NR &  \\
 ICCP~\cite{ji2026iccp} & 2026 & Gen. & -- & decoupled runtime hosting heuristic and RL CC… & Real &  \\
 Learn-to-Probe~\cite{han2026learn} & 2026 & WAN & rate & DRL with intrinsic probing reward + Bayesian… & NR &  \\
+MADDPG congestion control~\cite{chen2026congestion} & 2026 & Gen. & multi & multi-timescale MADDPG & Sim &  \\
 MADRL MPTCP for IIoT~\cite{an2026mptcp} & 2026 & IoT & cwnd & multi-agent DRL & NR &  \\
 MARL CC for wireless ad hoc networks~\cite{vazaios2026multi} & 2026 & IoT & rate & multi-agent RL + traffic prioritization & Sim &  \\
+MaGEO-CC~\cite{yu2026multi} & 2026 & Sat. & cwnd & centralized training, decentralized execution & Sim &  \\
 Multi-agent DQN CC (high-speed)~\cite{dara2026autonomous} & 2026 & Gen. & rate & multi-agent deep Q-learning & NR &  \\
 NetRL~\cite{peng2026netrl} & 2026 & WAN & rate & LLM policy: SFT + NetGRPO & NR & \cmark \\
 POCC~\cite{jia2026pocc} & 2026 & WAN & NR & pessimistic offline RL with critic ensembles… & Sim &  \\
@@ -292,19 +348,24 @@ PPO CC on a 10 Gb/s WAN~\cite{ghermezian2026ppo} & 2026 & WAN & rate & Aurora-st
 PPO CoAP-QUIC cross-layer CC~\cite{choi2026energy} & 2026 & IoT & cwnd, param. & PPO with traffic-class-aware reward weights & Sim &  \\
 PPO TCP CC for FANETs~\cite{cai2026deep} & 2026 & Wless & cwnd & PPO & Sim &  \\
 PPO-tuned CUBIC (beta, C)~\cite{sharma2026adaptive} & 2026 & Gen. & param. & PPO within safe parameter ranges & Sim &  \\
+PRISM~\cite{hassani2026prism} & 2026 & Wless & rate & RL using peak PRB utilization & Sim &  \\
 PRO-SAC~\cite{cui2026pro} & 2026 & WAN & bitrate & SAC with lower-bounded entropy temperature & Emu &  \\
 Pacemaker-CC~\cite{chae2026pacemaker} & 2026 & Gen. & cwnd & DQN with ceiling-normalized reward & Sim & \cmark \\
 Q-learning queue-discipline selection~\cite{liu2026q} & 2026 & Gen. & AQM & Q-learning selects FIFO/WFQ/RED/CoDel & Sim &  \\
+QoS-aware RL AQM~\cite{zhang2026reinforcement} & 2026 & Gen. & param. & policy gradient tuning a queue-latency contro… & Sim &  \\
 QoS-aware hierarchical CC (SAGSIN)~\cite{lv2026qos} & 2026 & Sat. & NR & hierarchical intelligent CC & NR &  \\
+RL rate shaping at the CPE~\cite{xue2026taming} & 2026 & Wless & rate & POMDP policy with Continual Backpropagation o… & Real &  \\
 RL-HCC (6G)~\cite{kanojia2026reinforcement} & 2026 & Wless & cwnd, rate & RL-assisted hybrid CC & Sim &  \\
 RL-HKD~\cite{aoki2026performance} & 2026 & Gen. & cwnd & DQN & Sim &  \\
 SAC-BBR~\cite{li2026sac} & 2026 & Wless & param. & DRL regulator of BBR pacing/cwnd gains & NR &  \\
+SACAQM~\cite{qian2026sacaqm} & 2026 & Wless & AQM & Soft Actor-Critic & Sim &  \\
 SCC-RT~\cite{guo2026deep} & 2026 & Gen. & bitrate, buffer & hierarchical DRL for semantic encoding and bu… & NR &  \\
 SymDistill-CC~\cite{lu2026wapi} & 2026 & IoT & rate & PPO distilled into symbolic decision trees & Sim &  \\
 Syntra~\cite{pan2026syntra} & 2026 & WAN & multi & minimax-synthesized strategies distilled by i… & NR &  \\
 TCCO~\cite{zhang2026transformer} & 2026 & Wless & cwnd & Transformer DRL agent in an external decision… & Real &  \\
 TCP-RLA~\cite{li2026lightweight} & 2026 & IoT & cwnd & DQN with rule-assisted discrete actions & Sim &  \\
 TT\&C microburst ECN (space)~\cite{zhang2026collaborative} & 2026 & Sat. & ECN thr. & deep-learning threshold optimizer with RL aux… & Sim &  \\
+TideTCP~\cite{li2026tidetcp} & 2026 & Sat. & other & RL in-flight draining with handover predictio… & Emu &  \\
 diffRL symbolic properties~\cite{zangooei2026analyzing} & 2026 & Gen. & -- & symbolic property verification of DRL agents & -- &  \\
 \end{longtable}
 \end{small}

@@ -1,0 +1,69 @@
+id|inc|name|setting|tags|ctrl|action|aspace|state|reward|family|algo|hybrid|train|sim|emu|real|real_kind|gen|fair|code|contrib|src|result
+U0007|Y|Q-learning TCP fairness for WMN|IOT|mesh,cross-layer|S|param|D|crosslayer|fair,thr|TAB|Q-learning over a MAC-layer state map tuning TCP parameters|Y|NR|1|0|1|wireless mesh testbed|NR|Y|N|ctrl|AB|improves TCP fairness and starved-flow throughput in multi-hop mesh networks (simulation and testbed)
+U0016|Y|DRL age-of-information over TCP/IP|GEN|AoI|S|rate|NR|NR|other|NR|deep RL|N|emu|0|1|0||NR|NR|N|ctrl|AB|learns an update rate that lowers age of information without assuming a delay distribution (emulation)
+U0018|Y|Q-learning MPTCP path and CC selection|CELL|multipath|S|select|D|radio|thr|TAB|Q-learning over interfaces and congestion controllers|Y|NR|?|?|?||NR|NR|N|ctrl|AB|10% more throughput than base MPTCP
+U0020|Y|QRED|GEN|AQM|N|param|D|queue|other|TAB|Q-learning tuning RED maxp|Y|ns-2|1|0|0||NR|NR|N|ctrl|AB|more stable queue than RED in NS-2
+U0033|Y|DDPG MPTCP for LEO satellites|SAT|multipath,LEO|S|cwnd|C|NR|NR|AC|DDPG|N|sim|1|0|0||NR|NR|N|ctrl|AB|learned multipath CC shown feasible in simulation
+U0036|Y|RL-adapted TCP CUBIC|GEN||S|cwnd|NR|NR|NR|NR|RL on the TCP CUBIC window|Y|NR|1|0|0||NR|NR|N|ctrl|AB|higher bandwidth use and lower latency than existing TCP in simulation
+U0039|Y|Dynamic-traffic-aware DRL AQM|GEN|AQM|N|aqm|NR|queue|delay|NR|deep RL with value iteration over fluid-model operating points|N|NR|?|?|?||NR|NR|N|ctrl|AB|lower queuing delay under dynamic traffic
+U0046|Y|RL pacing scheduler for deadline flows|GEN|SDN,deadline|C|rate|C|int|other|AC|central RL agent, DDPG in the extended report, sets pacing rates|N|NR|?|?|?||NR|NR|N|ctrl|AB|learned pacing of deadline flows compared with heuristics on a bottleneck link
+U0054|Y|RL buffer management for a DTN node|SAT|DTN,deep-space|N|multi|D|buffer|other|NR|RL choosing client slow-down, extra capacity or selective drop|N|NR|?|?|?||NR|NR|N|ctrl|AB|autonomous avoidance of memory overflow in a DTN node
+U0076|Y|Deep Q-learning DTN relay management|SAT|DTN,deep-space|N|multi|D|NR|other|DQN|deep Q-learning drops packets, changes neighbor data rates, reroutes bundles|N|NR|?|?|?||NR|NR|N|ctrl|AB|automates management of a Moon-Earth orbital relay
+U0077|Y|DQN AQM for fog/edge IoT|IOT|AQM|N|aqm|D|NR|delay,thr|DQN|DQN|N|sim|1|0|0||NR|NR|N|ctrl|AB|lower delay and jitter than other AQMs at above-average throughput (simulation)
+U0078|Y|RL-AQM|GEN|AQM|N|aqm|D|NR|delay,thr|DQN|deep Q-learning through OpenAI Gym and ns-3|N|ns-3|1|0|0||Y|NR|N|ctrl|AB|utilization comparable to PIE with much smaller queueing delay; pre-trained models work at other bandwidths and RTTs
+U0089|Y|D3T|WAN|RTC,deadline|S|multi|NR|netstats,app|qoe|NR|deep RL for sending rate and FEC ratio|N|sim|1|0|0||NR|NR|N|ctrl|AB|57% higher average QoE (trace-driven simulator)
+U0090|Y|Deep Q-learning DTN management for EO constellations|SAT|DTN|N|multi|D|NR|other|DQN|deep Q-learning|N|NR|?|?|?||NR|NR|N|ctrl|AB|DTN node management for a reactive Earth-observing constellation
+U0104|Y|DQN-tuned RED|GEN|AQM|N|param|D|NR|delay,loss|DQN|DQN adapting RED parameters|Y|ns-3|1|0|0||NR|NR|N|ctrl|AB|lower drop and delay in NS-3
+U0106|Y|DRL smart RED study|GEN|AQM|N|param|NR|NR|NR|NR|DRL adapting RED parameters|Y|NR|?|?|?||NR|NR|N|analysis|AB|varies bottleneck bandwidth and latency; more training data improves performance
+U0107|Y|PCC-DRL|GEN||S|rate|NR|NR|util,loss|NR|DRL optimizing a PCC-style utility|N|NR|?|?|?||NR|NR|N|ctrl|AB|9.67% higher bandwidth utilization, 5.69 ms lower delay
+U0109|Y|Oppugno|WAN|RTC|S|multi|NR|netstats|qoe|PG|PPO for joint loss and bitrate adaptation|N|sim|1|0|0||NR|NR|N|ctrl|AB|3.9-11.6% better than prior work (trace-driven)
+U0114|Y|Cognitive DTN buffer RL for LEO|SAT|DTN,LEO|C|buffer|NR|buffer|other|NR|centralized RL for DTN node buffers|N|NR|?|?|?||NR|NR|N|ctrl|AB|automatic buffer management across a LEO constellation
+U0117|Y|DQN-based CUBIC|GEN||S|cwnd|D|NR|thr|DQN|DQN combined with CUBIC|Y|ns-3|1|0|0||NR|NR|N|ctrl|AB|higher throughput than CUBIC in NS-3
+U0121|Y|QP-AQM|GEN|AQM|N|param|D|queue|other|TAB|Q-learning traffic predictor adapting ARED|Y|NR|?|?|?||NR|NR|N|ctrl|AB|better ARED performance on highly congested links
+U0123|Y|RL for parallel TCP streams|WAN|bulk|S|other|D|NR|thr,fair|NR|deep RL choosing the number of parallel TCP streams|N|NR|?|?|?||NR|Y|N|ctrl|AB|near-optimal 40% faster with up to 15% higher throughput than online optimizers
+U0134|Y|Inter-protocol fairness of DQN CC|GEN|fairness|S|cwnd|D|NR|NR|DQN|DQN-based NewReno and CUBIC|Y|ns-3|1|0|0||NR|Y|N|analysis|AB|fairness against the other protocol maintained or improved in NS-3
+U0159|Y|DeepGame|IOT|6LoWPAN,game|S|rate|NR|NR|thr,energy|MARL|federated multi-agent DRL on a non-cooperative game|N|Cooja|0|1|0||NR|NR|N|ctrl|AB|node throughput adjusted by preference, priority, data quality and energy (Cooja)
+U0160|Y|Palette|WAN|RTC,cross-layer|S|bitrate|NR|netstats,app|qoe|NR|RL deriving a per-frame compression factor|N|NR|?|?|?||NR|NR|N|ctrl|AB|unifies transport and codec control to maximize QoE
+U0165|Y|QCon|WAN|NDN|N|other|D|queue|NR|TAB|Q-learning hop-by-hop Interest forwarding|N|sim|1|0|0||NR|NR|N|ctrl|AB|lower loss and higher throughput than hop-by-hop NDN schemes (simulation)
+U0171|Y|AoI-aware low-power DRL AQM|IOT|AQM,AoI|N|aqm|D|queue|energy,other|NR|deep RL at the cluster head|N|sim|1|0|0||NR|NR|N|ctrl|AB|lower cluster-head power within an age-of-information threshold
+U0183|Y|Pioneer|WAN|RTC,offline|R|bitrate|C|netstats|qoe|OFF|offline RL with a trajectory sampler|N|dataset|1|0|0||NR|NR|N|ctrl|AB|9% higher QoE than another offline algorithm (online simulation platform)
+U0184|Y|FARC|WAN|RTC,offline|R|bitrate|C|netstats|qoe|OFF|offline actor-critic with a conservative critic|N|dataset|?|?|?||NR|NR|Y|ctrl|AB|second place, MMSys 2024 bandwidth estimation challenge
+U0185|Y|NAORL|WAN|RTC,offline|R|bitrate|C|netstats|qoe|OFF|offline RL|N|dataset|?|?|?||NR|NR|N|ctrl|AB|MMSys 2024 challenge entry
+U0186|Y|Schaferct|WAN|RTC,offline|R|bitrate|C|netstats|other|OFF|Implicit Q-Learning|N|dataset|1|0|0||NR|NR|Y|ctrl|AB|18-22% lower MSE than baseline and behavior policies; first prize, MMSys 2024 challenge
+U0196|Y|DRL data-rate adaptation for MANET|IOT|MANET|N|rate|NR|queue|NR|NR|deep RL at forwarding nodes|N|NR|?|?|?||NR|NR|N|ctrl|AB|adapts transfer rate from queue lengths and source counts
+U0208|Y|RR-WebRTC|WAN|RTC|S|rate|NR|loss|NR|NR|joint RL and rule-based online rate control|Y|NR|?|?|?||NR|NR|N|ctrl|AB|hybrid rate control built on a loss-rate model
+U0214|Y|DRL-AQM for RED|GEN|AQM|N|aqm|NR|NR|NR|NR|deep RL trained offline|N|NR|?|?|?||NR|NR|N|ctrl|AB|learned drop policy needs no further tuning after training
+U0217|Y|Integrate|CELL|buffer,6G|N|buffer|NR|NR|other|NR|model-based RL on a network digital twin; intents mapped to reward|N|digital twin|?|?|?||NR|NR|N|ctrl|AB|intent-driven router queue-depth configuration
+U0219|Y|CQLBWE|WAN|RTC,offline|R|bitrate|C|netstats|qoe|OFF|Conservative Q-Learning|N|dataset|?|?|?||NR|NR|N|ctrl|AB|offline RL bandwidth estimator learned from heuristic logs
+U0225|Y|Streetwise|WAN|RTC,offline|R|bitrate|C|netstats|qoe|OFF|post-deployment shaping of offline policies under out-of-distribution disturbance|N|dataset|1|0|0||Y|NR|N|method|AB|about 18% higher returns in some scenarios
+U0228|Y|AFICC|IOT|underwater,fairness|S|rate|D|NR|fair|TAB|Q-learning transmission-rate adjustment|N|sim|1|0|0||NR|Y|N|ctrl|AB|higher packet delivery than RBCC and EACC in 100-node simulation
+U0230|Y|SAC-TCPW|CELL|cross-layer|S|cwnd|C|radio,netstats|NR|AC|Soft Actor-Critic with RAN information in the state|N|sim|1|0|0||NR|Y|N|ctrl|AB|highest throughput across scenarios with fairness to NewReno (simulation)
+U0233|Y|Muno|WAN|RTC,multiparty|S|bitrate|NR|netstats|qoe|NR|deep RL bandwidth prediction|N|NR|?|?|1|in-campus deployment|Y|NR|N|ctrl|AB|higher streaming rate with lower delay than rule-based estimators in dynamic networks
+U0249|Y|LLM4Band|WAN|RTC,offline,LLM|R|bitrate|C|netstats|qoe|OFF+LLM|LLM policy network with offline RL and a balanced replay buffer|N|dataset|?|?|?||NR|NR|N|ctrl|AB|12.35% more accurate estimates, 21% higher communication quality
+U0266|Y|Merlin|WAN|RTC|S|bitrate|C|netstats|qoe|IL|behavioral cloning of a heuristic from logs, online fine-tuning|N|dataset|0|0|1|intercontinental video calls|NR|NR|N|ctrl|AB|matches the heuristic without online training; fine-tuning adds up to 7.8% QoE
+U0282|Y|DBS-RL|CELL|buffer,O-RAN|N|buffer|NR|radio|NR|NR|RL buffer sizing through O-RAN|N|NR|?|?|?||NR|NR|N|ctrl|AB|higher throughput with comparable delay to RED and CoDel
+U0286|Y|Octopus|CELL|RTC,cross-layer|S|multi|NR|netstats|qoe|META+IL|meta-imitation RL over encoding and sending bitrates|N|dataset|0|1|0||NR|NR|N|ctrl|AB|up to 37.1% higher bitrate on a WebRTC testbed with WeChat traces
+U0296|Y|DIQL for Microsoft Teams|WAN|RTC,offline|R|bitrate|C|recvrate,delay,loss,interarrival|qoe|OFF|Distributional Implicit Q-Learning on about 1M logged calls; QoE reward from subjective ratings|N|dataset|0|1|1|production A/B test, 25M calls|NR|NR|N|deploy|FT|poor-call ratio 11.41% lower than the baseline estimator in a two-week production A/B test
+U0314|Y|RBWE|WAN|RTC,offline|R|bitrate|C|netstats|qoe|OFF|Q-ensemble with a Gaussian-mixture policy; heuristic fallback under high uncertainty|Y|dataset|?|?|?||NR|NR|Y|ctrl|AB|18% lower overestimation, 18.6% higher 10th-percentile QoE
+U0315|Y|PRACC|DC|ECN|N|ecn|C|NR|NR|PG|PPO with a continuous action and adaptive reward|Y|ns-3|1|0|0||Y|NR|N|ctrl|AB|lower FCT than static DCQCN and HPCC and DRL-based ACC; model from one port used on spine-leaf topologies
+U0334|Y|SACAQM|CELL|AQM,UAV|N|aqm|C|queue|delay,energy|AC|Soft Actor-Critic|N|sim|1|0|0||NR|NR|N|ctrl|AB|delay-constraint satisfaction up 41.52% for high-priority traffic against a DRL AQM
+U0337|Y|DBSDD-AQM|IOT|AQM,buffer|N|multi|C|queue|delay|AC|DDPG queue removal with a bounded buffer-sizing loop|N|ns-3|1|0|0||NR|NR|N|ctrl|AB|buffer sizing cuts average queueing delay by 16-18% against a fixed 50 KB buffer
+U0339|Y|Chameleon|WAN|fairness,preference|S|rate|NR|netstats|multi|NR|detects competitor preference and switches policy|N|NR|0|1|1|real-world testbeds|NR|Y|N|ctrl|AB|fairness index up by as much as 66% among mixed-preference flows
+U0341|Y|TideTCP|SAT|LEO,handover|S|other|NR|NR|NR|NR|RL in-flight draining with handover prediction and probing|N|NR|0|1|0||NR|NR|N|ctrl|AB|up to 83% less loss and 55% lower tail delay in an emulated Starlink constellation
+U0343|Y|RL rate shaping at the CPE|CELL|Wi-Fi,POMDP|N|rate|NR|local|delay,fair|NR|POMDP policy with Continual Backpropagation on ARM CPE hardware|N|testbed|0|0|1|Wi-Fi testbed|Y|Y|N|ctrl|AB|median latency 94.5% lower under congested 2.4 GHz Wi-Fi
+U0383|Y|End-network RL for RDMA|DC|RDMA|S;N|multi|NR|queue,bw,loss,int|NR|NR|RL congestion assessment with a DNN signal mapping|N|NR|0|0|1|RDMA test platform|NR|NR|N|ctrl|AB|average latency 35.5% lower than DCQCN
+U0388|Y|MADDPG congestion control|GEN|SDN,MARL|C;N|multi|C|NR|NR|MARL+AC|multi-timescale MADDPG|N|NR|1|0|0||NR|NR|N|ctrl|AB|converges within 1,500 episodes, faster than DDPG and QMIX
+U0391|Y|Diff-Band|WAN|RTC,offline|R|bitrate|C|netstats|qoe|OFF|diffusion policy guided by a Q-function|N|dataset|1|0|0||NR|NR|N|ctrl|AB|better offline accuracy and online QoE than baselines
+U0398|Y|MaGEO-CC|SAT|GEO,MARL|S|cwnd|NR|local,global|thr,fair|MARL|centralized training, decentralized execution|N|NR|1|0|0||NR|Y|N|ctrl|AB|fairness index 0.97-0.98 on GEO return links in simulation
+U0429|Y|EACC|IOT|WSN,cross-layer|N|multi|D|NR|other|DQN|event-conditioned DQN with cross-layer MAC reservation|N|NR|?|?|?||NR|NR|N|ctrl|AB|anticipates event-driven bursts in acoustic sensor networks
+U0444|Y|QoS-aware RL AQM|GEN|AQM|N|param|C|delay|util,delay|PG|policy gradient tuning a queue-latency control law|Y|ns-3|1|0|0||NR|NR|N|ctrl|AB|maintains QoS under dynamic conditions without manual tuning in ns-3
+U0460|Y|PRISM|CELL|cross-layer,PRB|S|rate|NR|radio|NR|NR|RL using peak PRB utilization|N|ns-3|1|0|0||NR|Y|N|ctrl|AB|mean one-way delay 6.3 ms beside TCP flows at 371-390 ms (ns-3)
+U0501|Y|Mowgli|WAN|RTC,offline|S|bitrate|C|netstats,app|thr,delay,loss|OFF|SAC with Conservative Q-Learning and a distributional critic, trained on GCC logs|N|dataset|0|1|1|cellular networks in four U.S. cities|NR|NR|N|ctrl|FT|15-39% higher bitrate and 60-100% fewer freezes than GCC in emulation; 17.7% higher bitrate on real cellular networks
+U0502|Y|PET|DC|ECN,MARL|N|ecn|D|queue,ecn,rate|fct|MARL+PG|independent PPO with decentralized training and execution|Y|ns-3|1|0|0||NR|Y|N|ctrl|FT|better FCT, convergence and queue variance than static schemes and a learned baseline (ns-3)
+U0058|LINK|RL pacing scheduler (DDPG report)|||||||||||||||||||||linked report of U0046
+U0065|LINK|Deep Q-learning DTN (conf.)|||||||||||||||||||||linked report of U0076
+U0349|LINK|DIQL for Microsoft Teams (AAAI listing)|||||||||||||||||||||linked report of U0296
+U0445|LINK|GenRL-ACC|||||||||||||||||||||linked report of R0468
+U0273|NOTRET||||||||||||||||||||||
+U0327|NOTRET||||||||||||||||||||||
+U0351|NOTRET||||||||||||||||||||||

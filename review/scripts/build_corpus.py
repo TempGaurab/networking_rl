@@ -52,6 +52,19 @@ MANUAL = {  # no DOI: transcribed from the official proceedings pages
         "author": "Lorenzo Pappone and Alessio Sacco and Flavio Esposito",
         "title": "Mutant: Learning Congestion Control from Existing Protocols via Online Reinforcement Learning",
         "booktitle": "22nd USENIX Symposium on Networked Systems Design and Implementation (NSDI)", "year": "2025"}),
+    "U0501": ("inproceedings", "agarwal2025mowgli", {
+        "author": "Neil Agarwal and Rui Pan and Francis Y. Yan and Ravi Netravali",
+        "title": "Mowgli: Passively Learned Rate Control for Real-Time Video",
+        "booktitle": "22nd USENIX Symposium on Networked Systems Design and Implementation (NSDI)", "year": "2025"}),
+    "U0296": ("inproceedings", "khairy2026human", {
+        "author": "Sami Khairy and Gabriel Mittag and Vishak Gopal and Ross Cutler",
+        "title": "Human-in-the-Loop Bandwidth Estimation for Quality of Experience Optimization in Real-Time Video Communication",
+        "booktitle": "Proceedings of the AAAI Conference on Artificial Intelligence", "year": "2026",
+        "doi": "10.1609/aaai.v40i47.41437"}),
+    "U0349": ("misc", "cutler2026human", {  # the registered DOI points to a conference listing with an unusable URL
+        "author": "Sami Khairy and Gabriel Mittag and Vishak Gopal and Ross Cutler",
+        "title": "Human-in-the-Loop Bandwidth Estimation for Quality of Experience Optimization in Real-Time Video Communication",
+        "howpublished": "Conference listing, AAAI 2026", "year": "2026"}),
     "R0500": ("inproceedings", "pan2026syntra", {
         "author": "Jia Pan and Anup Agarwal and I{\\c{s}}{\\i}l Dillig and Venkat Arun",
         "title": "Syntra: Synthesizing Cross-Layer Controllers for Low-Latency Video Streaming",
