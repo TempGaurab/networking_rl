@@ -3,7 +3,7 @@
 PY ?= python3
 S  := review/scripts
 
-.PHONY: all numbers pdf slides case-figures case-study search clean
+.PHONY: all numbers pdf report slides case-figures case-study search clean
 
 all: numbers pdf
 
@@ -21,6 +21,16 @@ pdf:
 	  pdflatex -interaction=nonstopmode -output-directory=build main.tex | tail -1 && \
 	  ! grep -q "undefined" build/main.log && cp build/main.pdf main.pdf && \
 	  cp build/main.pdf ../RL_Congestion_Control_Survey.pdf && echo "survey/main.pdf and RL_Congestion_Control_Survey.pdf updated"
+
+# 50-paper report (report_top50/main.pdf); uses the stored citation snapshot and survey/references.bib
+report:
+	cd $(S) && $(PY) select_top50.py >/dev/null
+	cd report_top50 && mkdir -p build && \
+	  pdflatex -interaction=nonstopmode -output-directory=build main.tex >/dev/null; \
+	  (cd build && BIBINPUTS=..:../../survey: bibtex main >/dev/null) && \
+	  pdflatex -interaction=nonstopmode -output-directory=build main.tex >/dev/null; \
+	  pdflatex -interaction=nonstopmode -output-directory=build main.tex | tail -1 && \
+	  ! grep -q "undefined" build/main.log && cp build/main.pdf ../RL_Congestion_Control_Top50_Report.pdf && echo "RL_Congestion_Control_Top50_Report.pdf updated"
 
 # case-study figures and tables from the stored results (seconds)
 case-figures:

@@ -10,6 +10,7 @@ This repository contains the survey and its full replication package. The survey
 | Search, screening, extraction pipeline | `review/scripts/` |
 | Every record, decision and coded value | `review/data/` |
 | Case study (PPO controller, training-distribution shift) | `case_study/` |
+| Report on the 50 most-cited studies | `RL_Congestion_Control_Top50_Report.pdf` (source in `report_top50/`; ranked list in `review/data/top50.csv`) |
 | Slides | `slides/slides.pdf` |
 | Original proposal | `proposal.docs` |
 
@@ -19,6 +20,7 @@ This repository contains the survey and its full replication package. The survey
 pip install -r requirements.txt   # Python 3.12; TeX Live with pdflatex/bibtex for the PDF
 make numbers        # coded data -> study table, statistics, figures, LaTeX tables, bibliography
 make pdf            # builds in survey/build/, then copies to survey/main.pdf and ./RL_Congestion_Control_Survey.pdf
+make report         # 50-paper report: ranks studies from the stored citation snapshot, builds ./RL_Congestion_Control_Top50_Report.pdf
 make case-figures   # case-study figures/tables from stored results (seconds)
 make case-study     # retrain 8 PPO models (~9 min each, one CPU core), evaluate, plot
 ```

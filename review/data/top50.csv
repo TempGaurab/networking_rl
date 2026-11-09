@@ -1,0 +1,51 @@
+rank,citations,sid,id,bibkey,name,year,title,venue,group,level,contrib,src,score
+1,497,ST015,R0017,jay2019aurora,Aurora,2019,A Deep Reinforcement Learning Perspective on Internet Congestion Control,International Conference on Machine Learning,Internet / generic,Emulation,ctrl,FT,4
+2,337,ST046,R0048,abbasloo2020orca,Orca,2020,Classic Meets Modern,ACM SIGCOMM Conference (SIGCOMM),Internet / generic,Real network,ctrl,KN,5
+3,313,ST007,B036,yan2018pantheon,Pantheon (Indigo),2018,Pantheon: the training ground for internet congestion-control research,USENIX Annual Technical Conference,Internet / generic,Real network,framework,FT,
+4,201,ST011,R0014,li2019qtcp,QTCP,2018,QTCP: Adaptive Congestion Control with Reinforcement Learning,IEEE Transactions on Network Science and Engineering,Internet / generic,Not reported,ctrl,AB,0
+5,156,ST105,B084,xia2022genet,Genet,2022,Genet,ACM SIGCOMM Conference (SIGCOMM),Internet / generic,Real network,method,FT,4
+6,153,ST035,R0027,nie2019tcprl,TCP-RL,2019,Dynamic TCP Initial Windows and Congestion Control Schemes Through Reinforcement Learning,IEEE Journal on Selected Areas in Communications,Internet / generic,Real network,deploy,AB,2
+7,147,ST020,R0029,xu2019drlcc,DRL-CC (MPTCP),2019,Experience-Driven Congestion Control: When Multi-Path TCP Meets Deep Reinforcement Learning,IEEE Journal on Selected Areas in Communications,Internet / generic,Emulation,ctrl,AB,3
+8,145,ST045,B143,zhang2020onrl,OnRL,2020,OnRL,ACM Annual International Conference on Mobile Computing and Networking (MobiCom),Wireless & cellular,Real network,deploy,AB,3
+9,141,ST043,B057,meng2020interpreting,Metis,2020,Interpreting Deep Learning-Based Networking Systems,ACM SIGCOMM Conference (SIGCOMM),Internet / generic,Simulation,analysis,FT,
+10,139,ST073,R0105,sacco2021owl,Owl,2021,Owl: Congestion Control with Partially Invisible Networks via Reinforcement Learning,IEEE Conference on Computer Communications (INFOCOM),Internet / generic,Emulation,ctrl,FT,3
+11,114,ST009,B037,huang2018qarc,QARC,2018,QARC,ACM International Conference on Multimedia (ACM MM),Internet / generic,Simulation,ctrl,FT,1
+12,113,ST033,R0040,li2019smartcc,SmartCC,2019,SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks,IEEE Journal on Selected Areas in Communications,Wireless & cellular,Not reported,ctrl,AB,0
+13,108,ST179,B090,yen2023sage,Sage,2023,Computers Can Learn from the Heuristic Designs and Master Internet Congestion Control,ACM SIGCOMM Conference (SIGCOMM),Internet / generic,Real network,ctrl,AB,3
+14,101,ST016,S013,zhou2019concerto,Concerto,2019,Learning to Coordinate Video Codec with Transport Protocol for Mobile Video Telephony,ACM Annual International Conference on Mobile Computing and Networking (MobiCom),Internet / generic,Real network,deploy,AB,2
+15,100,ST087,R0120,eliyahu2021whirl,whiRL 2.0,2021,Verifying learning-augmented systems,ACM SIGCOMM Conference (SIGCOMM),Internet / generic,N/A,analysis,AB,
+16,95,ST070,B076,zhang2021loki,Loki,2021,Loki,ACM Annual International Conference on Mobile Computing and Networking (MobiCom),Internet / generic,Real network,deploy,AB,2
+17,91,ST012,R0010,kong2018improving,RL-TCP,2018,Improving TCP Congestion Control with Machine Intelligence,ACM SIGCOMM Workshop on Network Meets AI & ML (NetAI),Internet / generic,Simulation,ctrl,AB,1
+18,83,ST036,R0042,kazak2019verily,Verily,2019,Verifying Deep-RL-Driven Systems,ACM SIGCOMM Workshop on Network Meets AI & ML (NetAI),Internet / generic,N/A,analysis,AB,
+19,74,ST034,R0041,xiao2019drinc,TCP-Drinc,2019,TCP-Drinc: Smart Congestion Control Based on Deep Reinforcement Learning,IEEE Access,Internet / generic,Simulation,ctrl,FT,2
+20,64,ST040,R0051,emara2020eagle,Eagle,2020,Eagle: Refining Congestion Control by Learning from the Experts,IEEE Conference on Computer Communications (INFOCOM),Internet / generic,Emulation,ctrl,KN,2
+21,61,ST060,S070,pokhrel2021learning,DQL-MPTCP,2021,Learning to Harness Bandwidth With Multipath Congestion Control and Scheduling,IEEE Transactions on Mobile Computing,Internet / generic,Emulation,ctrl,FT,3
+22,61,ST112,K004,ma2022mocc,MOCC,2022,Multi-objective congestion control,,Internet / generic,Real network,ctrl,FT,4
+23,58,ST038,B071,abbasloo2021deepcc,DeepCC (Abbasloo et al.),2020,Wanna Make Your TCP Scheme Great for Cellular Networks? Let Machines Do It for You!,IEEE Journal on Selected Areas in Communications,Wireless & cellular,Real network,ctrl,FT,3
+24,54,ST066,R0086,he2021deepcc,"DeepCC (He et al., MPTCP)",2021,DeepCC: Multi-Agent Deep Reinforcement Learning Congestion Control for Multi-Path TCP Based on Self-Attention,IEEE Transactions on Network and Service Management,Wireless & cellular,Not reported,ctrl,AB,0
+25,53,ST051,R0044,naeem2020software,SDN actor-critic MPTCP for IoT,2020,A Software Defined Network Based Fuzzy Normalized Neural Adaptive Multipath Congestion Control for the Internet of Things,IEEE Transactions on Network Science and Engineering,"IoT, ad hoc & sensor",Simulation,ctrl,AB,1
+26,52,ST019,R0021,xie2019adaptive,DRL initial window for 5G MEC,2019,Adaptive Online Decision Method for Initial Congestion Window in 5G Mobile Edge Computing Using Deep Reinforcement Learning,IEEE Journal on Selected Areas in Communications,Wireless & cellular,Simulation,ctrl,AB,1
+27,52,ST026,R0039,fang2019rtc,RL BWE for RTC (Microsoft),2019,Reinforcement learning for bandwidth estimation and congestion control in real-time communications,arXiv (Cornell University),Internet / generic,Real network,ctrl,FT,2
+28,51,ST127,R0170,tessler2022rlcc,RL-CC (Tessler et al.),2022,Reinforcement Learning for Datacenter Congestion Control,ACM SIGMETRICS Performance Evaluation Review,Data center,Simulation,ctrl,FT,3
+29,49,ST181,R0211,tian2024spine,Spine,2023,Efficient DRL-Based Congestion Control With Ultra-Low Overhead,IEEE/ACM Transactions on Networking,Internet / generic,Real network,ctrl,AB,2
+30,46,ST217,R0290,du2025libra,Libra,2024,Libra: A Congestion Control Framework for Diverse Application Preferences and Network Conditions,IEEE Transactions on Networking,Internet / generic,Real network,ctrl,AB,3
+31,45,ST061,U0077,kim2021deep,DQN AQM for fog/edge IoT,2021,Deep Reinforcement Learning Based Active Queue Management for IoT Networks,Journal of Network and Systems Management,"IoT, ad hoc & sensor",Simulation,ctrl,AB,1
+32,45,ST187,R0253,donta2023icocoa,iCoCoA,2023,iCoCoA: intelligent congestion control algorithm for CoAP using deep reinforcement learning,Journal of Ambient Intelligence and Humanized Computing,"IoT, ad hoc & sensor",Not reported,ctrl,AB,0
+33,44,ST191,S176,liao2024astraea,Astraea,2024,Astraea: Towards Fair and Efficient Learning-based Congestion Control,European Conference on Computer Systems,Internet / generic,Real network,ctrl,FT,4
+34,42,ST025,S014,sivakumar2019mvfst,MVFST-RL,2019,MVFST-RL: An Asynchronous RL Framework for Congestion Control with Delayed Actions,arXiv (Cornell University),Internet / generic,Emulation,framework,FT,
+35,39,ST056,R0075,li2021auto,AUTO,2021,AUTO: Adaptive Congestion Control Based on Multi-Objective Reinforcement Learning for the Satellite-Ground Integrated Network,USENIX ATC '21,Satellite & space,Real network,ctrl,FT,3
+36,37,ST006,R0012,ruffy2018iroko,Iroko,2018,Iroko: A Framework to Prototype Reinforcement Learning for Data Center Traffic Control,arXiv (Cornell University),Data center,Emulation,framework,FT,
+37,37,ST044,R0049,lei2020congestion,Multi-task DRL CC (SDN),2020,Congestion Control in SDN-Based Networks via Multi-Task Deep Reinforcement Learning,IEEE Network,Internet / generic,Not reported,ctrl,AB,0
+38,37,ST053,R0074,yan2021acc,ACC,2021,ACC,ACM SIGCOMM Conference (SIGCOMM),Data center,Real network,deploy,AB,2
+39,36,ST002,B007,li2016learning,Q-learning TCP for memory-constrained IoT,2016,Learning-Based and Data-Driven TCP Design for Memory-Constrained IoT,International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT),"IoT, ad hoc & sensor",Simulation,ctrl,AB,1
+40,36,ST118,R0161,eo2022opennetlab,OpenNetLab,2022,OpenNetLab: Open Platform for RL-based Congestion Control for Real-Time Communications,Asia-Pacific Workshop on Networking (APNet),Internet / generic,Real network,framework,AB,
+41,35,ST005,U0016,sert2018optimizing,DRL age-of-information over TCP/IP,2018,Optimizing age of information on real-life TCP/IP connections through reinforcement learning,Signal Processing and Communications Applications Conference (SIU),Internet / generic,Emulation,ctrl,AB,2
+42,35,ST090,R0132,bentaleb2022bob,BoB,2022,BoB: Bandwidth Prediction for Real-Time Communications Using Heuristic and Reinforcement Learning,IEEE Transactions on Multimedia,Internet / generic,Emulation,ctrl,FT,3
+43,32,ST289,R0399,pappone2025mutant,Mutant,2025,Mutant: Learning Congestion Control from Existing Protocols via Online Reinforcement Learning,PORTO@Iris,Internet / generic,Real network,ctrl,FT,4
+44,31,ST010,U0020,su2018qred,QRED,2018,QRED: A Q-Learning-based Active Queue Management Scheme,網際網路技術學刊,Internet / generic,Simulation,ctrl,AB,1
+45,31,ST110,B085,zhang2022liteflow,LiteFlow,2022,LiteFlow,ACM SIGCOMM Conference (SIGCOMM),Internet / generic,Emulation,method,AB,2
+46,30,ST067,S053,wang2021hybrid,HRCC,2021,A Hybrid Receiver-side Congestion Control Scheme for Web Real-time Communication,ACM Multimedia Systems Conference (MMSys),Internet / generic,Simulation,ctrl,AB,1
+47,29,ST023,R0031,gomez2019intelligent,Intelligent AQM with ECN,2019,Intelligent Active Queue Management Using Explicit Congestion Notification,Globecom,Internet / generic,Emulation,ctrl,FT,2
+48,28,ST109,R0150,yang2022ieacc,IEACC,2022,IEACC: An Intelligent Edge-Aided Congestion Control Scheme for Named Data Networking With Deep Reinforcement Learning,IEEE Transactions on Network and Service Management,Internet / generic,Simulation,ctrl,AB,2
+49,27,ST041,R0055,cui2020improving,Hd-TCP,2020,Improving the Congestion Control Performance for Mobile Networks in High-Speed Railway via Deep Reinforcement Learning,IEEE Transactions on Vehicular Technology,Wireless & cellular,Simulation,ctrl,AB,1
+50,27,ST055,R0079,ma2021intelligent,AQM meets DRL,2021,An intelligent scheme for congestion control: When active queue management meets deep reinforcement learning,Computer Networks,Internet / generic,Not reported,ctrl,AB,0
