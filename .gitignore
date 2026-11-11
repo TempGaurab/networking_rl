@@ -16,5 +16,6 @@ __pycache__/
 .DS_Store
 survey/build/
 report_top50/build/
+report_techniques/build/
 # Third-party papers: retrieved locally, not redistributed
 review/data/fulltext/
