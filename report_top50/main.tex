@@ -151,15 +151,32 @@ We followed the PRISMA~2020 reporting guideline~\cite{page2021prisma}, with the 
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[
-  box/.style={draw, rounded corners=3pt, align=center, text width=62mm, minimum height=9mm, inner sep=4pt, font=\small},
-  >={Stealth[length=2.2mm]}, node distance=5mm]
-  \node[box] (a) {Records identified: \nAllIdentified\\ (databases \nAllIdentifiedDB; other methods \nAllIdentifiedOther)};
-  \node[box, below=of a] (b) {Eligible after screening and full-text assessment:\\ \nTopStudies studies in \nAllReports reports};
-  \node[box, below=of b] (c) {Ranked by Semantic Scholar citations (9 Nov 2026)};
-  \node[box, below=of c, fill=accent!8] (d) {\textbf{Reviewed in this report: \nTopN studies}\\ (minimum \nTopCut citations)};
-  \draw[->, thick] (a) -- (b); \draw[->, thick] (b) -- (c); \draw[->, thick] (c) -- (d);
+  box/.style={draw=black!70, rounded corners=2pt, align=center, text width=58mm, minimum height=9mm, inner sep=3pt, font=\small},
+  gone/.style={draw=black!70, rounded corners=2pt, align=left, text width=44mm, minimum height=9mm, inner sep=3pt, font=\small, fill=black!4},
+  stage/.style={font=\small\bfseries, text=accent, rotate=90, anchor=south},
+  >={Stealth[length=2mm]}]
+  % main column (x = 0) and "removed" column (x = 64mm); rows about 17 mm apart
+  \node[box] (found) at (0,0) {Papers found: \nAllIdentified\\ (database search \nAllIdentifiedDB; citations and\\ later search \nAllIdentifiedOther)};
+  \node[gone] (dup) at (64mm,0) {Duplicates removed: \nFlowDup};
+  \node[box] (title) at (0,-19mm) {Titles and abstracts checked:\\ \nFlowAfterDup};
+  \node[gone] (offtopic) at (64mm,-19mm) {Removed, not about RL for\\ congestion control: \nFlowExTA};
+  \node[box] (full) at (0,-36mm) {Full papers looked for: \nFlowSought};
+  \node[gone] (missing) at (64mm,-36mm) {Could not get the paper: \nFlowNotRet};
+  \node[box] (read) at (0,-53mm) {Full papers read: \nFlowAssessed};
+  \node[gone] (notfit) at (64mm,-53mm) {Removed after reading: \nFlowExFT};
+  \node[box] (incl) at (0,-70mm) {Included: \nTopStudies studies\\ (in \nAllReports papers)};
+  \node[box] (rank) at (0,-87mm) {Sorted by number of citations\\ (Semantic Scholar, 9 Nov 2026)};
+  \node[gone] (rest) at (64mm,-87mm) {Not kept (fewer citations):\\ \nRestN};
+  \node[box, fill=accent!10] (keep) at (0,-104mm) {\textbf{Kept for this report: top \nTopN}\\ (\nTopCut or more citations)};
+  \foreach \a/\b in {found/title, title/full, full/read, read/incl, incl/rank, rank/keep} \draw[->, thick] (\a) -- (\b);
+  \foreach \a/\b in {found/dup, title/offtopic, full/missing, read/notfit, rank/rest} \draw[->] (\a) -- (\b);
+  % stage labels on the left
+  \draw[accent!50, thick] (-33mm,5mm) -- (-33mm,-5mm); \node[stage] at (-34mm,0) {Find};
+  \draw[accent!50, thick] (-33mm,-15mm) -- (-33mm,-57mm); \node[stage] at (-34mm,-36mm) {Check};
+  \draw[accent!50, thick] (-33mm,-66mm) -- (-33mm,-74mm); \node[stage] at (-34mm,-70mm) {Include};
+  \draw[accent!50, thick] (-33mm,-83mm) -- (-33mm,-108mm); \node[stage] at (-34mm,-95.5mm) {Rank};
 \end{tikzpicture}
-\caption{Selection of the studies reviewed in this report. The full PRISMA flow, with exclusion counts and reasons, is in the replication package.}
+\caption{How the \nTopN studies were chosen, drawn in the style of a PRISMA~2020 flow diagram~\cite{page2021prisma}. The top part is the search behind the full survey. The last step, which keeps the \nTopN most-cited studies, is new in this report. Some studies appear in more than one paper, such as a conference paper and its journal version, so \nAllReports papers make up \nTopStudies studies.}
 \label{fig:flow}
 \end{figure}
 

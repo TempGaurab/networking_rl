@@ -93,6 +93,17 @@ prisma = json.load(open(DATA / "stats.json"))["prisma"]
 s.update({"AllIdentified": f"{prisma['IdentifiedTotal']:,}".replace(",", "{,}"), "AllIdentifiedDB": prisma["IdentifiedDB"],
           "AllIdentifiedOther": f"{prisma['IdentifiedTotal'] - prisma['IdentifiedDB']:,}".replace(",", "{,}"),
           "AllReports": prisma["ReportsIncluded"]})
+# simple PRISMA flow for the report (database and other-methods columns merged)
+fmt = lambda v: f"{v:,}".replace(",", "{,}")
+flow = {"Dup": prisma["Duplicates"], "AfterDup": prisma["IdentifiedTotal"] - prisma["Duplicates"],
+        "ExTA": prisma["ExcludedTA"] + prisma["OtherExcludedTA"], "Sought": prisma["SoughtAll"],
+        "NotRet": prisma["NotRetrievedDB"] + prisma["NotRetrievedOther"],
+        "Assessed": prisma["AssessedDB"] + prisma["AssessedOther"],
+        "ExFT": prisma["ExcludedFTDB"] + prisma["ExcludedFTOther"]}
+assert flow["AfterDup"] - flow["ExTA"] == flow["Sought"], "flow: screening does not add up"
+assert flow["Sought"] - flow["NotRet"] == flow["Assessed"], "flow: retrieval does not add up"
+assert flow["Assessed"] - flow["ExFT"] == prisma["ReportsIncluded"], "flow: eligibility does not add up"
+s.update({"Flow" + k: fmt(v) for k, v in flow.items()})
 s.update(profile("Top", top))
 s.update(profile("Rest", rest))
 s["TopFour"] = sum((r["score"] or 0) >= 4 for r in top)
