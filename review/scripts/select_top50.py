@@ -99,7 +99,11 @@ flow = {"Dup": prisma["Duplicates"], "AfterDup": prisma["IdentifiedTotal"] - pri
         "ExTA": prisma["ExcludedTA"] + prisma["OtherExcludedTA"], "Sought": prisma["SoughtAll"],
         "NotRet": prisma["NotRetrievedDB"] + prisma["NotRetrievedOther"],
         "Assessed": prisma["AssessedDB"] + prisma["AssessedOther"],
-        "ExFT": prisma["ExcludedFTDB"] + prisma["ExcludedFTOther"]}
+        "ExFT": prisma["ExcludedFTDB"] + prisma["ExcludedFTOther"],
+        "Forward": prisma["ForwardNew"], "ForwardFound": prisma["ForwardRetrieved"], "Backward": prisma["BackwardNew"],
+        "Update": prisma["UpdateNew"], "Known": prisma["ReviewerKnown"]}
+assert flow["Forward"] + flow["Backward"] + flow["Update"] + flow["Known"] == prisma["IdentifiedTotal"] - prisma["IdentifiedDB"], \
+    "flow: other sources do not add up"
 assert flow["AfterDup"] - flow["ExTA"] == flow["Sought"], "flow: screening does not add up"
 assert flow["Sought"] - flow["NotRet"] == flow["Assessed"], "flow: retrieval does not add up"
 assert flow["Assessed"] - flow["ExFT"] == prisma["ReportsIncluded"], "flow: eligibility does not add up"

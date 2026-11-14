@@ -149,34 +149,9 @@ We followed the PRISMA~2020 reporting guideline~\cite{page2021prisma}, with the 
 \paragraph{Selection of the \nTopN.} \Cref{fig:flow} shows the flow. Reviewing the top \nTopN is a deviation from our protocol, which covered every eligible study. For each of the \nTopStudies studies we retrieved citation counts from the Semantic Scholar API on 9~November~2026, so that all counts come from one source on one date. Lookups used the DOI or arXiv identifier, or an exact title match when neither resolved. When a study has several linked reports, such as a conference paper and its journal extension, we used the highest count among them and did not add the counts, because such reports can share citing papers. Ties were broken by earlier publication year and then by study identifier. The cutoff is \nTopCut citations, and \nTopTied studies are tied at that value, so the tie-break decided two of the last places. Semantic Scholar had no record for \nTopNoCount studies. We checked them in OpenAlex, where none has more than seven citations, so none could have reached the cutoff.
 
 \begin{figure}[t]
-\centering
-\begin{tikzpicture}[
-  box/.style={draw=black!70, rounded corners=2pt, align=center, text width=58mm, minimum height=9mm, inner sep=3pt, font=\small},
-  gone/.style={draw=black!70, rounded corners=2pt, align=left, text width=44mm, minimum height=9mm, inner sep=3pt, font=\small, fill=black!4},
-  stage/.style={font=\small\bfseries, text=accent, rotate=90, anchor=south},
-  >={Stealth[length=2mm]}]
-  % main column (x = 0) and "removed" column (x = 64mm); rows about 17 mm apart
-  \node[box] (found) at (0,0) {Papers found: \nAllIdentified\\ (database search \nAllIdentifiedDB; citations and\\ later search \nAllIdentifiedOther)};
-  \node[gone] (dup) at (64mm,0) {Duplicates removed: \nFlowDup};
-  \node[box] (title) at (0,-19mm) {Titles and abstracts checked:\\ \nFlowAfterDup};
-  \node[gone] (offtopic) at (64mm,-19mm) {Removed, not about RL for\\ congestion control: \nFlowExTA};
-  \node[box] (full) at (0,-36mm) {Full papers looked for: \nFlowSought};
-  \node[gone] (missing) at (64mm,-36mm) {Could not get the paper: \nFlowNotRet};
-  \node[box] (read) at (0,-53mm) {Full papers read: \nFlowAssessed};
-  \node[gone] (notfit) at (64mm,-53mm) {Removed after reading: \nFlowExFT};
-  \node[box] (incl) at (0,-70mm) {Included: \nTopStudies studies\\ (in \nAllReports papers)};
-  \node[box] (rank) at (0,-87mm) {Sorted by number of citations\\ (Semantic Scholar, 9 Nov 2026)};
-  \node[gone] (rest) at (64mm,-87mm) {Not kept (fewer citations):\\ \nRestN};
-  \node[box, fill=accent!10] (keep) at (0,-104mm) {\textbf{Kept for this report: top \nTopN}\\ (\nTopCut or more citations)};
-  \foreach \a/\b in {found/title, title/full, full/read, read/incl, incl/rank, rank/keep} \draw[->, thick] (\a) -- (\b);
-  \foreach \a/\b in {found/dup, title/offtopic, full/missing, read/notfit, rank/rest} \draw[->] (\a) -- (\b);
-  % stage labels on the left
-  \draw[accent!50, thick] (-33mm,5mm) -- (-33mm,-5mm); \node[stage] at (-34mm,0) {Find};
-  \draw[accent!50, thick] (-33mm,-15mm) -- (-33mm,-57mm); \node[stage] at (-34mm,-36mm) {Check};
-  \draw[accent!50, thick] (-33mm,-66mm) -- (-33mm,-74mm); \node[stage] at (-34mm,-70mm) {Include};
-  \draw[accent!50, thick] (-33mm,-83mm) -- (-33mm,-108mm); \node[stage] at (-34mm,-95.5mm) {Rank};
-\end{tikzpicture}
-\caption{How the \nTopN studies were chosen, drawn in the style of a PRISMA~2020 flow diagram~\cite{page2021prisma}. The top part is the search behind the full survey. The last step, which keeps the \nTopN most-cited studies, is new in this report. Some studies appear in more than one paper, such as a conference paper and its journal version, so \nAllReports papers make up \nTopStudies studies.}
+\centering\frenchspacing
+\input{flow_figure}
+\caption{How the \nTopN studies were chosen, drawn in the style of a PRISMA~2020 flow diagram~\cite{page2021prisma}. The top part is the search behind the full survey. Forward citation searching collects papers that cite a known study; backward citation searching goes through the reference list of a study to find older papers it cites. The last step, which keeps the \nTopN most-cited studies, is new in this report. Some studies appear in more than one paper, such as a conference paper and its journal version, so \nAllReports papers make up \nTopStudies studies.}
 \label{fig:flow}
 \end{figure}
 

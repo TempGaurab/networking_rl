@@ -1,0 +1,38 @@
+% PRISMA-style selection flow, shared by report_top50 and report_simple; needs generated/numbers.tex
+\begin{tikzpicture}[
+  box/.style={draw=black!70, rounded corners=2pt, align=center, text width=58mm, minimum height=9mm, inner sep=3pt, font=\small},
+  gone/.style={draw=black!70, rounded corners=2pt, align=left, text width=44mm, minimum height=9mm, inner sep=3pt, font=\small, fill=black!4},
+  stage/.style={font=\small\bfseries, text=accent, rotate=90, anchor=south},
+  >={Stealth[length=2mm]},
+  src/.style={draw=black!70, rounded corners=2pt, align=left, inner sep=4pt, font=\small, anchor=north, fill=accent!4},
+]
+  % top row: where the papers came from
+  \node[src] (db) at (0,0) {\parbox[t][35.3mm][t]{52mm}{\raggedright\textbf{Database search: \nAllIdentifiedDB}\\[2pt] We searched OpenAlex, arXiv and USENIX for papers whose title or abstract mentions both reinforcement learning and congestion control.}};
+  \node[src, text width=62mm, minimum height=38mm] (other) at (66mm,0) {\textbf{Other ways: \nAllIdentifiedOther}\\[2pt]
+    $\bullet$ Forward citations: \nFlowForward new\\ \hspace*{3mm}(papers that cite 9 well-known studies,\\ \hspace*{3mm}such as Aurora and Orca; \nFlowForwardFound checked)\\
+    $\bullet$ Backward citations: \nFlowBackward new\\ \hspace*{3mm}(papers in the reference lists of 16 recent\\ \hspace*{3mm}studies)\\
+    $\bullet$ Later, wider search: \nFlowUpdate new\\
+    $\bullet$ Already known to us: \nFlowKnown};
+  % main column (x = 0) and "removed" column (x = 64mm); rows 17 mm apart
+  \node[box] (found) at (0,-50mm) {Papers found: \nAllIdentified};
+  \node[gone] (dup) at (64mm,-50mm) {Duplicates removed: \nFlowDup};
+  \node[box] (title) at (0,-67mm) {Titles and abstracts checked:\\ \nFlowAfterDup};
+  \node[gone] (offtopic) at (64mm,-67mm) {Removed, not about RL for\\ congestion control: \nFlowExTA};
+  \node[box] (full) at (0,-84mm) {Full papers looked for: \nFlowSought};
+  \node[gone] (missing) at (64mm,-84mm) {Could not get the paper: \nFlowNotRet};
+  \node[box] (read) at (0,-101mm) {Full papers read: \nFlowAssessed};
+  \node[gone] (notfit) at (64mm,-101mm) {Removed after reading: \nFlowExFT};
+  \node[box] (incl) at (0,-118mm) {Included: \nTopStudies studies\\ (in \nAllReports papers)};
+  \node[box] (rank) at (0,-135mm) {Sorted by number of citations\\ (Semantic Scholar, 9 Nov 2026)};
+  \node[gone] (rest) at (64mm,-135mm) {Not kept (fewer citations):\\ \nRestN};
+  \node[box, fill=accent!10] (keep) at (0,-152mm) {\textbf{Kept for this report: top \nTopN}\\ (\nTopCut or more citations)};
+  \draw[->, thick] (db.south) -- (found.north);
+  \draw[->, thick] (other.south) -- ++(0,-3mm) -| ([xshift=18mm]found.north);
+  \foreach \a/\b in {found/title, title/full, full/read, read/incl, incl/rank, rank/keep} \draw[->, thick] (\a) -- (\b);
+  \foreach \a/\b in {found/dup, title/offtopic, full/missing, read/notfit, rank/rest} \draw[->] (\a) -- (\b);
+  % stage labels on the left
+  \draw[accent!50, thick] (-33mm,0mm) -- (-33mm,-55mm); \node[stage] at (-34mm,-27.5mm) {Find};
+  \draw[accent!50, thick] (-33mm,-63mm) -- (-33mm,-105mm); \node[stage] at (-34mm,-84mm) {Check};
+  \draw[accent!50, thick] (-33mm,-114mm) -- (-33mm,-122mm); \node[stage] at (-34mm,-118mm) {Include};
+  \draw[accent!50, thick] (-33mm,-131mm) -- (-33mm,-156mm); \node[stage] at (-34mm,-143.5mm) {Rank};
+\end{tikzpicture}
