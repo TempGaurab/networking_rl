@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>RL Paper Check</title>
+<style>
+:root {
+  --bg: #f7f7f5; --panel: #ffffff; --ink: #1c1c1a; --muted: #6b6b66; --line: #e3e2dc;
+  --accent: #1d4ed8; --accent-soft: #e8eefc;
+  --yes: #15803d; --yes-soft: #e7f5ec; --no: #b91c1c; --no-soft: #fbeaea; --unsure: #a16207; --unsure-soft: #fbf3df;
+  --radius: 10px; font-synthesis: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141413; --panel: #1d1d1b; --ink: #ecebe6; --muted: #a09f98; --line: #33332f;
+    --accent: #7aa2ff; --accent-soft: #1d2a4a;
+    --yes: #4ade80; --yes-soft: #15301f; --no: #f87171; --no-soft: #3a1b1b; --unsure: #facc15; --unsure-soft: #3a3115;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+button, input, select, textarea { font: inherit; color: inherit; }
+header { display: flex; align-items: center; gap: 16px; padding: 12px 20px; border-bottom: 1px solid var(--line); background: var(--panel); position: sticky; top: 0; z-index: 2; }
+header h1 { font-size: 16px; margin: 0; font-weight: 650; }
+header .sp { flex: 1; }
+.pill { font-size: 13px; color: var(--muted); }
+.bar { width: 140px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; display: inline-block; vertical-align: middle; margin-left: 6px; }
+.bar > i { display: block; height: 100%; background: var(--accent); }
+.btn { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 7px 12px; cursor: pointer; }
+.btn:hover { border-color: var(--muted); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.wrap { display: grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 53px); }
+aside { border-right: 1px solid var(--line); overflow-y: auto; max-height: calc(100vh - 53px); position: sticky; top: 53px; background: var(--panel); }
+aside .filters { display: flex; gap: 6px; padding: 10px 12px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+aside .filters button { font-size: 12px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); background: none; cursor: pointer; }
+aside .filters button.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+aside ol { list-style: none; margin: 0; padding: 0; }
+aside li button { display: flex; gap: 10px; width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--line); background: none; padding: 9px 12px; cursor: pointer; align-items: flex-start; }
+aside li button:hover { background: var(--bg); }
+aside li button.cur { background: var(--accent-soft); }
+.dot { flex: none; width: 10px; height: 10px; border-radius: 50%; margin-top: 6px; border: 1.5px solid var(--muted); }
+.dot.yes { background: var(--yes); border-color: var(--yes); } .dot.no { background: var(--no); border-color: var(--no); } .dot.unsure { background: var(--unsure); border-color: var(--unsure); }
+.li-t { font-size: 13px; line-height: 1.35; } .li-t b { font-weight: 600; } .li-t span { color: var(--muted); }
+main { padding: 28px clamp(16px, 4vw, 48px) 60px; max-width: 920px; }
+.meta { color: var(--muted); font-size: 13px; }
+h2 { font-size: 22px; line-height: 1.3; margin: 6px 0 4px; }
+.links { display: flex; gap: 10px; margin: 10px 0 18px; flex-wrap: wrap; }
+.links a { color: var(--accent); font-size: 13px; text-decoration: none; border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; }
+.abstract { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; white-space: pre-wrap; }
+.abstract.empty { color: var(--muted); font-style: italic; }
+.q { margin: 24px 0 10px; font-weight: 650; }
+.def { font-size: 13px; color: var(--muted); margin: -4px 0 12px; }
+.choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.choice { padding: 14px 10px; border-radius: var(--radius); border: 1.5px solid var(--line); background: var(--panel); cursor: pointer; font-weight: 600; }
+.choice kbd { font: 11px ui-monospace, monospace; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; margin-left: 6px; }
+.choice.yes.on { border-color: var(--yes); background: var(--yes-soft); color: var(--yes); }
+.choice.no.on { border-color: var(--no); background: var(--no-soft); color: var(--no); }
+.choice.unsure.on { border-color: var(--unsure); background: var(--unsure-soft); color: var(--unsure); }
+textarea { width: 100%; min-height: 64px; margin-top: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 10px 12px; resize: vertical; }
+.nav { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; gap: 10px; }
+.status { font-size: 13px; color: var(--muted); min-height: 20px; }
+details { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 14px; }
+summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+dl { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; font-size: 13px; margin: 10px 0 0; }
+dt { color: var(--muted); } dd { margin: 0; }
+.login { max-width: 400px; margin: 10vh auto; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 28px; }
+.login h1 { font-size: 20px; margin: 0 0 6px; } .login p { color: var(--muted); margin: 0 0 18px; font-size: 14px; }
+.login label { display: block; font-size: 13px; font-weight: 600; margin: 12px 0 4px; }
+.login select, .login input { width: 100%; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); }
+.login .btn { width: 100%; margin-top: 18px; padding: 10px; }
+.err { color: var(--no); font-size: 13px; min-height: 18px; margin-top: 10px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 16px 0 24px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+.card .v { font-size: 26px; font-weight: 700; } .card .k { font-size: 12px; color: var(--muted); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+tr.dis td { background: var(--no-soft); }
+.tag { font-weight: 600; } .tag.yes { color: var(--yes); } .tag.no { color: var(--no); } .tag.unsure { color: var(--unsure); }
+.hidden { display: none !important; }
+@media (max-width: 760px) {
+  .wrap { grid-template-columns: 1fr; }
+  aside { position: static; max-height: 260px; border-right: 0; border-bottom: 1px solid var(--line); }
+  header { flex-wrap: wrap; gap: 8px; padding: 10px 16px; } .bar { width: 80px; }
+  main { padding: 20px 16px 48px; }
+  .choices { grid-template-columns: 1fr; }
+  dl { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<section id="login" class="login hidden">
+  <h1>RL paper check</h1>
+  <p>Both authors independently check whether each of the 50 most-cited studies really uses reinforcement learning. You cannot see the other reviewer's answers until you have both finished.</p>
+  <form id="loginForm">
+    <label for="who">Reviewer</label>
+    <select id="who" required>
+      <option value="gaurab">Gaurab Baral</option>
+      <option value="nityashree">Nityashree Vangala</option>
+    </select>
+    <label for="code">Access code</label>
+    <input id="code" type="password" autocomplete="current-password" required>
+    <button class="btn primary" type="submit">Start</button>
+    <div class="err" id="loginErr"></div>
+  </form>
+</section>
+
+<div id="app" class="hidden">
+  <header>
+    <h1>RL paper check</h1>
+    <span class="pill" id="who-label"></span>
+    <span class="sp"></span>
+    <span class="pill" id="progress"></span>
+    <button class="btn" id="resultsBtn">Results</button>
+    <button class="btn" id="logout">Sign out</button>
+  </header>
+  <div class="wrap">
+    <aside>
+      <div class="filters" id="filters">
+        <button data-f="all" class="on">All</button><button data-f="todo">To do</button><button data-f="unsure">Unsure</button><button data-f="no">No</button>
+      </div>
+      <ol id="list"></ol>
+    </aside>
+    <main id="paper"></main>
+    <main id="results" class="hidden"></main>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const LABEL = { yes: "Yes, uses RL", no: "No RL", unsure: "Unsure" };
+let papers = [], mine = {}, state = null, cur = 0, filter = "all";
+let session = null;
+try { session = JSON.parse(sessionStorage.getItem("rlcheck") || "null"); } catch {}
+
+async function api(path, opts = {}) {
+  const r = await fetch(path, { ...opts, headers: { "Content-Type": "application/json", "x-reviewer": session.who, "x-access-code": session.code, ...(opts.headers || {}) } });
+  if (r.status === 401) { signOut("Wrong reviewer or access code."); throw new Error("401"); }
+  if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || r.statusText);
+  return r;
+}
+
+function signOut(msg = "") {
+  try { sessionStorage.removeItem("rlcheck"); } catch {}
+  session = null; $("#app").classList.add("hidden"); $("#login").classList.remove("hidden"); $("#loginErr").textContent = msg;
+}
+
+$("#loginForm").onsubmit = async e => {
+  e.preventDefault();
+  session = { who: $("#who").value, code: $("#code").value.trim() };
+  try { await start(); try { sessionStorage.setItem("rlcheck", JSON.stringify(session)); } catch {} }
+  catch (err) { if (err.message !== "401") $("#loginErr").textContent = err.message; }
+};
+$("#logout").onclick = () => signOut();
+
+async function load() {
+  state = await (await api("/api/decisions")).json();
+  mine = state.mine;
+}
+
+async function start() {
+  if (!papers.length) papers = await (await fetch("/papers.json")).json();
+  await load();
+  $("#login").classList.add("hidden"); $("#app").classList.remove("hidden");
+  $("#who-label").textContent = "Signed in as " + ($("#who").querySelector(`[value=${session.who}]`) || {}).textContent;
+  const first = papers.findIndex(p => !mine[p.id]);
+  cur = first < 0 ? 0 : first;
+  renderAll();
+}
+
+function renderProgress() {
+  const n = Object.keys(mine).length, other = Object.entries(state.progress).find(([k]) => k !== session.who);
+  $("#progress").innerHTML = `You: ${n}/${state.total}<span class="bar"><i style="width:${100 * n / state.total}%"></i></span> &nbsp; Other reviewer: ${other ? other[1] : 0}/${state.total}`;
+}
+
+function renderList() {
+  const show = p => filter === "all" || (filter === "todo" ? !mine[p.id] : mine[p.id]?.decision === filter);
+  $("#list").innerHTML = papers.map((p, i) => show(p) ? `<li><button data-i="${i}" class="${i === cur ? "cur" : ""}">
+    <span class="dot ${mine[p.id]?.decision || ""}"></span>
+    <span class="li-t"><b>#${p.rank} ${esc(p.name)}</b> <span>${p.year}</span><br>${esc(p.title)}</span></button></li>` : "").join("");
+}
+$("#list").onclick = e => { const b = e.target.closest("button[data-i]"); if (b) { cur = +b.dataset.i; showPaper(); } };
+$("#filters").onclick = e => { const b = e.target.closest("button[data-f]"); if (!b) return; filter = b.dataset.f;
+  document.querySelectorAll("#filters button").forEach(x => x.classList.toggle("on", x === b)); renderList(); };
+
+function renderPaper() {
+  const p = papers[cur], d = mine[p.id];
+  $("#paper").innerHTML = `
+    <div class="meta">#${p.rank} of 50 · ${p.citations} citations · ${p.year} · ${esc(p.venue)}</div>
+    <h2>${esc(p.title)}</h2>
+    <div class="meta">${esc(p.name)}</div>
+    <div class="links">${p.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join("")}</div>
+    <div class="abstract ${p.abstract ? "" : "empty"}">${p.abstract ? esc(p.abstract) : "No abstract on file. Open the DOI or Scholar link to read the paper."}</div>
+    <div class="q">Does this study use reinforcement learning to control congestion?</div>
+    <div class="def">Count it as RL if a learned policy is trained from reward or from an expert: deep RL, Q-learning, bandits, offline RL, multi-agent RL, or imitation learning. Count it as no RL if learning is only supervised prediction, or there is no learning at all.</div>
+    <div class="choices">
+      ${["yes", "no", "unsure"].map((k, i) => `<button class="choice ${k} ${d?.decision === k ? "on" : ""}" data-k="${k}">${LABEL[k]}<kbd>${"YNU"[i]}</kbd></button>`).join("")}
+    </div>
+    <textarea id="note" placeholder="Note (optional): why, which section, what the RL part is…">${esc(d?.note || "")}</textarea>
+    <div class="nav">
+      <button class="btn" id="prev">← Previous</button>
+      <span class="status" id="status">${d ? "Saved " + new Date(d.updated_at).toLocaleString() : ""}</span>
+      <button class="btn" id="next">Next →</button>
+    </div>
+    <details><summary>Show how we coded it in the survey</summary>
+      <dl>
+        <dt>Method</dt><dd>${esc(p.coded.method || "—")}</dd>
+        <dt>Family</dt><dd>${esc(p.coded.family || "—")}</dd>
+        <dt>Action</dt><dd>${esc(p.coded.action || "—")}</dd>
+        <dt>Setting</dt><dd>${esc(p.coded.setting || "—")}</dd>
+        <dt>Evaluation</dt><dd>${esc(p.coded.level || "—")}</dd>
+      </dl>
+    </details>`;
+  $("#paper").querySelectorAll(".choice").forEach(b => b.onclick = () => save(b.dataset.k, true));
+  $("#note").onchange = () => mine[p.id] && save(mine[p.id].decision, false);
+  $("#prev").onclick = () => go(-1); $("#next").onclick = () => go(1);
+}
+
+async function save(k, advance) {
+  const p = papers[cur], note = $("#note").value;
+  $("#status").textContent = "Saving…";
+  try {
+    await api("/api/decisions", { method: "POST", body: JSON.stringify({ paper_id: p.id, decision: k, note }) });
+    mine[p.id] = { decision: k, note, updated_at: new Date().toISOString() };
+    state.progress[session.who] = Object.keys(mine).length;
+    renderProgress(); renderList();
+    if (advance) { const nxt = papers.findIndex((q, i) => i > cur && !mine[q.id]); if (nxt >= 0) { cur = nxt; return showPaper(); } }
+    renderPaper();
+  } catch (e) { if (e.message !== "401") $("#status").textContent = "Not saved: " + e.message; }
+}
+
+function go(dx) { cur = (cur + dx + papers.length) % papers.length; showPaper(); }
+function showPaper() { $("#results").classList.add("hidden"); $("#paper").classList.remove("hidden"); renderPaper(); renderList(); $("#paper").scrollIntoView({ block: "start" }); }
+function renderAll() { renderProgress(); renderList(); renderPaper(); }
+
+document.addEventListener("keydown", e => {
+  if ($("#app").classList.contains("hidden") || /TEXTAREA|INPUT|SELECT/.test(document.activeElement.tagName)) return;
+  const k = { y: "yes", n: "no", u: "unsure" }[e.key.toLowerCase()];
+  if (k && !$("#paper").classList.contains("hidden")) save(k, true);
+  if (e.key === "ArrowRight") go(1); if (e.key === "ArrowLeft") go(-1);
+});
+
+$("#resultsBtn").onclick = async () => {
+  await load(); renderProgress();
+  $("#paper").classList.add("hidden"); const R = $("#results"); R.classList.remove("hidden");
+  if (!state.revealed) {
+    const pr = state.progress;
+    R.innerHTML = `<h2>Results are hidden until you both finish</h2>
+      <p class="meta">So that neither of you is influenced by the other, answers stay blind until both reviewers have decided all ${state.total} papers.</p>
+      <div class="cards">${Object.entries(pr).map(([k, n]) => `<div class="card"><div class="v">${n}/${state.total}</div><div class="k">${k === session.who ? "You" : "Other reviewer"}</div></div>`).join("")}</div>
+      <button class="btn" onclick="showPaper()">Back to papers</button>`;
+    return;
+  }
+  const s = state.results.stats, ids = Object.keys(state.results.papers);
+  const [a, b] = ["gaurab", "nityashree"];
+  const rows = papers.filter(p => ids.includes(p.id)).map(p => { const r = state.results.papers[p.id]; return { p, A: r[a], B: r[b], dis: r[a].decision !== r[b].decision }; });
+  const dis = rows.filter(r => r.dis).length;
+  R.innerHTML = `<h2>Agreement</h2>
+    <div class="cards">
+      <div class="card"><div class="v">${(100 * s.agreement).toFixed(0)}%</div><div class="k">Raw agreement (${s.n} papers)</div></div>
+      <div class="card"><div class="v">${s.kappa.toFixed(2)}</div><div class="k">Cohen's κ</div></div>
+      <div class="card"><div class="v">${dis}</div><div class="k">Disagreements to discuss</div></div>
+      <div class="card"><div class="v">${rows.filter(r => r.A.decision === "yes" && r.B.decision === "yes").length}</div><div class="k">Both say RL</div></div>
+    </div>
+    <p><button class="btn" id="dl">Download CSV</button> <button class="btn" onclick="showPaper()">Back to papers</button></p>
+    <table><thead><tr><th>#</th><th>Study</th><th>Gaurab</th><th>Nityashree</th></tr></thead><tbody>
+    ${rows.sort((x, y) => y.dis - x.dis || x.p.rank - y.p.rank).map(r => `<tr class="${r.dis ? "dis" : ""}"><td>${r.p.rank}</td><td><b>${esc(r.p.name)}</b><br><span class="meta">${esc(r.p.title)}</span></td>
+      <td><span class="tag ${r.A.decision}">${LABEL[r.A.decision]}</span><br><span class="meta">${esc(r.A.note)}</span></td>
+      <td><span class="tag ${r.B.decision}">${LABEL[r.B.decision]}</span><br><span class="meta">${esc(r.B.note)}</span></td></tr>`).join("")}
+    </tbody></table>`;
+  $("#dl").onclick = async () => {
+    const blob = await (await api("/api/export")).blob();
+    const u = URL.createObjectURL(blob), a = Object.assign(document.createElement("a"), { href: u, download: "rl_verification.csv" });
+    a.click(); URL.revokeObjectURL(u);
+  };
+};
+
+function esc(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]); }
+
+if (session) { $("#who").value = session.who; start().catch(() => signOut()); } else signOut();
+</script>
+</body>
+</html>

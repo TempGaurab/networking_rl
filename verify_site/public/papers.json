@@ -1,0 +1,1432 @@
+[
+ {
+  "id": "ST015",
+  "rank": 1,
+  "name": "Aurora",
+  "title": "A Deep Reinforcement Learning Perspective on Internet Congestion Control",
+  "year": "2019",
+  "venue": "International Conference on Machine Learning",
+  "citations": 497,
+  "abstract": "",
+  "abstract_source": "",
+  "links": [
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=A%20Deep%20Reinforcement%20Learning%20Perspective%20on%20Internet%20Congestion%20Control"
+   }
+  ],
+  "coded": {
+   "method": "PPO",
+   "family": "PG",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST046",
+  "rank": 2,
+  "name": "Orca",
+  "title": "Classic Meets Modern",
+  "year": "2020",
+  "venue": "ACM SIGCOMM Conference (SIGCOMM)",
+  "citations": 337,
+  "abstract": "These days, taking the revolutionary approach of using clean-slate learning-based designs to completely replace the classic congestion control schemes for the Internet is gaining popularity. However, we argue that current clean-slate learning-based techniques bring practical issues and concerns such as overhead, convergence issues, and low performance over unseen network conditions to the table. To address these issues, we take a pragmatic and evolutionary approach combining classic congestion control strategies and advanced modern deep reinforcement learning (DRL) techniques and introduce a novel hybrid congestion control for the Internet named Orca1. Through extensive experiments done over global testbeds on the Internet and various locally emulated network conditions, we demonstrate that Orca is adaptive and achieves consistent high performance in different network conditions, while it can significantly alleviate the issues and problems of its clean-slate learning-based counterparts.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3387514.3405892"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Classic%20Meets%20Modern"
+   }
+  ],
+  "coded": {
+   "method": "TD3 (distributed actors)",
+   "family": "AC",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST007",
+  "rank": 3,
+  "name": "Pantheon (Indigo)",
+  "title": "Pantheon: the training ground for internet congestion-control research",
+  "year": "2018",
+  "venue": "USENIX Annual Technical Conference",
+  "citations": 313,
+  "abstract": "Internet transport algorithms are foundational to the performance of network applications. But a number of practical challenges make it difficult to evaluate new ideas and algorithms in a reproducible manner. We present the Pantheon, a system that addresses this by serving as a community training ground for research on Internet transport protocols and congestion control (https://pantheon.stanford.edu). It allows network researchers to benefit from and contribute to a common set of benchmark algorithms, a shared evaluation platform, and a public archive of results.\r\n\r\nWe present three results showing the Pantheon's value as a research tool. First, we describe a measurement study from more than a year of data, indicating that congestion-control schemes vary dramatically in their relative performance as a function of path dynamics. Second, the Pantheon generates calibrated network emulators that capture the diverse performance of real Internet paths. These enable reproducible and rapid experiments that closely approximate real-world results. Finally, we describe the Pantheon's contribution to developing new congestion-control schemes, two of which were published at USENIX NSDI 2018, as well as data-driven neural-network-based congestion-control schemes that can be trained to achieve good performance over the real Internet.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Pantheon%3A%20the%20training%20ground%20for%20internet%20congestion-control%20research"
+   }
+  ],
+  "coded": {
+   "method": "imitation learning from emulator oracles (Indigo, LSTM)",
+   "family": "IL",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "cwnd",
+   "contribution": "framework"
+  }
+ },
+ {
+  "id": "ST011",
+  "rank": 4,
+  "name": "QTCP",
+  "title": "QTCP: Adaptive Congestion Control with Reinforcement Learning",
+  "year": "2018",
+  "venue": "IEEE Transactions on Network Science and Engineering",
+  "citations": 201,
+  "abstract": "Next generation network access technologies and Internet applications have increased the challenge of providing satisfactory quality of experience for users with traditional congestion control protocols. Efforts on optimizing the performance of TCP by modifying the core congestion control method depending on specific network architectures or apps do not generalize well under a wide range of network scenarios. This limitation arises from the rule-based design principle, where the performance is linked to a pre-decided mapping between the observed state of the network to the corresponding actions. Therefore, these protocols are unable to adapt their behavior in new environments or learn from experience for better performance. We address this problem by integrating a reinforcement-based Q-learning framework with TCP design in our approach called QTCP. QTCP enables senders to gradually learn the optimal congestion control policy in an on-line manner. QTCP does not need hard-coded rules, and can therefore generalize to a variety of different networking scenarios. Moreover, we develop a generalized Kanerva coding function approximation algorithm, which reduces the computation complexity of value functions and the searchable size of the state space. We show that QTCP outperforms the traditional rule-based TCP by providing 59.5 percent higher throughput while maintaining low transmission latency.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tnse.2018.2835758"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=QTCP%3A%20Adaptive%20Congestion%20Control%20with%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "Q-learning + generalized Kanerva coding",
+   "family": "TAB",
+   "setting": "Internet / generic",
+   "level": "Not reported",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST105",
+  "rank": 5,
+  "name": "Genet",
+  "title": "Genet",
+  "year": "2022",
+  "venue": "ACM SIGCOMM Conference (SIGCOMM)",
+  "citations": 156,
+  "abstract": "As deep reinforcement learning (RL) showcases its strengths in networking, its pitfalls are also coming to the public's attention. Training on a wide range of network environments leads to suboptimal performance, whereas training on a narrow distribution of environments results in poor generalization.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3544216.3544243"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Genet"
+   }
+  ],
+  "coded": {
+   "method": "curriculum learning promoting environments where RL lags rule-based baselines",
+   "family": "PG",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "rate",
+   "contribution": "method"
+  }
+ },
+ {
+  "id": "ST035",
+  "rank": 6,
+  "name": "TCP-RL",
+  "title": "Dynamic TCP Initial Windows and Congestion Control Schemes Through Reinforcement Learning",
+  "year": "2019",
+  "venue": "IEEE Journal on Selected Areas in Communications",
+  "citations": 153,
+  "abstract": "Despite many years of improvements to it, TCP still suffers from an unsatisfactory performance. For services dominated by short flows (e.g., web search and e-commerce), TCP suffers from the flow startup problem and cannot fully utilize the available bandwidth in the modern Internet: TCP starts from a conservative and static initial window (IW, 2-4 or 10), while most of the web flows are too short to converge to the best sending rate before the session ends. For services dominated by long flows (e.g., video streaming and file downloading), the congestion control (CC) scheme manually and statically configured might not offer the best performance for the latest network conditions. To address these two challenges, we propose TCP-RL, which uses reinforcement learning (RL) techniques to dynamically configure IW and CC in order to improve the performance of TCP flow transmission. Basing on the latest network conditions observed at the server side of a web service, TCP-RL dynamically configures a suitable IW for short flows through group-based RL, and dynamically configures a suitable CC scheme for long flows through deep RL. Our extensive experiments show that for short flows, TCP-RL can reduce the average transmission time by about 23%; and for long flows, compared with the performance of 14 CC schemes, TCP-RL's performance ranks top 5 for about 85% of the 288 given static network conditions, whereas for about 90% of conditions, its performance drops by less than 12% compared with that of the best-performing CC schemes for the same network conditions.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/jsac.2019.2904350"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Dynamic%20TCP%20Initial%20Windows%20and%20Congestion%20Control%20Schemes%20Through%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "group-based RL (IW) + deep RL (CCA selection among 14)",
+   "family": "BANDIT+DQN",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "param;select",
+   "contribution": "deploy"
+  }
+ },
+ {
+  "id": "ST020",
+  "rank": 7,
+  "name": "DRL-CC (MPTCP)",
+  "title": "Experience-Driven Congestion Control: When Multi-Path TCP Meets Deep Reinforcement Learning",
+  "year": "2019",
+  "venue": "IEEE Journal on Selected Areas in Communications",
+  "citations": 147,
+  "abstract": "In this paper, we aim to study networking problems from a whole new perspective by leveraging emerging deep learning, to develop an experience-driven approach, which enables a network or a protocol to learn the best way to control itself from its own experience (e.g., runtime statistics data), just as a human learns a skill. We present design, implementation and evaluation of a deep reinforcement learning (DRL)-based control framework, DRL-CC (DRL for Congestion Control), which realizes our experience-driven design philosophy on multi-path TCP (MPTCP) congestion control. DRL-CC utilizes a single (instead of multiple independent) agent to dynamically and jointly perform congestion control for all active MPTCP flows on an end host with the objective of maximizing the overall utility. The novelty of our design is to utilize a flexible recurrent neural network, LSTM, under a DRL framework for learning a representation for all active flows and dealing with their dynamics. Moreover, we, for the first time, integrate the above LSTM-based representation network into an actor-critic framework for continuous (congestion) control, which leverages the emerging deterministic policy gradient to train critic, actor, and LSTM networks in an end-to-end manner. We implemented DRL-CC based on the MPTCP implementation in the Linux kernel. The experimental results show that 1) DRL-CC consistently and significantly outperforms a few well-known MPTCP congestion control algorithms in terms of goodput without sacrificing fairness, 2) it is flexible and robust to highly-dynamic network environments with time-varying flows, and 3) it is friendly to regular TCP.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/jsac.2019.2904358"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Experience-Driven%20Congestion%20Control%3A%20When%20Multi-Path%20TCP%20Meets%20Deep%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "deterministic policy gradient actor-critic + LSTM",
+   "family": "AC",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST045",
+  "rank": 8,
+  "name": "OnRL",
+  "title": "OnRL",
+  "year": "2020",
+  "venue": "ACM Annual International Conference on Mobile Computing and Networking (MobiCom)",
+  "citations": 145,
+  "abstract": "Machine learning models, particularly reinforcement learning (RL), have demonstrated great potential in optimizing video streaming applications. However, the state-of-the-art solutions are limited to an \"offline learning\" paradigm, i.e., the RL models are trained in simulators and then are operated in real networks. As a result, they inevitably suffer from the simulation-to-reality gap, showing far less satisfactory performance under real conditions compared with simulated environment. In this work, we close the gap by proposing OnRL, an online RL framework for real-time mobile video telephony. OnRL puts many individual RL agents directly into the video telephony system, which make video bitrate decisions in real-time and evolve their models over time. OnRL then aggregates these agents to form a high-level RL model that can help each individual to react to unseen network conditions. Moreover, OnRL incorporates novel mechanisms to handle the adverse impacts of inherent video traffic dynamics, and to eliminate risks of quality degradation caused by the RL model's exploration attempts. We implement OnRL on a mainstream operational video telephony system, Alibaba Taobao-live. In a month-long evaluation with 543 hours of video sessions from 151 real-world mobile users, OnRL outperforms the prior algorithms significantly, reducing video stalling rate by 14.22% while maintaining similar video quality.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3372224.3419186"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=OnRL"
+   }
+  ],
+  "coded": {
+   "method": "online RL: per-user agents, aggregated model, safeguards against risky exploration",
+   "family": "NR",
+   "setting": "Wireless & cellular",
+   "level": "Real network",
+   "action": "bitrate",
+   "contribution": "deploy"
+  }
+ },
+ {
+  "id": "ST043",
+  "rank": 9,
+  "name": "Metis",
+  "title": "Interpreting Deep Learning-Based Networking Systems",
+  "year": "2020",
+  "venue": "ACM SIGCOMM Conference (SIGCOMM)",
+  "citations": 141,
+  "abstract": "While many deep learning (DL)-based networking systems have demonstrated superior performance, the underlying Deep Neural Networks (DNNs) remain blackboxes and stay uninterpretable for network operators. The lack of interpretability makes DL-based networking systems prohibitive to deploy in practice. In this paper, we propose Metis, a framework that provides interpretability for two general categories of networking problems spanning local and global control. Accordingly, Metis introduces two different interpretation methods based on decision tree and hypergraph, where it converts DNN policies to interpretable rule-based controllers and highlight critical components based on analysis over hypergraph. We evaluate Metis over two categories of state-of-the-art DL-based networking systems and show that Metis provides human-readable interpretations while preserving nearly no degradation in performance. We further present four concrete use cases of Metis, showcasing how Metis helps network operators to design, debug, deploy, and ad-hoc adjust DL-based networking systems.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3387514.3405859"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Interpreting%20Deep%20Learning-Based%20Networking%20Systems"
+   }
+  ],
+  "coded": {
+   "method": "decision-tree and hypergraph interpretation of DL networking systems",
+   "family": "",
+   "setting": "Internet / generic",
+   "level": "Simulation",
+   "action": "",
+   "contribution": "analysis"
+  }
+ },
+ {
+  "id": "ST073",
+  "rank": 10,
+  "name": "Owl",
+  "title": "Owl: Congestion Control with Partially Invisible Networks via Reinforcement Learning",
+  "year": "2021",
+  "venue": "IEEE Conference on Computer Communications (INFOCOM)",
+  "citations": 139,
+  "abstract": "Years of research on transport protocols have not solved the tussle between in-network and end-to-end congestion control. This debate is due to the variance of conditions and assumptions in different network scenarios, e.g., cellular versus data center networks. Recently, the community has proposed a few transport protocols driven by machine learning, nonetheless limited to end-to-end approaches.In this paper, we present Owl, a transport protocol based on reinforcement learning, whose goal is to select the proper congestion window learning from end-to-end features and network signals, when available. We show that our solution converges to a fair resource allocation after the learning overhead. Our kernel implementation, deployed over emulated and large scale virtual network testbeds, outperforms all benchmark solutions based on end-to-end or in-network congestion control.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/infocom42981.2021.9488851"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Owl%3A%20Congestion%20Control%20with%20Partially%20Invisible%20Networks%20via%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "DQN in a Linux kernel module",
+   "family": "DQN",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST009",
+  "rank": 11,
+  "name": "QARC",
+  "title": "QARC",
+  "year": "2018",
+  "venue": "ACM International Conference on Multimedia (ACM MM)",
+  "citations": 114,
+  "abstract": "Real-time video streaming is now one of the main applications in all network environments. Due to the fluctuation of throughput under various network conditions, how to choose a proper bitrate adaptively has become an upcoming and interesting issue. To tackle this problem, most proposed rate control methods work for providing high video bitrates instead of video qualities. Nevertheless, we notice that there exists a trade-off between sending bitrate and video quality, which motivates us to focus on how to reach a balance between them.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3240508.3240545"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=QARC"
+   }
+  ],
+  "coded": {
+   "method": "A3C + video-quality prediction network",
+   "family": "PG",
+   "setting": "Internet / generic",
+   "level": "Simulation",
+   "action": "bitrate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST033",
+  "rank": 12,
+  "name": "SmartCC",
+  "title": "SmartCC: A Reinforcement Learning Approach for Multipath TCP Congestion Control in Heterogeneous Networks",
+  "year": "2019",
+  "venue": "IEEE Journal on Selected Areas in Communications",
+  "citations": 113,
+  "abstract": "The Multipath TCP (MPTCP) protocol has been standardized by the IETF as an extension of conventional TCP, which enables multi-homed devices to establish multiple paths for simultaneous data transmission. Congestion control is a fundamental mechanism for the design and implementation of MPTCP. Due to the diverse QoS characteristics of heterogeneous links, existing multipath congestion control mechanisms suffer from a number of performance problems such as bufferbloat, suboptimal bandwidth usage, etc. In this paper, we propose a learning-based multipath congestion control approach called SmartCC to deal with the diversities of multiple communication path in heterogeneous networks. SmartCC adopts an asynchronous reinforcement learning framework to learn a set of congestion rules, which allows the sender to observe the environment and take actions to adjust the subflows' congestion windows adaptively to fit different network situations. To deal with the problem of infinite states in high-dimensional space, we propose a hierarchical tile coding algorithm for state aggregation and a function estimation approach for Q-learning, which can derive the optimal policy efficiently. Due to the asynchronous design of SmartCC, the processes of model training and execution are decoupled, and the learning process will not introduce extra delay and overhead on the decision making process in MPTCP congestion control. We conduct extensive experiments for performance evaluation, which show that SmartCC improves the aggregate throughput significantly and outperforms the state-of-the-art mechanisms on a variety of performance metrics.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/jsac.2019.2933761"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=SmartCC%3A%20A%20Reinforcement%20Learning%20Approach%20for%20Multipath%20TCP%20Congestion%20Control%20in%20Heterogeneous%20Networks"
+   }
+  ],
+  "coded": {
+   "method": "Q-learning + hierarchical tile coding (asynchronous)",
+   "family": "TAB",
+   "setting": "Wireless & cellular",
+   "level": "Not reported",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST179",
+  "rank": 13,
+  "name": "Sage",
+  "title": "Computers Can Learn from the Heuristic Designs and Master Internet Congestion Control",
+  "year": "2023",
+  "venue": "ACM SIGCOMM Conference (SIGCOMM)",
+  "citations": 108,
+  "abstract": "In this work, for the first time, we demonstrate that computers can automatically learn from observing the heuristic efforts of the last four decades, stand on the shoulders of the existing Internet congestion control (CC) schemes, and discover a better-performing one. To that end, we address many different practical challenges, from how to generalize representation of various existing CC schemes to serious challenges regarding learning from a vast pool of policies in the complex CC domain and introduce Sage. Sage is the first purely data-driven Internet CC design that learns a better scheme by harnessing the existing solutions. We compare Sage's performance with the state-of-the-art CC schemes through extensive evaluations on the Internet and in controlled environments. The results suggests that Sage has learned a better-performing policy. While there are still many unanswered questions, we hope our data-driven framework can pave the way for a more sustainable design strategy.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3603269.3604838"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Computers%20Can%20Learn%20from%20the%20Heuristic%20Designs%20and%20Master%20Internet%20Congestion%20Control"
+   }
+  ],
+  "coded": {
+   "method": "offline RL learning from a pool of existing heuristics' trajectories",
+   "family": "OFF",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST016",
+  "rank": 14,
+  "name": "Concerto",
+  "title": "Learning to Coordinate Video Codec with Transport Protocol for Mobile Video Telephony",
+  "year": "2019",
+  "venue": "ACM Annual International Conference on Mobile Computing and Networking (MobiCom)",
+  "citations": 101,
+  "abstract": "Despite the pervasive use of real-time video telephony services, the users' quality of experience (QoE) remains unsatisfactory, especially over the mobile Internet. Previous work studied the problem via controlled experiments, while a systematic and in-depth investigation in the wild is still missing. To bridge the gap, we conduct a large-scale measurement campaign on \\appname, an operational mobile video telephony service. Our measurement logs fine-grained performance metrics over 1 million video call sessions. Our analysis shows that the application-layer video codec and transport-layer protocols remain highly uncoordinated, which represents one major reason for the low QoE. We thus propose \\name, a machine learning based framework to resolve the issue. Instead of blindly following the transport layer's estimation of network capacity, \\name reviews historical logs of both layers, and extracts high-level features of codec/network dynamics, based on which it determines the highest bitrates for forthcoming video frames without incurring congestion. To attain the ability, we train \\name with the aforementioned massive data traces using a custom-designed imitation learning algorithm, which enables \\name to learn from past experience. We have implemented and incorporated \\name into \\appname. Our experiments show that \\name outperforms state-of-the-art solutions, improving video quality while reducing stalling time by multi-folds under various practical scenarios.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3300061.3345430"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Learning%20to%20Coordinate%20Video%20Codec%20with%20Transport%20Protocol%20for%20Mobile%20Video%20Telephony"
+   }
+  ],
+  "coded": {
+   "method": "custom imitation learning on >1M logged sessions",
+   "family": "IL",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "bitrate",
+   "contribution": "deploy"
+  }
+ },
+ {
+  "id": "ST087",
+  "rank": 15,
+  "name": "whiRL 2.0",
+  "title": "Verifying learning-augmented systems",
+  "year": "2021",
+  "venue": "ACM SIGCOMM Conference (SIGCOMM)",
+  "citations": 100,
+  "abstract": "The application of deep reinforcement learning (DRL) to computer and networked systems has recently gained significant popularity. However, the obscurity of decisions by DRL policies renders it hard to ascertain that learning-augmented systems are safe to deploy, posing a significant obstacle to their real-world adoption. We observe that specific characteristics of recent applications of DRL to systems contexts give rise to an exciting opportunity: applying formal verification to establish that a given system provably satisfies designer/user-specified requirements, or to expose concrete counter-examples. We present whiRL, a platform for verifying DRL policies for systems, which combines recent advances in the verification of deep neural networks with scalable model checking techniques. To exemplify its usefulness, we employ whiRL to verify natural equirements from recently introduced learning-augmented systems for three real-world environments: Internet congestion control, adaptive video streaming, and job scheduling in compute clusters. Our evaluation shows that whiRL is capable of guaranteeing that natural requirements from these systems are satisfied, and of exposing specific scenarios in which other basic requirements are not.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3452296.3472936"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Verifying%20learning-augmented%20systems"
+   }
+  ],
+  "coded": {
+   "method": "DNN verification + model checking of DRL policies",
+   "family": "",
+   "setting": "Internet / generic",
+   "level": "N/A",
+   "action": "",
+   "contribution": "analysis"
+  }
+ },
+ {
+  "id": "ST070",
+  "rank": 16,
+  "name": "Loki",
+  "title": "Loki",
+  "year": "2021",
+  "venue": "ACM Annual International Conference on Mobile Computing and Networking (MobiCom)",
+  "citations": 95,
+  "abstract": "Maximizing the quality of experience (QoE) for real-time video is a long-standing challenge. Traditional video transport protocols, represented by a few deterministic rules, can hardly adapt to the heterogeneous and highly dynamic modern Internet. Emerging learning-based algorithms have demonstrated potential to meet the challenge. However, our measurement study reveals an alarming long tail performance issue: these algorithms tend to be bottle-necked by occasional catastrophic events due to the built-in exploration mechanisms. In this work, we propose Loki, which improves the robustness of learning-based model by coherently integrating it with a rule-based algorithm. To enable integration at feature level, we first reverse-engineer the rule-based algorithm into an equivalent \"black-box\" neural network. Then, we design a dual-attention feature fusion mechanism to fuse it with a reinforcement learning model. We train Loki in a commercial real-time video system through online learning, and evaluate it over 101 million video sessions, in comparison to state-of-the-art rule-based and learning-based solutions. The results show that Loki improves not only the average but also the tail performance substantially (26.30% to 44.24% reduction of stall rate and 1.76% to 2.17% increase in video throughput at 95-percentile).",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3447993.3483259"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Loki"
+   }
+  ],
+  "coded": {
+   "method": "RL model fused with a reverse-engineered rule-based model (dual attention), trained online",
+   "family": "NR",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "bitrate",
+   "contribution": "deploy"
+  }
+ },
+ {
+  "id": "ST012",
+  "rank": 17,
+  "name": "RL-TCP",
+  "title": "Improving TCP Congestion Control with Machine Intelligence",
+  "year": "2018",
+  "venue": "ACM SIGCOMM Workshop on Network Meets AI & ML (NetAI)",
+  "citations": 91,
+  "abstract": "In a TCP/IP network, a key to ensure efficient and fair sharing of network resources among its users is the TCP congestion control (CC) scheme. Previously, the design of TCP CC schemes is based on hard-wiring of predefined actions to specific feedback signals from the network. However, as networks become more complex and dynamic, it becomes harder to design the optimal feedback-action mapping. Recently, learning-based TCP CC schemes have attracted much attention due to their strong capabilities to learn the actions from interacting with the network. In this paper, we design two learning-based TCP CC schemes for wired networks with under-buffered bottleneck links, a loss predictor (LP) based TCP CC (LP-TCP), and a reinforcement learning (RL) based TCP CC (RL-TCP). We implement both LP-TCP and RL-TCP in NS2. Compared to the existing NewReno and Q-learning based TCP, LP-TCP and RL-TCP both achieve a better tradeoff between throughput and delay, under various simulated network scenarios.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3229543.3229550"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Improving%20TCP%20Congestion%20Control%20with%20Machine%20Intelligence"
+   }
+  ],
+  "coded": {
+   "method": "Q-learning",
+   "family": "TAB",
+   "setting": "Internet / generic",
+   "level": "Simulation",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST036",
+  "rank": 18,
+  "name": "Verily",
+  "title": "Verifying Deep-RL-Driven Systems",
+  "year": "2019",
+  "venue": "ACM SIGCOMM Workshop on Network Meets AI & ML (NetAI)",
+  "citations": 83,
+  "abstract": "Deep reinforcement learning (RL) has recently been successfully applied to networking contexts including routing, flow scheduling, congestion control, packet classification, cloud resource management, and video streaming. Deep-RL-driven systems automate decision making, and have been shown to outperform state-of-the-art handcrafted systems in important domains. However, the (typical) non-explainability of decisions induced by the deep learning machinery employed by these systems renders reasoning about crucial system properties, including correctness and security, extremely difficult. We show that despite the obscurity of decision making in these contexts, verifying that deep-RL-driven systems adhere to desired, designer-specified behavior, is achievable. To this end, we initiate the study of formal verification of deep RL and present Verily, a system for verifying deep-RL-based systems that leverages recent advances in verification of deep neural networks. We employ Verily to verify recently-introduced deep-RL-driven systems for adaptive video streaming, cloud resource management, and Internet congestion control. Our results expose scenarios in which deep-RL-driven decision making yields undesirable behavior. We discuss guidelines for building deep-RL-driven systems that are both safer and easier to verify.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3341216.3342218"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Verifying%20Deep-RL-Driven%20Systems"
+   }
+  ],
+  "coded": {
+   "method": "formal verification of DRL policies",
+   "family": "",
+   "setting": "Internet / generic",
+   "level": "N/A",
+   "action": "",
+   "contribution": "analysis"
+  }
+ },
+ {
+  "id": "ST034",
+  "rank": 19,
+  "name": "TCP-Drinc",
+  "title": "TCP-Drinc: Smart Congestion Control Based on Deep Reinforcement Learning",
+  "year": "2019",
+  "venue": "IEEE Access",
+  "citations": 74,
+  "abstract": "As wired/wireless networks become more and more complex, the fundamental assumptions made by many existing TCP variants may not hold true anymore. In this paper, we develop a model-free, smart congestion control algorithm based on deep reinforcement learning, which has a high potential in dealing with the complex and dynamic network environment. We present TCP-Deep ReInforcement learNing-based Congestion control (Drinc) which learns from past experience in the form of a set of measured features to decide how to adjust the congestion window size. We present the TCP-Drinc design and validate its performance with extensive ns-3 simulations and comparison with five benchmark schemes.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/access.2019.2892046"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=TCP-Drinc%3A%20Smart%20Congestion%20Control%20Based%20on%20Deep%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "DQN with CNN+LSTM",
+   "family": "DQN",
+   "setting": "Internet / generic",
+   "level": "Simulation",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST040",
+  "rank": 20,
+  "name": "Eagle",
+  "title": "Eagle: Refining Congestion Control by Learning from the Experts",
+  "year": "2020",
+  "venue": "IEEE Conference on Computer Communications (INFOCOM)",
+  "citations": 64,
+  "abstract": "Traditional congestion control algorithms were designed with a hardwired heuristic mapping between packet- level events and predefined control actions in response to these events, and may fail to satisfy all the desirable performance goals as a result. In this paper, we seek to reconsider these fundamental goals in congestion control, and propose Eagle, a new congestion control algorithm to refine existing heuristics. Eagle takes advantage of expert knowledge from an existing algorithm, and uses deep reinforcement learning (DRL) to train a generalized model with the hope of learning from an expert. Learning by trial-and-error may not be as efficient as imitating a teacher; by the same token, DRL alone is not enough to guarantee good performance. In Eagle, we seek help from an expert congestion control algorithm, BBR, to help us train a long-short term memory (LSTM) neural network in the DRL agent, with the hope of making decisions that can be as good as or even better than the expert. With an extensive array of experiments, we discovered that Eagle is able to match and even outperform the performance of its teacher, and outperformed a large number of recent congestion control algorithms by a considerable margin.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/infocom41043.2020.9155250"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Eagle%3A%20Refining%20Congestion%20Control%20by%20Learning%20from%20the%20Experts"
+   }
+  ],
+  "coded": {
+   "method": "DRL with LSTM guided by BBR as expert",
+   "family": "IL+PG",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST060",
+  "rank": 21,
+  "name": "DQL-MPTCP",
+  "title": "Learning to Harness Bandwidth With Multipath Congestion Control and Scheduling",
+  "year": "2021",
+  "venue": "IEEE Transactions on Mobile Computing",
+  "citations": 61,
+  "abstract": "Multipath TCP (MPTCP) has emerged as a facilitator for harnessing and pooling available bandwidth in wireless/wireline communication networks and in data centers. Existing implementations of MPTCP such as, Linked Increase Algorithm (LIA), Opportunistic LIA (OLIA) and BAlanced LInked Adaptation (BALIA) include separate algorithms for congestion control and packet scheduling, with pre-selected control parameters. We propose a Deep Q-Learning (DQL) based framework for joint congestion control and packet scheduling for MPTCP. At the heart of the solution is an intelligent agent for interface, learning and actuation, which learns from experience optimal congestion control and scheduling mechanism using DQL techniques with policy gradients. We provide a rigorous stability analysis of system dynamics which provides important practical design insights. In addition, the proposed DQL-MPTCP algorithm utilizes the ‘recurrent neural network’ and integrates it with ‘long short-term memory’ for continuously i) learning dynamic behavior of subflows (paths) and ii) responding promptly to their behavior using prioritized experience replay. With extensive emulations, we show that the proposed DQL-based MPTCP algorithm outperforms MPTCP LIA, OLIA and BALIA algorithms. Moreover, the DQL-MPTCP algorithm is robust to time-varying network characteristics, and provides dynamic exploration and exploitation of paths.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tmc.2021.3085598"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Learning%20to%20Harness%20Bandwidth%20With%20Multipath%20Congestion%20Control%20and%20Scheduling"
+   }
+  ],
+  "coded": {
+   "method": "deep Q-learning with policy gradients, LSTM, prioritized replay",
+   "family": "DQN+AC",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "cwnd;split",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST112",
+  "rank": 22,
+  "name": "MOCC",
+  "title": "Multi-objective congestion control",
+  "year": "2022",
+  "venue": "",
+  "citations": 61,
+  "abstract": "Decades of research on Internet congestion control (CC) has produced a plethora of algorithms that optimize for different performance objectives. Applications face the challenge of choosing the most suitable algorithm based on their needs, and it takes tremendous efforts and expertise to customize CC algorithms when new demands emerge. In this paper, we explore a basic question: can we design a single CC algorithm to satisfy different objectives? We propose MOCC, the first multi-objective congestion control algorithm that attempts to address this challenge. The core of MOCC is a novel multi-objective reinforcement learning framework for CC that can automatically learn the correlations between different application requirements and the corresponding optimal control policies. Under this framework, MOCC further applies transfer learning to transfer the knowledge from past experience to new applications, quickly adapting itself to a new objective even if it is unforeseen. We provide both user-space and kernel-space implementation of MOCC. Real-world experiments and extensive simulations show that MOCC well supports multi-objective, competing or outperforming the best existing CC algorithms on individual objectives, and quickly adapting to new applications (e.g., 14.2x faster than prior work) without compromising old ones.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3492321.3519593"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Multi-objective%20congestion%20control"
+   }
+  ],
+  "coded": {
+   "method": "PPO with preference sub-network + transfer learning (user- and kernel-space)",
+   "family": "PG+MO",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST038",
+  "rank": 23,
+  "name": "DeepCC (Abbasloo et al.)",
+  "title": "Wanna Make Your TCP Scheme Great for Cellular Networks? Let Machines Do It for You!",
+  "year": "2020",
+  "venue": "IEEE Journal on Selected Areas in Communications",
+  "citations": 58,
+  "abstract": "Can we instead of designing yet another new TCP algorithm, design a TCP plug-in that can enable machines to automatically boost the performance of the existing/future TCP designs in cellular networks? We answer this question by introducing DeepCC. DeepCC leverages advanced deep reinforcement learning (DRL) techniques to let machines automatically learn how to steer throughput-oriented TCP algorithms toward achieving applications' desired delays in a highly dynamic network such as the cellular network. We used DeepCC plug-in to boost the performance of various old and new TCP schemes including TCP Cubic, Google's BBR, TCP Westwood, and TCP Illinois in cellular networks. Through both extensive trace-based evaluations and real-world experiments, we show that not only DeepCC can significantly improve the performance of TCP schemes, but also after accompanied by DeepCC, these schemes can outperform state-of-the-art TCP protocols including new clean-slate machine learning-based designs and the ones designed solely for cellular networks.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/jsac.2020.3036958"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Wanna%20Make%20Your%20TCP%20Scheme%20Great%20for%20Cellular%20Networks%3F%20Let%20Machines%20Do%20It%20for%20You%21"
+   }
+  ],
+  "coded": {
+   "method": "DDPG plug-in capping the cwnd of existing TCP",
+   "family": "AC",
+   "setting": "Wireless & cellular",
+   "level": "Real network",
+   "action": "param",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST066",
+  "rank": 24,
+  "name": "DeepCC (He et al., MPTCP)",
+  "title": "DeepCC: Multi-Agent Deep Reinforcement Learning Congestion Control for Multi-Path TCP Based on Self-Attention",
+  "year": "2021",
+  "venue": "IEEE Transactions on Network and Service Management",
+  "citations": 54,
+  "abstract": "With the development of the Internet of Things (IoT) and 5G, there are ubiquitous smart devices and network functions providing emerging network services efficiently and optimally through building many network connections based on WiFi, LTE/5G, Ethernet, and etc. The Multipath TCP (MPTCP) protocol that enables these devices to establish multiple paths for simultaneous data transmission, has been a widely used extension of standard TCP in smart devices and network functions. On the other hand, more heavy and time-varying traffic loads are generated in an MPTCP network, so that an efficient congestion control mechanism that schedules the traffic between multiple subflows and avoids congestion is highly required. In this paper, we propose a decentralized learning approach, DeepCC, to adapt to the volatile environments and realize the efficient congestion control. The Multi-Agent Deep Reinforcement Learning (MADRL) is used to learn a policy of congestion control for each subflow according to the real-time network states. To deal with the problem of the fixed state space and slow convergence, we adopt two self-attention mechanisms to receive the states and train the policy, respectively. Due to the asynchronous design of DeepCC, the learning process will not introduce extra delay and overhead on the decision-making process. Experiment results show that DeepCC consistently outperforms the well-known heuristic method and DRL-based MPTCP congestion control method in terms of goodput and jitter. Besides, DeepCC with the attention mechanism reduces convergence time by about 50% and increase goodput by about 80% compared with the commonly used structures of neural networks.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tnsm.2021.3093302"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=DeepCC%3A%20Multi-Agent%20Deep%20Reinforcement%20Learning%20Congestion%20Control%20for%20Multi-Path%20TCP%20Based%20on%20Self-Attention"
+   }
+  ],
+  "coded": {
+   "method": "multi-agent DRL with self-attention",
+   "family": "MARL",
+   "setting": "Wireless & cellular",
+   "level": "Not reported",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST051",
+  "rank": 25,
+  "name": "SDN actor-critic MPTCP for IoT",
+  "title": "A Software Defined Network Based Fuzzy Normalized Neural Adaptive Multipath Congestion Control for the Internet of Things",
+  "year": "2020",
+  "venue": "IEEE Transactions on Network Science and Engineering",
+  "citations": 53,
+  "abstract": "Multipath Transmission Control Protocol (MPTCP) enables multi-homed devices to establish multiple simultaneous routes for data transmission. Congestion Control (CC) is a fundamental mechanism for implementing and designing MPTCP. The Internet of Things (IoT) networks generate a massive volume of heterogeneous traffic with high dimensional states and diverse QoS characteristics. The existing MPTCP CC algorithms are unable to perform efficiently under highly mobile and dynamic IoT environments. We propose a novel model-free SDN-based adaptive actor-critic deep reinforcement learning framework based on a fuzzy normalized neural network to address the issue of CC for MPTCP in the IoT networks. In the proposed method, an agent can learn efficiently and better approximate the state-action value function of the actor and the action function of the critic to adjust the sub-flows congestion windows size adaptively according to the dynamic condition of a network. Simulation results show that the proposed scheme outperforms the state of the art schemes in terms of the goodput under highly-dynamic IoT environments.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tnse.2020.2991106"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=A%20Software%20Defined%20Network%20Based%20Fuzzy%20Normalized%20Neural%20Adaptive%20Multipath%20Congestion%20Control%20for%20the%20Internet%20of%20Things"
+   }
+  ],
+  "coded": {
+   "method": "actor-critic with fuzzy normalized NN",
+   "family": "AC",
+   "setting": "IoT, ad hoc & sensor",
+   "level": "Simulation",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST019",
+  "rank": 26,
+  "name": "DRL initial window for 5G MEC",
+  "title": "Adaptive Online Decision Method for Initial Congestion Window in 5G Mobile Edge Computing Using Deep Reinforcement Learning",
+  "year": "2019",
+  "venue": "IEEE Journal on Selected Areas in Communications",
+  "citations": 52,
+  "abstract": "Mobile edge computing provides users with low response time and avoids unnecessary data transmission. Due to the deployment of 5G, the emerging edge systems can provide gigabit bandwidth. However, network protocols have not evolved together. In TCP, the initial congestion window (IW) is such a low value that most short flows still stay in slow start phase when finishing, and do not fully utilize available bandwidth. Naively increasing IW may result in congestion, which causes long latency. Moreover, since the network environment is dynamic, we have a challenging problem-how to adaptively adjust IW such that flow completion time is optimized, while congestion is minimized. In this paper, we propose an adaptive online decision method to solve the problem, which learns the best policy using deep reinforcement learning stably and fast. In addition, we propose an approach to further improve the performance by supervised learning, using data collected during online learning. We also propose to adopt SDN to address the challenges in implementing our method in MEC systems. To evaluate our method, we build an MEC simulator based on ns3. Our simulations demonstrate that our method performs better than existing methods. It can effectively reduce FCT with little congestion caused.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/jsac.2019.2959187"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Adaptive%20Online%20Decision%20Method%20for%20Initial%20Congestion%20Window%20in%205G%20Mobile%20Edge%20Computing%20Using%20Deep%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "DRL (+supervised refinement)",
+   "family": "NR",
+   "setting": "Wireless & cellular",
+   "level": "Simulation",
+   "action": "param",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST026",
+  "rank": 27,
+  "name": "RL BWE for RTC (Microsoft)",
+  "title": "Reinforcement learning for bandwidth estimation and congestion control in real-time communications",
+  "year": "2019",
+  "venue": "arXiv (Cornell University)",
+  "citations": 52,
+  "abstract": "Bandwidth estimation and congestion control for real-time communications (i.e., audio and video conferencing) remains a difficult problem, despite many years of research. Achieving high quality of experience (QoE) for end users requires continual updates due to changing network architectures and technologies. In this paper, we apply reinforcement learning for the first time to the problem of real-time communications (RTC), where we seek to optimize user-perceived quality. We present initial proof-of-concept results, where we learn an agent to control sending rate in an RTC system, evaluating using both network simulation and real Internet video calls. We discuss the challenges we observed, particularly in designing realistic reward functions that reflect QoE, and in bridging the gap between the training environment and real-world networks.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/1912.02222"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Reinforcement%20learning%20for%20bandwidth%20estimation%20and%20congestion%20control%20in%20real-time%20communications"
+   }
+  ],
+  "coded": {
+   "method": "PPO (actor-critic)",
+   "family": "PG",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "bitrate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST127",
+  "rank": 28,
+  "name": "RL-CC (Tessler et al.)",
+  "title": "Reinforcement Learning for Datacenter Congestion Control",
+  "year": "2022",
+  "venue": "ACM SIGMETRICS Performance Evaluation Review",
+  "citations": 51,
+  "abstract": "We approach the task of network congestion control in datacenters using Reinforcement Learning (RL). Successful congestion control algorithms can dramatically improve latency and overall network throughput. Until today, no such learning-based algorithms have shown practical potential in this domain. Evidently, the most popular recent deployments rely on rule-based heuristics that are tested on a predetermined set of benchmarks. Consequently, these heuristics do not generalize well to newly-seen scenarios. Contrarily, we devise an RL-based algorithm with the aim of generalizing to different configurations of real-world datacenter networks. We overcome challenges such as partial-observability, non-stationarity, and multi-objectiveness. We further propose a policy gradient algorithm that leverages the analytical structure of the reward function to approximate its derivative and improve stability. We show that this scheme outperforms alternative popular RL approaches, and generalizes to scenarios that were not seen during training. Our experiments, conducted on a realistic simulator that emulates communication networks' behavior, exhibit improved performance concurrently on the multiple considered metrics compared to the popular algorithms deployed today in real datacenters. Our algorithm is being productized to replace heuristics in some of the largest datacenters in the world.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3512798.3512815"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Reinforcement%20Learning%20for%20Datacenter%20Congestion%20Control"
+   }
+  ],
+  "coded": {
+   "method": "policy gradient with analytic reward derivative (multi-agent, partially observable)",
+   "family": "PG+MARL",
+   "setting": "Data center",
+   "level": "Simulation",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST181",
+  "rank": 29,
+  "name": "Spine",
+  "title": "Efficient DRL-Based Congestion Control With Ultra-Low Overhead",
+  "year": "2023",
+  "venue": "IEEE/ACM Transactions on Networking",
+  "citations": 49,
+  "abstract": "Previous congestion control (CC) algorithms based on deep reinforcement learning (DRL) directly adjust flow sending rate to respond to dynamic bandwidth change, resulting in high inference overhead. Such overhead may consume considerable CPU resources and hurt the datapath performance. In this paper, we present, a hierarchical congestion control algorithm that fully utilizes the performance gain from deep reinforcement learning but with ultra-low overhead. At its heart, decouples the congestion control task into two subtasks in different timescales and handles them with different components: 1) lightweight CC executor that performs fine-grained control responding to dynamic bandwidth changes; and 2) RL agent that works at a coarse-grained level that generates control sub-policies for the CC executor. Such two-level control architecture can provide fine-grained DRL-based control with a low model inference overhead. Real-world experiments and emulations show that achieves consistent high performance across various network conditions with an ultra-low control overhead reduced by at least 80% compared to its DRL-based counterparts, similar to classic CC schemes such as Cubic.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tnet.2023.3330737"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Efficient%20DRL-Based%20Congestion%20Control%20With%20Ultra-Low%20Overhead"
+   }
+  ],
+  "coded": {
+   "method": "hierarchical: light CC executor + coarse-grained DRL sub-policy generator",
+   "family": "NR",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "param",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST217",
+  "rank": 30,
+  "name": "Libra",
+  "title": "Libra: A Congestion Control Framework for Diverse Application Preferences and Network Conditions",
+  "year": "2024",
+  "venue": "IEEE Transactions on Networking",
+  "citations": 46,
+  "abstract": "With the increase of diversity in application preferences and networks, existing congestion control algorithms (CCAs) do not accommodate this complicated reality. Previous classic CCAs are designed for a specific domain with fixed rules, failing to adapt to such diversities. Recently surged learning-based CCAs have great potential in adaptability and flexibility but are not practical due to unsatisfying performance on convergence, fairness, overhead, consistency and safety assurance. In this paper, we propose Libra, a unified congestion control framework, that can empower these properties by combining the wisdom of classic and reinforcement learning (RL)-based CCAs. Extensive evaluation of Libra’s Linux kernel implementations on both live Internet and emulated networks shows performance improvement under dynamic networks (e.g.,$1.2\\times $throughput than Orca on average). At the same time, Libra can flexibly satisfy different application needs, reduce the running overhead by at most$0.88\\times $and perform good fairness and convergence properties, well-fitting our theoretical analysis.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tnet.2024.3492096"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Libra%3A%20A%20Congestion%20Control%20Framework%20for%20Diverse%20Application%20Preferences%20and%20Network%20Conditions"
+   }
+  ],
+  "coded": {
+   "method": "classic and RL candidates compared in exploration/evaluation stages",
+   "family": "PG",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST061",
+  "rank": 31,
+  "name": "DQN AQM for fog/edge IoT",
+  "title": "Deep Reinforcement Learning Based Active Queue Management for IoT Networks",
+  "year": "2021",
+  "venue": "Journal of Network and Systems Management",
+  "citations": 45,
+  "abstract": "Internet of Things (IoT) has pervaded most aspects of our life through the Fourth Industrial Revolution. It is expected that a typical family home could contain several hundreds of smart devices by 2022. Current network architecture has been moving to fog/edge architecture to have the capacity for IoT. However, in order to deal with the enormous amount of traffic generated by those devices and reduce queuing delay, novel self-learning network management algorithms are required on fog/edge nodes. For efficient network management, Active Queue Management (AQM) has been proposed which is the intelligent queuing discipline. In this paper, we propose a new AQM based on Deep Reinforcement Learning (DRL) to handle the latency as well as the trade-off between queuing delay and throughput. We choose Deep Q-Network (DQN) as a baseline of our scheme, and compare our approach with various AQM schemes by deploying them on the interface of fog/edge node in IoT infrastructure. We simulate the AQM schemes on the different bandwidth and round trip time (RTT) settings, and in the empirical results, our approach outperforms other AQM schemes in terms of delay and jitter maintaining above-average throughput and verifies that DRL applied AQM is an efficient network manager for congestion.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1007/s10922-021-09603-x"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Deep%20Reinforcement%20Learning%20Based%20Active%20Queue%20Management%20for%20IoT%20Networks"
+   }
+  ],
+  "coded": {
+   "method": "DQN",
+   "family": "DQN",
+   "setting": "IoT, ad hoc & sensor",
+   "level": "Simulation",
+   "action": "aqm",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST187",
+  "rank": 32,
+  "name": "iCoCoA",
+  "title": "iCoCoA: intelligent congestion control algorithm for CoAP using deep reinforcement learning",
+  "year": "2023",
+  "venue": "Journal of Ambient Intelligence and Humanized Computing",
+  "citations": 45,
+  "abstract": "TLDR: This article presents a new Intelligent congestion control algorithm (iCoCoA) for constraint devices, motivated by the success of the deep reinforcement learning in various applications that mitigates congestion, outperforms 4–15% in throughput, 3–10% better packet delivery ratio, and 7–16% energy-efficiency with reduced number of retransmissions.",
+  "abstract_source": "s2-tldr",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1007/s12652-023-04534-8"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=iCoCoA%3A%20intelligent%20congestion%20control%20algorithm%20for%20CoAP%20using%20deep%20reinforcement%20learning"
+   }
+  ],
+  "coded": {
+   "method": "DRL",
+   "family": "NR",
+   "setting": "IoT, ad hoc & sensor",
+   "level": "Not reported",
+   "action": "param",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST191",
+  "rank": 33,
+  "name": "Astraea",
+  "title": "Astraea: Towards Fair and Efficient Learning-based Congestion Control",
+  "year": "2024",
+  "venue": "European Conference on Computer Systems",
+  "citations": 44,
+  "abstract": "Recent years have witnessed a plethora of learning-based solutions for congestion control (CC) that demonstrate better performance over traditional TCP schemes. However, they fail to provide consistently good convergence properties, including fairness, fast convergence and stability, due to the mismatch between their objective functions and these properties. Despite being intuitive, integrating these properties into existing learning-based CC is challenging, because: 1) their training environments are designed for the performance optimization of single flow but incapable of cooperative multi-flow optimization, and 2) there is no directly measurable metric to represent these properties into the training objective function. We present Astraea, a new learning-based congestion control that ensures fast convergence to fairness with stability. At the heart of Astraea is a multi-agent deep reinforcement learning framework that explicitly optimizes these convergence properties during the training process by enabling the learning of interactive policy between multiple competing flows, while maintaining high performance. We further build a faithful multi-flow environment that emulates the competing behaviors of concurrent flows, explicitly expressing convergence properties to enable their optimization during training. We have fully implemented Astraea and our comprehensive experiments show that Astraea can quickly converge to fairness point and exhibit better stability than its counterparts. For example, Astraea achieves near-optimal bandwidth sharing (i.e., fairness) when multiple flows compete for the same bottleneck, delivers up to 8.4× faster convergence speed and 2.8× smaller throughput deviation, while achieving comparable or even better performance over prior solutions.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3627703.3650069"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Astraea%3A%20Towards%20Fair%20and%20Efficient%20Learning-based%20Congestion%20Control"
+   }
+  ],
+  "coded": {
+   "method": "multi-agent DRL with a faithful multi-flow training environment",
+   "family": "MARL+AC",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST025",
+  "rank": 34,
+  "name": "MVFST-RL",
+  "title": "MVFST-RL: An Asynchronous RL Framework for Congestion Control with Delayed Actions",
+  "year": "2019",
+  "venue": "arXiv (Cornell University)",
+  "citations": 42,
+  "abstract": "Effective network congestion control strategies are key to keeping the Internet (or any large computer network) operational. Network congestion control has been dominated by hand-crafted heuristics for decades. Recently, ReinforcementLearning (RL) has emerged as an alternative to automatically optimize such control strategies. Research so far has primarily considered RL interfaces which block the sender while an agent considers its next action. This is largely an artifact of building on top of frameworks designed for RL in games (e.g. OpenAI Gym). However, this does not translate to real-world networking environments, where a network sender waiting on a policy without sending data leads to under-utilization of bandwidth. We instead propose to formulate congestion control with an asynchronous RL agent that handles delayed actions. We present MVFST-RL, a scalable framework for congestion control in the QUIC transport protocol that leverages state-of-the-art in asynchronous RL training with off-policy correction. We analyze modeling improvements to mitigate the deviation from Markovian dynamics, and evaluate our method on emulated networks from the Pantheon benchmark platform. The source code is publicly available at this https URL.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/1910.04054"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=MVFST-RL%3A%20An%20Asynchronous%20RL%20Framework%20for%20Congestion%20Control%20with%20Delayed%20Actions"
+   }
+  ],
+  "coded": {
+   "method": "IMPALA (asynchronous actor-learner, V-trace off-policy correction) with delayed actions",
+   "family": "PG+AC",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "cwnd",
+   "contribution": "framework"
+  }
+ },
+ {
+  "id": "ST056",
+  "rank": 35,
+  "name": "AUTO",
+  "title": "AUTO: Adaptive Congestion Control Based on Multi-Objective Reinforcement Learning for the Satellite-Ground Integrated Network",
+  "year": "2021",
+  "venue": "USENIX ATC '21",
+  "citations": 39,
+  "abstract": "The satellite-ground integrated network is highly heterogeneous with diversified applications. It requires congestion control (CC) to achieve consistent high performances in both long-latency satellite networks and large-bandwidth terrestrial networks and cope with different application requirements. However, existing schemes can hardly achieve these goals, for they cannot balance the objectives of CC (i.e., throughput, delay) adaptively and are not objective-configurable. To address these limitations, we propose and implement a novel adaptive CC scheme named AUTO, based on Multi-Objective Reinforcement Learning (MORL). It is environment-adaptive by training a MORL agent and a preference adaptation model. The first can generate optimal policies for all possible preferences (i.e., the relative importance of objectives). The latter automatically selects an appropriate preference for each environment, by taking a state sequence as input to recognize the environment. Meanwhile, AUTO can satisfy diversified application requirements by letting applications determine the input preference at will. Evaluations on emulated networks and the real Internet show that AUTO consistently outperforms the state-of-the-art in representative network environments and is more robust to stochastic packet loss and rapid network changes. Moreover, AUTO can achieve fairness against different CC schemes.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=AUTO%3A%20Adaptive%20Congestion%20Control%20Based%20on%20Multi-Objective%20Reinforcement%20Learning%20for%20the%20Satellite-Ground%20Integrated%20Network"
+   }
+  ],
+  "coded": {
+   "method": "multi-objective RL + preference-adaptation model",
+   "family": "MO+PG",
+   "setting": "Satellite & space",
+   "level": "Real network",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST006",
+  "rank": 36,
+  "name": "Iroko",
+  "title": "Iroko: A Framework to Prototype Reinforcement Learning for Data Center Traffic Control",
+  "year": "2018",
+  "venue": "arXiv (Cornell University)",
+  "citations": 37,
+  "abstract": "Recent networking research has identified that data-driven congestion control (CC) can be more efficient than traditional CC in TCP. Deep reinforcement learning (RL), in particular, has the potential to learn optimal network policies. However, RL suffers from instability and over-fitting, deficiencies which so far render it unacceptable for use in datacenter networks. In this paper, we analyze the requirements for RL to succeed in the datacenter context. We present a new emulator, Iroko, which we developed to support different network topologies, congestion control algorithms, and deployment scenarios. Iroko interfaces with the OpenAI gym toolkit, which allows for fast and fair evaluation of different RL and traditional CC algorithms under the same conditions. We present initial benchmarks on three deep RL algorithms compared to TCP New Vegas and DCTCP. Our results show that these algorithms are able to learn a CC policy which exceeds the performance of TCP New Vegas on a dumbbell and fat-tree topology. We make our emulator open-source and publicly available: https://github.com/dcgym/iroko",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/1812.09975"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Iroko%3A%20A%20Framework%20to%20Prototype%20Reinforcement%20Learning%20for%20Data%20Center%20Traffic%20Control"
+   }
+  ],
+  "coded": {
+   "method": "PPO; REINFORCE; DDPG",
+   "family": "PG+AC",
+   "setting": "Data center",
+   "level": "Emulation",
+   "action": "rate",
+   "contribution": "framework"
+  }
+ },
+ {
+  "id": "ST044",
+  "rank": 37,
+  "name": "Multi-task DRL CC (SDN)",
+  "title": "Congestion Control in SDN-Based Networks via Multi-Task Deep Reinforcement Learning",
+  "year": "2020",
+  "venue": "IEEE Network",
+  "citations": 37,
+  "abstract": "Congestion control is a fundamental network task that modulates the data transmission rates of traffic sources to efficiently utilize network capacity. With the advent of machine learning, congestion control based on deep reinforcement learning is the subject of extensive attention. At present, research on machine-learning-based congestion control is mainly focused on single-task scenarios -- to design a control strategy that is only used to reduce congestion. This article studies the congestion control problem based on machine learning in multi-task scenarios. Specifically, we propose a congestion control model based on multi-task deep reinforcement learning. The model takes congestion control as the main task and load balancing as the auxiliary task. Compared to the single-task method, our model can better represent the network environment by learning the shared representation of congestion features and load balancing features. Moreover, network traffic control may involve both congestion control and load balancing. Therefore, learning multiple tasks jointly while exploiting commonalities and differences across tasks can help reduce the cost of task coordination. We use software defined networking to decouple the data and control planes, making network control strategies more flexible than traditional networks. To the best of our knowledge, this is the first time multi-task learning has been applied to network traffic control. Experimental results show that the method is efficient.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/mnet.011.1900408"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Congestion%20Control%20in%20SDN-Based%20Networks%20via%20Multi-Task%20Deep%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "multi-task DRL",
+   "family": "NR",
+   "setting": "Internet / generic",
+   "level": "Not reported",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST053",
+  "rank": 38,
+  "name": "ACC",
+  "title": "ACC",
+  "year": "2021",
+  "venue": "ACM SIGCOMM Conference (SIGCOMM)",
+  "citations": 37,
+  "abstract": "For the widely deployed ECN-based congestion control schemes, the marking threshold is the key to deliver high bandwidth and low latency. However, due to traffic dynamics in the high-speed production networks, it is difficult to maintain persistent performance by using the static ECN setting. To meet the operational challenge, in this paper we report the design and implementation of an automatic run-time optimization scheme, ACC, which leverages the multi-agent reinforcement learning technique to dynamically adjust the marking threshold at each switch. The proposed approach works in a distributed fashion and combines offline and online training to adapt to dynamic traffic patterns. It can be easily deployed based on the common features supported by major commodity switching chips. Both testbed experiments and large-scale simulations have shown that ACC achieves low flow completion time (FCT) for both mice flows and elephant flows at line-rate. Under heterogeneous production environments with 300 machines, compared with the well-tuned static ECN settings, ACC achieves up to 20\\% improvement on IOPS and 30\\% lower FCT for storage service. ACC has been applied in high-speed datacenter networks and significantly simplifies the network operations.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3452296.3472927"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=ACC"
+   }
+  ],
+  "coded": {
+   "method": "multi-agent DRL per switch (offline + online training)",
+   "family": "MARL+DQN",
+   "setting": "Data center",
+   "level": "Real network",
+   "action": "ecn",
+   "contribution": "deploy"
+  }
+ },
+ {
+  "id": "ST002",
+  "rank": 39,
+  "name": "Q-learning TCP for memory-constrained IoT",
+  "title": "Learning-Based and Data-Driven TCP Design for Memory-Constrained IoT",
+  "year": "2016",
+  "venue": "International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT)",
+  "citations": 36,
+  "abstract": "Advances in wireless technology have resulted in pervasive deployment of devices of a high variability in form factors, memory and computational ability. The need for maintaining continuous connections that deliver data with high reliability necessitate re-thinking of conventional design of the transport layer protocol. This paper investigates the use of Q-learning in TCP cwnd adaptation during the congestion avoidance state, wherein the classical alternation of the window is replaced, thereby allowing the protocol to immediately respond to previously seen network conditions. Furthermore, it demonstrates how memory plays a critical role in building the exploration space, and proposes ways to reduce this overhead through function approximation. The superior performance of the learning-based approach over TCP New Reno is demonstrated through a comprehensive simulation study, revealing 33.8% and 12.1% improvement in throughput and delay, respectively, for the evaluated topologies. We also show how function approximation can be used to dramatically reduce the memory requirements of a learning-based protocol while maintaining the same throughput and delay.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/dcoss.2016.8"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Learning-Based%20and%20Data-Driven%20TCP%20Design%20for%20Memory-Constrained%20IoT"
+   }
+  ],
+  "coded": {
+   "method": "Q-learning with function approximation",
+   "family": "TAB",
+   "setting": "IoT, ad hoc & sensor",
+   "level": "Simulation",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST118",
+  "rank": 40,
+  "name": "OpenNetLab",
+  "title": "OpenNetLab: Open Platform for RL-based Congestion Control for Real-Time Communications",
+  "year": "2022",
+  "venue": "Asia-Pacific Workshop on Networking (APNet)",
+  "citations": 36,
+  "abstract": "With the growing importance of real-time communications (RTC), designing congestion control (CC) algorithms for RTC that achieve high network performance and QoE is gaining attention. Recently, data-driven, reinforcement learning (RL)-based CC algorithms for RTC have shown great potential, outperforming traditional rule-based counterparts. However, there are no open platforms tailored for training, evaluation, and validation of the algorithms that can facilitate this emerging research area.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3542637.3542648"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=OpenNetLab%3A%20Open%20Platform%20for%20RL-based%20Congestion%20Control%20for%20Real-Time%20Communications"
+   }
+  ],
+  "coded": {
+   "method": "platform for training/evaluating RL RTC CC",
+   "family": "",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "bitrate",
+   "contribution": "framework"
+  }
+ },
+ {
+  "id": "ST005",
+  "rank": 41,
+  "name": "DRL age-of-information over TCP/IP",
+  "title": "Optimizing age of information on real-life TCP/IP connections through reinforcement learning",
+  "year": "2018",
+  "venue": "Signal Processing and Communications Applications Conference (SIU)",
+  "citations": 35,
+  "abstract": "Age of Information (AoI) has emerged as a performance metric capturing the freshness of data for status-update based applications (e.g., remote monitoring) as a more suitable alternative to classical network performance indicators such as throughput or delay. Optimizing AoI often requires distinctly novel and sometimes counter-intuitive networking policies that adapt the rate of update transmissions to the randomness in network resources. However, almost all previous work on AoI to data has been theoretical, assuming idealized networking models, and known delay and service time distributions. It is difficult to obtain these statistics and optimize for them in a real-life network as there are many interacting phenomena in different networking layers (e.g., consider an end-to-end IoT application running over the Internet). With this work we introduce a deep reinforcement learning-based approach that can learn to minimize the AoI with no prior assumptions about network topology. After evaluating the learning model on an emulated network, we have shown that the method can be scaled up to any realistic network with unknown delay distribution.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/siu.2018.8404794"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Optimizing%20age%20of%20information%20on%20real-life%20TCP/IP%20connections%20through%20reinforcement%20learning"
+   }
+  ],
+  "coded": {
+   "method": "deep RL",
+   "family": "NR",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST090",
+  "rank": 42,
+  "name": "BoB",
+  "title": "BoB: Bandwidth Prediction for Real-Time Communications Using Heuristic and Reinforcement Learning",
+  "year": "2022",
+  "venue": "IEEE Transactions on Multimedia",
+  "citations": 35,
+  "abstract": "Bandwidth prediction is critical in any Real-time Communication (RTC) service or application. This component decides how much media data can be sent in real time. Subsequently, the video and audio encoder dynamically adapts the bitrate to achieve the best quality without congesting the network and causing packets to be lost or delayed. To date, several RTC services have deployed the heuristic-based Google Congestion Control (GCC), which performs well under certain circumstances and falls short in some others. In this paper, we leverage the advancements in reinforcement learning and propose BoB (Bang-on-Bandwidth) — a hybrid bandwidth predictor for RTC. At the beginning of the RTC session, BoB uses a heuristic-based approach. It then switches to a learning-based approach. BoB predicts the available bandwidth accurately and improves bandwidth utilization under diverse network conditions compared to the two winning solutions of the ACM MMSys'21 grand challenge on bandwidth estimation in RTC. An open-source implementation of BoB is publicly available for further testing and research.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tmm.2022.3216456"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=BoB%3A%20Bandwidth%20Prediction%20for%20Real-Time%20Communications%20Using%20Heuristic%20and%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "PPO + heuristic warm start",
+   "family": "PG",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "bitrate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST289",
+  "rank": 43,
+  "name": "Mutant",
+  "title": "Mutant: Learning Congestion Control from Existing Protocols via Online Reinforcement Learning",
+  "year": "2025",
+  "venue": "PORTO@Iris",
+  "citations": 32,
+  "abstract": "Learning how to control congestion remains a challenge despite years of progress. Existing congestion control protocols have demonstrated efficacy within specific network conditions, inevitably behaving suboptimally or poorly in others. Machine learning solutions to congestion control have been proposed, though relying on extensive training and specific network configurations. In this paper, we loosen such dependencies by proposing Mutant, an online reinforcement learning algorithm for congestion control that adapts to the behavior of the best-performing schemes, outperforming them in most network conditions. Design challenges included determining the best protocols to learn from, given a network scenario, and creating a system able to evolve to accommodate future protocols with minimal changes. Our evaluation on real-world and emulated scenarios shows that Mutant achieves lower delays and higher throughput than prior learning-based schemes while maintaining fairness by exhibiting negligible harm to competing flows, making it robust across diverse and dynamic network conditions.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Mutant%3A%20Learning%20Congestion%20Control%20from%20Existing%20Protocols%20via%20Online%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "online contextual bandit (LinUCB) over a pool of existing protocols",
+   "family": "BANDIT",
+   "setting": "Internet / generic",
+   "level": "Real network",
+   "action": "select",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST010",
+  "rank": 44,
+  "name": "QRED",
+  "title": "QRED: A Q-Learning-based Active Queue Management Scheme",
+  "year": "2018",
+  "venue": "網際網路技術學刊",
+  "citations": 31,
+  "abstract": "The Active Queue Management (AQM) algorithm is one of most important research fields in network congestion control. To adjust the maximum dropping probability (maxp) according to the network situation the maxp calculation based on the RED algorithm is improved using the Q-learning algorithm, and a new algorithm, known as QRED (Q-learning RED), is proposed. The self-adaptive adjustment for the maxp is achieved using the QRED algorithm and the queue length stability in a dynamic network environment is realized. In addition, the QRED algorithm not only avoids the sensitivity of the RED algorithm parameters, but also adapts the packet loss rate according to the specific network service type. Results based on the NS2 simulation show that the QRED algorithm has better stability in complex network environments, and hence, are superior to the RED active queue management algorithm.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=QRED%3A%20A%20Q-Learning-based%20Active%20Queue%20Management%20Scheme"
+   }
+  ],
+  "coded": {
+   "method": "Q-learning tuning RED maxp",
+   "family": "TAB",
+   "setting": "Internet / generic",
+   "level": "Simulation",
+   "action": "param",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST110",
+  "rank": 45,
+  "name": "LiteFlow",
+  "title": "LiteFlow",
+  "year": "2022",
+  "venue": "ACM SIGCOMM Conference (SIGCOMM)",
+  "citations": 31,
+  "abstract": "Adaptive neural networks (NN) have been used to optimize OS kernel datapath functions because they can achieve superior performance under changing environments. However, how to deploy these NNs remains a challenge. One approach is to deploy these adaptive NNs in the userspace. However, such userspace deployments suffer from either high cross-space communication overhead or low responsiveness, significantly compromising the function performance. On the other hand, pure kernel-space deployments also incur a large performance degradation because the computation logic of model tuning algorithm is typically complex, interfering with the performance of normal datapath execution.",
+  "abstract_source": "openalex",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3544216.3544229"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=LiteFlow"
+   }
+  ],
+  "coded": {
+   "method": "kernel fast path for NN inference + userspace slow path for tuning",
+   "family": "",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "rate",
+   "contribution": "method"
+  }
+ },
+ {
+  "id": "ST067",
+  "rank": 46,
+  "name": "HRCC",
+  "title": "A Hybrid Receiver-side Congestion Control Scheme for Web Real-time Communication",
+  "year": "2021",
+  "venue": "ACM Multimedia Systems Conference (MMSys)",
+  "citations": 30,
+  "abstract": "Web real-time communication (WebRTC) employs congestion control to ensure the quality of experience (QoE). Different from congestion control schemes for TCP, WebRTC keeps a low-level playback buffer that considers excessively delayed packets as losses, which makes the congestion control for WebRTC more challenging. Existing heuristic schemes estimate the network conditions based on hand-crafted rules that may be suboptimal, leading to under-utilization or over-utilization of link capacity in many cases. On the other hand, the existing learning-based schemes train a model that acts in a large action space, which is hard to converge to a stable status and has low performance over unpredictable network conditions. In this paper, we propose a hybrid receiver-side congestion control (HRCC) framework, which combines a heuristic congestion control scheme with an RL-Agent that periodically generates a gain coefficient to tune the bandwidth estimated by the heuristic scheme. Extensive simulation experiments demonstrate that the HRCC's RL-Agent effectively tunes the bandwidth estimate of the heuristic scheme. The hybrid scheme achieves higher bandwidth utilization than the fully heuristic scheme with similar queuing delay and packet loss and outperforms the fully RL-based scheme on overall performance.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1145/3458305.3479970"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=A%20Hybrid%20Receiver-side%20Congestion%20Control%20Scheme%20for%20Web%20Real-time%20Communication"
+   }
+  ],
+  "coded": {
+   "method": "RL agent sets a gain on the heuristic (GCC-like) bandwidth estimate",
+   "family": "NR",
+   "setting": "Internet / generic",
+   "level": "Simulation",
+   "action": "param",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST023",
+  "rank": 47,
+  "name": "Intelligent AQM with ECN",
+  "title": "Intelligent Active Queue Management Using Explicit Congestion Notification",
+  "year": "2019",
+  "venue": "Globecom",
+  "citations": 29,
+  "abstract": "As more end devices are getting connected, the Internet will become more congested. Various congestion control techniques have been developed either on transport or network layers. Active Queue Management (AQM) is a paradigm that aims to mitigate the congestion on the network layer through active buffer control to avoid overflow. However, finding the right parameters for an AQM scheme is challenging, due to the complexity and dynamics of the networks. On the other hand, the Explicit Congestion Notification (ECN) mechanism is a solution that makes visible incipient congestion on the network layer to the transport layer. In this work, we propose to exploit the ECN information to improve AQM algorithms by applying Machine Learning techniques. Our intelligent method uses an artificial neural network to predict congestion and an AQM parameter tuner based on reinforcement learning. The evaluation results show that our solution can enhance the performance of deployed AQM, using the existing TCP congestion control mechanisms.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/globecom38437.2019.9013475"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Intelligent%20Active%20Queue%20Management%20Using%20Explicit%20Congestion%20Notification"
+   }
+  ],
+  "coded": {
+   "method": "Q-learning (+ANN congestion predictor)",
+   "family": "TAB",
+   "setting": "Internet / generic",
+   "level": "Emulation",
+   "action": "aqm",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST109",
+  "rank": 48,
+  "name": "IEACC",
+  "title": "IEACC: An Intelligent Edge-Aided Congestion Control Scheme for Named Data Networking With Deep Reinforcement Learning",
+  "year": "2022",
+  "venue": "IEEE Transactions on Network and Service Management",
+  "citations": 28,
+  "abstract": "As a promising implementation of Information-Centric Networking (ICN), Named Data Networking (NDN) has potential advantages over the TCP/IP network in content distribution, mobility support, etc. However, the research on NDN is still in its infancy, and congestion control, NDN’s most important functional element, poses many challenges, such as congestion detection, excessive window reduction for non-congested paths, and unfairness. In this paper, we propose an Intelligent Edge-Aided Congestion Control (IEACC) scheme for the NDN network based on Deep Reinforcement Learning (DRL). The proposed IEACC provides a proactive congestion detector that utilizes intermediate routers to transmit accurate congestion information along the path to consumers through data packets. Furthermore, considering the multi-source transmission in NDN, IEACC divides data packets into different congestion degrees by a lightweight clustering algorithm and provides suitable inputs for DRL, thereby obtaining a reasonable transmission rate. Then, it distributes the estimated bandwidth resources to consumers with transmission needs to maintain fairness. Finally, we implement our proposed scheme in the simulation platform and evaluate the performance in different scenarios. The results show that it can improve data transmission rate, reduce packet loss, and maintain fairness compared with others.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tnsm.2022.3196344"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=IEACC%3A%20An%20Intelligent%20Edge-Aided%20Congestion%20Control%20Scheme%20for%20Named%20Data%20Networking%20With%20Deep%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "DRL with edge-aided congestion degrees",
+   "family": "NR",
+   "setting": "Internet / generic",
+   "level": "Simulation",
+   "action": "rate",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST041",
+  "rank": 49,
+  "name": "Hd-TCP",
+  "title": "Improving the Congestion Control Performance for Mobile Networks in High-Speed Railway via Deep Reinforcement Learning",
+  "year": "2020",
+  "venue": "IEEE Transactions on Vehicular Technology",
+  "citations": 27,
+  "abstract": "Due to the poor Transmission Control Protocol (TCP) performance in high-speed mobile scenarios, passengers have bad network experiences on High-Speed Railway (HSR). As a result, improving network performance for HSR scenarios has become urgent and widespread concerns. Some previous works quantitatively analyzed the TCP performance on HSR and proposed relevant solutions. Other works focused on the handover problem (the leading cause of poor network performance on HSR), and proposed a series of handover algorithms for HSR scenarios. However, the existing works are either limited to only measurement studies without algorithm implementation or lack of integration with real-world scenarios. In this paper, with a large amount of field measurement data in real HSR networks, we study the main reasons why traditional TCP performs poorly in HSR scenarios. To improve the TCP performance, we propose Hd-TCP, a customized Congestion Control (CC) algorithm designed to deal with frequent handover on HSR from the transport layer perspective. For the transmission characteristic on HSR, Hd-TCP can accurately evaluate the link condition and apply a Deep Reinforcement Learning (DRL) method to make a fine control. The simulation results show that Hd-TCP outperforms traditional CC algorithms in both throughput and latency by fully utilizing the transmission gap between handovers.",
+  "abstract_source": "local",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1109/tvt.2020.2984038"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=Improving%20the%20Congestion%20Control%20Performance%20for%20Mobile%20Networks%20in%20High-Speed%20Railway%20via%20Deep%20Reinforcement%20Learning"
+   }
+  ],
+  "coded": {
+   "method": "DRL",
+   "family": "NR",
+   "setting": "Wireless & cellular",
+   "level": "Simulation",
+   "action": "cwnd",
+   "contribution": "ctrl"
+  }
+ },
+ {
+  "id": "ST055",
+  "rank": 50,
+  "name": "AQM meets DRL",
+  "title": "An intelligent scheme for congestion control: When active queue management meets deep reinforcement learning",
+  "year": "2021",
+  "venue": "Computer Networks",
+  "citations": 27,
+  "abstract": "",
+  "abstract_source": "",
+  "links": [
+   {
+    "label": "DOI",
+    "url": "https://doi.org/10.1016/j.comnet.2021.108515"
+   },
+   {
+    "label": "Scholar",
+    "url": "https://scholar.google.com/scholar?q=An%20intelligent%20scheme%20for%20congestion%20control%3A%20When%20active%20queue%20management%20meets%20deep%20reinforcement%20learning"
+   }
+  ],
+  "coded": {
+   "method": "DRL",
+   "family": "NR",
+   "setting": "Internet / generic",
+   "level": "Not reported",
+   "action": "aqm",
+   "contribution": "ctrl"
+  }
+ }
+]
