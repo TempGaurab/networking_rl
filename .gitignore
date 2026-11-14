@@ -17,5 +17,6 @@ __pycache__/
 survey/build/
 report_top50/build/
 report_techniques/build/
+report_final/build/
 # Third-party papers: retrieved locally, not redistributed
 review/data/fulltext/

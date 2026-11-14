@@ -3,7 +3,7 @@
 PY ?= python3
 S  := review/scripts
 
-.PHONY: all numbers pdf report techniques slides case-figures case-study search clean
+.PHONY: all numbers pdf report final techniques slides case-figures case-study search clean
 
 all: numbers pdf
 
@@ -31,6 +31,16 @@ report:
 	  pdflatex -interaction=nonstopmode -output-directory=build main.tex >/dev/null; \
 	  pdflatex -interaction=nonstopmode -output-directory=build main.tex | tail -1 && \
 	  ! grep -q "undefined" build/main.log && cp build/main.pdf ../RL_Congestion_Control_Top50_Report.pdf && echo "RL_Congestion_Control_Top50_Report.pdf updated"
+
+# CS 6043 submission: 10-page, 12 pt condensed report (report_final/), essential references only
+final:
+	cd $(S) && $(PY) select_top50.py >/dev/null
+	cd report_final && mkdir -p build && \
+	  pdflatex -interaction=nonstopmode -output-directory=build main.tex >/dev/null; \
+	  (cd build && BIBINPUTS=..:../../report_top50:../../survey: bibtex main >/dev/null) && \
+	  pdflatex -interaction=nonstopmode -output-directory=build main.tex >/dev/null; \
+	  pdflatex -interaction=nonstopmode -output-directory=build main.tex | tail -1 && \
+	  ! grep -q "undefined" build/main.log && cp build/main.pdf ../RL_Congestion_Control_Final_Report.pdf && echo "RL_Congestion_Control_Final_Report.pdf updated"
 
 # companion guide to the RL techniques of the 50 studies (report_techniques/main.pdf)
 techniques:
